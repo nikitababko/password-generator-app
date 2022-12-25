@@ -2,6 +2,10 @@
   "**/*.{js,jsx,ts,tsx}": [
     "eslint --max-warnings=0",
     "npx prettier --write",
-    "npx eslint --fix"
+    "npx eslint --fix",
+    "next lint"
+  ],
+  "**/*.styles.{ts,tsx}": [
+    "stylelint --config .stylelint.json"
   ]
 }

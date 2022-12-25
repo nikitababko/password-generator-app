@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-styled-components"
+  ],
+  "customSyntax": "@stylelint/postcss-css-in-js",
+  "overrides": [
+    {
+      "files": [
+        "**/*.styles.ts"
+      ],
+      "rules": {
+        "no-empty-first-line": null
+      }
+    }
+  ]
+}
