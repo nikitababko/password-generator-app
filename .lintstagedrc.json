@@ -1,0 +1,7 @@
+{
+  "**/*.{js,jsx,ts,tsx}": [
+    "eslint --max-warnings=0",
+    "npx prettier --write",
+    "npx eslint --fix"
+  ]
+}
