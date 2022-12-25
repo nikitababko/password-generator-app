@@ -56,9 +56,6 @@
       "name": "seo"
     },
     {
-      "name": "packages"
-    },
-    {
       "name": "deps"
     },
     {
@@ -81,6 +78,9 @@
     },
     {
       "name": "lintstaged"
+    },
+    {
+      "name": "commitizen"
     },
     {
       "name": "stylelint"
