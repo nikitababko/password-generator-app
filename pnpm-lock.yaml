@@ -28,6 +28,7 @@ specifiers:
   release-it: 15.5.1
   styled-components: 5.3.6
   stylelint: 14.16.0
+  stylelint-config-prettier: 9.0.4
   stylelint-config-standard-scss: 6.1.0
   stylelint-config-styled-components: 0.1.1
   typescript: 4.9.4
@@ -63,6 +64,7 @@ devDependencies:
   lint-staged: 13.1.0
   release-it: 15.5.1
   stylelint: 14.16.0
+  stylelint-config-prettier: 9.0.4_stylelint@14.16.0
   stylelint-config-standard-scss: 6.1.0_l3s4qeu3gkar2knsdy3w5miimm
   stylelint-config-styled-components: 0.1.1
 
@@ -226,7 +228,7 @@ packages:
     resolution: {integrity: sha512-jr9lCZ4RbRQmCR28Q8U8Fu49zvFqLxTY9AMOUz+iyMohMoAgpEcVxY+wJNay99oXOpOcCTODkk70NDN2aaJEeg==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      core-js-pure: 3.26.1
+      core-js-pure: 3.27.0
       regenerator-runtime: 0.13.11
     dev: false
 
@@ -1213,7 +1215,7 @@ packages:
     resolution: {integrity: sha512-IG23inYII3dWlU2EyiAiGj6Bwal5GzsgPMwjYGvc1HPE2dgbj4ZB5ToWBKSquKw74nB3TIuOwaI6/jSULzfgrw==}
     engines: {node: '>=14.16'}
     dependencies:
-      type-fest: 3.4.0
+      type-fest: 3.5.0
     dev: true
 
   /ansi-regex/3.0.1:
@@ -1936,8 +1938,8 @@ packages:
   /convert-source-map/1.9.0:
     resolution: {integrity: sha512-ASFBup0Mz1uyiIjANan1jzLQami9z1PoYSZCiiYW2FczPbenXc45FZdBZLzOT+r6+iciuEModtmCti+hjaAk0A==}
 
-  /core-js-pure/3.26.1:
-    resolution: {integrity: sha512-VVXcDpp/xJ21KdULRq/lXdLzQAtX7+37LzpyfFM973il0tWSsDEoyzG38G14AjTpK9VTfiNM9jnFauq/CpaWGQ==}
+  /core-js-pure/3.27.0:
+    resolution: {integrity: sha512-fJml7FM6v1HI3Gkg5/Ifc/7Y2qXcJxaDwSROeZGAZfNykSTvUk94WT55TYzJ2lFHK0voSr/d4nOVChLuNCWNpA==}
     requiresBuild: true
     dev: false
 
@@ -5677,6 +5679,16 @@ packages:
       react: 18.2.0
     dev: false
 
+  /stylelint-config-prettier/9.0.4_stylelint@14.16.0:
+    resolution: {integrity: sha512-38nIGTGpFOiK5LjJ8Ma1yUgpKENxoKSOhbDNSemY7Ep0VsJoXIW9Iq/2hSt699oB9tReynfWicTAoIHiq8Rvbg==}
+    engines: {node: '>= 12'}
+    hasBin: true
+    peerDependencies:
+      stylelint: '>=11.0.0'
+    dependencies:
+      stylelint: 14.16.0
+    dev: true
+
   /stylelint-config-recommended-scss/8.0.0_l3s4qeu3gkar2knsdy3w5miimm:
     resolution: {integrity: sha512-BxjxEzRaZoQb7Iinc3p92GS6zRdRAkIuEu2ZFLTxJK2e1AIcCb5B5MXY9KOXdGTnYFZ+KKx6R4Fv9zU6CtMYPQ==}
     peerDependencies:
@@ -6013,8 +6025,8 @@ packages:
     engines: {node: '>=12.20'}
     dev: true
 
-  /type-fest/3.4.0:
-    resolution: {integrity: sha512-PEPg6RHlB9cFwoTMNENNrQFL0cXX04voWr2UPwQBJ3pVs7Mt8Y1oLWdUeMdGEwZE8HFFlujq8gS9enmyiQ8pLg==}
+  /type-fest/3.5.0:
+    resolution: {integrity: sha512-bI3zRmZC8K0tUz1HjbIOAGQwR2CoPQG68N5IF7gm0LBl8QSNXzkmaWnkWccCUL5uG9mCsp4sBwC8SBrNSISWew==}
     engines: {node: '>=14.16'}
     dev: true
 

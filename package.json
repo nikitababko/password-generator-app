@@ -38,7 +38,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint:css": "stylelint --config .stylelint.json '**/*.styles.ts'",
+    "lint:css": "stylelint --config .stylelintrc '**/*.styles.ts'",
     "prepare": "npx husky install"
   },
   "dependencies": {
@@ -72,6 +72,7 @@
     "lint-staged": "13.1.0",
     "release-it": "15.5.1",
     "stylelint": "14.16.0",
+    "stylelint-config-prettier": "9.0.4",
     "stylelint-config-standard-scss": "6.1.0",
     "stylelint-config-styled-components": "0.1.1"
   },
