@@ -90,6 +90,9 @@
     },
     {
       "name": "config"
+    },
+    {
+      "name": "utils"
     }
   ],
   "allowCustomScopes": true,
