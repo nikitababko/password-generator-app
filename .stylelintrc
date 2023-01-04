@@ -8,10 +8,12 @@
   "overrides": [
     {
       "files": [
-        "**/*.styles.ts"
+        "**/*.styles.{ts,tsx}"
       ],
       "rules": {
-        "no-empty-first-line": null
+        "no-empty-first-line": null,
+        "scss/operator-no-unspaced": null,
+        "value-keyword-case": null
       }
     }
   ]
