@@ -5,7 +5,8 @@
     "airbnb-typescript",
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
   ],
   "root": true,
   "parser": "@typescript-eslint/parser",
@@ -15,7 +16,8 @@
     "tsconfigRootDir": "./"
   },
   "plugins": [
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "prettier"
   ],
   "env": {
     "node": true,
@@ -42,9 +44,11 @@
     "@typescript-eslint/no-magic-numbers": [
       "error",
       {
-        "ignoreEnums": true
+        "ignoreEnums": true,
+        "ignoreNumericLiteralTypes": true
       }
     ],
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/indent": "off"
   }
 }
