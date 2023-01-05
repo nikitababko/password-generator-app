@@ -22,7 +22,7 @@
   "include": [
     "next-env.d.ts",
     "next.config.js",
-    "commitlint.config.ts",
+    "commitlint.config.js",
     "**/*.ts",
     "**/*.tsx"
   ],
