@@ -1,12 +1,13 @@
 import type { AppProps } from 'next/app';
+import React from 'react';
 import { GlobalStyles } from '../styles/globalStyles.styles';
 import { Layout } from '../components/Layout';
 import { Theme } from '../components/Theme';
 
-export default function App({
+const App: React.FC<AppProps> = ({
   Component,
   pageProps,
-}: AppProps) {
+}) => {
   return (
     <Theme>
       <GlobalStyles />
@@ -15,4 +16,6 @@ export default function App({
       </Layout>
     </Theme>
   );
-}
+};
+
+export default App;
