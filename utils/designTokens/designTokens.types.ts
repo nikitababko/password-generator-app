@@ -13,6 +13,7 @@ export type MediaBreakPointsDesignTokensType = Record<
 
 type ColorDesignTokensKeysType =
   | 'BlueDark'
+  | 'BlueMedium'
   | 'BlueLight'
   | 'BlackDark'
   | 'BlackLight'
@@ -23,6 +24,7 @@ type ColorDesignTokensKeysType =
   | 'White';
 type ColorDesignTokensValuesType =
   | '#157AF5'
+  | '#DAE6FF'
   | '#E9F4FE'
   | '#222222'
   | '#2E3D54'
@@ -39,12 +41,14 @@ export type ColorDesignTokensType = Record<
 type ThemeColorsKeysType =
   | 'backgroundColor'
   | 'foregroundColor'
+  | 'labelBackgroundColor'
   | 'inputBackgroundColor'
   | 'fontColor'
   | 'fontGenerateButtonColor'
   | 'borderColor'
   | 'themeSwitchBackgroundColor'
-  | 'themeSwitchBorderColor'
+  | 'themeCircleBorderColor'
+  | 'inputBorderColor'
   | 'blue'
   | 'generateButtonBackgroundColor';
 type ThemeFontSizesKeysType = 'sm' | 'm' | 'l';
@@ -58,4 +62,5 @@ export type ThemeType = {
     ThemeFontSizesKeysType,
     ThemeFontSizesValuesType
   >;
+  transition: (target: string) => string;
 };

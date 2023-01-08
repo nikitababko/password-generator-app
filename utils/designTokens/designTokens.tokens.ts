@@ -13,6 +13,7 @@ export const MediaBreakPointsDesignTokens: MediaBreakPointsDesignTokensType =
 
 export const ColorDesignTokens: ColorDesignTokensType = {
   BlueDark: '#157AF5',
+  BlueMedium: '#DAE6FF',
   BlueLight: '#E9F4FE',
   BlackDark: '#222222',
   BlackLight: '#2E3D54',
@@ -27,13 +28,15 @@ export const LightTheme: ThemeType = {
   colors: {
     backgroundColor: ColorDesignTokens.BlueLight,
     foregroundColor: ColorDesignTokens.White,
-    inputBackgroundColor: ColorDesignTokens.GrayLight,
+    labelBackgroundColor: ColorDesignTokens.GrayLight,
+    inputBackgroundColor: ColorDesignTokens.White,
+    inputBorderColor: ColorDesignTokens.GrayLight,
     fontColor: ColorDesignTokens.BlackDark,
     fontGenerateButtonColor: ColorDesignTokens.White,
     borderColor: ColorDesignTokens.BlackLight,
     themeSwitchBackgroundColor:
       ColorDesignTokens.YellowLight,
-    themeSwitchBorderColor: ColorDesignTokens.YellowDark,
+    themeCircleBorderColor: ColorDesignTokens.YellowDark,
     blue: ColorDesignTokens.BlueDark,
     generateButtonBackgroundColor:
       ColorDesignTokens.BlackLight,
@@ -43,19 +46,24 @@ export const LightTheme: ThemeType = {
     m: '26px',
     l: '36px',
   },
+  transition: (target: string) => {
+    return `${target ?? 'all'} 0.3s ease-in-out`;
+  },
 } as const;
 
 export const DarkTheme: ThemeType = {
   colors: {
     backgroundColor: ColorDesignTokens.BlackLight,
     foregroundColor: ColorDesignTokens.GrayDark,
+    labelBackgroundColor: ColorDesignTokens.GrayLight,
     inputBackgroundColor: ColorDesignTokens.GrayLight,
+    inputBorderColor: ColorDesignTokens.GrayLight,
     fontColor: ColorDesignTokens.White,
     fontGenerateButtonColor: ColorDesignTokens.White,
     borderColor: ColorDesignTokens.GrayLight,
     themeSwitchBackgroundColor:
       ColorDesignTokens.BlackLight,
-    themeSwitchBorderColor: ColorDesignTokens.White,
+    themeCircleBorderColor: ColorDesignTokens.White,
     blue: ColorDesignTokens.BlueDark,
     generateButtonBackgroundColor:
       MediaBreakPointsDesignTokens.media768
@@ -66,5 +74,8 @@ export const DarkTheme: ThemeType = {
     sm: '22px',
     m: '26px',
     l: '36px',
+  },
+  transition: (target: string) => {
+    return `${target ?? 'all'} 0.3s ease-in-out`;
   },
 } as const;
