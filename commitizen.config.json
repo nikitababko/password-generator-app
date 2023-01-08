@@ -99,6 +99,9 @@
     },
     {
       "name": "components"
+    },
+    {
+      "name": "pages"
     }
   ],
   "allowCustomScopes": true,
