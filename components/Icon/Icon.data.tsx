@@ -1,7 +1,7 @@
-import { IconItemType } from './Icon.types';
+import { IconItemsType } from './Icon.types';
 import { ColorDesignTokens } from '../../utils/designTokens';
 
-export const IconItem: IconItemType = {
+export const IconItems: IconItemsType = {
   FlagUs: () => (
     <>
       <g clipPath="url(#clip0_345_393)">

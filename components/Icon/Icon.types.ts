@@ -1,6 +1,6 @@
 import React from 'react';
 
-type IconItemKeyType =
+type IconItemsKeyType =
   | 'FlagUs'
   | 'FlagRu'
   | 'FlagPl'
@@ -20,13 +20,23 @@ type IconItemKeyType =
   | 'ChevronDown'
   | 'CheckMark';
 
-export type IconItemType = Record<
-  IconItemKeyType,
+export type IconItemsType = Record<
+  IconItemsKeyType,
   () => React.ReactNode
 >;
 
 export type IconProps = {
-  name: IconItemKeyType;
+  name: IconItemsKeyType;
   width?: number;
   height?: number;
+  style?: React.CSSProperties | undefined;
 };
+
+export type IconContainerStylesType = {
+  width?: number;
+  height?: number;
+  style?: React.CSSProperties | undefined;
+};
+
+export type IconContainerAttrsType =
+  IconContainerStylesType;
