@@ -1,24 +1,20 @@
 import React from 'react';
 
-import { IconItem } from './Icon.data';
+import { IconItems } from './Icon.data';
 import { IconProps } from './Icon.types';
+import { Container } from './Icon.styles';
 
 export const Icon: React.FC<IconProps> = ({
   name,
   width,
   height,
+  style,
 }) => {
-  const Component = IconItem[name]();
+  const Component = IconItems[name]();
 
   return (
-    <svg
-      width={width ?? '22'}
-      height={height ?? '17'}
-      viewBox={`0 0 ${width ?? '22'} ${height ?? '17'}`}
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <Container style={style} width={width} height={height}>
       {Component}
-    </svg>
+    </Container>
   );
 };
