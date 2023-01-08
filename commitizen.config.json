@@ -93,6 +93,9 @@
     },
     {
       "name": "utils"
+    },
+    {
+      "name": "hooks"
     }
   ],
   "allowCustomScopes": true,
