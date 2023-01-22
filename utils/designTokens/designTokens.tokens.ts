@@ -19,8 +19,8 @@ export const ColorDesignTokens: ColorDesignTokensType = {
   BlackLight: '#2E3D54',
   GrayLight: '#F0F4F7',
   GrayDark: '#979797',
-  YellowDark: '#FFBB52',
-  YellowLight: '#FFECCF',
+  YellowDark: '#F5EB71',
+  YellowLight: '#FFFAA8',
   White: '#FFFFFF',
 } as const;
 
@@ -41,6 +41,7 @@ export const LightTheme: ThemeType = {
     generateButtonBackgroundColor:
       ColorDesignTokens.BlackLight,
   },
+  // TODO: Make common object {...fontSizes, transition}
   fontSizes: {
     sm: '22px',
     m: '26px',
@@ -70,6 +71,7 @@ export const DarkTheme: ThemeType = {
         ? ColorDesignTokens.BlackDark
         : ColorDesignTokens.BlackLight,
   },
+  // TODO: Make common object {...fontSizes, transition}
   fontSizes: {
     sm: '22px',
     m: '26px',

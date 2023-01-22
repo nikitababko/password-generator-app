@@ -1,66 +1,55 @@
-type MediaBreakPointsDesignTokensKeysType =
-  | 'media1920'
-  | 'media768'
-  | 'media480';
-type MediaBreakPointsDesignTokensValuesType =
-  | 1920
-  | 768
-  | 480;
-export type MediaBreakPointsDesignTokensType = Record<
-  MediaBreakPointsDesignTokensKeysType,
-  MediaBreakPointsDesignTokensValuesType
->;
+export type MediaBreakPointsDesignTokensType = {
+  media1920: 1920;
+  media768: 768;
+  media480: 480;
+};
 
-type ColorDesignTokensKeysType =
-  | 'BlueDark'
-  | 'BlueMedium'
-  | 'BlueLight'
-  | 'BlackDark'
-  | 'BlackLight'
-  | 'GrayLight'
-  | 'GrayDark'
-  | 'YellowDark'
-  | 'YellowLight'
-  | 'White';
-type ColorDesignTokensValuesType =
-  | '#157AF5'
-  | '#DAE6FF'
-  | '#E9F4FE'
-  | '#222222'
-  | '#2E3D54'
-  | '#F0F4F7'
-  | '#979797'
-  | '#FFBB52'
-  | '#FFECCF'
-  | '#FFFFFF';
-export type ColorDesignTokensType = Record<
-  ColorDesignTokensKeysType,
-  ColorDesignTokensValuesType
->;
+export type ColorDesignTokensType = {
+  BlueDark: '#157AF5';
+  BlueMedium: '#DAE6FF';
+  BlueLight: '#E9F4FE';
+  BlackDark: '#222222';
+  BlackLight: '#2E3D54';
+  GrayLight: '#F0F4F7';
+  GrayDark: '#979797';
+  YellowDark: '#F5EB71';
+  YellowLight: '#FFFAA8';
+  White: '#FFFFFF';
+};
 
-type ThemeColorsKeysType =
-  | 'backgroundColor'
-  | 'foregroundColor'
-  | 'labelBackgroundColor'
-  | 'inputBackgroundColor'
-  | 'fontColor'
-  | 'fontGenerateButtonColor'
-  | 'borderColor'
-  | 'themeSwitchBackgroundColor'
-  | 'themeCircleBorderColor'
-  | 'inputBorderColor'
-  | 'blue'
-  | 'generateButtonBackgroundColor';
-type ThemeFontSizesKeysType = 'sm' | 'm' | 'l';
-type ThemeFontSizesValuesType = '22px' | '26px' | '36px';
 export type ThemeType = {
-  colors: Record<
-    ThemeColorsKeysType,
-    ColorDesignTokensValuesType
-  >;
-  fontSizes: Record<
-    ThemeFontSizesKeysType,
-    ThemeFontSizesValuesType
-  >;
+  colors: {
+    backgroundColor: ColorDesignTokensType[
+      | 'BlueLight'
+      | 'BlackLight'];
+    foregroundColor: ColorDesignTokensType[
+      | 'White'
+      | 'GrayDark'];
+    labelBackgroundColor: ColorDesignTokensType['GrayLight'];
+    inputBackgroundColor: ColorDesignTokensType[
+      | 'White'
+      | 'GrayLight'];
+    inputBorderColor: ColorDesignTokensType['GrayLight'];
+    fontColor: ColorDesignTokensType['BlackDark' | 'White'];
+    fontGenerateButtonColor: ColorDesignTokensType['White'];
+    borderColor: ColorDesignTokensType[
+      | 'BlackLight'
+      | 'GrayLight'];
+    themeSwitchBackgroundColor: ColorDesignTokensType[
+      | 'YellowLight'
+      | 'BlackLight'];
+    themeCircleBorderColor: ColorDesignTokensType[
+      | 'YellowDark'
+      | 'White'];
+    blue: ColorDesignTokensType['BlueDark'];
+    generateButtonBackgroundColor: ColorDesignTokensType[
+      | 'BlackLight'
+      | 'BlackDark'];
+  };
+  fontSizes: {
+    sm: '22px';
+    m: '26px';
+    l: '36px';
+  };
   transition: (target: string) => string;
 };
