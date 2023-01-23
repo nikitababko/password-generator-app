@@ -25,14 +25,6 @@
     "es6": true,
     "browser": true
   },
-  "overrides": [
-    {
-      "files": [
-        "*.ts",
-        "*.tsx"
-      ]
-    }
-  ],
   "rules": {
     "no-console": [
       "error",
@@ -46,7 +38,12 @@
       "error",
       {
         "ignoreEnums": true,
-        "ignoreNumericLiteralTypes": true
+        "ignoreNumericLiteralTypes": true,
+        "ignore": [
+          1920,
+          768,
+          480
+        ]
       }
     ],
     "import/prefer-default-export": "off",
