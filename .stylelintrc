@@ -5,16 +5,9 @@
     "stylelint-config-prettier"
   ],
   "customSyntax": "@stylelint/postcss-css-in-js",
-  "overrides": [
-    {
-      "files": [
-        "**/*.styles.{ts,tsx}"
-      ],
-      "rules": {
-        "no-empty-first-line": null,
-        "scss/operator-no-unspaced": null,
-        "value-keyword-case": null
-      }
-    }
-  ]
+  "rules": {
+    "no-empty-first-line": null,
+    "scss/operator-no-unspaced": null,
+    "value-keyword-case": null
+  }
 }
