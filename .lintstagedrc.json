@@ -1,8 +1,8 @@
 {
   "**/*.{js,jsx,ts,tsx}": [
-    "eslint --max-warnings=0",
     "npx prettier --write",
-    "npx eslint ."
+    "npx eslint --fix",
+    "eslint --max-warnings=0"
   ],
   "**/*.styles.{ts,tsx}": [
     "stylelint --config .stylelintrc"
