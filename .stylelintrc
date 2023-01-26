@@ -8,6 +8,7 @@
   "rules": {
     "no-empty-first-line": null,
     "scss/operator-no-unspaced": null,
-    "value-keyword-case": null
+    "value-keyword-case": null,
+    "function-whitespace-after": null
   }
 }
