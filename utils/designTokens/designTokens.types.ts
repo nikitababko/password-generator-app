@@ -51,5 +51,5 @@ export type ThemeType = {
     m: '26px';
     l: '36px';
   };
-  transition: (target: string) => string;
+  animation: string;
 };

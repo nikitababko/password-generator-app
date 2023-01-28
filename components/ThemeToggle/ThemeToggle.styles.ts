@@ -49,9 +49,7 @@ export const Container = styled.div<ThemeStylesType>`
     return isDay ? '#96dcee' : '#808fc7';
   }};
   transition: ${({ theme }) => {
-    return `${theme.transition(
-      'background-color',
-    )}, ${theme.transition('border')}`;
+    return `background-color ${theme.animation}, border ${theme.animation}`;
   }};
   cursor: pointer;
 `;
@@ -61,11 +59,11 @@ export const ToggleItem = styled.div<ThemeStylesType>`
   top: 50%;
   left: 5px;
   z-index: 2;
-  animation: ${({ isDay }) => {
+  animation: ${({ theme, isDay }) => {
     return css`
       ${isDay
         ? sunRightToLeftAnimation
-        : sunLeftToRightAnimation} 0.3s ease-in-out forwards
+        : sunLeftToRightAnimation} ${theme.animation} forwards
     `;
   }};
   transform: translateY(-50%);
@@ -94,7 +92,7 @@ export const ToggleItem = styled.div<ThemeStylesType>`
         : ThemeToggleOpacityState.One;
     }};
     transition: ${({ theme }) => {
-      return theme.transition('opacity');
+      return `opacity ${theme.animation}`;
     }};
   }
 
@@ -113,7 +111,7 @@ export const ToggleItem = styled.div<ThemeStylesType>`
         : ThemeToggleOpacityState.One;
     }};
     transition: ${({ theme }) => {
-      return theme.transition('opacity');
+      return `opacity ${theme.animation}`;
     }};
   }
 `;
@@ -129,9 +127,7 @@ export const Cloud = styled.div<ThemeStylesType>`
       : ThemeToggleOpacityState.Zero;
   }};
   transition: ${({ theme }) => {
-    return `${theme.transition(
-      'right',
-    )}, ${theme.transition('opacity')}`;
+    return `right ${theme.animation}, opacity ${theme.animation}`;
   }};
   background: ${ColorDesignTokens.White};
   height: 15px;
@@ -154,9 +150,7 @@ export const Stars = styled.div<ThemeStylesType>`
       : ThemeToggleOpacityState.One;
   }};
   transition: ${({ theme }) => {
-    return `${theme.transition('left')}, ${theme.transition(
-      'opacity',
-    )}`;
+    return `left ${theme.animation}, opacity ${theme.animation}`;
   }};
   transform: translateY(-50%);
   background-color: ${ColorDesignTokens.White};

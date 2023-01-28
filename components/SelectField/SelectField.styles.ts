@@ -31,6 +31,6 @@ export const ChevronWrapper = styled.div<ChevronWrapperStylesType>`
     return `rotate(${isOpen ? '180deg' : '0'})`;
   }};
   transition: ${({ theme }) => {
-    return theme.transition('transform');
+    return `transform ${theme.animation}`;
   }};
 `;

@@ -47,9 +47,7 @@ export const LightTheme: ThemeType = {
     m: '26px',
     l: '36px',
   },
-  transition: (target: string) => {
-    return `${target ?? 'all'} 0.3s ease-in-out`;
-  },
+  animation: '0.3s ease-in-out',
 } as const;
 
 export const DarkTheme: ThemeType = {
@@ -77,7 +75,5 @@ export const DarkTheme: ThemeType = {
     m: '26px',
     l: '36px',
   },
-  transition: (target: string) => {
-    return `${target ?? 'all'} 0.3s ease-in-out`;
-  },
+  animation: '0.3s ease-in-out',
 } as const;

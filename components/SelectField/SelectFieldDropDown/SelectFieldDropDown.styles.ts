@@ -13,9 +13,7 @@ export const Container = styled.div<SelectFieldDropDownContainerStylesType>`
   width: 100%;
   height: ${({ isOpen }) => (isOpen ? '300px' : '0')};
   transition: ${({ theme }) => {
-    return `${theme.transition(
-      'padding',
-    )}, ${theme.transition('height')}`;
+    return `padding ${theme.animation}, height ${theme.animation}`;
   }};
   overflow-y: scroll;
   background-color: ${({ theme }) => {
@@ -35,7 +33,6 @@ export const Container = styled.div<SelectFieldDropDownContainerStylesType>`
   }
 
   &::-webkit-scrollbar-thumb {
-    transition: ${({ theme }) => theme.transition('all')};
     border-radius: 12px;
     background: ${ColorDesignTokens.GrayDark};
   }

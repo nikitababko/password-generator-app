@@ -20,11 +20,9 @@ export const Container = styled.div<SelectFieldItemContainerStylesType>`
       `
         padding: 12px 14px;
         &:hover {
-          background-color: ${
-            ColorDesignTokens.BlueMedium
-          };  
+          background-color: ${ColorDesignTokens.BlueMedium};  
         }
-        transition: ${theme.transition('background-color')};
+        transition: background-color ${theme.animation};
       `
     );
   }};
