@@ -6,11 +6,17 @@ export const Container = styled.div<SelectFieldDropDownContainerStylesType>`
   position: absolute;
   top: 58px;
   left: 0;
-  display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
   flex-direction: column;
-  padding: 12px 6px;
+  padding: ${({ isOpen }) => {
+    return `${isOpen ? '12px' : '0'} 6px`;
+  }};
   width: 100%;
-  height: 300px;
+  height: ${({ isOpen }) => (isOpen ? '300px' : '0')};
+  transition: ${({ theme }) => {
+    return `${theme.transition(
+      'padding',
+    )}, ${theme.transition('height')}`;
+  }};
   overflow-y: scroll;
   background-color: ${({ theme }) => {
     return theme.colors.inputBackgroundColor;

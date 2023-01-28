@@ -34,15 +34,13 @@ export const SelectField: React.FC<SelectFieldProps> = ({
         </ChevronWrapper>
       </Content>
 
-      {isOpen && (
-        <DropDown
-          data={data}
-          isOpen={isOpen}
-          setSelectedItem={setSelectedItem}
-          setIsOpen={setIsOpen}
-          selectedItem={selectedItem}
-        />
-      )}
+      <DropDown
+        data={data}
+        isOpen={isOpen}
+        setSelectedItem={setSelectedItem}
+        setIsOpen={setIsOpen}
+        selectedItem={selectedItem}
+      />
     </Container>
   );
 };
