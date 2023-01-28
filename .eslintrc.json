@@ -25,28 +25,36 @@
     "es6": true,
     "browser": true
   },
-  "rules": {
-    "no-console": [
-      "error",
-      {
-        "allow": [
-          "error"
-        ]
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "rules": {
+        "no-console": [
+          "error",
+          {
+            "allow": [
+              "error"
+            ]
+          }
+        ],
+        "@typescript-eslint/no-magic-numbers": [
+          "error",
+          {
+            "ignoreEnums": true,
+            "ignoreNumericLiteralTypes": true,
+            "ignore": [
+              1920,
+              768,
+              480
+            ]
+          }
+        ],
+        "import/prefer-default-export": "off",
+        "@typescript-eslint/indent": "off"
       }
-    ],
-    "@typescript-eslint/no-magic-numbers": [
-      "error",
-      {
-        "ignoreEnums": true,
-        "ignoreNumericLiteralTypes": true,
-        "ignore": [
-          1920,
-          768,
-          480
-        ]
-      }
-    ],
-    "import/prefer-default-export": "off",
-    "@typescript-eslint/indent": "off"
-  }
+    }
+  ]
 }
