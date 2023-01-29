@@ -28,16 +28,12 @@ export const LightTheme: ThemeType = {
   colors: {
     backgroundColor: ColorDesignTokens.BlueLight,
     foregroundColor: ColorDesignTokens.White,
-    labelBackgroundColor: ColorDesignTokens.GrayLight,
-    inputBackgroundColor: ColorDesignTokens.White,
-    inputBorderColor: ColorDesignTokens.GrayLight,
+    formItemLeftColBackgroundColor:
+      ColorDesignTokens.GrayLight,
+    selectBackgroundColor: ColorDesignTokens.White,
     fontColor: ColorDesignTokens.BlackDark,
     fontGenerateButtonColor: ColorDesignTokens.White,
     borderColor: ColorDesignTokens.BlackLight,
-    themeSwitchBackgroundColor:
-      ColorDesignTokens.YellowLight,
-    themeCircleBorderColor: ColorDesignTokens.YellowDark,
-    blue: ColorDesignTokens.BlueDark,
     generateButtonBackgroundColor:
       ColorDesignTokens.BlackLight,
   },
@@ -54,16 +50,12 @@ export const DarkTheme: ThemeType = {
   colors: {
     backgroundColor: ColorDesignTokens.BlackLight,
     foregroundColor: ColorDesignTokens.GrayDark,
-    labelBackgroundColor: ColorDesignTokens.GrayLight,
-    inputBackgroundColor: ColorDesignTokens.GrayLight,
-    inputBorderColor: ColorDesignTokens.GrayLight,
+    formItemLeftColBackgroundColor:
+      ColorDesignTokens.GrayLight,
+    selectBackgroundColor: ColorDesignTokens.GrayLight,
     fontColor: ColorDesignTokens.White,
     fontGenerateButtonColor: ColorDesignTokens.White,
     borderColor: ColorDesignTokens.GrayLight,
-    themeSwitchBackgroundColor:
-      ColorDesignTokens.BlackLight,
-    themeCircleBorderColor: ColorDesignTokens.White,
-    blue: ColorDesignTokens.BlueDark,
     generateButtonBackgroundColor:
       MediaBreakPointsDesignTokens.media768
         ? ColorDesignTokens.BlackDark

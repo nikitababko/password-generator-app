@@ -17,12 +17,9 @@ export const Content = styled.div`
   width: 100%;
   height: 100%;
   background-color: ${({ theme }) => {
-    return theme.colors.inputBackgroundColor;
+    return theme.colors.selectBackgroundColor;
   }};
   border-radius: 12px;
-  border: ${({ theme }) => {
-    return `2px solid ${theme.colors.inputBorderColor}`;
-  }};
   cursor: pointer;
 `;
 

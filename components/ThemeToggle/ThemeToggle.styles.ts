@@ -70,12 +70,8 @@ export const ToggleItem = styled.div<ThemeStylesType>`
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: ${({ theme }) => {
-    return `3px solid ${theme.colors.themeCircleBorderColor}`;
-  }};
-  background-color: ${({ theme }) => {
-    return theme.colors.themeSwitchBackgroundColor;
-  }};
+  border: 3px solid ${ColorDesignTokens.YellowDark};
+  background-color: ${ColorDesignTokens.YellowLight};
 
   &::before {
     content: '';

@@ -25,23 +25,15 @@ export type ThemeType = {
     foregroundColor: ColorDesignTokensType[
       | 'White'
       | 'GrayDark'];
-    labelBackgroundColor: ColorDesignTokensType['GrayLight'];
-    inputBackgroundColor: ColorDesignTokensType[
+    formItemLeftColBackgroundColor: ColorDesignTokensType['GrayLight'];
+    selectBackgroundColor: ColorDesignTokensType[
       | 'White'
       | 'GrayLight'];
-    inputBorderColor: ColorDesignTokensType['GrayLight'];
     fontColor: ColorDesignTokensType['BlackDark' | 'White'];
     fontGenerateButtonColor: ColorDesignTokensType['White'];
     borderColor: ColorDesignTokensType[
       | 'BlackLight'
       | 'GrayLight'];
-    themeSwitchBackgroundColor: ColorDesignTokensType[
-      | 'YellowLight'
-      | 'BlackLight'];
-    themeCircleBorderColor: ColorDesignTokensType[
-      | 'YellowDark'
-      | 'White'];
-    blue: ColorDesignTokensType['BlueDark'];
     generateButtonBackgroundColor: ColorDesignTokensType[
       | 'BlackLight'
       | 'BlackDark'];

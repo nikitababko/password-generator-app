@@ -4,7 +4,7 @@ import { ColorDesignTokens } from '../../../utils/designTokens';
 
 export const Container = styled.div<SelectFieldDropDownContainerStylesType>`
   position: absolute;
-  top: 58px;
+  top: 60px;
   left: 0;
   flex-direction: column;
   padding: ${({ isOpen }) => {
@@ -12,16 +12,13 @@ export const Container = styled.div<SelectFieldDropDownContainerStylesType>`
   }};
   width: 100%;
   height: ${({ isOpen }) => (isOpen ? '300px' : '0')};
-  transition: ${({ theme }) => {
-    return `padding ${theme.animation}, height ${theme.animation}`;
-  }};
   overflow-y: scroll;
   background-color: ${({ theme }) => {
-    return theme.colors.inputBackgroundColor;
+    return theme.colors.selectBackgroundColor;
   }};
   border-radius: 12px;
-  border: ${({ theme }) => {
-    return `2px solid ${theme.colors.inputBorderColor}`;
+  transition: ${({ theme }) => {
+    return `padding ${theme.animation}, height ${theme.animation}`;
   }};
 
   &::-webkit-scrollbar {
