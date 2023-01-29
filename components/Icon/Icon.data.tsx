@@ -3195,7 +3195,7 @@ export const IconItems: IconItemsType = {
   ChevronUp: () => (
     <path
       d="M20 15L12 7L4 15"
-      stroke={ColorDesignTokens.BlueDark}
+      stroke={ColorDesignTokens.Blue}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -3204,7 +3204,7 @@ export const IconItems: IconItemsType = {
   ChevronDown: () => (
     <path
       d="M4 9L12 17L20 9"
-      stroke={ColorDesignTokens.BlueDark}
+      stroke={ColorDesignTokens.Blue}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"

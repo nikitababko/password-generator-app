@@ -12,15 +12,20 @@ export const MediaBreakPointsDesignTokens: MediaBreakPointsDesignTokensType =
   } as const;
 
 export const ColorDesignTokens: ColorDesignTokensType = {
-  BlueDark: '#157AF5',
-  BlueMedium: '#DAE6FF',
+  Blue: '#157AF5',
+  BlueDarkTurquoise: '#72cce3',
+  BlueTurquoise: '#96dcee',
+  BlueDarkSlate: '#5d6baa',
+  BlueSlate: '#808fc7',
+  BlueLightSky: '#DAE6FF',
   BlueLight: '#E9F4FE',
-  BlackDark: '#222222',
+  Black: '#222222',
   BlackLight: '#2E3D54',
   GrayLight: '#F0F4F7',
   GrayDark: '#979797',
-  YellowDark: '#F5EB71',
-  YellowLight: '#FFFAA8',
+  GrayDim: '#6B7382',
+  Yellow: '#F5EB71',
+  YellowCorn: '#FFFAA8',
   White: '#FFFFFF',
 } as const;
 
@@ -31,7 +36,7 @@ export const LightTheme: ThemeType = {
     formItemLeftColBackgroundColor:
       ColorDesignTokens.GrayLight,
     selectBackgroundColor: ColorDesignTokens.White,
-    fontColor: ColorDesignTokens.BlackDark,
+    fontColor: ColorDesignTokens.Black,
     fontGenerateButtonColor: ColorDesignTokens.White,
     borderColor: ColorDesignTokens.BlackLight,
     generateButtonBackgroundColor:
@@ -58,7 +63,7 @@ export const DarkTheme: ThemeType = {
     borderColor: ColorDesignTokens.GrayLight,
     generateButtonBackgroundColor:
       MediaBreakPointsDesignTokens.media768
-        ? ColorDesignTokens.BlackDark
+        ? ColorDesignTokens.Black
         : ColorDesignTokens.BlackLight,
   },
   // TODO: Make common object {...fontSizes, transition}

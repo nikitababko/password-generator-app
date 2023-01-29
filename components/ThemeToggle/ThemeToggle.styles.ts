@@ -43,10 +43,16 @@ export const Container = styled.div<ThemeStylesType>`
   height: 100%;
   border-radius: 100px;
   border: ${({ isDay }) => {
-    return `2px solid ${isDay ? '#72cce3' : '#5d6baa'}`;
+    return `2px solid ${
+      isDay
+        ? ColorDesignTokens.BlueDarkTurquoise
+        : ColorDesignTokens.BlueDarkSlate
+    }`;
   }};
   background-color: ${({ isDay }) => {
-    return isDay ? '#96dcee' : '#808fc7';
+    return isDay
+      ? ColorDesignTokens.BlueTurquoise
+      : ColorDesignTokens.BlueSlate;
   }};
   transition: ${({ theme }) => {
     return `background-color ${theme.animation}, border ${theme.animation}`;
@@ -70,8 +76,8 @@ export const ToggleItem = styled.div<ThemeStylesType>`
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 3px solid ${ColorDesignTokens.YellowDark};
-  background-color: ${ColorDesignTokens.YellowLight};
+  border: 3px solid ${ColorDesignTokens.Yellow};
+  background-color: ${ColorDesignTokens.YellowCorn};
 
   &::before {
     content: '';

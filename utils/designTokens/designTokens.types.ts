@@ -5,15 +5,20 @@ export type MediaBreakPointsDesignTokensType = {
 };
 
 export type ColorDesignTokensType = {
-  BlueDark: '#157AF5';
-  BlueMedium: '#DAE6FF';
+  Blue: '#157AF5';
+  BlueDarkTurquoise: '#72cce3';
+  BlueTurquoise: '#96dcee';
+  BlueDarkSlate: '#5d6baa';
+  BlueSlate: '#808fc7';
+  BlueLightSky: '#DAE6FF';
   BlueLight: '#E9F4FE';
-  BlackDark: '#222222';
+  Black: '#222222';
   BlackLight: '#2E3D54';
   GrayLight: '#F0F4F7';
   GrayDark: '#979797';
-  YellowDark: '#F5EB71';
-  YellowLight: '#FFFAA8';
+  GrayDim: '#6B7382';
+  Yellow: '#F5EB71';
+  YellowCorn: '#FFFAA8';
   White: '#FFFFFF';
 };
 
@@ -29,14 +34,14 @@ export type ThemeType = {
     selectBackgroundColor: ColorDesignTokensType[
       | 'White'
       | 'GrayLight'];
-    fontColor: ColorDesignTokensType['BlackDark' | 'White'];
+    fontColor: ColorDesignTokensType['Black' | 'White'];
     fontGenerateButtonColor: ColorDesignTokensType['White'];
     borderColor: ColorDesignTokensType[
       | 'BlackLight'
       | 'GrayLight'];
     generateButtonBackgroundColor: ColorDesignTokensType[
       | 'BlackLight'
-      | 'BlackDark'];
+      | 'Black'];
   };
   fontSizes: {
     sm: '22px';

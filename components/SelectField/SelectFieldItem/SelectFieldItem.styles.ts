@@ -11,7 +11,7 @@ export const Container = styled.div<SelectFieldItemContainerStylesType>`
   cursor: pointer;
   background-color: ${({ selectedItemEqualToItem }) => {
     return selectedItemEqualToItem
-      ? ColorDesignTokens.BlueMedium
+      ? ColorDesignTokens.BlueLightSky
       : 'transparent';
   }};
   ${({ theme, isDropDownItem }) => {
@@ -20,7 +20,7 @@ export const Container = styled.div<SelectFieldItemContainerStylesType>`
       `
         padding: 12px 14px;
         &:hover {
-          background-color: ${ColorDesignTokens.BlueMedium};  
+          background-color: ${ColorDesignTokens.BlueLightSky};  
         }
         transition: background-color ${theme.animation};
       `
