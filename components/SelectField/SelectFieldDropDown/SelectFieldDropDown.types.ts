@@ -12,6 +12,6 @@ export type SelectFieldDropDownProps = {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export type SelectFieldDropDownContainerStylesType = {
+export type SelectFieldDropDownContainerStylesProps = {
   isOpen: boolean;
 };
