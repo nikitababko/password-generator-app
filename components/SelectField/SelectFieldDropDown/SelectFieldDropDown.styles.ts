@@ -1,11 +1,12 @@
 import styled from 'styled-components';
-import { SelectFieldDropDownContainerStylesType } from './SelectFieldDropDown.types';
+import { SelectFieldDropDownContainerStylesProps } from './SelectFieldDropDown.types';
 import { ColorDesignTokens } from '../../../utils/designTokens';
 
-export const Container = styled.div<SelectFieldDropDownContainerStylesType>`
+export const Container = styled.div<SelectFieldDropDownContainerStylesProps>`
   position: absolute;
   top: 60px;
   left: 0;
+  z-index: 999;
   flex-direction: column;
   padding: ${({ isOpen }) => {
     return `${isOpen ? '12px' : '0'} 6px`;
