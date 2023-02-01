@@ -27,7 +27,7 @@ export const SelectField: React.FC<SelectFieldProps> = ({
   } = useSelectFieldController(data[firstItem]);
 
   return (
-    <Container ref={ref} style={styles}>
+    <Container ref={ref} styles={styles}>
       <Content onClick={handleClick}>
         <SelectFieldItem item={selectedItem} />
         <ChevronWrapper isOpen={isOpen}>
