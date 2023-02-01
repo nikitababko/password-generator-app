@@ -8,11 +8,20 @@ export type SelectFieldItemType = {
 
 export type SelectFieldProps = {
   data: SelectFieldItemType[];
+  styles?: Partial<{
+    maxWidth: string;
+    // backgroundColor: keyof ColorDesignTokensType;
+  }>;
 };
 
-export type ChevronWrapperStylesType = {
+export type ChevronWrapperProps = {
   isOpen: boolean;
 };
+
+export type ContainerStylesProps = Pick<
+  SelectFieldProps,
+  'styles'
+>;
 
 export type UseSelectFieldControllerType = (
   firstItem: SelectFieldItemType,

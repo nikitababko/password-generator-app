@@ -1,11 +1,14 @@
 import styled from 'styled-components';
 
-import { ChevronWrapperStylesType } from './SelectField.types';
+import {
+  ChevronWrapperProps,
+  ContainerStylesProps,
+} from './SelectField.types';
 
-export const Container = styled.div`
+export const Container = styled.div<ContainerStylesProps>`
   position: relative;
   width: 100%;
-  max-width: 196px;
+  max-width: ${({ styles }) => styles?.maxWidth ?? '196px'};
   height: 55px;
 `;
 
@@ -23,7 +26,7 @@ export const Content = styled.div`
   cursor: pointer;
 `;
 
-export const ChevronWrapper = styled.div<ChevronWrapperStylesType>`
+export const ChevronWrapper = styled.div<ChevronWrapperProps>`
   transform: ${({ isOpen }) => {
     return `rotate(${isOpen ? '180deg' : '0'})`;
   }};
