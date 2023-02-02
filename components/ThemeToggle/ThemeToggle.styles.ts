@@ -12,7 +12,7 @@ const ThemeToggleOpacityState: ThemeToggleOpacityStateType =
     One: 1,
   } as const;
 
-const sunLeftToRightAnimation = keyframes`
+const itemLeftToRightAnimation = keyframes`
   0% {
     left: 5px;
   }
@@ -24,7 +24,7 @@ const sunLeftToRightAnimation = keyframes`
   }
 `;
 
-const sunRightToLeftAnimation = keyframes`
+const itemRightToLeftAnimation = keyframes`
   0% {
     left: 48px;
   }
@@ -68,8 +68,8 @@ export const ToggleItem = styled.div<ThemeStylesType>`
   animation: ${({ theme, isDay }) => {
     return css`
       ${isDay
-        ? sunRightToLeftAnimation
-        : sunLeftToRightAnimation} ${theme.animation} forwards
+        ? itemRightToLeftAnimation
+        : itemLeftToRightAnimation} ${theme.animation} forwards
     `;
   }};
   transform: translateY(-50%);
