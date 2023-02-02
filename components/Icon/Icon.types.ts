@@ -18,6 +18,7 @@ type IconItemsKeyType =
   | 'FlagAe'
   | 'ChevronUp'
   | 'ChevronDown'
+  | 'ArrowRepeat'
   | 'CheckMark';
 
 export type IconItemsType = Record<
