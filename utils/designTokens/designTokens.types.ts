@@ -48,5 +48,4 @@ export type ThemeType = {
     m: '26px';
     l: '36px';
   };
-  animation: string;
 };

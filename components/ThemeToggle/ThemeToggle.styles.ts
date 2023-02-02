@@ -4,7 +4,10 @@ import {
   ThemeStylesType,
   ThemeToggleOpacityStateType,
 } from './ThemeToggle.types';
-import { ColorDesignTokens } from '../../utils/designTokens';
+import {
+  Animation,
+  ColorDesignTokens,
+} from '../../utils/designTokens';
 
 const ThemeToggleOpacityState: ThemeToggleOpacityStateType =
   {
@@ -54,9 +57,8 @@ export const Container = styled.div<ThemeStylesType>`
       ? ColorDesignTokens.BlueTurquoise
       : ColorDesignTokens.BlueSlate;
   }};
-  transition: ${({ theme }) => {
-    return `background-color ${theme.animation}, border ${theme.animation}`;
-  }};
+  transition: background-color ${Animation},
+    border ${Animation};
   cursor: pointer;
 `;
 
@@ -65,11 +67,11 @@ export const ToggleItem = styled.div<ThemeStylesType>`
   top: 50%;
   left: 5px;
   z-index: 2;
-  animation: ${({ theme, isDay }) => {
+  animation: ${({ isDay }) => {
     return css`
       ${isDay
         ? itemRightToLeftAnimation
-        : itemLeftToRightAnimation} ${theme.animation} forwards
+        : itemLeftToRightAnimation} ${Animation} forwards
     `;
   }};
   transform: translateY(-50%);
@@ -93,9 +95,7 @@ export const ToggleItem = styled.div<ThemeStylesType>`
         ? ThemeToggleOpacityState.Zero
         : ThemeToggleOpacityState.One;
     }};
-    transition: ${({ theme }) => {
-      return `opacity ${theme.animation}`;
-    }};
+    transition: opacity ${Animation};
   }
 
   &::after {
@@ -112,9 +112,7 @@ export const ToggleItem = styled.div<ThemeStylesType>`
         ? ThemeToggleOpacityState.Zero
         : ThemeToggleOpacityState.One;
     }};
-    transition: ${({ theme }) => {
-      return `opacity ${theme.animation}`;
-    }};
+    transition: opacity ${Animation};
   }
 `;
 
@@ -128,9 +126,7 @@ export const Cloud = styled.div<ThemeStylesType>`
       ? ThemeToggleOpacityState.One
       : ThemeToggleOpacityState.Zero;
   }};
-  transition: ${({ theme }) => {
-    return `right ${theme.animation}, opacity ${theme.animation}`;
-  }};
+  transition: right ${Animation}, opacity ${Animation};
   background: ${ColorDesignTokens.White};
   height: 15px;
   width: 15px;
@@ -151,9 +147,7 @@ export const Stars = styled.div<ThemeStylesType>`
       ? ThemeToggleOpacityState.Zero
       : ThemeToggleOpacityState.One;
   }};
-  transition: ${({ theme }) => {
-    return `left ${theme.animation}, opacity ${theme.animation}`;
-  }};
+  transition: left ${Animation}, opacity ${Animation};
   transform: translateY(-50%);
   background-color: ${ColorDesignTokens.White};
   height: 7px;

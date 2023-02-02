@@ -29,6 +29,8 @@ export const ColorDesignTokens: ColorDesignTokensType = {
   White: '#FFFFFF',
 } as const;
 
+export const Animation = '0.3s ease-in-out';
+
 export const LightTheme: ThemeType = {
   colors: {
     backgroundColor: ColorDesignTokens.BlueLight,
@@ -48,7 +50,6 @@ export const LightTheme: ThemeType = {
     m: '26px',
     l: '36px',
   },
-  animation: '0.3s ease-in-out',
 } as const;
 
 export const DarkTheme: ThemeType = {
@@ -72,5 +73,4 @@ export const DarkTheme: ThemeType = {
     m: '26px',
     l: '36px',
   },
-  animation: '0.3s ease-in-out',
 } as const;

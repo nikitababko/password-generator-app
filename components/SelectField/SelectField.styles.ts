@@ -4,6 +4,7 @@ import {
   ChevronWrapperProps,
   ContainerStylesProps,
 } from './SelectField.types';
+import { Animation } from '../../utils/designTokens';
 
 export const Container = styled.div<ContainerStylesProps>`
   position: relative;
@@ -30,7 +31,5 @@ export const ChevronWrapper = styled.div<ChevronWrapperProps>`
   transform: ${({ isOpen }) => {
     return `rotate(${isOpen ? '180deg' : '0'})`;
   }};
-  transition: ${({ theme }) => {
-    return `transform ${theme.animation}`;
-  }};
+  transition: transform ${Animation};
 `;

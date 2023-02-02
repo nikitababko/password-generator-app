@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
-import { ColorDesignTokens } from '../../../../utils/designTokens';
+import {
+  Animation,
+  ColorDesignTokens,
+} from '../../../../utils/designTokens';
 
 import { FormItemSwitchPropsStylesContainer } from './FormItemSwitch.types';
 
@@ -15,9 +18,7 @@ export const Container = styled.div<FormItemSwitchPropsStylesContainer>`
   }};
   border-radius: 26px;
   cursor: pointer;
-  transition: ${({ theme }) => {
-    return `background-color ${theme.animation}`;
-  }};
+  transition: background-color ${Animation};
 
   &::after {
     content: '';
@@ -33,8 +34,7 @@ export const Container = styled.div<FormItemSwitchPropsStylesContainer>`
         : ColorDesignTokens.GrayDim;
     }};
     border-radius: 50%;
-    transition: ${({ theme }) => {
-      return `left ${theme.animation}, background-color ${theme.animation}`;
-    }};
+    transition: left ${Animation},
+      background-color ${Animation};
   }
 `;

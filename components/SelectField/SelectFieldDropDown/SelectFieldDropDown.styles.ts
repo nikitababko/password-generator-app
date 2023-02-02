@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import { SelectFieldDropDownContainerStylesProps } from './SelectFieldDropDown.types';
-import { ColorDesignTokens } from '../../../utils/designTokens';
+import {
+  Animation,
+  ColorDesignTokens,
+} from '../../../utils/designTokens';
 
 export const Container = styled.div<SelectFieldDropDownContainerStylesProps>`
   position: absolute;
@@ -18,9 +21,7 @@ export const Container = styled.div<SelectFieldDropDownContainerStylesProps>`
     return theme.colors.selectBackgroundColor;
   }};
   border-radius: 12px;
-  transition: ${({ theme }) => {
-    return `padding ${theme.animation}, height ${theme.animation}`;
-  }};
+  transition: padding ${Animation}, height ${Animation};
 
   &::-webkit-scrollbar {
     width: 6px;

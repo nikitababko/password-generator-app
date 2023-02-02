@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
 import { SelectFieldItemContainerStylesType } from './SelectFieldItem.types';
-import { ColorDesignTokens } from '../../../utils/designTokens';
+import {
+  Animation,
+  ColorDesignTokens,
+} from '../../../utils/designTokens';
 
 export const Container = styled.div<SelectFieldItemContainerStylesType>`
   display: flex;
@@ -14,7 +17,7 @@ export const Container = styled.div<SelectFieldItemContainerStylesType>`
       ? ColorDesignTokens.BlueLightSky
       : 'transparent';
   }};
-  ${({ theme, isDropDownItem }) => {
+  ${({ isDropDownItem }) => {
     return (
       isDropDownItem &&
       `
@@ -22,7 +25,7 @@ export const Container = styled.div<SelectFieldItemContainerStylesType>`
         &:hover {
           background-color: ${ColorDesignTokens.BlueLightSky};  
         }
-        transition: background-color ${theme.animation};
+        transition: background-color ${Animation};
       `
     );
   }};
