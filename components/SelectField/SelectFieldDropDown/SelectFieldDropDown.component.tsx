@@ -17,15 +17,15 @@ export const DropDown: React.FC<
 }) => {
   return (
     <Container isOpen={isOpen}>
-      {data.map((item) => (
+      {data.map((selectFieldItem) => (
         <SelectFieldItem
-          key={item.id}
-          item={item}
+          key={selectFieldItem.id}
+          item={selectFieldItem}
           setSelectedItem={setSelectedItem}
           setIsOpen={setIsOpen}
           isDropDownItem={true}
           selectedItemEqualToItem={
-            item.id === selectedItem.id
+            selectFieldItem.id === selectedItem.id
           }
         >
           <Icon name="CheckMark" width={15} height={16} />
