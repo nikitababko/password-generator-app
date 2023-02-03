@@ -5,9 +5,9 @@ import {
   ColorDesignTokens,
 } from '../../utils/designTokens';
 
-import { SwitchPropsStylesContainer } from './Switch.types';
+import { SwitchContainerStylesProps } from './Switch.types';
 
-export const Container = styled.div<SwitchPropsStylesContainer>`
+export const Container = styled.div<SwitchContainerStylesProps>`
   position: relative;
   width: 56px;
   height: 32px;

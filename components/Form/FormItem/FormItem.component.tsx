@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { SelectField } from '../../SelectField';
+import { Switch } from '../../Switch';
 
 import {
   Container,
@@ -9,7 +10,6 @@ import {
   ValueExample,
 } from './FormItem.styles';
 import { FormItemProps } from './FormItem.types';
-import { Switch } from '../../Switch';
 import { selectData } from './FormItem.data';
 
 export const FormItem: React.FC<FormItemProps> = ({
@@ -32,7 +32,7 @@ export const FormItem: React.FC<FormItemProps> = ({
           callback={() => null}
         />
       ) : (
-        <Switch />
+        <Switch id={item.id} callback={() => null} />
       )}
     </Container>
   );

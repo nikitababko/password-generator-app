@@ -1,5 +1,5 @@
 export type FormItemProps = {
-  item: Omit<FormItemDataType, 'id'>;
+  item: FormItemDataType;
 };
 
 export type FormItemDataType = {
