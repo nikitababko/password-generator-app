@@ -29,7 +29,7 @@ export const ColorDesignTokens: ColorDesignTokensType = {
   White: '#FFFFFF',
 } as const;
 
-export const Animation = '0.3s ease-in-out';
+export const Animation = '0.3s ease-in-out' as const;
 
 export const FontSize = {
   sm: '22px',
