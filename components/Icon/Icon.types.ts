@@ -19,6 +19,7 @@ type IconItemsKeyType =
   | 'ChevronUp'
   | 'ChevronDown'
   | 'ArrowRepeat'
+  | 'CopySelect'
   | 'CheckMark';
 
 export type IconItemsType = Record<
