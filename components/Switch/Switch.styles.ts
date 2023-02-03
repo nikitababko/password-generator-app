@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import {
   Animation,
   ColorDesignTokens,
-} from '../../../../utils/designTokens';
+} from '../../utils/designTokens';
 
-import { FormItemSwitchPropsStylesContainer } from './FormItemSwitch.types';
+import { SwitchPropsStylesContainer } from './Switch.types';
 
-export const Container = styled.div<FormItemSwitchPropsStylesContainer>`
+export const Container = styled.div<SwitchPropsStylesContainer>`
   position: relative;
   width: 56px;
   height: 32px;

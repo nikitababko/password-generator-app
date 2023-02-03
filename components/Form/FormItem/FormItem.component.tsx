@@ -9,7 +9,7 @@ import {
   ValueExample,
 } from './FormItem.styles';
 import { FormItemProps } from './FormItem.types';
-import { FormItemSwitch } from './FormItemSwitch';
+import { Switch } from '../../Switch';
 import { selectData } from './FormItem.data';
 
 export const FormItem: React.FC<FormItemProps> = ({
@@ -29,9 +29,10 @@ export const FormItem: React.FC<FormItemProps> = ({
             // TODO: add backgroundColorType
             // backgroundColor: ColorDesignTokens.BlackLight,
           }}
+          callback={() => null}
         />
       ) : (
-        <FormItemSwitch />
+        <Switch />
       )}
     </Container>
   );

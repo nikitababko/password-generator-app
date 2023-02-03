@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Container } from './FormItemSwitch.styles';
 
-export const FormItemSwitch: React.FC = () => {
+import { Container } from './Switch.styles';
+
+export const Switch: React.FC = () => {
   const [isActive, setIsActive] = useState<boolean>(false);
 
   return (
