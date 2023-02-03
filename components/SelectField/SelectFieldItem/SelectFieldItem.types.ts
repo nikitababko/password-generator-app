@@ -28,3 +28,7 @@ export type UseItemControllerType = (
   setIsOpen?: React.Dispatch<React.SetStateAction<boolean>>,
   callback?: (id: number) => void,
 ) => { handleClick: () => void };
+
+export type ChildrenStylesProps = {
+  selectedItemEqualToItem?: boolean;
+};

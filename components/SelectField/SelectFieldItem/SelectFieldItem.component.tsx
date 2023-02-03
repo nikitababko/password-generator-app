@@ -37,8 +37,12 @@ export const SelectFieldItem: React.FC<
 
       <Label>{item?.label}</Label>
 
-      {selectedItemEqualToItem && (
-        <Children>{children}</Children>
+      {children && (
+        <Children
+          selectedItemEqualToItem={selectedItemEqualToItem}
+        >
+          {children}
+        </Children>
       )}
     </Container>
   );

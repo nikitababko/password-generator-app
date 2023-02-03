@@ -6,7 +6,10 @@ import {
   FontSize,
 } from '../../../utils/designTokens';
 
-import { SelectFieldItemContainerStylesType } from './SelectFieldItem.types';
+import {
+  ChildrenStylesProps,
+  SelectFieldItemContainerStylesType,
+} from './SelectFieldItem.types';
 
 export const Container = styled.div<SelectFieldItemContainerStylesType>`
   display: flex;
@@ -37,6 +40,9 @@ export const Label = styled.p`
   font-size: ${FontSize.sm};
 `;
 
-export const Children = styled.div`
+export const Children = styled.div<ChildrenStylesProps>`
   margin-left: auto;
+  opacity: ${({ selectedItemEqualToItem }) => {
+    return selectedItemEqualToItem ? '1' : '0';
+  }};
 `;
