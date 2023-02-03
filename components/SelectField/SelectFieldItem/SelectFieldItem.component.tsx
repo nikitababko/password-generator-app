@@ -17,11 +17,13 @@ export const SelectFieldItem: React.FC<
   isDropDownItem,
   selectedItemEqualToItem,
   children,
+  callback,
 }) => {
   const { handleClick } = useItemController(
     item,
     setSelectedItem,
     setIsOpen,
+    callback,
   );
 
   return (

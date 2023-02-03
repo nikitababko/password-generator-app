@@ -12,6 +12,7 @@ export type SelectFieldProps = {
     maxWidth: string;
     // backgroundColor: keyof ColorDesignTokensType;
   }>;
+  callback?: (id: number) => void;
 };
 
 export type ChevronWrapperProps = {

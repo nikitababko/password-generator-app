@@ -14,6 +14,7 @@ export const DropDown: React.FC<
   setIsOpen,
   isOpen,
   selectedItem,
+  callback,
 }) => {
   return (
     <Container isOpen={isOpen}>
@@ -27,6 +28,7 @@ export const DropDown: React.FC<
           selectedItemEqualToItem={
             selectFieldItem.id === selectedItem.id
           }
+          callback={callback}
         >
           <Icon name="CheckMark" width={15} height={16} />
         </SelectFieldItem>

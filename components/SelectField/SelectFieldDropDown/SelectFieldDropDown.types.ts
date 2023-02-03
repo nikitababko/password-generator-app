@@ -10,6 +10,7 @@ export type SelectFieldDropDownProps = {
     React.SetStateAction<SelectFieldItemType>
   >;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  callback?: (id: number) => void;
 };
 
 export type SelectFieldDropDownContainerStylesProps = {

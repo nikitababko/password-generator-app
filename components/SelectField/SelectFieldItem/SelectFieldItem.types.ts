@@ -6,12 +6,12 @@ export type SelectFieldItemProps = {
   item: SelectFieldItemType;
   isDropDownItem?: boolean;
   selectedItemEqualToItem?: boolean;
-  selectedItem?: SelectFieldItemType;
   setSelectedItem?: React.Dispatch<
     React.SetStateAction<SelectFieldItemType>
   >;
   setIsOpen?: React.Dispatch<React.SetStateAction<boolean>>;
   children?: React.ReactNode;
+  callback?: (id: number) => void;
 };
 
 export type SelectFieldItemContainerStylesType = {
@@ -26,4 +26,5 @@ export type UseItemControllerType = (
     React.SetStateAction<SelectFieldItemType>
   >,
   setIsOpen?: React.Dispatch<React.SetStateAction<boolean>>,
+  callback?: (id: number) => void,
 ) => { handleClick: () => void };

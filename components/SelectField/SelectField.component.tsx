@@ -16,6 +16,7 @@ import { firstItem } from './SelectField.data';
 export const SelectField: React.FC<SelectFieldProps> = ({
   data,
   styles,
+  callback,
 }) => {
   const {
     isOpen,
@@ -41,6 +42,7 @@ export const SelectField: React.FC<SelectFieldProps> = ({
         setSelectedItem={setSelectedItem}
         setIsOpen={setIsOpen}
         selectedItem={selectedItem}
+        callback={callback}
       />
     </Container>
   );
