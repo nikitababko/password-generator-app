@@ -31,6 +31,12 @@ export const ColorDesignTokens: ColorDesignTokensType = {
 
 export const Animation = '0.3s ease-in-out';
 
+export const FontSize = {
+  sm: '22px',
+  m: '26px',
+  l: '36px',
+} as const;
+
 export const LightTheme: ThemeType = {
   colors: {
     backgroundColor: ColorDesignTokens.BlueLight,
@@ -43,12 +49,6 @@ export const LightTheme: ThemeType = {
     borderColor: ColorDesignTokens.BlackLight,
     generateButtonBackgroundColor:
       ColorDesignTokens.BlackLight,
-  },
-  // TODO: Make common object {...fontSizes, transition}
-  fontSizes: {
-    sm: '22px',
-    m: '26px',
-    l: '36px',
   },
 } as const;
 
@@ -66,11 +66,5 @@ export const DarkTheme: ThemeType = {
       MediaBreakPointsDesignTokens.media768
         ? ColorDesignTokens.Black
         : ColorDesignTokens.BlackLight,
-  },
-  // TODO: Make common object {...fontSizes, transition}
-  fontSizes: {
-    sm: '22px',
-    m: '26px',
-    l: '36px',
   },
 } as const;

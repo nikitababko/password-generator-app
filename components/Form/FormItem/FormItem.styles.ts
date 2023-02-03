@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { FontSize } from '../../../utils/designTokens';
+
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
@@ -15,7 +17,7 @@ export const LeftCol = styled.div`
   width: 100%;
   max-width: 645px;
   height: 48px;
-  font-size: 22px;
+  font-size: ${FontSize.sm};
   font-weight: 400;
   line-height: 25px;
   background-color: ${({ theme }) => {

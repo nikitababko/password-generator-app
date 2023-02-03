@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
-import { SelectFieldItemContainerStylesType } from './SelectFieldItem.types';
 import {
   Animation,
   ColorDesignTokens,
+  FontSize,
 } from '../../../utils/designTokens';
+
+import { SelectFieldItemContainerStylesType } from './SelectFieldItem.types';
 
 export const Container = styled.div<SelectFieldItemContainerStylesType>`
   display: flex;
@@ -32,7 +34,7 @@ export const Container = styled.div<SelectFieldItemContainerStylesType>`
 `;
 
 export const Label = styled.p`
-  font-size: 22px;
+  font-size: ${FontSize.sm};
 `;
 
 export const Children = styled.div`

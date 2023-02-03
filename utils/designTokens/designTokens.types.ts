@@ -43,9 +43,4 @@ export type ThemeType = {
       | 'BlackLight'
       | 'Black'];
   };
-  fontSizes: {
-    sm: '22px';
-    m: '26px';
-    l: '36px';
-  };
 };
