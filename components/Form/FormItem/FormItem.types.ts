@@ -1,15 +1,14 @@
+import { FormItemsType } from '../../../store/store.types';
+
 export type FormItemProps = {
-  item: FormItemDataType;
+  item: FormItemsType;
+  callback: (
+    id: number,
+    value: string | number | boolean,
+  ) => void;
 };
 
-export type FormItemDataType = {
-  id: number;
-  label: string;
-  valueExample: string;
-  type: 'select' | 'switch';
-};
-
-export type SelectData = {
-  id: number;
-  label: number;
-};
+export type HandleClickType = (
+  id: number,
+  value: string | number | boolean,
+) => void;

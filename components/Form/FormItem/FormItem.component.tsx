@@ -10,10 +10,10 @@ import {
   ValueExample,
 } from './FormItem.styles';
 import { FormItemProps } from './FormItem.types';
-import { selectData } from './FormItem.data';
 
 export const FormItem: React.FC<FormItemProps> = ({
   item,
+  callback,
 }) => {
   return (
     <Container>
@@ -23,16 +23,20 @@ export const FormItem: React.FC<FormItemProps> = ({
       </LeftCol>
       {item.type === 'select' ? (
         <SelectField
-          data={selectData}
+          data={item.options}
           styles={{
             maxWidth: '90px',
             // TODO: add backgroundColorType
             // backgroundColor: ColorDesignTokens.BlackLight,
           }}
-          callback={() => null}
+          callback={(id, value) => callback(item.id, value)}
         />
       ) : (
-        <Switch id={item.id} callback={() => null} />
+        <Switch
+          value={item.value as boolean}
+          id={item.id}
+          callback={callback}
+        />
       )}
     </Container>
   );

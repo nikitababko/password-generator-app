@@ -1,18 +1,14 @@
-import { UseItemControllerType } from './SelectFieldItem.types';
+import { UseSelectFieldItemControllerType } from './SelectFieldItem.types';
 
-export const useItemController: UseItemControllerType = (
-  item,
-  setSelectedItem,
-  setIsOpen,
-  callback,
-) => {
-  const handleClick = () => {
-    setSelectedItem?.(item);
-    setIsOpen?.(false);
-    callback?.(item.id);
-  };
+export const useSelectFieldItemController: UseSelectFieldItemControllerType =
+  (item, setSelectedItem, setIsOpen, callback) => {
+    const handleClick = () => {
+      setSelectedItem?.(item);
+      setIsOpen?.(false);
+      callback?.(item.id, item.label);
+    };
 
-  return {
-    handleClick,
+    return {
+      handleClick,
+    };
   };
-};

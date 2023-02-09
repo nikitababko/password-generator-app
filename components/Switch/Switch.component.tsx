@@ -1,18 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { Container } from './Switch.styles';
 import { SwitchProps } from './Switch.types';
+import { useSwitchController } from './Switch.controller';
 
 export const Switch: React.FC<SwitchProps> = ({
   id,
   callback,
+  value,
 }) => {
-  const [isActive, setIsActive] = useState<boolean>(false);
-
-  const handleClick = () => {
-    setIsActive((prevState) => !prevState);
-    callback(id);
-  };
+  const { isActive, handleClick } = useSwitchController(
+    value,
+    callback,
+    id,
+  );
 
   return (
     <Container onClick={handleClick} isActive={isActive} />

@@ -11,7 +11,7 @@ export type SelectFieldItemProps = {
   >;
   setIsOpen?: React.Dispatch<React.SetStateAction<boolean>>;
   children?: React.ReactNode;
-  callback?: (id: number) => void;
+  callback?: (id: number, value: string | number) => void;
 };
 
 export type SelectFieldItemContainerStylesType = {
@@ -20,13 +20,13 @@ export type SelectFieldItemContainerStylesType = {
   selectedItemEqualToItem?: boolean;
 };
 
-export type UseItemControllerType = (
+export type UseSelectFieldItemControllerType = (
   item: SelectFieldItemType,
   setSelectedItem?: React.Dispatch<
     React.SetStateAction<SelectFieldItemType>
   >,
   setIsOpen?: React.Dispatch<React.SetStateAction<boolean>>,
-  callback?: (id: number) => void,
+  callback?: (id: number, value: string | number) => void,
 ) => { handleClick: () => void };
 
 export type ChildrenStylesProps = {

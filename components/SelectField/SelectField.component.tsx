@@ -14,7 +14,7 @@ import { useSelectFieldController } from './SelectField.controller';
 import { firstItem } from './SelectField.data';
 
 export const SelectField: React.FC<SelectFieldProps> = ({
-  data,
+  data = [],
   styles,
   callback,
 }) => {

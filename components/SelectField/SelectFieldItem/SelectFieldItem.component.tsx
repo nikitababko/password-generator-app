@@ -6,7 +6,7 @@ import {
   Container,
   Label,
 } from './SelectFieldItem.styles';
-import { useItemController } from './SelectFieldItem.controller';
+import { useSelectFieldItemController } from './SelectFieldItem.controller';
 
 export const SelectFieldItem: React.FC<
   SelectFieldItemProps
@@ -19,7 +19,7 @@ export const SelectFieldItem: React.FC<
   children,
   callback,
 }) => {
-  const { handleClick } = useItemController(
+  const { handleClick } = useSelectFieldItemController(
     item,
     setSelectedItem,
     setIsOpen,

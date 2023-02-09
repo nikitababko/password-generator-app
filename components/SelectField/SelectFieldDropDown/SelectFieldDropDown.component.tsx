@@ -18,7 +18,7 @@ export const DropDown: React.FC<
 }) => {
   return (
     <Container isOpen={isOpen}>
-      {data.map((selectFieldItem) => (
+      {data?.map((selectFieldItem) => (
         <SelectFieldItem
           key={selectFieldItem.id}
           item={selectFieldItem}

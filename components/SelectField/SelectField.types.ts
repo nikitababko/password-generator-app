@@ -7,12 +7,12 @@ export type SelectFieldItemType = {
 };
 
 export type SelectFieldProps = {
-  data: SelectFieldItemType[];
+  data?: SelectFieldItemType[];
   styles?: Partial<{
     maxWidth: string;
     // backgroundColor: keyof ColorDesignTokensType;
   }>;
-  callback?: (id: number) => void;
+  callback?: (id: number, value: string | number) => void;
 };
 
 export type ChevronWrapperProps = {
