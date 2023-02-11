@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
 import {
-  Animation,
+  animation,
   ColorDesignTokens,
   FontSize,
 } from '../../../utils/designTokens';
+
+import { CopyButtonStylesProps } from './MidSection.types';
 
 export const Container = styled.div`
   display: flex;
@@ -23,7 +25,7 @@ export const GenerateButton = styled.button`
     return theme.colors.generateButtonBackgroundColor;
   }};
   cursor: pointer;
-  transition: box-shadow ${Animation};
+  transition: box-shadow ${animation()};
   border: none;
 
   &:hover {
@@ -74,13 +76,13 @@ export const PasswordLabel = styled.p`
   }
 `;
 
-export const CopyButton = styled.button`
+export const CopyButton = styled.button<CopyButtonStylesProps>`
   width: 56px;
   height: 56px;
   border-radius: 12px;
   background-color: ${ColorDesignTokens.Blue};
   cursor: pointer;
-  transition: box-shadow ${Animation};
+  transition: box-shadow ${animation()};
   border: none;
 
   &:hover {

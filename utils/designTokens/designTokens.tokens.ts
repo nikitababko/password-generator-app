@@ -1,4 +1,5 @@
 import {
+  AnimationType,
   ColorDesignTokensType,
   MediaBreakPointsDesignTokensType,
   ThemeType,
@@ -29,7 +30,9 @@ export const ColorDesignTokens: ColorDesignTokensType = {
   White: '#FFFFFF',
 } as const;
 
-export const Animation = '0.3s ease-in-out' as const;
+export const animation: AnimationType = (time = '0.3s') => {
+  return `${time} ease-in-out`;
+};
 
 export const FontSize = {
   sm: '22px',

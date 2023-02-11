@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import {
-  Animation,
+  animation,
   ColorDesignTokens,
   FontSize,
 } from '../../../utils/designTokens';
@@ -28,9 +28,11 @@ export const Container = styled.div<SelectFieldItemContainerStylesType>`
       `
         padding: 12px 14px;
         &:hover {
-          background-color: ${ColorDesignTokens.BlueLightSky};  
+          background-color: ${
+            ColorDesignTokens.BlueLightSky
+          };  
         }
-        transition: background-color ${Animation};
+        transition: background-color ${animation()};
       `
     );
   }};

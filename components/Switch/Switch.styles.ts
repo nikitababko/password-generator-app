@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import {
-  Animation,
+  animation,
   ColorDesignTokens,
 } from '../../utils/designTokens';
 
@@ -18,7 +18,7 @@ export const Container = styled.div<SwitchContainerStylesProps>`
   }};
   border-radius: 26px;
   cursor: pointer;
-  transition: background-color ${Animation};
+  transition: background-color ${animation()};
 
   &::after {
     content: '';
@@ -34,7 +34,7 @@ export const Container = styled.div<SwitchContainerStylesProps>`
         : ColorDesignTokens.GrayDim;
     }};
     border-radius: 50%;
-    transition: left ${Animation},
-      background-color ${Animation};
+    transition: left ${animation()},
+      background-color ${animation()};
   }
 `;

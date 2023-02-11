@@ -5,7 +5,7 @@ import {
   ThemeToggleOpacityStateType,
 } from './ThemeToggle.types';
 import {
-  Animation,
+  animation,
   ColorDesignTokens,
 } from '../../utils/designTokens';
 
@@ -57,8 +57,8 @@ export const Container = styled.div<ThemeStylesType>`
       ? ColorDesignTokens.BlueTurquoise
       : ColorDesignTokens.BlueSlate;
   }};
-  transition: background-color ${Animation},
-    border ${Animation};
+  transition: background-color ${animation()},
+    border ${animation()};
   cursor: pointer;
 `;
 
@@ -71,7 +71,7 @@ export const ToggleItem = styled.div<ThemeStylesType>`
     return css`
       ${isDay
         ? itemRightToLeftAnimation
-        : itemLeftToRightAnimation} ${Animation} forwards
+        : itemLeftToRightAnimation} ${animation()} forwards
     `;
   }};
   transform: translateY(-50%);
@@ -95,7 +95,7 @@ export const ToggleItem = styled.div<ThemeStylesType>`
         ? ThemeToggleOpacityState.Zero
         : ThemeToggleOpacityState.One;
     }};
-    transition: opacity ${Animation};
+    transition: opacity ${animation()};
   }
 
   &::after {
@@ -112,7 +112,7 @@ export const ToggleItem = styled.div<ThemeStylesType>`
         ? ThemeToggleOpacityState.Zero
         : ThemeToggleOpacityState.One;
     }};
-    transition: opacity ${Animation};
+    transition: opacity ${animation()};
   }
 `;
 
@@ -126,7 +126,7 @@ export const Cloud = styled.div<ThemeStylesType>`
       ? ThemeToggleOpacityState.One
       : ThemeToggleOpacityState.Zero;
   }};
-  transition: right ${Animation}, opacity ${Animation};
+  transition: right ${animation()}, opacity ${animation()};
   background: ${ColorDesignTokens.White};
   height: 15px;
   width: 15px;
@@ -147,7 +147,7 @@ export const Stars = styled.div<ThemeStylesType>`
       ? ThemeToggleOpacityState.Zero
       : ThemeToggleOpacityState.One;
   }};
-  transition: left ${Animation}, opacity ${Animation};
+  transition: left ${animation()}, opacity ${animation()};
   transform: translateY(-50%);
   background-color: ${ColorDesignTokens.White};
   height: 7px;
