@@ -71,6 +71,9 @@
       "name": "styles"
     },
     {
+      "name": "types"
+    },
+    {
       "name": "eslint"
     },
     {
