@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Icon } from '../../Icon';
+import { ColorDesignTokens } from '../../../utils/designTokens';
 
 import {
   Container,
@@ -14,8 +15,12 @@ import { useMidSectionController } from './MidSection.controller';
 import { firstElement } from './MidSection.data';
 
 export const MidSection: React.FC = () => {
-  const { handleGeneratePassword, password } =
-    useMidSectionController();
+  const {
+    handleGeneratePassword,
+    password,
+    handleCopy,
+    isCopied,
+  } = useMidSectionController();
 
   return (
     <Container>
@@ -30,8 +35,14 @@ export const MidSection: React.FC = () => {
         </PasswordLabel>
       </PasswordWrapper>
 
-      <CopyButton>
+      <CopyButton onClick={handleCopy} isCopied={isCopied}>
         <Icon name="CopySelect" width={31} height={32} />
+        <Icon
+          name="CheckMark"
+          width={15}
+          height={16}
+          color={ColorDesignTokens.White}
+        />
       </CopyButton>
     </Container>
   );

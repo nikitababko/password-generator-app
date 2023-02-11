@@ -1,17 +1,42 @@
 import { useState } from 'react';
 import { generatePassword } from '@nikitababko/password-generator';
-import { UseMidSectionControllerType } from './MidSection.types';
+
 import { useAppContext } from '../../../store';
+
+import { UseMidSectionControllerType } from './MidSection.types';
+import {
+  animationTime,
+  firstElement,
+} from './MidSection.data';
 
 export const useMidSectionController: UseMidSectionControllerType =
   () => {
     const [password, setPassword] = useState<string[]>([
       '',
     ]);
+    const [isCopied, setIsCopied] =
+      useState<boolean>(false);
 
     const {
       form: [formItems],
     } = useAppContext();
+
+    const handleCopy = async () => {
+      try {
+        await navigator.clipboard.writeText(
+          password[firstElement],
+        );
+
+        setIsCopied(true);
+
+        setTimeout(
+          () => setIsCopied(false),
+          Number(`${animationTime}000`),
+        );
+      } catch (error) {
+        console.error(error);
+      }
+    };
 
     const handleGeneratePassword = () => {
       setPassword(
@@ -38,5 +63,7 @@ export const useMidSectionController: UseMidSectionControllerType =
     return {
       handleGeneratePassword,
       password,
+      handleCopy,
+      isCopied,
     };
   };
