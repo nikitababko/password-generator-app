@@ -1,5 +1,15 @@
 import React from 'react';
 
+import { ColorDesignTokensType } from '../../utils/designTokens/designTokens.types';
+import { ValueOf } from '../../types/global.types';
+
+export type ColorType = ValueOf<ColorDesignTokensType>;
+
+export type DefaultSizeType = Record<
+  'width' | 'height',
+  number
+>;
+
 type IconItemsKeyType =
   | 'FlagUs'
   | 'FlagRu'
@@ -24,11 +34,12 @@ type IconItemsKeyType =
 
 export type IconItemsType = Record<
   IconItemsKeyType,
-  () => React.ReactNode
+  (color?: ColorType) => React.ReactNode
 >;
 
 export type IconProps = {
   name: IconItemsKeyType;
+  color?: ColorType;
   width?: number;
   height?: number;
   style?: React.CSSProperties | undefined;

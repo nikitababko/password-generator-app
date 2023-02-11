@@ -6,14 +6,20 @@ import { Container } from './Icon.styles';
 
 export const Icon: React.FC<IconProps> = ({
   name,
+  color,
   width,
   height,
   style,
 }) => {
-  const Component = IconItems[name]();
+  const Component = IconItems[name](color);
 
   return (
-    <Container style={style} width={width} height={height}>
+    <Container
+      style={style}
+      width={width}
+      height={height}
+      color={color}
+    >
       {Component}
     </Container>
   );
