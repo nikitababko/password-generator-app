@@ -1,5 +1,8 @@
 import React, { useContext } from 'react';
 
+import { ThemeType } from '../utils/designTokens/designTokens.types';
+import { LightTheme } from '../utils/designTokens';
+
 import { formItemsInitialState } from './store.data';
 import {
   FormItemsType,
@@ -10,6 +13,7 @@ import {
 export const StoreContext =
   React.createContext<StoreContextType>({
     form: [[], () => {}],
+    theme: [LightTheme, () => {}],
   });
 
 export const useAppContext = () =>
@@ -21,9 +25,12 @@ export const StoreProvider: React.FC<
   const [formItems, setFormItems] = React.useState<
     FormItemsType[]
   >(formItemsInitialState);
+  const [theme, setTheme] =
+    React.useState<ThemeType>(LightTheme);
 
   const store: StoreContextType = {
     form: [formItems, setFormItems],
+    theme: [theme, setTheme],
   };
 
   return (
