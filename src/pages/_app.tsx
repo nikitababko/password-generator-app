@@ -3,7 +3,7 @@ import React from 'react';
 
 import { GlobalStyles } from '../styles/globalStyles.styles';
 import { Layout } from '../components/Layout';
-import { Theme } from '../components/Theme';
+import { ThemeProvider } from '../components/ThemeProvider';
 import { StoreProvider } from '../store';
 
 const App: React.FC<AppProps> = ({
@@ -12,12 +12,12 @@ const App: React.FC<AppProps> = ({
 }) => {
   return (
     <StoreProvider>
-      <Theme>
+      <ThemeProvider>
         <GlobalStyles />
         <Layout>
           <Component {...pageProps} />
         </Layout>
-      </Theme>
+      </ThemeProvider>
     </StoreProvider>
   );
 };
