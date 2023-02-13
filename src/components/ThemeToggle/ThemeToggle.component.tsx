@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import {
   Cloud,
@@ -6,12 +6,10 @@ import {
   Stars,
   ToggleItem,
 } from './ThemeToggle.styles';
+import { useThemeToggle } from './ThemeToggle.controller';
 
 export const ThemeToggle: React.FC = () => {
-  const [isDay, setIsDay] = useState<boolean>(true);
-
-  const handleClick = () =>
-    setIsDay((prevState) => !prevState);
+  const { handleClick, isDay } = useThemeToggle();
 
   return (
     <Container onClick={handleClick} isDay={isDay}>
