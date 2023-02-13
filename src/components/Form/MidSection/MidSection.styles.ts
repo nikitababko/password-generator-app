@@ -23,7 +23,7 @@ export const GenerateButton = styled.button`
   height: 56px;
   border-radius: 12px;
   background-color: ${({ theme }) => {
-    return theme.colors.generateButtonBackgroundColor;
+    return theme.generateButtonBackgroundColor;
   }};
   cursor: pointer;
   transition: box-shadow ${animation()};
@@ -49,7 +49,7 @@ export const PasswordWrapper = styled.div`
   width: 360px;
   height: 56px;
   background-color: ${({ theme }) => {
-    return theme.colors.formItemLeftColBackgroundColor;
+    return theme.formItemLeftColBackgroundColor;
   }};
   border-radius: 12px;
 `;
@@ -58,7 +58,7 @@ export const PasswordLabel = styled.p`
   text-align: center;
   width: 100%;
   background-color: ${({ theme }) => {
-    return theme.colors.formItemLeftColBackgroundColor;
+    return theme.formItemLeftColBackgroundColor;
   }};
   font-size: ${FontSize.sm};
   line-height: 26px;

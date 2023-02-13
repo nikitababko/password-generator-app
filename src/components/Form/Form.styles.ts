@@ -8,7 +8,7 @@ export const Container = styled.div`
   width: 988px;
   height: 882px;
   background-color: ${({ theme }) => {
-    return theme.colors.foregroundColor;
+    return theme.foregroundColor;
   }};
   border-radius: 12px;
   box-shadow: 0 15px 37px -3px ${ColorDesignTokens.Black}45;
@@ -19,6 +19,6 @@ export const Border = styled.div`
   width: 100%;
   height: 2px;
   background-color: ${({ theme }) => {
-    return theme.colors.borderColor;
+    return theme.borderColor;
   }};
 `;

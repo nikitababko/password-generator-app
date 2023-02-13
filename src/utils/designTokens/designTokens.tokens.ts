@@ -41,33 +41,29 @@ export const FontSize = {
 } as const;
 
 export const LightTheme: ThemeType = {
-  colors: {
-    backgroundColor: ColorDesignTokens.BlueLight,
-    foregroundColor: ColorDesignTokens.White,
-    formItemLeftColBackgroundColor:
-      ColorDesignTokens.GrayLight,
-    selectBackgroundColor: ColorDesignTokens.White,
-    fontColor: ColorDesignTokens.Black,
-    fontGenerateButtonColor: ColorDesignTokens.White,
-    borderColor: ColorDesignTokens.BlackLight,
-    generateButtonBackgroundColor:
-      ColorDesignTokens.BlackLight,
-  },
+  backgroundColor: ColorDesignTokens.BlueLight,
+  foregroundColor: ColorDesignTokens.White,
+  formItemLeftColBackgroundColor:
+    ColorDesignTokens.GrayLight,
+  selectBackgroundColor: ColorDesignTokens.White,
+  fontColor: ColorDesignTokens.Black,
+  fontGenerateButtonColor: ColorDesignTokens.White,
+  borderColor: ColorDesignTokens.BlackLight,
+  generateButtonBackgroundColor:
+    ColorDesignTokens.BlackLight,
 } as const;
 
 export const DarkTheme: ThemeType = {
-  colors: {
-    backgroundColor: ColorDesignTokens.BlackLight,
-    foregroundColor: ColorDesignTokens.GrayDark,
-    formItemLeftColBackgroundColor:
-      ColorDesignTokens.GrayLight,
-    selectBackgroundColor: ColorDesignTokens.GrayLight,
-    fontColor: ColorDesignTokens.White,
-    fontGenerateButtonColor: ColorDesignTokens.White,
-    borderColor: ColorDesignTokens.GrayLight,
-    generateButtonBackgroundColor:
-      MediaBreakPointsDesignTokens.media768
-        ? ColorDesignTokens.Black
-        : ColorDesignTokens.BlackLight,
-  },
+  backgroundColor: ColorDesignTokens.BlackLight,
+  foregroundColor: ColorDesignTokens.GrayDark,
+  formItemLeftColBackgroundColor:
+    ColorDesignTokens.GrayLight,
+  selectBackgroundColor: ColorDesignTokens.GrayLight,
+  fontColor: ColorDesignTokens.White,
+  fontGenerateButtonColor: ColorDesignTokens.White,
+  borderColor: ColorDesignTokens.GrayLight,
+  generateButtonBackgroundColor:
+    MediaBreakPointsDesignTokens.media768
+      ? ColorDesignTokens.Black
+      : ColorDesignTokens.BlackLight,
 } as const;

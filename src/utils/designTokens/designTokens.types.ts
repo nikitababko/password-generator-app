@@ -25,24 +25,22 @@ export type ColorDesignTokensType = {
 };
 
 export type ThemeType = {
-  colors: {
-    backgroundColor: ColorDesignTokensType[
-      | 'BlueLight'
-      | 'BlackLight'];
-    foregroundColor: ColorDesignTokensType[
-      | 'White'
-      | 'GrayDark'];
-    formItemLeftColBackgroundColor: ColorDesignTokensType['GrayLight'];
-    selectBackgroundColor: ColorDesignTokensType[
-      | 'White'
-      | 'GrayLight'];
-    fontColor: ColorDesignTokensType['Black' | 'White'];
-    fontGenerateButtonColor: ColorDesignTokensType['White'];
-    borderColor: ColorDesignTokensType[
-      | 'BlackLight'
-      | 'GrayLight'];
-    generateButtonBackgroundColor: ColorDesignTokensType[
-      | 'BlackLight'
-      | 'Black'];
-  };
+  backgroundColor: ColorDesignTokensType[
+    | 'BlueLight'
+    | 'BlackLight'];
+  foregroundColor: ColorDesignTokensType[
+    | 'White'
+    | 'GrayDark'];
+  formItemLeftColBackgroundColor: ColorDesignTokensType['GrayLight'];
+  selectBackgroundColor: ColorDesignTokensType[
+    | 'White'
+    | 'GrayLight'];
+  fontColor: ColorDesignTokensType['Black' | 'White'];
+  fontGenerateButtonColor: ColorDesignTokensType['White'];
+  borderColor: ColorDesignTokensType[
+    | 'BlackLight'
+    | 'GrayLight'];
+  generateButtonBackgroundColor: ColorDesignTokensType[
+    | 'BlackLight'
+    | 'Black'];
 };

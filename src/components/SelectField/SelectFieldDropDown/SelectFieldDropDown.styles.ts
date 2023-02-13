@@ -18,7 +18,7 @@ export const Container = styled.div<SelectFieldDropDownContainerStylesProps>`
   height: ${({ isOpen }) => (isOpen ? '300px' : '0')};
   overflow-y: scroll;
   background-color: ${({ theme }) => {
-    return theme.colors.selectBackgroundColor;
+    return theme.selectBackgroundColor;
   }};
   border-radius: 12px;
   transition: padding ${animation()}, height ${animation()};

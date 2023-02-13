@@ -21,7 +21,7 @@ export const Content = styled.div`
   width: 100%;
   height: 100%;
   background-color: ${({ theme }) => {
-    return theme.colors.selectBackgroundColor;
+    return theme.selectBackgroundColor;
   }};
   border-radius: 12px;
   cursor: pointer;

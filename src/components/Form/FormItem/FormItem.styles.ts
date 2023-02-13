@@ -21,7 +21,7 @@ export const LeftCol = styled.div`
   font-weight: 400;
   line-height: 25px;
   background-color: ${({ theme }) => {
-    return theme.colors.formItemLeftColBackgroundColor;
+    return theme.formItemLeftColBackgroundColor;
   }};
   border-radius: 12px;
 `;
