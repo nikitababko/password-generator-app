@@ -10,7 +10,7 @@ export const Container = styled.div<ContainerStylesProps>`
   position: relative;
   width: 100%;
   max-width: ${({ styles }) => styles?.maxWidth ?? '196px'};
-  height: 55px;
+  height: 48px;
 `;
 
 export const Content = styled.div`

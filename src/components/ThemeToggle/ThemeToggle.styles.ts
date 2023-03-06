@@ -43,7 +43,7 @@ export const Container = styled.div<ThemeStylesType>`
   margin-right: 34px;
   width: 100%;
   max-width: 100px;
-  height: 100%;
+  height: 48px;
   border-radius: 100px;
   border: ${({ isDay }) => {
     return `2px solid ${
@@ -75,8 +75,8 @@ export const ToggleItem = styled.div<ThemeStylesType>`
     `;
   }};
   transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 3px solid ${ColorDesignTokens.Yellow};
   background-color: ${ColorDesignTokens.YellowCorn};
