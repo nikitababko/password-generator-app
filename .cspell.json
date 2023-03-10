@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "language": "en,ru",
+  "ignoreWords": [
+    "commitlint",
+    "roboto",
+    "Fira",
+    "lintstaged",
+    "stylelint",
+    "stylelintrc",
+    "Babko",
+    "Segoe",
+    "Cascadia",
+    "Menlo",
+    "Roboto",
+    "nikitababko",
+    "Italiano",
+    "हिन्दी",
+    "հայերեն",
+    "ქართული",
+    "Polski",
+    "Deutsch"
+  ],
+  "ignorePaths": [
+    ".husky",
+    ".next",
+    "dist",
+    "build",
+    "node_modules"
+  ]
+}
