@@ -1,7 +1,8 @@
 import React from 'react';
+import { LanguagesType } from '../../hooks/useTranslate/useTranslate.types';
 
 export type SelectFieldItemType = {
-  id: number;
+  id: number | LanguagesType;
   icon?: React.ReactNode;
   label: string | number;
 };
@@ -12,7 +13,10 @@ export type SelectFieldProps = {
     maxWidth: string;
     // backgroundColor: keyof ColorDesignTokensType;
   }>;
-  callback?: (id: number, value: string | number) => void;
+  callback?: (
+    id: number | LanguagesType,
+    value: string | number,
+  ) => void;
 };
 
 export type ChevronWrapperProps = {

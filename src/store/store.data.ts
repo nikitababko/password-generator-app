@@ -1,9 +1,9 @@
-import { FormItemsType } from './store.types';
+import { FormItemsType } from '../components/Form/FormItem/FormItem.types';
 
 export const formItemsInitialState = [
   {
     id: 1,
-    label: 'Password Length:',
+    label: 'passwordLength',
     valueExample: '',
     type: 'select',
     value: 6,
@@ -52,42 +52,42 @@ export const formItemsInitialState = [
   },
   {
     id: 2,
-    label: 'Include Symbols:',
+    label: 'includeSymbols',
     valueExample: '!";#$%&\'()*+,-./:;<=>?@[]^_`{|}~',
     type: 'switch',
     value: true,
   },
   {
     id: 3,
-    label: 'Include Numbers',
+    label: 'includeNumbers',
     valueExample: '123456',
     type: 'switch',
     value: false,
   },
   {
     id: 4,
-    label: 'Include Lowercase Characters',
+    label: 'includeLowercaseCharacters',
     valueExample: 'abcdefgh',
     type: 'switch',
     value: false,
   },
   {
     id: 5,
-    label: 'Include Uppercase Characters',
+    label: 'includeUppercaseCharacters',
     valueExample: 'ABCDEFGH',
     type: 'switch',
     value: false,
   },
   {
     id: 6,
-    label: 'Exclude Similar Characters',
+    label: 'excludeSimilarCharacters',
     valueExample: 'e.g. i,l,1,L,o,0,O',
     type: 'switch',
     value: false,
   },
   {
     id: 7,
-    label: 'Exclude Ambiguous Characters',
+    label: 'excludeAmbiguousCharacters',
     valueExample: '{}[]()/\'"`~,;:.<>',
     type: 'switch',
     value: false,

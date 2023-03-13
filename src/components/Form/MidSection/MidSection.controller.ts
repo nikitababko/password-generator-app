@@ -8,6 +8,7 @@ import {
   animationTime,
   firstElement,
 } from './MidSection.data';
+import { useTranslate } from '../../../hooks';
 
 export const useMidSectionController: UseMidSectionControllerType =
   () => {
@@ -20,6 +21,8 @@ export const useMidSectionController: UseMidSectionControllerType =
     const {
       form: [formItems],
     } = useAppContext();
+
+    const t = useTranslate();
 
     const handleCopy = async () => {
       try {
@@ -65,5 +68,6 @@ export const useMidSectionController: UseMidSectionControllerType =
       password,
       handleCopy,
       isCopied,
+      generateButtonTranslation: t.generate,
     };
   };

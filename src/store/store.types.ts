@@ -1,5 +1,8 @@
 import React from 'react';
+
 import { ThemeType } from '../utils/designTokens/designTokens.types';
+import { FormItemsType } from '../components/Form/FormItem/FormItem.types';
+import { LanguagesType } from '../hooks/useTranslate/useTranslate.types';
 
 export type StoreProviderProps = {
   children: React.ReactNode;
@@ -14,16 +17,8 @@ export type StoreContextType = {
     ThemeType,
     React.Dispatch<React.SetStateAction<ThemeType>>,
   ];
-};
-
-export type FormItemsType = {
-  id: number;
-  label: string;
-  valueExample: string;
-  type: 'select' | 'switch';
-  value: string | number | boolean;
-  options?: {
-    id: number;
-    label: number;
-  }[];
+  lang: [
+    LanguagesType,
+    React.Dispatch<React.SetStateAction<LanguagesType>>,
+  ];
 };

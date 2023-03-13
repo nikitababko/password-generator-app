@@ -3,6 +3,7 @@ export type UseMidSectionControllerType = () => {
   password: string[];
   handleCopy: () => Promise<void>;
   isCopied: boolean;
+  generateButtonTranslation: string;
 };
 
 export type CopyButtonStylesProps = {

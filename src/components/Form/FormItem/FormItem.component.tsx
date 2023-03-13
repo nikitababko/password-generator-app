@@ -10,15 +10,21 @@ import {
   ValueExample,
 } from './FormItem.styles';
 import { FormItemProps } from './FormItem.types';
+import { useTranslate } from '../../../hooks';
+import { TranslationsValuesType } from '../../../hooks/useTranslate/useTranslate.types';
 
 export const FormItem: React.FC<FormItemProps> = ({
   item,
   callback,
 }) => {
+  const t = useTranslate();
+
   return (
     <Container>
       <LeftCol>
-        <Label>{item.label}</Label>
+        <Label>
+          {t[item.label as keyof TranslationsValuesType]}
+        </Label>
         <ValueExample>{item.valueExample}</ValueExample>
       </LeftCol>
       {item.type === 'select' ? (

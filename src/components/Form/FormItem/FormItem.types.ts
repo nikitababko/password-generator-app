@@ -1,5 +1,3 @@
-import { FormItemsType } from '../../../store/store.types';
-
 export type FormItemProps = {
   item: FormItemsType;
   callback: (
@@ -12,3 +10,15 @@ export type HandleClickType = (
   id: number,
   value: string | number | boolean,
 ) => void;
+
+export type FormItemsType = {
+  id: number;
+  label: string;
+  valueExample: string;
+  type: 'select' | 'switch';
+  value: string | number | boolean;
+  options?: {
+    id: number;
+    label: number;
+  }[];
+};

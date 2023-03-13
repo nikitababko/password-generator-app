@@ -5,7 +5,7 @@ import { Icon } from '../Icon';
 
 export const data: SelectFieldItemType[] = [
   {
-    id: 1,
+    id: 'en',
     icon: (
       <Icon
         name="FlagUs"
@@ -17,7 +17,7 @@ export const data: SelectFieldItemType[] = [
     label: 'English',
   },
   {
-    id: 2,
+    id: 'ru',
     icon: (
       <Icon
         name="FlagRu"
@@ -29,7 +29,7 @@ export const data: SelectFieldItemType[] = [
     label: 'Русский',
   },
   {
-    id: 3,
+    id: 'zh',
     icon: (
       <Icon
         name="FlagCh"
@@ -41,7 +41,7 @@ export const data: SelectFieldItemType[] = [
     label: '中國人',
   },
   {
-    id: 4,
+    id: 'ko',
     icon: (
       <Icon
         name="FlagKr"
@@ -53,7 +53,7 @@ export const data: SelectFieldItemType[] = [
     label: '한국인',
   },
   {
-    id: 5,
+    id: 'ja',
     icon: (
       <Icon
         name="FlagJp"
@@ -65,7 +65,7 @@ export const data: SelectFieldItemType[] = [
     label: '日本語',
   },
   {
-    id: 6,
+    id: 'fr',
     icon: (
       <Icon
         name="FlagFr"
@@ -77,7 +77,7 @@ export const data: SelectFieldItemType[] = [
     label: 'Français',
   },
   {
-    id: 7,
+    id: 'de',
     icon: (
       <Icon
         name="FlagDe"
@@ -89,7 +89,7 @@ export const data: SelectFieldItemType[] = [
     label: 'Deutsch',
   },
   {
-    id: 8,
+    id: 'id',
     icon: (
       <Icon
         name="FlagIn"
@@ -101,7 +101,7 @@ export const data: SelectFieldItemType[] = [
     label: 'Indonesia',
   },
   {
-    id: 9,
+    id: 'pl',
     icon: (
       <Icon
         name="FlagPl"
@@ -113,7 +113,7 @@ export const data: SelectFieldItemType[] = [
     label: 'Polski',
   },
   {
-    id: 10,
+    id: 'es',
     icon: (
       <Icon
         name="FlagEs"
@@ -125,7 +125,7 @@ export const data: SelectFieldItemType[] = [
     label: 'Español',
   },
   {
-    id: 11,
+    id: 'ka',
     icon: (
       <Icon
         name="FlagGe"
@@ -137,7 +137,7 @@ export const data: SelectFieldItemType[] = [
     label: 'ქართული',
   },
   {
-    id: 12,
+    id: 'ar',
     icon: (
       <Icon
         name="FlagAe"
@@ -149,7 +149,7 @@ export const data: SelectFieldItemType[] = [
     label: 'عرب',
   },
   {
-    id: 13,
+    id: 'hy',
     icon: (
       <Icon
         name="FlagAm"
@@ -161,7 +161,7 @@ export const data: SelectFieldItemType[] = [
     label: 'հայերեն',
   },
   {
-    id: 14,
+    id: 'hi',
     icon: (
       <Icon
         name="FlagIn"
@@ -173,7 +173,7 @@ export const data: SelectFieldItemType[] = [
     label: 'हिन्दी',
   },
   {
-    id: 15,
+    id: 'it',
     icon: (
       <Icon
         name="FlagIt"
