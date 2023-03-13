@@ -6,5 +6,8 @@
   ],
   "**/*.styles.{ts,tsx}": [
     "stylelint --config .stylelintrc"
+  ],
+  "**/*.{js,jsx,ts,tsx,md,json}": [
+    "npx cspell '**/*.{js,jsx,ts,tsx,md,json}'"
   ]
 }
