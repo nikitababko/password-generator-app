@@ -2,6 +2,8 @@ import React from 'react';
 
 import { SelectField } from '../../SelectField';
 import { Switch } from '../../Switch';
+import { useTranslate } from '../../../hooks';
+import { TranslationsValuesType } from '../../../hooks/useTranslate/useTranslate.types';
 
 import {
   Container,
@@ -10,8 +12,6 @@ import {
   ValueExample,
 } from './FormItem.styles';
 import { FormItemProps } from './FormItem.types';
-import { useTranslate } from '../../../hooks';
-import { TranslationsValuesType } from '../../../hooks/useTranslate/useTranslate.types';
 
 export const FormItem: React.FC<FormItemProps> = ({
   item,

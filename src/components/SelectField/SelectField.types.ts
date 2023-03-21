@@ -23,10 +23,11 @@ export type ChevronWrapperProps = {
   isOpen: boolean;
 };
 
-export type ContainerStylesProps = Pick<
-  SelectFieldProps,
-  'styles'
->;
+export type ContainerStylesProps = Partial<{
+  styles?: Partial<{
+    maxWidth: string;
+  }>;
+}>;
 
 export type UseSelectFieldControllerType = (
   firstItem: SelectFieldItemType,

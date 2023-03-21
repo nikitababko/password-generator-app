@@ -4,7 +4,10 @@ import {
   ChevronWrapperProps,
   ContainerStylesProps,
 } from './SelectField.types';
-import { animation } from '../../utils/designTokens';
+import {
+  animation,
+  ColorDesignTokens,
+} from '../../utils/designTokens';
 
 export const Container = styled.div<ContainerStylesProps>`
   position: relative;
@@ -23,6 +26,7 @@ export const Content = styled.div`
   background-color: ${({ theme }) => {
     return theme.selectBackgroundColor;
   }};
+  border: 1px solid ${ColorDesignTokens.BlueLightSky};
   border-radius: 12px;
   cursor: pointer;
 `;

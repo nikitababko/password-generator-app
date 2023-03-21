@@ -20,6 +20,11 @@ export const Container = styled.div<SelectFieldDropDownContainerStylesProps>`
   background-color: ${({ theme }) => {
     return theme.selectBackgroundColor;
   }};
+  border: ${({ isOpen }) => {
+    return isOpen
+      ? `1px solid ${ColorDesignTokens.BlueLightSky}`
+      : 'none';
+  }};
   border-radius: 12px;
   transition: padding ${animation()}, height ${animation()};
 
