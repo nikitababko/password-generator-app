@@ -47,6 +47,7 @@
             "ignoreNumericLiteralTypes": true,
             "ignore": [
               1920,
+              1200,
               768,
               480
             ]
