@@ -7,8 +7,8 @@ import {
 
 export const MediaBreakPointsDesignTokens: MediaBreakPointsDesignTokensType =
   {
-    media1920: 1920,
     media1200: 1200,
+    media1024: 1024,
     media768: 768,
     media480: 480,
   } as const;

@@ -46,8 +46,8 @@
             "ignoreEnums": true,
             "ignoreNumericLiteralTypes": true,
             "ignore": [
-              1920,
               1200,
+              1024,
               768,
               480
             ]
