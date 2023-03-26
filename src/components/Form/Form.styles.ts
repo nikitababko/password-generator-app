@@ -1,6 +1,7 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { ColorDesignTokens } from '../../utils/designTokens';
+import { mediaContainer1024 } from '../../styles/mediaQueryContainers';
 
 export const Container = styled.div`
   align-self: center;
@@ -12,6 +13,15 @@ export const Container = styled.div`
   }};
   border-radius: 12px;
   box-shadow: 0 15px 37px -3px ${ColorDesignTokens.Black}45;
+
+  ${mediaContainer1024(
+    css`
+      box-shadow: none;
+      background-color: transparent;
+      padding: 40px 0;
+      max-width: 648px;
+    `,
+  )}
 `;
 
 export const Border = styled.div`

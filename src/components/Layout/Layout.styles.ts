@@ -1,4 +1,6 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { mediaContainer1024 } from '../../styles/mediaQueryContainers';
+import { ColorDesignTokens } from '../../utils/designTokens';
 
 export const Container = styled.div`
   display: flex;
@@ -6,7 +8,13 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
   padding: 36px 40px;
-  background: ${({ theme }) => {
+  background-color: ${({ theme }) => {
     return theme.backgroundColor;
   }};
+
+  ${mediaContainer1024(
+    css`
+      background-color: ${ColorDesignTokens.White};
+    `,
+  )}
 `;
