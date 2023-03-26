@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { SelectFieldItemType } from '../SelectField.types';
+import { LanguagesType } from '../../../hooks/useTranslate/useTranslate.types';
 
 export type SelectFieldDropDownProps = {
   data?: SelectFieldItemType[];
@@ -10,7 +11,10 @@ export type SelectFieldDropDownProps = {
     React.SetStateAction<SelectFieldItemType>
   >;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  callback?: (id: number, value: string | number) => void;
+  callback?: (
+    id: number | LanguagesType,
+    value: string | number,
+  ) => void;
 };
 
 export type SelectFieldDropDownContainerStylesProps = {

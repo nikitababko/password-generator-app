@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { SelectFieldItemType } from '../SelectField.types';
+import { LanguagesType } from '../../../hooks/useTranslate/useTranslate.types';
 
 export type SelectFieldItemProps = {
   item: SelectFieldItemType;
@@ -11,11 +12,14 @@ export type SelectFieldItemProps = {
   >;
   setIsOpen?: React.Dispatch<React.SetStateAction<boolean>>;
   children?: React.ReactNode;
-  callback?: (id: number, value: string | number) => void;
+  callback?: (
+    id: number | LanguagesType,
+    value: string | number,
+  ) => void;
 };
 
 export type SelectFieldItemContainerStylesType = {
-  itemId: number;
+  itemId: number | LanguagesType;
   isDropDownItem?: boolean;
   selectedItemEqualToItem?: boolean;
 };
@@ -26,7 +30,10 @@ export type UseSelectFieldItemControllerType = (
     React.SetStateAction<SelectFieldItemType>
   >,
   setIsOpen?: React.Dispatch<React.SetStateAction<boolean>>,
-  callback?: (id: number, value: string | number) => void,
+  callback?: (
+    id: number | LanguagesType,
+    value: string | number,
+  ) => void,
 ) => { handleClick: () => void };
 
 export type ChildrenStylesProps = {
