@@ -4,7 +4,8 @@ import { FontSize } from '../../../utils/designTokens';
 
 export const Container = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  column-gap: 28px;
   align-items: center;
   width: 100%;
 `;
@@ -24,6 +25,14 @@ export const LeftCol = styled.div`
     return theme.formItemLeftColBackgroundColor;
   }};
   border-radius: 12px;
+`;
+
+export const RightCol = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 90px;
+  justify-content: flex-end;
 `;
 
 export const Label = styled.p``;

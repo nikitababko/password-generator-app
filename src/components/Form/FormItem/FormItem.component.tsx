@@ -9,6 +9,7 @@ import {
   Container,
   Label,
   LeftCol,
+  RightCol,
   ValueExample,
 } from './FormItem.styles';
 import { FormItemProps } from './FormItem.types';
@@ -27,23 +28,27 @@ export const FormItem: React.FC<FormItemProps> = ({
         </Label>
         <ValueExample>{item.valueExample}</ValueExample>
       </LeftCol>
-      {item.type === 'select' ? (
-        <SelectField
-          data={item.options}
-          styles={{
-            maxWidth: '90px',
-            // TODO: add backgroundColorType
-            // backgroundColor: ColorDesignTokens.BlackLight,
-          }}
-          callback={(id, value) => callback(item.id, value)}
-        />
-      ) : (
-        <Switch
-          value={item.value as boolean}
-          id={item.id}
-          callback={callback}
-        />
-      )}
+      <RightCol>
+        {item.type === 'select' ? (
+          <SelectField
+            data={item.options}
+            styles={{
+              maxWidth: '90px',
+              // TODO: add backgroundColorType
+              // backgroundColor: ColorDesignTokens.BlackLight,
+            }}
+            callback={(id, value) =>
+              callback(item.id, value)
+            }
+          />
+        ) : (
+          <Switch
+            value={item.value as boolean}
+            id={item.id}
+            callback={callback}
+          />
+        )}
+      </RightCol>
     </Container>
   );
 };
