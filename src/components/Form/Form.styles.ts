@@ -5,8 +5,8 @@ import { ColorDesignTokens } from '../../utils/designTokens';
 export const Container = styled.div`
   align-self: center;
   padding: 40px 124px;
-  width: 988px;
-  height: 882px;
+  width: 100%;
+  max-width: 998px;
   background-color: ${({ theme }) => {
     return theme.foregroundColor;
   }};

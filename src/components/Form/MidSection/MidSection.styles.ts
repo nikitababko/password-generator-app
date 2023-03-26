@@ -12,6 +12,7 @@ import { animationTime } from './MidSection.data';
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
+  column-gap: 24px;
 `;
 
 export const GenerateButton = styled.button`
@@ -46,8 +47,11 @@ export const PasswordWrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 34px;
-  width: 360px;
+  width: 100%;
+  max-width: 360px;
   height: 56px;
+  overflow-x: auto;
+  overflow-y: hidden;
   background-color: ${({ theme }) => {
     return theme.formItemLeftColBackgroundColor;
   }};
@@ -63,8 +67,6 @@ export const PasswordLabel = styled.p`
   font-size: ${FontSize.sm};
   line-height: 26px;
   border-radius: 12px;
-  overflow-x: auto;
-  overflow-y: hidden;
   white-space: nowrap;
 
   &::-webkit-scrollbar {
@@ -107,7 +109,8 @@ const copyButtonSecondIconAnimation = keyframes`
 
 export const CopyButton = styled.button<CopyButtonStylesProps>`
   position: relative;
-  width: 56px;
+  width: 100%;
+  max-width: 56px;
   height: 56px;
   border-radius: 12px;
   background-color: ${ColorDesignTokens.Blue};
