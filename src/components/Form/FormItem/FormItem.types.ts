@@ -6,6 +6,18 @@ export type FormItemProps = {
   ) => void;
 };
 
+export type FormItemLeftColStylesProps = {
+  isPasswordLengthRow: boolean;
+};
+
+export type FormItemValueExampleStylesProps = {
+  valueExampleIsVisible: boolean;
+};
+
+export type FormItemLabelStylesProps = {
+  valueExampleIsVisible: boolean;
+};
+
 export type HandleClickType = (
   id: number,
   value: string | number | boolean,
@@ -21,4 +33,12 @@ export type FormItemsType = {
     id: number;
     label: number;
   }[];
+};
+
+export type UseFormItemControllerType = (
+  itemId: number,
+) => {
+  valueExampleIsVisible: boolean;
+  handleClick: () => void;
+  isPasswordLengthRow: boolean;
 };

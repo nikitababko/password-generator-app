@@ -7,12 +7,14 @@ import { TranslationsValuesType } from '../../../hooks/useTranslate/useTranslate
 
 import {
   Container,
+  Info,
   Label,
   LeftCol,
   RightCol,
   ValueExample,
 } from './FormItem.styles';
 import { FormItemProps } from './FormItem.types';
+import { useFormItemController } from './FormItem.controller';
 
 export const FormItem: React.FC<FormItemProps> = ({
   item,
@@ -20,13 +22,31 @@ export const FormItem: React.FC<FormItemProps> = ({
 }) => {
   const t = useTranslate();
 
+  const {
+    valueExampleIsVisible,
+    handleClick,
+    isPasswordLengthRow,
+  } = useFormItemController(item.id);
+
   return (
     <Container>
-      <LeftCol>
-        <Label>
+      <LeftCol
+        onClick={handleClick}
+        isPasswordLengthRow={isPasswordLengthRow}
+      >
+        {!isPasswordLengthRow && <Info>i</Info>}
+
+        <Label
+          valueExampleIsVisible={valueExampleIsVisible}
+        >
           {t[item.label as keyof TranslationsValuesType]}
         </Label>
-        <ValueExample>{item.valueExample}</ValueExample>
+
+        <ValueExample
+          valueExampleIsVisible={valueExampleIsVisible}
+        >
+          {item.valueExample}
+        </ValueExample>
       </LeftCol>
       <RightCol>
         {item.type === 'select' ? (

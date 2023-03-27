@@ -1,6 +1,16 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-import { FontSize } from '../../../utils/designTokens';
+import {
+  ColorDesignTokens,
+  FontSize,
+} from '../../../utils/designTokens';
+import { mediaContainer768 } from '../../../styles/mediaQueryContainers';
+
+import {
+  FormItemLabelStylesProps,
+  FormItemLeftColStylesProps,
+  FormItemValueExampleStylesProps,
+} from './FormItem.types';
 
 export const Container = styled.div`
   display: flex;
@@ -10,7 +20,8 @@ export const Container = styled.div`
   width: 100%;
 `;
 
-export const LeftCol = styled.div`
+export const LeftCol = styled.div<FormItemLeftColStylesProps>`
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,6 +36,19 @@ export const LeftCol = styled.div`
     return theme.formItemLeftColBackgroundColor;
   }};
   border-radius: 12px;
+  pointer-events: none;
+
+  ${({ isPasswordLengthRow }) => {
+    return mediaContainer768(
+      css`
+        justify-content: flex-start;
+        pointer-events: ${isPasswordLengthRow
+          ? 'none'
+          : 'all'};
+        padding-left: 36px;
+      `,
+    );
+  }}
 `;
 
 export const RightCol = styled.div`
@@ -35,6 +59,48 @@ export const RightCol = styled.div`
   justify-content: flex-end;
 `;
 
-export const Label = styled.p``;
+export const Label = styled.p<FormItemLabelStylesProps>`
+  ${({ valueExampleIsVisible }) => {
+    return mediaContainer768(
+      css`
+        display: ${valueExampleIsVisible
+          ? 'none'
+          : 'block'};
+      `,
+    );
+  }}
+`;
 
-export const ValueExample = styled.p``;
+export const ValueExample = styled.p<FormItemValueExampleStylesProps>`
+  ${({ valueExampleIsVisible }) => {
+    return mediaContainer768(
+      css`
+        display: ${valueExampleIsVisible
+          ? 'none'
+          : 'block'};
+      `,
+    );
+  }}
+`;
+
+export const Info = styled.p`
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  display: none;
+  margin-right: 15px;
+  padding: 6px 5px;
+  border: 1px solid ${ColorDesignTokens.GrayDark};
+  border-radius: 2px;
+  background-color: ${ColorDesignTokens.White};
+  line-height: 11px;
+  color: ${ColorDesignTokens.GrayDark};
+  pointer-events: none;
+
+  ${mediaContainer768(
+    css`
+      display: block;
+    `,
+  )}
+`;

@@ -5,6 +5,7 @@ import {
   ColorDesignTokens,
   FontSize,
 } from '../../../utils/designTokens';
+import { mediaContainer768 } from '../../../styles/mediaQueryContainers';
 
 import { CopyButtonStylesProps } from './MidSection.types';
 import { animationTime } from './MidSection.data';
@@ -20,7 +21,8 @@ export const GenerateButton = styled.button`
   justify-content: space-between;
   align-items: center;
   padding: 14px;
-  width: 240px;
+  width: 100%;
+  max-width: 240px;
   height: 56px;
   border-radius: 12px;
   background-color: ${({ theme }) => {
@@ -33,6 +35,12 @@ export const GenerateButton = styled.button`
   &:hover {
     box-shadow: 0 0 16px 1px ${ColorDesignTokens.Black};
   }
+
+  ${mediaContainer768(
+    css`
+      max-width: 56px;
+    `,
+  )}
 `;
 
 export const GenerateButtonLabel = styled.p`
@@ -40,6 +48,12 @@ export const GenerateButtonLabel = styled.p`
   line-height: 26px;
   font-weight: 400;
   color: ${ColorDesignTokens.White};
+
+  ${mediaContainer768(
+    css`
+      display: none;
+    `,
+  )}
 `;
 
 export const PasswordWrapper = styled.div`
