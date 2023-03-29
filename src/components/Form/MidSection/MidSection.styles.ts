@@ -5,7 +5,10 @@ import {
   ColorDesignTokens,
   FontSize,
 } from '../../../utils/designTokens';
-import { mediaContainer768 } from '../../../styles/mediaQueryContainers';
+import {
+  mediaContainer1024,
+  mediaContainer768,
+} from '../../../styles/mediaQueryContainers';
 
 import { CopyButtonStylesProps } from './MidSection.types';
 import { animationTime } from './MidSection.data';
@@ -70,14 +73,18 @@ export const PasswordWrapper = styled.div`
     return theme.formItemLeftColBackgroundColor;
   }};
   border-radius: 12px;
+
+  ${mediaContainer1024(
+    css`
+      background-color: ${ColorDesignTokens.White};
+    `,
+  )}
 `;
 
 export const PasswordLabel = styled.p`
   text-align: center;
   width: 100%;
-  background-color: ${({ theme }) => {
-    return theme.formItemLeftColBackgroundColor;
-  }};
+  background-color: transparent;
   font-size: ${FontSize.sm};
   line-height: 26px;
   border-radius: 12px;

@@ -4,7 +4,10 @@ import {
   ColorDesignTokens,
   FontSize,
 } from '../../../utils/designTokens';
-import { mediaContainer768 } from '../../../styles/mediaQueryContainers';
+import {
+  mediaContainer1024,
+  mediaContainer768,
+} from '../../../styles/mediaQueryContainers';
 
 import {
   FormItemLabelStylesProps,
@@ -37,6 +40,12 @@ export const LeftCol = styled.div<FormItemLeftColStylesProps>`
   }};
   border-radius: 12px;
   pointer-events: none;
+
+  ${mediaContainer1024(
+    css`
+      background-color: ${ColorDesignTokens.White};
+    `,
+  )}
 
   ${({ isPasswordLengthRow }) => {
     return mediaContainer768(
