@@ -76,8 +76,8 @@ export const ValueExample = styled.p<FormItemValueExampleStylesProps>`
     return mediaContainer768(
       css`
         display: ${valueExampleIsVisible
-          ? 'none'
-          : 'block'};
+          ? 'block'
+          : 'none'};
       `,
     );
   }}
