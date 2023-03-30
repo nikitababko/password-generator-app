@@ -10,7 +10,7 @@ export type SelectFieldItemType = {
 export type SelectFieldProps = {
   data?: SelectFieldItemType[];
   styles?: Partial<{
-    maxWidth: string;
+    width: string;
     // backgroundColor: keyof ColorDesignTokensType;
   }>;
   callback?: (
@@ -25,7 +25,7 @@ export type ChevronWrapperProps = {
 
 export type ContainerStylesProps = Partial<{
   styles?: Partial<{
-    maxWidth: string;
+    width: string;
   }>;
 }>;
 

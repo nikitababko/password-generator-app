@@ -17,7 +17,6 @@ import {
 
 export const Container = styled.div`
   display: flex;
-  justify-content: center;
   column-gap: 28px;
   align-items: center;
   width: 100%;
@@ -28,7 +27,7 @@ export const LeftCol = styled.div<FormItemLeftColStylesProps>`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 21px;
+  padding: 10px 21px;
   width: 100%;
   max-width: 645px;
   height: 48px;

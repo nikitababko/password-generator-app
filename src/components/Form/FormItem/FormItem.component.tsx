@@ -53,7 +53,7 @@ export const FormItem: React.FC<FormItemProps> = ({
           <SelectField
             data={item.options}
             styles={{
-              maxWidth: '90px',
+              width: '90px',
               // TODO: add backgroundColorType
               // backgroundColor: ColorDesignTokens.BlackLight,
             }}

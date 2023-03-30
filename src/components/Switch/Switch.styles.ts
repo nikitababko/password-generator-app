@@ -9,8 +9,7 @@ import { SwitchContainerStylesProps } from './Switch.types';
 
 export const Container = styled.div<SwitchContainerStylesProps>`
   position: relative;
-  width: 100%;
-  max-width: 56px;
+  width: 56px;
   height: 32px;
   background-color: ${({ isActive }) => {
     return isActive

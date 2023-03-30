@@ -39,10 +39,7 @@ const itemRightToLeftAnimation = keyframes`
 
 export const Container = styled.div<ThemeStylesType>`
   position: relative;
-  margin-left: auto;
-  margin-right: 34px;
-  width: 100%;
-  max-width: 100px;
+  min-width: 100px;
   height: 48px;
   border-radius: 100px;
   border: ${({ isDay }) => {
