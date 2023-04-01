@@ -35,3 +35,11 @@ export const mediaContainer480: MediaQueryContainerType = (
     ${inner};
   }
 `;
+
+export const mediaContainer375: MediaQueryContainerType = (
+  inner,
+) => css`
+  @media (max-width: ${MediaBreakPointsDesignTokens.media375}px) {
+    ${inner};
+  }
+`;

@@ -11,6 +11,7 @@ export const MediaBreakPointsDesignTokens: MediaBreakPointsDesignTokensType =
     media1024: 1024,
     media768: 768,
     media480: 480,
+    media375: 375,
   } as const;
 
 export const ColorDesignTokens: ColorDesignTokensType = {

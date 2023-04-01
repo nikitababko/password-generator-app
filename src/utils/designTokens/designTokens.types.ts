@@ -3,6 +3,7 @@ export type MediaBreakPointsDesignTokensType = {
   media1024: 1024;
   media768: 768;
   media480: 480;
+  media375: 375;
 };
 
 export type AnimationType = (time?: string) => string;
