@@ -30,7 +30,8 @@ export const LeftCol = styled.div<FormItemLeftColStylesProps>`
   padding: 10px 21px;
   width: 100%;
   max-width: 645px;
-  height: 48px;
+  min-width: 160px;
+  height: 100%;
   font-size: ${FontSize.sm};
   font-weight: 400;
   line-height: 25px;
@@ -80,6 +81,8 @@ export const Label = styled.p<FormItemLabelStylesProps>`
 `;
 
 export const ValueExample = styled.p<FormItemValueExampleStylesProps>`
+  word-break: break-all;
+
   ${({ valueExampleIsVisible }) => {
     return mediaContainer768(
       css`

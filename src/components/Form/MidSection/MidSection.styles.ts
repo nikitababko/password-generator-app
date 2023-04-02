@@ -7,6 +7,7 @@ import {
 } from '../../../utils/designTokens';
 import {
   mediaContainer1024,
+  mediaContainer480,
   mediaContainer768,
 } from '../../../styles/mediaQueryContainers';
 
@@ -17,6 +18,15 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   column-gap: 24px;
+
+  ${mediaContainer480(
+    css`
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-row-gap: 40px;
+    `,
+  )}
 `;
 
 export const GenerateButton = styled.button`
@@ -25,7 +35,7 @@ export const GenerateButton = styled.button`
   align-items: center;
   padding: 14px;
   width: 100%;
-  max-width: 240px;
+  max-width: 180px;
   height: 56px;
   border-radius: 12px;
   background-color: ${({ theme }) => {
@@ -42,6 +52,12 @@ export const GenerateButton = styled.button`
   ${mediaContainer768(
     css`
       max-width: 56px;
+    `,
+  )}
+
+  ${mediaContainer480(
+    css`
+      grid-column: 1;
     `,
   )}
 `;
@@ -77,6 +93,14 @@ export const PasswordWrapper = styled.div`
   ${mediaContainer1024(
     css`
       background-color: ${ColorDesignTokens.White};
+    `,
+  )}
+
+  ${mediaContainer480(
+    css`
+      grid-column: 1 / -1;
+      grid-row: 2;
+      max-width: none;
     `,
   )}
 `;
@@ -172,4 +196,11 @@ export const CopyButton = styled.button<CopyButtonStylesProps>`
   &:hover {
     box-shadow: 0 0 16px 1px ${ColorDesignTokens.Blue};
   }
+
+  ${mediaContainer480(
+    css`
+      grid-column: 2;
+      justify-self: flex-end;
+    `,
+  )}
 `;
