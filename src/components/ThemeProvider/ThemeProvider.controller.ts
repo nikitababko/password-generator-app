@@ -4,11 +4,9 @@ import { UseThemeProviderType } from './ThemeProvider.types';
 
 export const useThemeProvider: UseThemeProviderType =
   () => {
-    const {
-      theme: [theme],
-    } = useAppContext();
+    const [state] = useAppContext();
 
     return {
-      theme,
+      theme: state.theme,
     };
   };

@@ -1,43 +1,29 @@
-import React, { useContext } from 'react';
+import React, { useContext, useReducer } from 'react';
 
-import { ThemeType } from '../utils/designTokens/designTokens.types';
-import { LightTheme } from '../utils/designTokens';
-import { FormItemsType } from '../components/Form/FormItem/FormItem.types';
-
-import { formItemsInitialState } from './store.data';
 import {
-  StoreContextType,
   StoreProviderProps,
+  StoreType,
 } from './store.types';
-import { LanguagesType } from '../hooks/useTranslate/useTranslate.types';
+import { appReducer } from './appReducer.reducers';
+import { storeInitialState } from './store.data';
 
-export const StoreContext =
-  React.createContext<StoreContextType>({
-    form: [[], () => {}],
-    theme: [LightTheme, () => {}],
-    lang: ['en', () => {}],
-  });
+export const StoreContext = React.createContext<StoreType>([
+  storeInitialState,
+  () => {},
+]);
 
 export const useAppContext = () =>
-  useContext<StoreContextType>(StoreContext);
+  useContext<StoreType>(StoreContext);
 
 export const StoreProvider: React.FC<
   StoreProviderProps
 > = ({ children }) => {
-  const [formItems, setFormItems] = React.useState<
-    FormItemsType[]
-  >(formItemsInitialState);
-  const [theme, setTheme] =
-    React.useState<ThemeType>(LightTheme);
+  const [state, dispatch] = useReducer(
+    appReducer,
+    storeInitialState,
+  );
 
-  const [lang, setLang] =
-    React.useState<LanguagesType>('en');
-
-  const store: StoreContextType = {
-    form: [formItems, setFormItems],
-    theme: [theme, setTheme],
-    lang: [lang, setLang],
-  };
+  const store: StoreType = [state, dispatch];
 
   return (
     <StoreContext.Provider value={store}>

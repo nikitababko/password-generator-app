@@ -4,9 +4,7 @@ import { Translations } from './useTranslate.data';
 import { UseTranslateType } from './useTranslate.types';
 
 export const useTranslate: UseTranslateType = () => {
-  const {
-    lang: [lang],
-  } = useAppContext();
+  const [state] = useAppContext();
 
-  return Translations[lang];
+  return Translations[state.lang];
 };

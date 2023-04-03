@@ -1,0 +1,5 @@
+export enum ActionTypes {
+  THEME_TOGGLE = 'THEME_TOGGLE',
+  CHANGE_LANG = 'CHANGE_LANG',
+  SET_FORM_ITEMS = 'SET_FORM_ITEMS',
+}

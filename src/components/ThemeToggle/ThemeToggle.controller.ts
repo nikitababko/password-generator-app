@@ -1,31 +1,27 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
-import { UseThemeToggleType } from './ThemeToggle.types';
 import { useAppContext } from '../../store';
 import {
   DarkTheme,
   LightTheme,
 } from '../../utils/designTokens';
 
+import { UseThemeToggleType } from './ThemeToggle.types';
+import { themeToggleAction } from '../../store/appActions.actions';
+
 export const useThemeToggle: UseThemeToggleType = () => {
   const [isDay, setIsDay] = useState<boolean>(true);
 
-  const {
-    theme: [, setTheme],
-  } = useAppContext();
-
-  useEffect(() => {
-    if (isDay) {
-      setTheme(LightTheme);
-    } else {
-      setTheme(DarkTheme);
-    }
-
-    return () => setTheme(LightTheme);
-  }, [setTheme, isDay]);
+  const [, dispatch] = useAppContext();
 
   const handleClick = () => {
     setIsDay((prevState) => !prevState);
+
+    if (!isDay) {
+      dispatch(themeToggleAction(LightTheme));
+    } else {
+      dispatch(themeToggleAction(DarkTheme));
+    }
   };
 
   return {

@@ -4,7 +4,6 @@ import { Title } from '../Title';
 import { SelectField } from '../SelectField';
 import { ThemeToggle } from '../ThemeToggle';
 import { useAppContext } from '../../store';
-import { LanguagesType } from '../../hooks/useTranslate/useTranslate.types';
 
 import {
   Container,
@@ -12,11 +11,11 @@ import {
   RightCol,
 } from './Header.styles';
 import { data } from './Header.data';
+import { changeLangAction } from '../../store/appActions.actions';
+import { LanguagesType } from '../../hooks/useTranslate/useTranslate.types';
 
 export const Header: React.FC = () => {
-  const {
-    lang: [, setLang],
-  } = useAppContext();
+  const [, dispatch] = useAppContext();
 
   return (
     <Container>
@@ -27,7 +26,9 @@ export const Header: React.FC = () => {
         <ThemeToggle />
         <SelectField
           data={data}
-          callback={(id) => setLang(id as LanguagesType)}
+          callback={(id) =>
+            dispatch(changeLangAction(id as LanguagesType))
+          }
         />
       </RightCol>
     </Container>

@@ -2,25 +2,20 @@ import { HandleClickType } from '../FormItem/FormItem.types';
 import { useAppContext } from '../../../store';
 
 import { UseTopSectionControllerType } from './TopSection.types';
+import { setFormItemsAction } from '../../../store/appActions.actions';
 
 export const useTopSectionController: UseTopSectionControllerType =
   () => {
-    const {
-      form: [formItems, setFormItems],
-    } = useAppContext();
+    const [state, dispatch] = useAppContext();
 
     const handleClick: HandleClickType = (id, value) => {
-      setFormItems((prevState) => {
-        return prevState?.map((prevStateItem) => {
-          return prevStateItem.id === id
-            ? { ...prevStateItem, value }
-            : prevStateItem;
-        });
-      });
+      dispatch(
+        setFormItemsAction(state.formItems, id, value),
+      );
     };
 
     return {
-      formItems,
+      formItems: state.formItems,
       handleClick,
     };
   };
