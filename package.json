@@ -38,7 +38,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint:css": "stylelint --config .stylelintrc '**/*.styles.ts'",
     "prepare": "npx husky install"
   },
   "dependencies": {
@@ -60,7 +59,6 @@
     "@commitlint/cli": "17.3.0",
     "@commitlint/config-conventional": "17.3.0",
     "@release-it/conventional-changelog": "5.1.1",
-    "@stylelint/postcss-css-in-js": "0.38.0",
     "@types/styled-components": "5.1.26",
     "@typescript-eslint/eslint-plugin": "5.48.0",
     "@typescript-eslint/parser": "5.48.0",
@@ -76,11 +74,7 @@
     "husky": "8.0.2",
     "lint-staged": "13.1.0",
     "prettier": "2.8.1",
-    "release-it": "15.5.1",
-    "stylelint": "14.16.1",
-    "stylelint-config-prettier": "9.0.4",
-    "stylelint-config-standard-scss": "6.1.0",
-    "stylelint-config-styled-components": "0.1.1"
+    "release-it": "15.5.1"
   },
   "config": {
     "commitizen": {

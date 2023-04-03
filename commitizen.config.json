@@ -86,9 +86,6 @@
       "name": "commitizen"
     },
     {
-      "name": "stylelint"
-    },
-    {
       "name": "release"
     },
     {
