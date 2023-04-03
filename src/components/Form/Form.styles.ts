@@ -7,7 +7,6 @@ export const Container = styled.div`
   align-self: center;
   padding: 40px 124px;
   width: 100%;
-  max-width: 998px;
   background-color: ${({ theme }) => {
     return theme.foregroundColor;
   }};
