@@ -1,8 +1,8 @@
-import { FormItemsType } from '../components/Form/FormItem/FormItem.types';
-import { ThemeType } from '../utils/designTokens/designTokens.types';
-import { LanguagesType } from '../hooks/useTranslate/useTranslate.types';
+import type { FormItemsType } from '../components/Form/FormItem/FormItem.types';
+import type { ThemeType } from '../utils/designTokens/designTokens.types';
+import type { LanguagesType } from '../hooks/useTranslate/useTranslate.types';
 
-import { ActionType } from './store.types';
+import type { ActionType } from './store.types';
 import { ActionTypes } from './appActions.data';
 
 export const themeToggleAction = (

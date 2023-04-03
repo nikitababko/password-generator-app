@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { IconItems } from './Icon.data';
-import { IconProps } from './Icon.types';
+import type { IconProps } from './Icon.types';
 import { Container } from './Icon.styles';
 
 export const Icon: React.FC<IconProps> = ({

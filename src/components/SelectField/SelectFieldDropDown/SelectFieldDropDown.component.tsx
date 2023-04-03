@@ -3,7 +3,7 @@ import React from 'react';
 import { SelectFieldItem } from '../SelectFieldItem';
 import { Icon } from '../../Icon';
 
-import { SelectFieldDropDownProps } from './SelectFieldDropDown.types';
+import type { SelectFieldDropDownProps } from './SelectFieldDropDown.types';
 import { Container } from './SelectFieldDropDown.styles';
 
 export const DropDown: React.FC<
@@ -24,7 +24,7 @@ export const DropDown: React.FC<
           item={selectFieldItem}
           setSelectedItem={setSelectedItem}
           setIsOpen={setIsOpen}
-          isDropDownItem={true}
+          isDropDownItem
           selectedItemEqualToItem={
             selectFieldItem.id === selectedItem.id
           }

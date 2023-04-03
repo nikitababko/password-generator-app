@@ -1,6 +1,6 @@
 import React, { useContext, useReducer } from 'react';
 
-import {
+import type {
   StoreProviderProps,
   StoreType,
 } from './store.types';

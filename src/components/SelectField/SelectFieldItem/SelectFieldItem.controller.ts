@@ -1,4 +1,4 @@
-import { UseSelectFieldItemControllerType } from './SelectFieldItem.types';
+import type { UseSelectFieldItemControllerType } from './SelectFieldItem.types';
 
 export const useSelectFieldItemController: UseSelectFieldItemControllerType =
   (item, setSelectedItem, setIsOpen, callback) => {

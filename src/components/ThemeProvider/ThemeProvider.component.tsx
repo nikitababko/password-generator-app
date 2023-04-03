@@ -1,7 +1,7 @@
 import React from 'react';
 import { ThemeProvider as ThemeProviderSC } from 'styled-components';
 
-import { ThemeProviderProps } from './ThemeProvider.types';
+import type { ThemeProviderProps } from './ThemeProvider.types';
 import { useThemeProvider } from './ThemeProvider.controller';
 
 export const ThemeProvider: React.FC<

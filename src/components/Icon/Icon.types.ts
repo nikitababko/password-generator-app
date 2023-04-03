@@ -1,7 +1,7 @@
-import React from 'react';
-import { ValueOf } from 'next/constants';
+import type React from 'react';
+import type { ValueOf } from 'next/constants';
 
-import { ColorDesignTokensType } from '../../utils/designTokens/designTokens.types';
+import type { ColorDesignTokensType } from '../../utils/designTokens/designTokens.types';
 
 export type ColorType = ValueOf<ColorDesignTokensType>;
 

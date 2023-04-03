@@ -7,7 +7,7 @@ import {
   Container,
   Content,
 } from './SelectField.styles';
-import { SelectFieldProps } from './SelectField.types';
+import type { SelectFieldProps } from './SelectField.types';
 import { SelectFieldItem } from './SelectFieldItem';
 import { DropDown } from './SelectFieldDropDown';
 import { useSelectFieldController } from './SelectField.controller';
@@ -31,6 +31,7 @@ export const SelectField: React.FC<SelectFieldProps> = ({
     <Container ref={ref} styles={styles}>
       <Content onClick={handleClick}>
         <SelectFieldItem item={selectedItem} />
+
         <ChevronWrapper isOpen={isOpen}>
           <Icon name="ChevronDown" width={24} height={24} />
         </ChevronWrapper>

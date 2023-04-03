@@ -14,6 +14,7 @@ const App: React.FC<AppProps> = ({
     <StoreProvider>
       <ThemeProvider>
         <GlobalStyles />
+
         <Layout>
           <Component {...pageProps} />
         </Layout>

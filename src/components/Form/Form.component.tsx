@@ -8,7 +8,9 @@ export const Form: React.FC = () => {
   return (
     <Container>
       <TopSection />
+
       <Border />
+
       <MidSection />
     </Container>
   );

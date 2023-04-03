@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 
 import { useOnClickOutside } from '../../hooks';
 
-import {
+import type {
   SelectFieldItemType,
   UseSelectFieldControllerType,
 } from './SelectField.types';

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import { UseOnClickOutsideType } from './useOnClickOutside.types';
+import type { UseOnClickOutsideType } from './useOnClickOutside.types';
 
 export const useOnClickOutside: UseOnClickOutsideType = (
   ref,

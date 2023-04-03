@@ -1,4 +1,4 @@
-import React from 'react';
+import type React from 'react';
 
 export type UseOnClickOutsideType = <T extends HTMLElement>(
   ref: React.RefObject<T>,

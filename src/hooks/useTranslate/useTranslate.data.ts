@@ -1,4 +1,4 @@
-import { TranslationsType } from './useTranslate.types';
+import type { TranslationsType } from './useTranslate.types';
 
 export const Translations = {
   en: {

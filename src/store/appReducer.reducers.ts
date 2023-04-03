@@ -1,4 +1,4 @@
-import {
+import type {
   ActionType,
   StoreInitialStateType,
 } from './store.types';

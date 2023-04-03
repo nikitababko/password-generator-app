@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import {
+import type {
   ChevronWrapperProps,
   ContainerStylesProps,
 } from './SelectField.types';

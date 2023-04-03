@@ -1,7 +1,7 @@
-import React from 'react';
+import type React from 'react';
 
-import { SelectFieldItemType } from '../SelectField.types';
-import { LanguagesType } from '../../../hooks/useTranslate/useTranslate.types';
+import type { SelectFieldItemType } from '../SelectField.types';
+import type { LanguagesType } from '../../../hooks/useTranslate/useTranslate.types';
 
 export type SelectFieldDropDownProps = {
   data?: SelectFieldItemType[];

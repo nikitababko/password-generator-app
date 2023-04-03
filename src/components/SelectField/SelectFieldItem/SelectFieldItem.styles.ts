@@ -6,7 +6,7 @@ import {
   FontSize,
 } from '../../../utils/designTokens';
 
-import {
+import type {
   ChildrenStylesProps,
   SelectFieldItemContainerStylesType,
 } from './SelectFieldItem.types';

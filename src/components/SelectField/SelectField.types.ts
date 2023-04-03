@@ -1,5 +1,5 @@
-import React from 'react';
-import { LanguagesType } from '../../hooks/useTranslate/useTranslate.types';
+import type React from 'react';
+import type { LanguagesType } from '../../hooks/useTranslate/useTranslate.types';
 
 export type SelectFieldItemType = {
   id: number | LanguagesType;

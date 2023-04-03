@@ -1,7 +1,7 @@
-import { HandleClickType } from '../FormItem/FormItem.types';
+import type { HandleClickType } from '../FormItem/FormItem.types';
 import { useAppContext } from '../../../store';
 
-import { UseTopSectionControllerType } from './TopSection.types';
+import type { UseTopSectionControllerType } from './TopSection.types';
 import { setFormItemsAction } from '../../../store/appActions.actions';
 
 export const useTopSectionController: UseTopSectionControllerType =

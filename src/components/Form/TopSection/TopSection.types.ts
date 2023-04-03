@@ -1,4 +1,4 @@
-import {
+import type {
   FormItemsType,
   HandleClickType,
 } from '../FormItem/FormItem.types';

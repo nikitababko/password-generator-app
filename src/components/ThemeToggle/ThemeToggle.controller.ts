@@ -6,7 +6,7 @@ import {
   LightTheme,
 } from '../../utils/designTokens';
 
-import { UseThemeToggleType } from './ThemeToggle.types';
+import type { UseThemeToggleType } from './ThemeToggle.types';
 import { themeToggleAction } from '../../store/appActions.actions';
 
 export const useThemeToggle: UseThemeToggleType = () => {

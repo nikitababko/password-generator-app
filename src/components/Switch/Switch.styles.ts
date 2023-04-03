@@ -5,7 +5,7 @@ import {
   ColorDesignTokens,
 } from '../../utils/designTokens';
 
-import { SwitchContainerStylesProps } from './Switch.types';
+import type { SwitchContainerStylesProps } from './Switch.types';
 
 export const Container = styled.div<SwitchContainerStylesProps>`
   position: relative;

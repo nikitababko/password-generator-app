@@ -5,6 +5,8 @@
     "airbnb-typescript",
     "eslint:recommended",
     "plugin:jsx-a11y/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended"
@@ -57,7 +59,50 @@
           }
         ],
         "import/prefer-default-export": "off",
-        "@typescript-eslint/indent": "off"
+        "@typescript-eslint/indent": "off",
+        "react/jsx-filename-extension": "off",
+        "arrow-body-style": "off",
+        "import/no-extraneous-dependencies": [
+          "error",
+          {
+            "devDependencies": true
+          }
+        ],
+        "@typescript-eslint/ban-types": "off",
+        "react/self-closing-comp": "error",
+        "react/no-array-index-key": "error",
+        "react/jsx-boolean-value": "error",
+        "react/jsx-curly-brace-presence": "error",
+        "react/jsx-fragments": [
+          "error",
+          "element"
+        ],
+        "react/jsx-no-useless-fragment": [
+          "error",
+          {
+            "allowExpressions": true
+          }
+        ],
+        "@typescript-eslint/consistent-type-imports": [
+          "error"
+        ],
+        "react/no-multi-comp": [
+          "error"
+        ],
+        "react/jsx-newline": "error"
+      }
+    },
+    {
+      "files": [
+        "src/components/Icon/Icon.data.tsx"
+      ],
+      "rules": {
+        "react/no-multi-comp": [
+          "error",
+          {
+            "ignoreStateless": true
+          }
+        ]
       }
     }
   ]

@@ -1,6 +1,6 @@
 import styled, { css, keyframes } from 'styled-components';
 
-import {
+import type {
   ThemeStylesType,
   ThemeToggleOpacityStateType,
 } from './ThemeToggle.types';

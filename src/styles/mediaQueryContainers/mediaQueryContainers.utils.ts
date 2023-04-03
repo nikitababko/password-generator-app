@@ -2,7 +2,7 @@ import { css } from 'styled-components';
 
 import { MediaBreakPointsDesignTokens } from '../../utils/designTokens';
 
-import { MediaQueryContainerType } from './mediaQueryContainers.types';
+import type { MediaQueryContainerType } from './mediaQueryContainers.types';
 
 export const mediaContainer1200: MediaQueryContainerType = (
   styles,

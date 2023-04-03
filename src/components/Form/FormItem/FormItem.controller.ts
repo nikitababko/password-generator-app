@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { UseFormItemControllerType } from './FormItem.types';
+import type { UseFormItemControllerType } from './FormItem.types';
 
 export const useFormItemController: UseFormItemControllerType =
   (itemId) => {

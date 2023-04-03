@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SelectFieldItemProps } from './SelectFieldItem.types';
+import type { SelectFieldItemProps } from './SelectFieldItem.types';
 import {
   Children,
   Container,

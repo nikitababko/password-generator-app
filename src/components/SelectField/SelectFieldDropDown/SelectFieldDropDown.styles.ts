@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { SelectFieldDropDownContainerStylesProps } from './SelectFieldDropDown.types';
+import type { SelectFieldDropDownContainerStylesProps } from './SelectFieldDropDown.types';
 import {
   animation,
   ColorDesignTokens,

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { UseSwitchControllerType } from './Switch.types';
+import type { UseSwitchControllerType } from './Switch.types';
 
 export const useSwitchController: UseSwitchControllerType =
   (value, callback, id) => {

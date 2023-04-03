@@ -4,7 +4,7 @@ import { generatePassword } from '@nikitababko/password-generator';
 import { useAppContext } from '../../../store';
 import { useTranslate } from '../../../hooks';
 
-import { UseMidSectionControllerType } from './MidSection.types';
+import type { UseMidSectionControllerType } from './MidSection.types';
 import { animationTime } from './MidSection.data';
 
 export const useMidSectionController: UseMidSectionControllerType =

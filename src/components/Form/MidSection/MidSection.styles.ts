@@ -11,7 +11,7 @@ import {
   mediaContainer768,
 } from '../../../styles/mediaQueryContainers';
 
-import { CopyButtonStylesProps } from './MidSection.types';
+import type { CopyButtonStylesProps } from './MidSection.types';
 import { animationTime } from './MidSection.data';
 
 export const Container = styled.div`

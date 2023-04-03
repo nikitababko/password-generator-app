@@ -1,4 +1,4 @@
-import { CSSProp } from 'styled-components';
+import type { CSSProp } from 'styled-components';
 
 export type MediaQueryContainerType = (
   style: CSSProp,

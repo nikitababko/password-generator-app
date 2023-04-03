@@ -1,6 +1,6 @@
-import React from 'react';
+import type React from 'react';
 
-import { ThemeType } from '../../utils/designTokens/designTokens.types';
+import type { ThemeType } from '../../utils/designTokens/designTokens.types';
 
 export type ThemeProviderProps = {
   children: React.ReactNode;

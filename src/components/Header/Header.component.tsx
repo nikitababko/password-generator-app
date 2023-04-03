@@ -12,7 +12,7 @@ import {
 } from './Header.styles';
 import { data } from './Header.data';
 import { changeLangAction } from '../../store/appActions.actions';
-import { LanguagesType } from '../../hooks/useTranslate/useTranslate.types';
+import type { LanguagesType } from '../../hooks/useTranslate/useTranslate.types';
 
 export const Header: React.FC = () => {
   const [, dispatch] = useAppContext();
@@ -22,8 +22,10 @@ export const Header: React.FC = () => {
       <LeftCol>
         <Title />
       </LeftCol>
+
       <RightCol>
         <ThemeToggle />
+
         <SelectField
           data={data}
           callback={(id) =>

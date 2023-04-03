@@ -9,7 +9,7 @@ import {
   mediaContainer768,
 } from '../../../styles/mediaQueryContainers';
 
-import {
+import type {
   FormItemLabelStylesProps,
   FormItemLeftColStylesProps,
   FormItemValueExampleStylesProps,

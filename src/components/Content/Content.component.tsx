@@ -9,6 +9,7 @@ export const Content: React.FC = () => {
   return (
     <Container>
       <Header />
+
       <Form />
     </Container>
   );

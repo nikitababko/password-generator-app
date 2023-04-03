@@ -3,7 +3,7 @@ import React from 'react';
 import { SelectField } from '../../SelectField';
 import { Switch } from '../../Switch';
 import { useTranslate } from '../../../hooks';
-import { TranslationsValuesType } from '../../../hooks/useTranslate/useTranslate.types';
+import type { TranslationsValuesType } from '../../../hooks/useTranslate/useTranslate.types';
 
 import {
   Container,
@@ -13,7 +13,7 @@ import {
   RightCol,
   ValueExample,
 } from './FormItem.styles';
-import { FormItemProps } from './FormItem.types';
+import type { FormItemProps } from './FormItem.types';
 import { useFormItemController } from './FormItem.controller';
 
 export const FormItem: React.FC<FormItemProps> = ({
@@ -49,6 +49,7 @@ export const FormItem: React.FC<FormItemProps> = ({
           {item.valueExample}
         </ValueExample>
       </LeftCol>
+
       <RightCol>
         {item.type === 'select' ? (
           <SelectField

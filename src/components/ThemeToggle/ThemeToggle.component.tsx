@@ -14,7 +14,9 @@ export const ThemeToggle: React.FC = () => {
   return (
     <Container onClick={handleClick} isDay={isDay}>
       <ToggleItem isDay={isDay} />
+
       <Cloud isDay={isDay} />
+
       <Stars isDay={isDay} />
     </Container>
   );

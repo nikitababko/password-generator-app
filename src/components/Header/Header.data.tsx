@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SelectFieldItemType } from '../SelectField/SelectField.types';
+import type { SelectFieldItemType } from '../SelectField/SelectField.types';
 import { Icon } from '../Icon';
 
 export const data: SelectFieldItemType[] = [

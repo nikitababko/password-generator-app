@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import {
+import type {
   IconContainerAttrsType,
   IconContainerStylesType,
 } from './Icon.types';

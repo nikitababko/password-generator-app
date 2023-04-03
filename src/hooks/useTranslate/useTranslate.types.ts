@@ -1,4 +1,4 @@
-import { ValueOf } from 'next/constants';
+import type { ValueOf } from 'next/constants';
 
 export type LanguagesType =
   | 'en'

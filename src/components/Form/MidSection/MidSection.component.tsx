@@ -28,6 +28,7 @@ export const MidSection: React.FC = () => {
         <GenerateButtonLabel>
           {generateButtonTranslation}
         </GenerateButtonLabel>
+
         <Icon name="ArrowRepeat" width={31} height={32} />
       </GenerateButton>
 
@@ -37,6 +38,7 @@ export const MidSection: React.FC = () => {
 
       <CopyButton onClick={handleCopy} isCopied={isCopied}>
         <Icon name="CopySelect" width={31} height={32} />
+
         <Icon
           name="CheckMark"
           width={15}

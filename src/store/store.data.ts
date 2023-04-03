@@ -1,5 +1,5 @@
-import { FormItemsType } from '../components/Form/FormItem/FormItem.types';
-import { StoreInitialStateType } from './store.types';
+import type { FormItemsType } from '../components/Form/FormItem/FormItem.types';
+import type { StoreInitialStateType } from './store.types';
 import { LightTheme } from '../utils/designTokens';
 
 export const formItemsInitialState = [
