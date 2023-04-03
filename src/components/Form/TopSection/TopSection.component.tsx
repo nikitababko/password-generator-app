@@ -6,7 +6,7 @@ import { Container } from './TopSection.styles';
 import { useTopSectionController } from './TopSection.controller';
 
 export const TopSection: React.FC = () => {
-  const { handleClick, formItems } =
+  const { handleClick, formItems, isLastActiveFormItemId } =
     useTopSectionController();
 
   return (
@@ -16,6 +16,9 @@ export const TopSection: React.FC = () => {
           key={formItem.id}
           item={formItem}
           callback={(id, value) => handleClick(id, value)}
+          isDisabled={
+            isLastActiveFormItemId === formItem.id
+          }
         />
       ))}
     </Container>

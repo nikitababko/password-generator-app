@@ -2,13 +2,10 @@ import { useCallback, useEffect, useState } from 'react';
 import { generatePassword } from '@nikitababko/password-generator';
 
 import { useAppContext } from '../../../store';
+import { useTranslate } from '../../../hooks';
 
 import { UseMidSectionControllerType } from './MidSection.types';
-import {
-  animationTime,
-  firstElement,
-} from './MidSection.data';
-import { useTranslate } from '../../../hooks';
+import { animationTime } from './MidSection.data';
 
 export const useMidSectionController: UseMidSectionControllerType =
   () => {
@@ -24,9 +21,7 @@ export const useMidSectionController: UseMidSectionControllerType =
 
     const handleCopy = async () => {
       try {
-        await navigator.clipboard.writeText(
-          password[firstElement],
-        );
+        await navigator.clipboard.writeText(password[0]);
 
         setIsCopied(true);
 

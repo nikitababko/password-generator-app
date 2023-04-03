@@ -19,6 +19,7 @@ import { useFormItemController } from './FormItem.controller';
 export const FormItem: React.FC<FormItemProps> = ({
   item,
   callback,
+  isDisabled,
 }) => {
   const t = useTranslate();
 
@@ -66,6 +67,7 @@ export const FormItem: React.FC<FormItemProps> = ({
             value={item.value as boolean}
             id={item.id}
             callback={callback}
+            isDisabled={isDisabled}
           />
         )}
       </RightCol>

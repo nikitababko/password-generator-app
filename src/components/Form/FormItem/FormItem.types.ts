@@ -4,6 +4,7 @@ export type FormItemProps = {
     id: number,
     value: string | number | boolean,
   ) => void;
+  isDisabled: boolean;
 };
 
 export type FormItemLeftColStylesProps = {

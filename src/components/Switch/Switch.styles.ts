@@ -11,14 +11,21 @@ export const Container = styled.div<SwitchContainerStylesProps>`
   position: relative;
   width: 56px;
   height: 32px;
-  background-color: ${({ isActive }) => {
+  background-color: ${({ isActive, isDisabled }) => {
     return isActive
-      ? ColorDesignTokens.Blue
+      ? `${
+          isDisabled
+            ? `${ColorDesignTokens.Blue}70`
+            : ColorDesignTokens.Blue
+        }`
       : ColorDesignTokens.BlueLightSky;
   }};
   border-radius: 26px;
   cursor: pointer;
   transition: background-color ${animation()};
+  pointer-events: ${({ isDisabled }) => {
+    return isDisabled ? 'none' : 'auto';
+  }};
 
   &::after {
     content: '';

@@ -8,6 +8,7 @@ export const Switch: React.FC<SwitchProps> = ({
   id,
   callback,
   value,
+  isDisabled,
 }) => {
   const { isActive, handleClick } = useSwitchController(
     value,
@@ -16,6 +17,10 @@ export const Switch: React.FC<SwitchProps> = ({
   );
 
   return (
-    <Container onClick={handleClick} isActive={isActive} />
+    <Container
+      onClick={handleClick}
+      isActive={isActive}
+      isDisabled={isDisabled}
+    />
   );
 };

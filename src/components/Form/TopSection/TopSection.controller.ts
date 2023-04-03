@@ -14,8 +14,21 @@ export const useTopSectionController: UseTopSectionControllerType =
       );
     };
 
+    const isLastActiveFormItemId = (() => {
+      const items = state.formItems.filter((formItem) => {
+        return formItem.value === true;
+      });
+
+      if (items.length <= 1) {
+        return items[0].id;
+      }
+
+      return null;
+    })();
+
     return {
       formItems: state.formItems,
       handleClick,
+      isLastActiveFormItemId,
     };
   };

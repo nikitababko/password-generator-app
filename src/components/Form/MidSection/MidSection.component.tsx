@@ -12,7 +12,6 @@ import {
   PasswordWrapper,
 } from './MidSection.styles';
 import { useMidSectionController } from './MidSection.controller';
-import { firstElement } from './MidSection.data';
 
 export const MidSection: React.FC = () => {
   const {
@@ -33,9 +32,7 @@ export const MidSection: React.FC = () => {
       </GenerateButton>
 
       <PasswordWrapper>
-        <PasswordLabel>
-          {password[firstElement]}
-        </PasswordLabel>
+        <PasswordLabel>{password[0]}</PasswordLabel>
       </PasswordWrapper>
 
       <CopyButton onClick={handleCopy} isCopied={isCopied}>
