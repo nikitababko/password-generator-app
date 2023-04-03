@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { generatePassword } from '@nikitababko/password-generator';
 
 import { useAppContext } from '../../../store';
@@ -39,7 +39,7 @@ export const useMidSectionController: UseMidSectionControllerType =
       }
     };
 
-    const handleGeneratePassword = () => {
+    const handleGeneratePassword = useCallback(() => {
       setPassword(
         generatePassword({
           // eslint-disable-next-line @typescript-eslint/no-magic-numbers
@@ -62,7 +62,11 @@ export const useMidSectionController: UseMidSectionControllerType =
           quantity: 1,
         }),
       );
-    };
+    }, [state.formItems]);
+
+    useEffect(() => {
+      handleGeneratePassword();
+    }, [handleGeneratePassword]);
 
     return {
       handleGeneratePassword,
