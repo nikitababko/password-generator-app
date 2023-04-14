@@ -4,7 +4,6 @@ import {
   ColorDesignTokens,
   FontSize,
 } from '../../../utils/designTokens';
-
 import type {
   ChildrenStylesProps,
   SelectFieldItemContainerStylesType,

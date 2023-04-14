@@ -1,7 +1,9 @@
 import styled from 'styled-components';
-import type { SelectFieldDropDownContainerStylesProps } from './SelectFieldDropDown.types';
+
 import { ColorDesignTokens } from '../../../utils/designTokens';
 import { animation } from '../../../utils/animation';
+
+import type { SelectFieldDropDownContainerStylesProps } from './SelectFieldDropDown.types';
 
 export const Container = styled.div<SelectFieldDropDownContainerStylesProps>`
   position: absolute;

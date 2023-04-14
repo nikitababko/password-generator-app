@@ -1,11 +1,12 @@
 import styled, { css, keyframes } from 'styled-components';
 
+import { ColorDesignTokens } from '../../utils/designTokens';
+import { animation } from '../../utils/animation';
+
 import type {
   ThemeStylesType,
   ThemeToggleOpacityStateType,
 } from './ThemeToggle.types';
-import { ColorDesignTokens } from '../../utils/designTokens';
-import { animation } from '../../utils/animation';
 
 const ThemeToggleOpacityState: ThemeToggleOpacityStateType =
   {

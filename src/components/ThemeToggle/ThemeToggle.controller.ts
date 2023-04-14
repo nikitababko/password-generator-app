@@ -5,9 +5,9 @@ import {
   DarkTheme,
   LightTheme,
 } from '../../utils/designTokens';
+import { themeToggleAction } from '../../store/appActions.actions';
 
 import type { UseThemeToggleType } from './ThemeToggle.types';
-import { themeToggleAction } from '../../store/appActions.actions';
 
 export const useThemeToggle: UseThemeToggleType = () => {
   const [isDay, setIsDay] = useState<boolean>(true);

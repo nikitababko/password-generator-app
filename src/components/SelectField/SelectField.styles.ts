@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
+import { ColorDesignTokens } from '../../utils/designTokens';
+import { animation } from '../../utils/animation';
+
 import type {
   ChevronWrapperProps,
   ContainerStylesProps,
 } from './SelectField.types';
-import { ColorDesignTokens } from '../../utils/designTokens';
-import { animation } from '../../utils/animation';
 
 export const Container = styled.div<ContainerStylesProps>`
   position: relative;
