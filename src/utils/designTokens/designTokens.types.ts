@@ -6,8 +6,6 @@ export type MediaBreakPointsDesignTokensType = {
   media375: 375;
 };
 
-export type AnimationType = (time?: string) => string;
-
 export type ColorDesignTokensType = {
   Blue: '#157AF5';
   BlueDarkTurquoise: '#72cce3';

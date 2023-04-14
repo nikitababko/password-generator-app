@@ -4,10 +4,8 @@ import type {
   ThemeStylesType,
   ThemeToggleOpacityStateType,
 } from './ThemeToggle.types';
-import {
-  animation,
-  ColorDesignTokens,
-} from '../../utils/designTokens';
+import { ColorDesignTokens } from '../../utils/designTokens';
+import { animation } from '../../utils/animation';
 
 const ThemeToggleOpacityState: ThemeToggleOpacityStateType =
   {

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 import {
-  animation,
   ColorDesignTokens,
   FontSize,
 } from '../../../utils/designTokens';
@@ -10,6 +9,7 @@ import type {
   ChildrenStylesProps,
   SelectFieldItemContainerStylesType,
 } from './SelectFieldItem.types';
+import { animation } from '../../../utils/animation';
 
 export const Container = styled.div<SelectFieldItemContainerStylesType>`
   display: flex;

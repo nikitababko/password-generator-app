@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import '@nikitababko/reset-css';
 import { Roboto } from '@next/font/google';
-import { animation } from '../utils/designTokens';
+import { animation } from '../utils/animation';
 
 const roboto = Roboto({
   weight: '400',

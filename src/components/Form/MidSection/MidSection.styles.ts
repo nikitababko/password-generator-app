@@ -1,7 +1,6 @@
 import styled, { css, keyframes } from 'styled-components';
 
 import {
-  animation,
   ColorDesignTokens,
   FontSize,
 } from '../../../utils/designTokens';
@@ -13,6 +12,7 @@ import {
 
 import type { CopyButtonStylesProps } from './MidSection.types';
 import { animationTime } from './MidSection.data';
+import { animation } from '../../../utils/animation';
 
 export const Container = styled.div`
   display: flex;
@@ -179,7 +179,7 @@ export const CopyButton = styled.button<CopyButtonStylesProps>`
       isCopied &&
       css`
         animation: ${copyButtonFirstIconAnimation}
-          ${animation(`${animationTime}s`)};
+          ${animation(animationTime)};
       `}
   }
 
@@ -189,7 +189,7 @@ export const CopyButton = styled.button<CopyButtonStylesProps>`
       isCopied &&
       css`
         animation: ${copyButtonSecondIconAnimation}
-          ${animation(`${animationTime}s`)};
+          ${animation(animationTime)};
       `}
   }
 

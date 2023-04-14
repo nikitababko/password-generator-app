@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 
-import {
-  animation,
-  ColorDesignTokens,
-} from '../../utils/designTokens';
+import { ColorDesignTokens } from '../../utils/designTokens';
 
 import type { SwitchContainerStylesProps } from './Switch.types';
+import { animation } from '../../utils/animation';
 
 export const Container = styled.div<SwitchContainerStylesProps>`
   position: relative;
