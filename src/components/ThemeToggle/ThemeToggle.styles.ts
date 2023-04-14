@@ -17,23 +17,29 @@ const ThemeToggleOpacityState: ThemeToggleOpacityStateType =
 
 const itemLeftToRightAnimation = keyframes`
   0% {
-    left: 5px;
+    transform: translate(5px, -50%);
+    border: 3px solid ${ColorDesignTokens.Yellow};
+    background-color: ${ColorDesignTokens.YellowCorn};
   }
 
   100% {
     border: 3px solid ${ColorDesignTokens.GrayDark};
     background-color: ${ColorDesignTokens.White};
-    left: 48px;
+    transform: translate(48px, -50%);
   }
 `;
 
 const itemRightToLeftAnimation = keyframes`
   0% {
-    left: 48px;
+    transform: translate(48px, -50%);
+    border: 3px solid ${ColorDesignTokens.GrayDark};
+    background-color: ${ColorDesignTokens.White};
   }
 
   100% {
-    left: 5px;
+    transform: translate(5px, -50%);
+    border: 3px solid ${ColorDesignTokens.Yellow};
+    background-color: ${ColorDesignTokens.YellowCorn};
   }
 `;
 
@@ -62,8 +68,8 @@ export const Container = styled.div<ThemeStylesType>`
 export const ToggleItem = styled.div<ThemeStylesType>`
   position: absolute;
   top: 50%;
-  left: 5px;
   z-index: 2;
+  transform: translate(5px, -50%);
   animation: ${({ isDay }) => {
     return css`
       ${isDay
@@ -71,12 +77,9 @@ export const ToggleItem = styled.div<ThemeStylesType>`
         : itemLeftToRightAnimation} ${animation()} forwards
     `;
   }};
-  transform: translateY(-50%);
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 3px solid ${ColorDesignTokens.Yellow};
-  background-color: ${ColorDesignTokens.YellowCorn};
 
   &::before {
     content: '';
@@ -117,13 +120,16 @@ export const Cloud = styled.div<ThemeStylesType>`
   border-radius: 50%;
   position: absolute;
   top: 42%;
-  right: ${({ isDay }) => (isDay ? '22px' : '40px')};
+  transform: translateX(
+    ${({ isDay }) => (isDay ? '54px' : '16px')}
+  );
   opacity: ${({ isDay }) => {
     return isDay
       ? ThemeToggleOpacityState.One
       : ThemeToggleOpacityState.Zero;
   }};
-  transition: right ${animation()}, opacity ${animation()};
+  transition: transform ${animation()},
+    opacity ${animation()};
   background: ${ColorDesignTokens.White};
   height: 15px;
   width: 15px;
@@ -138,14 +144,16 @@ export const Stars = styled.div<ThemeStylesType>`
   position: absolute;
   top: 50%;
   z-index: 1;
-  left: ${({ isDay }) => (isDay ? '40px' : '26px')};
   opacity: ${({ isDay }) => {
     return isDay
       ? ThemeToggleOpacityState.Zero
       : ThemeToggleOpacityState.One;
   }};
-  transition: left ${animation()}, opacity ${animation()};
-  transform: translateY(-50%);
+  transform: ${({ isDay }) => {
+    return `translate(${isDay ? '68px' : '26px'}, -50%)`;
+  }};
+  transition: transform ${animation()},
+    opacity ${animation()};
   background-color: ${ColorDesignTokens.White};
   height: 7px;
   width: 7px;

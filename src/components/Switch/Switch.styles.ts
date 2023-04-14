@@ -31,8 +31,11 @@ export const Container = styled.div<SwitchContainerStylesProps>`
     content: '';
     position: absolute;
     top: 50%;
-    left: ${({ isActive }) => (isActive ? '28px' : '4px')};
-    transform: translateY(-50%);
+    transform: ${({ isActive }) => {
+      return `translate(${
+        isActive ? '28px' : '4px'
+      }, -50%)`;
+    }};
     width: 24px;
     height: 24px;
     background-color: ${({ isActive }) => {
@@ -41,7 +44,7 @@ export const Container = styled.div<SwitchContainerStylesProps>`
         : ColorDesignTokens.GrayDim;
     }};
     border-radius: 50%;
-    transition: left ${animation()},
+    transition: transform ${animation()},
       background-color ${animation()};
   }
 `;
