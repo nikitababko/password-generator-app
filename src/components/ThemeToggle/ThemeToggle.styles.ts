@@ -3,16 +3,7 @@ import styled, { css, keyframes } from 'styled-components';
 import { ColorDesignTokens } from '../../utils/designTokens';
 import { animation } from '../../utils/animation';
 
-import type {
-  ThemeStylesType,
-  ThemeToggleOpacityStateType,
-} from './ThemeToggle.types';
-
-const ThemeToggleOpacityState: ThemeToggleOpacityStateType =
-  {
-    Zero: 0,
-    One: 1,
-  } as const;
+import type { ThemeStylesType } from './ThemeToggle.types';
 
 const itemLeftToRightAnimation = keyframes`
   0% {
@@ -90,9 +81,7 @@ export const ToggleItem = styled.div<ThemeStylesType>`
     border-radius: 50%;
     background-color: ${ColorDesignTokens.GrayDark};
     opacity: ${({ isDay }) => {
-      return isDay
-        ? ThemeToggleOpacityState.Zero
-        : ThemeToggleOpacityState.One;
+      return isDay ? 0 : 1;
     }};
     transition: opacity ${animation()};
   }
@@ -107,9 +96,7 @@ export const ToggleItem = styled.div<ThemeStylesType>`
     border-radius: 50%;
     background-color: ${ColorDesignTokens.GrayDark};
     opacity: ${({ isDay }) => {
-      return isDay
-        ? ThemeToggleOpacityState.Zero
-        : ThemeToggleOpacityState.One;
+      return isDay ? 0 : 1;
     }};
     transition: opacity ${animation()};
   }
@@ -123,9 +110,7 @@ export const Cloud = styled.div<ThemeStylesType>`
     ${({ isDay }) => (isDay ? '54px' : '16px')}
   );
   opacity: ${({ isDay }) => {
-    return isDay
-      ? ThemeToggleOpacityState.One
-      : ThemeToggleOpacityState.Zero;
+    return isDay ? 1 : 0;
   }};
   transition: transform ${animation()},
     opacity ${animation()};
@@ -144,9 +129,7 @@ export const Stars = styled.div<ThemeStylesType>`
   top: 50%;
   z-index: 1;
   opacity: ${({ isDay }) => {
-    return isDay
-      ? ThemeToggleOpacityState.Zero
-      : ThemeToggleOpacityState.One;
+    return isDay ? 0 : 1;
   }};
   transform: ${({ isDay }) => {
     return `translate(${isDay ? '68px' : '26px'}, -50%)`;

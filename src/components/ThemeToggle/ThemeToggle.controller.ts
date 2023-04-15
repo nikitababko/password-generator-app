@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { useAppContext } from '../../store';
 import {
@@ -14,14 +14,18 @@ export const useThemeToggle: UseThemeToggleType = () => {
 
   const [, dispatch] = useAppContext();
 
-  const handleClick = () => {
-    setIsDay((prevState) => !prevState);
-
-    if (!isDay) {
+  useEffect(() => {
+    if (isDay) {
       dispatch(themeToggleAction(LightTheme));
     } else {
       dispatch(themeToggleAction(DarkTheme));
     }
+
+    return () => dispatch(themeToggleAction(LightTheme));
+  }, [dispatch, isDay]);
+
+  const handleClick = () => {
+    setIsDay((prevState) => !prevState);
   };
 
   return {
