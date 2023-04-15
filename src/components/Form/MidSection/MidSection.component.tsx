@@ -7,6 +7,7 @@ import {
   Container,
   CopyButton,
   GenerateButton,
+  GenerateButtonAnimation,
   GenerateButtonLabel,
   PasswordLabel,
   PasswordWrapper,
@@ -20,6 +21,7 @@ export const MidSection: React.FC = () => {
     handleCopy,
     isCopied,
     generateButtonTranslation,
+    isGenerated,
   } = useMidSectionController();
 
   return (
@@ -29,7 +31,12 @@ export const MidSection: React.FC = () => {
           {generateButtonTranslation}
         </GenerateButtonLabel>
 
-        <Icon name="ArrowRepeat" width={31} height={32} />
+        <Icon
+          name="ArrowRepeat"
+          width={31}
+          height={32}
+          style={GenerateButtonAnimation(isGenerated)}
+        />
       </GenerateButton>
 
       <PasswordWrapper>

@@ -14,6 +14,8 @@ export const useMidSectionController: UseMidSectionControllerType =
     ]);
     const [isCopied, setIsCopied] =
       useState<boolean>(false);
+    const [isGenerated, setIsGenerated] =
+      useState<boolean>(false);
 
     const [state] = useAppContext();
 
@@ -35,6 +37,8 @@ export const useMidSectionController: UseMidSectionControllerType =
     };
 
     const handleGeneratePassword = useCallback(() => {
+      setIsGenerated((prevState) => !prevState);
+
       setPassword(
         generatePassword({
           // eslint-disable-next-line @typescript-eslint/no-magic-numbers
@@ -69,5 +73,6 @@ export const useMidSectionController: UseMidSectionControllerType =
       handleCopy,
       isCopied,
       generateButtonTranslation: t.generate,
+      isGenerated,
     };
   };

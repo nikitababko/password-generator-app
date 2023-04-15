@@ -1,5 +1,4 @@
 import styled, { css, keyframes } from 'styled-components';
-
 import {
   ColorDesignTokens,
   FontSize,
@@ -9,10 +8,13 @@ import {
   mediaContainer480,
   mediaContainer768,
 } from '../../../styles/mediaQueryContainers';
-
-import type { CopyButtonStylesProps } from './MidSection.types';
-import { animationTime } from './MidSection.data';
 import { animation } from '../../../utils/animation';
+
+import type {
+  CopyButtonStylesProps,
+  GenerateButtonAnimationType,
+} from './MidSection.types';
+import { animationTime } from './MidSection.data';
 
 export const Container = styled.div`
   display: flex;
@@ -204,3 +206,11 @@ export const CopyButton = styled.button<CopyButtonStylesProps>`
     `,
   )}
 `;
+
+export const GenerateButtonAnimation: GenerateButtonAnimationType =
+  (isGenerated) => {
+    return {
+      transform: `rotate(${isGenerated ? '180deg' : 0})`,
+      transition: `transform ${animation()}`,
+    };
+  };
