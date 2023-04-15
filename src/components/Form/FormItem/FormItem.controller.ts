@@ -1,5 +1,8 @@
 import { useState } from 'react';
 
+import { useTranslate } from '../../../hooks';
+
+import { visibleTime } from './FormItem.data';
 import type { UseFormItemControllerType } from './FormItem.types';
 
 export const useFormItemController: UseFormItemControllerType =
@@ -8,9 +11,7 @@ export const useFormItemController: UseFormItemControllerType =
       valueExampleIsVisible,
       setValueExampleIsVisible,
     ] = useState<boolean>(false);
-
-    const visibleTime = 2000;
-    const passwordLengthId = 1;
+    const t = useTranslate();
 
     const handleClick = () => {
       setValueExampleIsVisible((prevState) => !prevState);
@@ -20,11 +21,12 @@ export const useFormItemController: UseFormItemControllerType =
       );
     };
 
-    const isPasswordLengthRow = itemId === passwordLengthId;
+    const isPasswordLengthRow = itemId === 1;
 
     return {
       valueExampleIsVisible,
       handleClick,
       isPasswordLengthRow,
+      t,
     };
   };

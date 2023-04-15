@@ -2,7 +2,6 @@ import React from 'react';
 
 import { SelectField } from '../../SelectField';
 import { Switch } from '../../Switch';
-import { useTranslate } from '../../../hooks';
 import type { TranslationsValuesType } from '../../../hooks/useTranslate/useTranslate.types';
 
 import {
@@ -21,12 +20,11 @@ export const FormItem: React.FC<FormItemProps> = ({
   callback,
   isDisabled,
 }) => {
-  const t = useTranslate();
-
   const {
     valueExampleIsVisible,
     handleClick,
     isPasswordLengthRow,
+    t,
   } = useFormItemController(item.id);
 
   return (

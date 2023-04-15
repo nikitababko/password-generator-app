@@ -1,3 +1,5 @@
+import type { ReturnUseTranslateType } from '../../../hooks/useTranslate/useTranslate.types';
+
 export type FormItemProps = {
   item: FormItemsType;
   callback: (
@@ -42,4 +44,5 @@ export type UseFormItemControllerType = (
   valueExampleIsVisible: boolean;
   handleClick: () => void;
   isPasswordLengthRow: boolean;
+  t: ReturnUseTranslateType;
 };
