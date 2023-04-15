@@ -14,12 +14,7 @@ export const Icon: React.FC<IconProps> = ({
   const Component = IconItems[name](color);
 
   return (
-    <Container
-      style={style}
-      width={width}
-      height={height}
-      color={color}
-    >
+    <Container style={style} width={width} height={height}>
       {Component}
     </Container>
   );

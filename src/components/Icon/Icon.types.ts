@@ -48,7 +48,6 @@ export type IconProps = {
 export type IconContainerStylesType = {
   width?: number;
   height?: number;
-  style?: React.CSSProperties | undefined;
 };
 
 export type IconContainerAttrsType =

@@ -7,8 +7,7 @@ import type {
 import { defaultSize } from './Icon.data';
 
 export const Container = styled.svg.attrs<IconContainerAttrsType>(
-  ({ style, width, height }) => ({
-    style,
+  ({ width, height }) => ({
     viewBox: `0 0 ${width ?? defaultSize.width} ${
       height ?? defaultSize.height
     }`,
