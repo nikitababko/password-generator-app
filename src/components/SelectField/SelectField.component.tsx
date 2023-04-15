@@ -11,7 +11,6 @@ import type { SelectFieldProps } from './SelectField.types';
 import { SelectFieldItem } from './SelectFieldItem';
 import { DropDown } from './SelectFieldDropDown';
 import { useSelectFieldController } from './SelectField.controller';
-import { firstItem } from './SelectField.data';
 
 export const SelectField: React.FC<SelectFieldProps> = ({
   data = [],
@@ -25,7 +24,7 @@ export const SelectField: React.FC<SelectFieldProps> = ({
     setSelectedItem,
     handleClick,
     ref,
-  } = useSelectFieldController(data[firstItem]);
+  } = useSelectFieldController(data);
 
   return (
     <Container ref={ref} styles={styles}>

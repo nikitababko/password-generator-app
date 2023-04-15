@@ -8,8 +8,11 @@ import type {
 } from './SelectField.types';
 
 export const useSelectFieldController: UseSelectFieldControllerType =
-  (firstItem) => {
+  (data) => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
+
+    const firstItem = data[0];
+
     const [selectedItem, setSelectedItem] =
       useState<SelectFieldItemType>(firstItem);
 

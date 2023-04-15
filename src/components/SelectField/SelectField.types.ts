@@ -31,7 +31,7 @@ export type ContainerStylesProps = Partial<{
 }>;
 
 export type UseSelectFieldControllerType = (
-  firstItem: SelectFieldItemType,
+  data: SelectFieldItemType[],
 ) => {
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
