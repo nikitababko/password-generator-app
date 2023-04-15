@@ -1,4 +1,5 @@
 import type React from 'react';
+import type { ReturnUseTranslateType } from '../../../hooks/useTranslate/useTranslate.types';
 
 export type UseMidSectionControllerType = () => {
   handleGeneratePassword: () => void;
@@ -6,7 +7,7 @@ export type UseMidSectionControllerType = () => {
   handleCopy: () => Promise<void>;
   isCopied: boolean;
   isGenerated: boolean;
-  generateButtonTranslation: string;
+  t: ReturnUseTranslateType;
 };
 
 export type CopyButtonStylesProps = {

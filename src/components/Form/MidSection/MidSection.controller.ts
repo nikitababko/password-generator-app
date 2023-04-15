@@ -72,7 +72,7 @@ export const useMidSectionController: UseMidSectionControllerType =
       password,
       handleCopy,
       isCopied,
-      generateButtonTranslation: t.generate,
+      t,
       isGenerated,
     };
   };

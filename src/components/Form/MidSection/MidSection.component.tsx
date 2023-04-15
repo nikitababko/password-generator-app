@@ -20,7 +20,7 @@ export const MidSection: React.FC = () => {
     password,
     handleCopy,
     isCopied,
-    generateButtonTranslation,
+    t,
     isGenerated,
   } = useMidSectionController();
 
@@ -28,7 +28,7 @@ export const MidSection: React.FC = () => {
     <Container>
       <GenerateButton onClick={handleGeneratePassword}>
         <GenerateButtonLabel>
-          {generateButtonTranslation}
+          {t.generate}
         </GenerateButtonLabel>
 
         <Icon
