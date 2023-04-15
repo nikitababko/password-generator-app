@@ -48,7 +48,7 @@ export const GenerateButton = styled.button`
   border: none;
 
   &:hover {
-    box-shadow: 0 0 16px 1px ${ColorDesignTokens.Black};
+    box-shadow: 0 0 8px 1px ${ColorDesignTokens.Black};
   }
 
   ${mediaContainer768(
@@ -196,7 +196,7 @@ export const CopyButton = styled.button<CopyButtonStylesProps>`
   }
 
   &:hover {
-    box-shadow: 0 0 16px 1px ${ColorDesignTokens.Blue};
+    box-shadow: 0 0 8px 1px ${ColorDesignTokens.Blue};
   }
 
   ${mediaContainer480(
