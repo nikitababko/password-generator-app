@@ -3,6 +3,8 @@ import React from 'react';
 import type { SelectFieldItemType } from '../SelectField/SelectField.types';
 import { Icon } from '../Icon';
 
+const boxShadow = '0px 0px 5px 3px rgb(34 60 80 / 20%)';
+
 export const data: SelectFieldItemType[] = [
   {
     id: 'en',
@@ -10,7 +12,7 @@ export const data: SelectFieldItemType[] = [
       <Icon
         name="FlagUs"
         style={{
-          boxShadow: '0px 0px 5px 3px rgb(34 60 80 / 20%)',
+          boxShadow,
         }}
       />
     ),
@@ -22,7 +24,7 @@ export const data: SelectFieldItemType[] = [
       <Icon
         name="FlagRu"
         style={{
-          boxShadow: '0px 0px 5px 3px rgb(34 60 80 / 20%)',
+          boxShadow,
         }}
       />
     ),
@@ -34,7 +36,7 @@ export const data: SelectFieldItemType[] = [
       <Icon
         name="FlagCh"
         style={{
-          boxShadow: '0px 0px 5px 3px rgb(34 60 80 / 20%)',
+          boxShadow,
         }}
       />
     ),
@@ -46,7 +48,7 @@ export const data: SelectFieldItemType[] = [
       <Icon
         name="FlagKr"
         style={{
-          boxShadow: '0px 0px 5px 3px rgb(34 60 80 / 20%)',
+          boxShadow,
         }}
       />
     ),
@@ -58,7 +60,7 @@ export const data: SelectFieldItemType[] = [
       <Icon
         name="FlagJp"
         style={{
-          boxShadow: '0px 0px 5px 3px rgb(34 60 80 / 20%)',
+          boxShadow,
         }}
       />
     ),
@@ -70,7 +72,7 @@ export const data: SelectFieldItemType[] = [
       <Icon
         name="FlagFr"
         style={{
-          boxShadow: '0px 0px 5px 3px rgb(34 60 80 / 20%)',
+          boxShadow,
         }}
       />
     ),
@@ -82,7 +84,7 @@ export const data: SelectFieldItemType[] = [
       <Icon
         name="FlagDe"
         style={{
-          boxShadow: '0px 0px 5px 3px rgb(34 60 80 / 20%)',
+          boxShadow,
         }}
       />
     ),
@@ -94,7 +96,7 @@ export const data: SelectFieldItemType[] = [
       <Icon
         name="FlagIn"
         style={{
-          boxShadow: '0px 0px 5px 3px rgb(34 60 80 / 20%)',
+          boxShadow,
         }}
       />
     ),
@@ -106,7 +108,7 @@ export const data: SelectFieldItemType[] = [
       <Icon
         name="FlagPl"
         style={{
-          boxShadow: '0px 0px 5px 3px rgb(34 60 80 / 20%)',
+          boxShadow,
         }}
       />
     ),
@@ -118,7 +120,7 @@ export const data: SelectFieldItemType[] = [
       <Icon
         name="FlagEs"
         style={{
-          boxShadow: '0px 0px 5px 3px rgb(34 60 80 / 20%)',
+          boxShadow,
         }}
       />
     ),
@@ -130,7 +132,7 @@ export const data: SelectFieldItemType[] = [
       <Icon
         name="FlagGe"
         style={{
-          boxShadow: '0px 0px 5px 3px rgb(34 60 80 / 20%)',
+          boxShadow,
         }}
       />
     ),
@@ -142,7 +144,7 @@ export const data: SelectFieldItemType[] = [
       <Icon
         name="FlagAe"
         style={{
-          boxShadow: '0px 0px 5px 3px rgb(34 60 80 / 20%)',
+          boxShadow,
         }}
       />
     ),
@@ -154,7 +156,7 @@ export const data: SelectFieldItemType[] = [
       <Icon
         name="FlagAm"
         style={{
-          boxShadow: '0px 0px 5px 3px rgb(34 60 80 / 20%)',
+          boxShadow,
         }}
       />
     ),
@@ -166,7 +168,7 @@ export const data: SelectFieldItemType[] = [
       <Icon
         name="FlagIn"
         style={{
-          boxShadow: '0px 0px 5px 3px rgb(34 60 80 / 20%)',
+          boxShadow,
         }}
       />
     ),
@@ -178,7 +180,7 @@ export const data: SelectFieldItemType[] = [
       <Icon
         name="FlagIt"
         style={{
-          boxShadow: '0px 0px 5px 3px rgb(34 60 80 / 20%)',
+          boxShadow,
         }}
       />
     ),

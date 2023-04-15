@@ -4,6 +4,8 @@ import { Title } from '../Title';
 import { SelectField } from '../SelectField';
 import { ThemeToggle } from '../ThemeToggle';
 import { useAppContext } from '../../store';
+import { changeLangAction } from '../../store/appActions.actions';
+import type { LanguagesType } from '../../hooks/useTranslate/useTranslate.types';
 
 import {
   Container,
@@ -11,8 +13,6 @@ import {
   RightCol,
 } from './Header.styles';
 import { data } from './Header.data';
-import { changeLangAction } from '../../store/appActions.actions';
-import type { LanguagesType } from '../../hooks/useTranslate/useTranslate.types';
 
 export const Header: React.FC = () => {
   const [, dispatch] = useAppContext();
