@@ -6,5 +6,9 @@ import type {
 export type UseTopSectionControllerType = () => {
   formItems: FormItemsType[];
   handleClick: HandleClickType;
-  isLastActiveFormItemId: number | null;
+  isDisabledItem: IsDisabledItemType;
 };
+
+export type IsDisabledItemType = (
+  formItemId: number,
+) => boolean;
