@@ -5,6 +5,7 @@ export const Container = styled.div`
 `;
 
 export const Copyright = styled.p`
+  margin-bottom: 10px;
   text-align: center;
   font-size: 22px;
   font-weight: 400;
