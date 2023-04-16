@@ -1,3 +1,3 @@
 export type UseBottomSectionControllerType = () => {
-  getCopyright: string;
+  copyright: string;
 };

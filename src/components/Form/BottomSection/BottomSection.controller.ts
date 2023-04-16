@@ -16,9 +16,9 @@ export const useBottomSectionController: UseBottomSectionControllerType =
       return `- ${getFullYear}`;
     };
 
-    const getCopyright = `© ${authorName} ${foundationYear} ${getCurrentYear()}`;
+    const copyright = `Copyright © ${foundationYear} ${getCurrentYear()} ${authorName}`;
 
     return {
-      getCopyright,
+      copyright,
     };
   };

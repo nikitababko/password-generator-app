@@ -11,11 +11,11 @@ import { useBottomSectionController } from './BottomSection.controller';
 import { projectVersion } from './BottomSection.data';
 
 export const BottomSection: React.FC = () => {
-  const { getCopyright } = useBottomSectionController();
+  const { copyright } = useBottomSectionController();
 
   return (
     <Container>
-      <Copyright>{getCopyright}</Copyright>
+      <Copyright>{copyright}</Copyright>
 
       <ProjectVersion>
         {`${getProjectName()} ${projectVersion}`}
