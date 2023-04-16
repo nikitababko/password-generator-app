@@ -18,9 +18,7 @@ export const BottomSection: React.FC = () => {
       <Copyright>{getCopyright}</Copyright>
 
       <ProjectVersion>
-        {getProjectName()}
-
-        {projectVersion}
+        {`${getProjectName()} ${projectVersion}`}
       </ProjectVersion>
     </Container>
   );
