@@ -1,7 +1,11 @@
 {
   "name": "password-generator-app",
   "version": "0.1.0",
-  "author": "Nikita Babko <niki.babko@gmail.com>",
+  "author": {
+    "name": "Nikita Babko",
+    "email": "niki.babko@gmail.com",
+    "url": "https://nikitababko.github.io"
+  },
   "description": "Password generator app",
   "keywords": [
     "password",

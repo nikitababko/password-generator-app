@@ -1,16 +1,17 @@
 import React from 'react';
 
-import { Title } from '../Title';
 import { SelectField } from '../SelectField';
 import { ThemeToggle } from '../ThemeToggle';
 import { useAppContext } from '../../store';
 import { changeLangAction } from '../../store/appActions.actions';
 import type { LanguagesType } from '../../hooks/useTranslate/useTranslate.types';
+import { getProjectName } from '../../utils/getProjectName';
 
 import {
   Container,
   LeftCol,
   RightCol,
+  Title,
 } from './Header.styles';
 import { data } from './Header.data';
 
@@ -20,7 +21,7 @@ export const Header: React.FC = () => {
   return (
     <Container>
       <LeftCol>
-        <Title />
+        <Title>{getProjectName()}</Title>
       </LeftCol>
 
       <RightCol>
