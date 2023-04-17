@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { mediaContainer480 } from '../../styles/mediaQueryContainers';
+import { mediaContainer479 } from '../../styles/mediaQueryContainers';
 
 export const Container = styled.div`
   display: flex;
@@ -12,7 +12,7 @@ export const Container = styled.div`
     return theme.backgroundColor;
   }};
 
-  ${mediaContainer480(
+  ${mediaContainer479(
     css`
       padding: 36px 20px;
     `,

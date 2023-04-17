@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 
 import {
-  mediaContainer375,
-  mediaContainer768,
+  mediaContainer374,
+  mediaContainer767,
 } from '../../styles/mediaQueryContainers';
 import { FontSize } from '../../utils/designTokens';
 
@@ -11,7 +11,7 @@ export const Container = styled.header`
   justify-content: space-between;
   align-items: center;
 
-  ${mediaContainer768(
+  ${mediaContainer767(
     css`
       flex-direction: column;
       row-gap: 40px;
@@ -34,7 +34,7 @@ export const RightCol = styled.div`
   flex-direction: row;
   column-gap: 34px;
 
-  ${mediaContainer768(
+  ${mediaContainer767(
     css`
       justify-content: space-between;
       column-gap: 0;
@@ -42,7 +42,7 @@ export const RightCol = styled.div`
     `,
   )}
 
-  ${mediaContainer375(
+  ${mediaContainer374(
     css`
       flex-direction: column;
       row-gap: 34px;

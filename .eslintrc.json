@@ -48,11 +48,10 @@
             "ignoreEnums": true,
             "ignoreNumericLiteralTypes": true,
             "ignore": [
-              1200,
-              1024,
-              768,
-              480,
-              375,
+              1023,
+              767,
+              479,
+              374,
               2,
               1,
               0

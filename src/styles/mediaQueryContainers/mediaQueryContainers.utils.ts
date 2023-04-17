@@ -4,42 +4,34 @@ import { MediaBreakPointsDesignTokens } from '../../utils/designTokens';
 
 import type { MediaQueryContainerType } from './mediaQueryContainers.types';
 
-export const mediaContainer1200: MediaQueryContainerType = (
+export const mediaContainer1023: MediaQueryContainerType = (
   styles,
 ) => css`
-  @media (max-width: ${MediaBreakPointsDesignTokens.media1200}px) {
+  @media (max-width: ${MediaBreakPointsDesignTokens.media1023}px) {
     ${styles};
   }
 `;
 
-export const mediaContainer1024: MediaQueryContainerType = (
+export const mediaContainer767: MediaQueryContainerType = (
   styles,
 ) => css`
-  @media (max-width: ${MediaBreakPointsDesignTokens.media1024}px) {
+  @media (max-width: ${MediaBreakPointsDesignTokens.media767}px) {
     ${styles};
   }
 `;
 
-export const mediaContainer768: MediaQueryContainerType = (
-  styles,
-) => css`
-  @media (max-width: ${MediaBreakPointsDesignTokens.media768}px) {
-    ${styles};
-  }
-`;
-
-export const mediaContainer480: MediaQueryContainerType = (
+export const mediaContainer479: MediaQueryContainerType = (
   inner,
 ) => css`
-  @media (max-width: ${MediaBreakPointsDesignTokens.media480}px) {
+  @media (max-width: ${MediaBreakPointsDesignTokens.media479}px) {
     ${inner};
   }
 `;
 
-export const mediaContainer375: MediaQueryContainerType = (
+export const mediaContainer374: MediaQueryContainerType = (
   inner,
 ) => css`
-  @media (max-width: ${MediaBreakPointsDesignTokens.media375}px) {
+  @media (max-width: ${MediaBreakPointsDesignTokens.media374}px) {
     ${inner};
   }
 `;

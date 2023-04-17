@@ -5,8 +5,8 @@ import {
   FontSize,
 } from '../../../utils/designTokens';
 import {
-  mediaContainer1024,
-  mediaContainer768,
+  mediaContainer1023,
+  mediaContainer767,
 } from '../../../styles/mediaQueryContainers';
 
 import type {
@@ -41,14 +41,14 @@ export const LeftCol = styled.div<FormItemLeftColStylesProps>`
   border-radius: 12px;
   pointer-events: none;
 
-  ${mediaContainer1024(
+  ${mediaContainer1023(
     css`
       background-color: ${ColorDesignTokens.White};
     `,
   )}
 
   ${({ isPasswordLengthRow }) => {
-    return mediaContainer768(
+    return mediaContainer767(
       css`
         justify-content: flex-start;
         pointer-events: ${isPasswordLengthRow
@@ -70,7 +70,7 @@ export const RightCol = styled.div`
 
 export const Label = styled.p<FormItemLabelStylesProps>`
   ${({ valueExampleIsVisible }) => {
-    return mediaContainer768(
+    return mediaContainer767(
       css`
         display: ${valueExampleIsVisible
           ? 'none'
@@ -84,7 +84,7 @@ export const ValueExample = styled.p<FormItemValueExampleStylesProps>`
   word-break: break-all;
 
   ${({ valueExampleIsVisible }) => {
-    return mediaContainer768(
+    return mediaContainer767(
       css`
         display: ${valueExampleIsVisible
           ? 'block'
@@ -109,7 +109,7 @@ export const Info = styled.p`
   color: ${ColorDesignTokens.GrayDark};
   pointer-events: none;
 
-  ${mediaContainer768(
+  ${mediaContainer767(
     css`
       display: block;
     `,

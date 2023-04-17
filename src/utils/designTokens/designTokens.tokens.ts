@@ -6,11 +6,10 @@ import type {
 
 export const MediaBreakPointsDesignTokens: MediaBreakPointsDesignTokensType =
   {
-    media1200: 1200,
-    media1024: 1024,
-    media768: 768,
-    media480: 480,
-    media375: 375,
+    media1023: 1023,
+    media767: 767,
+    media479: 479,
+    media374: 374,
   } as const;
 
 export const ColorDesignTokens: ColorDesignTokensType = {
@@ -60,7 +59,7 @@ export const DarkTheme: ThemeType = {
   fontGenerateButtonColor: ColorDesignTokens.White,
   borderColor: ColorDesignTokens.GrayLight,
   generateButtonBackgroundColor:
-    MediaBreakPointsDesignTokens.media768
+    MediaBreakPointsDesignTokens.media767
       ? ColorDesignTokens.Black
       : ColorDesignTokens.BlackLight,
 } as const;

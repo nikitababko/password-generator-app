@@ -5,9 +5,9 @@ import {
   FontSize,
 } from '../../../utils/designTokens';
 import {
-  mediaContainer1024,
-  mediaContainer480,
-  mediaContainer768,
+  mediaContainer1023,
+  mediaContainer479,
+  mediaContainer767,
 } from '../../../styles/mediaQueryContainers';
 import { animation } from '../../../utils/animation';
 
@@ -22,7 +22,7 @@ export const Container = styled.div`
   justify-content: space-between;
   column-gap: 24px;
 
-  ${mediaContainer480(
+  ${mediaContainer479(
     css`
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -52,13 +52,13 @@ export const GenerateButton = styled.button`
     box-shadow: 0 0 8px 1px ${ColorDesignTokens.Black};
   }
 
-  ${mediaContainer768(
+  ${mediaContainer767(
     css`
       max-width: 56px;
     `,
   )}
 
-  ${mediaContainer480(
+  ${mediaContainer479(
     css`
       grid-column: 1;
     `,
@@ -71,7 +71,7 @@ export const GenerateButtonLabel = styled.p`
   font-weight: 400;
   color: ${ColorDesignTokens.White};
 
-  ${mediaContainer768(
+  ${mediaContainer767(
     css`
       display: none;
     `,
@@ -93,13 +93,13 @@ export const PasswordWrapper = styled.div`
   }};
   border-radius: 12px;
 
-  ${mediaContainer1024(
+  ${mediaContainer1023(
     css`
       background-color: ${ColorDesignTokens.White};
     `,
   )}
 
-  ${mediaContainer480(
+  ${mediaContainer479(
     css`
       grid-column: 1 / -1;
       grid-row: 2;
@@ -200,7 +200,7 @@ export const CopyButton = styled.button<CopyButtonStylesProps>`
     box-shadow: 0 0 8px 1px ${ColorDesignTokens.Blue};
   }
 
-  ${mediaContainer480(
+  ${mediaContainer479(
     css`
       grid-column: 2;
       justify-self: flex-end;

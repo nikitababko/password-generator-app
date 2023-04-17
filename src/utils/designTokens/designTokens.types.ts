@@ -1,9 +1,8 @@
 export type MediaBreakPointsDesignTokensType = {
-  media1200: 1200;
-  media1024: 1024;
-  media768: 768;
-  media480: 480;
-  media375: 375;
+  media1023: 1023;
+  media767: 767;
+  media479: 479;
+  media374: 374;
 };
 
 export type ColorDesignTokensType = {
