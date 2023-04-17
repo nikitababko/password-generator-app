@@ -42,13 +42,16 @@ export type IconProps = {
   color?: ColorType;
   width?: number;
   height?: number;
-  style?: React.CSSProperties | undefined;
+  styles?: React.CSSProperties;
 };
 
 export type IconContainerStylesType = {
   width?: number;
   height?: number;
+  styles?: React.CSSProperties;
 };
 
-export type IconContainerAttrsType =
-  IconContainerStylesType;
+export type IconContainerAttrsType = Omit<
+  IconContainerStylesType,
+  'styles'
+>;

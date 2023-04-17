@@ -15,9 +15,12 @@ export const Container = styled.svg.attrs<IconContainerAttrsType>(
     xmlns: 'http://www.w3.org/2000/svg',
   }),
 )<IconContainerStylesType>`
-  text-decoration: none;
-  ${({ width, height }) => `
-      width: ${width ?? defaultSize.width}px;
-      height: ${height ?? defaultSize.height}px;
-  `}
+  ${({ styles, width, height }) => {
+    return {
+      ...styles,
+      width: `${width ?? defaultSize.width}px`,
+      height: `${height ?? defaultSize.height}px`,
+      textDecoration: 'none',
+    };
+  }};
 `;

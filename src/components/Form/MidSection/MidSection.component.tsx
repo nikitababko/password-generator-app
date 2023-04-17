@@ -35,7 +35,7 @@ export const MidSection: React.FC = () => {
           name="ArrowRepeat"
           width={31}
           height={32}
-          style={GenerateButtonAnimation(isGenerated)}
+          styles={GenerateButtonAnimation(isGenerated)}
         />
       </GenerateButton>
 

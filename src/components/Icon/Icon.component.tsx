@@ -9,12 +9,16 @@ export const Icon: React.FC<IconProps> = ({
   color,
   width,
   height,
-  style,
+  styles,
 }) => {
   const Component = IconItems[name](color);
 
   return (
-    <Container style={style} width={width} height={height}>
+    <Container
+      styles={styles}
+      width={width}
+      height={height}
+    >
       {Component}
     </Container>
   );
