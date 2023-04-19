@@ -1,7 +1,7 @@
 import type React from 'react';
 
 import type { ThemeType } from '../utils/designTokens/designTokens.types';
-import type { FormItemsType } from '../components/Form/FormItem/FormItem.types';
+import type { ItemsType as FormItemsType } from '../components/Form/Item/Item.types';
 import type { LanguagesType } from '../hooks/useTranslate/useTranslate.types';
 
 import type { ActionTypes } from './appActions.data';

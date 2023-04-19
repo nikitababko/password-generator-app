@@ -1,7 +1,7 @@
 import type {
-  FormItemsType,
   HandleClickType,
-} from '../FormItem/FormItem.types';
+  ItemsType as FormItemsType,
+} from '../Item/Item.types';
 
 export type UseTopSectionControllerType = () => {
   formItems: FormItemsType[];

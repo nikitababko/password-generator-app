@@ -3,7 +3,7 @@ import type React from 'react';
 import type { SelectFieldItemType } from '../SelectField.types';
 import type { LanguagesType } from '../../../hooks/useTranslate/useTranslate.types';
 
-export type SelectFieldDropDownProps = {
+export type DropDownProps = {
   data?: SelectFieldItemType[];
   isOpen: boolean;
   selectedItem: SelectFieldItemType;
@@ -17,6 +17,6 @@ export type SelectFieldDropDownProps = {
   ) => void;
 };
 
-export type SelectFieldDropDownContainerStylesProps = {
+export type DropDownPropsContainerStylesProps = {
   isOpen: boolean;
 };

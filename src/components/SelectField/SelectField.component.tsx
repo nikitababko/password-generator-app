@@ -9,7 +9,7 @@ import {
 } from './SelectField.styles';
 import type { SelectFieldProps } from './SelectField.types';
 import { SelectFieldItem } from './SelectFieldItem';
-import { DropDown } from './SelectFieldDropDown';
+import { DropDown } from './DropDown';
 import { useSelectFieldController } from './SelectField.controller';
 
 export const SelectField: React.FC<SelectFieldProps> = ({

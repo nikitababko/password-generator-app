@@ -1,4 +1,4 @@
-import type { HandleClickType } from '../FormItem/FormItem.types';
+import type { HandleClickType } from '../Item/Item.types';
 import { useAppContext } from '../../../store';
 import { setFormItemsAction } from '../../../store/appActions.actions';
 
@@ -17,7 +17,7 @@ export const useTopSectionController: UseTopSectionControllerType =
       );
     };
 
-    const isLastActiveFormItemId = () => {
+    const isLastActiveItemId = () => {
       const items = state.formItems.filter((formItem) => {
         return formItem.value === true;
       });
@@ -32,13 +32,13 @@ export const useTopSectionController: UseTopSectionControllerType =
     const isDisabledItem: IsDisabledItemType = (
       formItemId,
     ) => {
-      return isLastActiveFormItemId() === formItemId;
+      return isLastActiveItemId() === formItemId;
     };
 
     return {
       formItems: state.formItems,
       handleClick,
-      isLastActiveFormItemId,
+      isLastActiveItemId,
       isDisabledItem,
     };
   };

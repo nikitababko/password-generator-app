@@ -10,10 +10,10 @@ import {
 } from '../../../styles/mediaQueryContainers';
 
 import type {
-  FormItemLabelStylesProps,
-  FormItemLeftColStylesProps,
-  FormItemValueExampleStylesProps,
-} from './FormItem.types';
+  ItemLabelStylesProps,
+  ItemLeftColStylesProps,
+  ItemValueExampleStylesProps,
+} from './Item.types';
 
 export const Container = styled.div`
   display: flex;
@@ -22,7 +22,7 @@ export const Container = styled.div`
   width: 100%;
 `;
 
-export const LeftCol = styled.div<FormItemLeftColStylesProps>`
+export const LeftCol = styled.div<ItemLeftColStylesProps>`
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -68,7 +68,7 @@ export const RightCol = styled.div`
   justify-content: flex-end;
 `;
 
-export const Label = styled.p<FormItemLabelStylesProps>`
+export const Label = styled.p<ItemLabelStylesProps>`
   ${({ valueExampleIsVisible }) => {
     return mediaContainer767(
       css`
@@ -80,7 +80,7 @@ export const Label = styled.p<FormItemLabelStylesProps>`
   }}
 `;
 
-export const ValueExample = styled.p<FormItemValueExampleStylesProps>`
+export const ValueExample = styled.p<ItemValueExampleStylesProps>`
   word-break: break-all;
 
   ${({ valueExampleIsVisible }) => {

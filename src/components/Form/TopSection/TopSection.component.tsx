@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FormItem } from '../FormItem';
+import { Item } from '../Item';
 
 import { Container } from './TopSection.styles';
 import { useTopSectionController } from './TopSection.controller';
@@ -12,7 +12,7 @@ export const TopSection: React.FC = () => {
   return (
     <Container>
       {formItems?.map((formItem) => (
-        <FormItem
+        <Item
           key={formItem.id}
           item={formItem}
           callback={handleClick}

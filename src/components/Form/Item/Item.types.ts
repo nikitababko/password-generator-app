@@ -1,7 +1,7 @@
 import type { ReturnUseTranslateType } from '../../../hooks/useTranslate/useTranslate.types';
 
-export type FormItemProps = {
-  item: FormItemsType;
+export type ItemProps = {
+  item: ItemsType;
   callback: (
     id: number,
     value: string | number | boolean,
@@ -9,15 +9,15 @@ export type FormItemProps = {
   isDisabled: boolean;
 };
 
-export type FormItemLeftColStylesProps = {
+export type ItemLeftColStylesProps = {
   isPasswordLengthRow: boolean;
 };
 
-export type FormItemValueExampleStylesProps = {
+export type ItemValueExampleStylesProps = {
   valueExampleIsVisible: boolean;
 };
 
-export type FormItemLabelStylesProps = {
+export type ItemLabelStylesProps = {
   valueExampleIsVisible: boolean;
 };
 
@@ -26,7 +26,7 @@ export type HandleClickType = (
   value: string | number | boolean,
 ) => void;
 
-export type FormItemsType = {
+export type ItemsType = {
   id: number;
   label: string;
   valueExample: string;
@@ -38,9 +38,7 @@ export type FormItemsType = {
   }[];
 };
 
-export type UseFormItemControllerType = (
-  itemId: number,
-) => {
+export type UseItemControllerType = (itemId: number) => {
   valueExampleIsVisible: boolean;
   handleClick: () => void;
   isPasswordLengthRow: boolean;

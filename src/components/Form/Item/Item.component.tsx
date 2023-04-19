@@ -11,11 +11,11 @@ import {
   LeftCol,
   RightCol,
   ValueExample,
-} from './FormItem.styles';
-import type { FormItemProps } from './FormItem.types';
-import { useFormItemController } from './FormItem.controller';
+} from './Item.styles';
+import type { ItemProps } from './Item.types';
+import { useItemController } from './Item.controller';
 
-export const FormItem: React.FC<FormItemProps> = ({
+export const Item: React.FC<ItemProps> = ({
   item,
   callback,
   isDisabled,
@@ -25,7 +25,7 @@ export const FormItem: React.FC<FormItemProps> = ({
     handleClick,
     isPasswordLengthRow,
     t,
-  } = useFormItemController(item.id);
+  } = useItemController(item.id);
 
   return (
     <Container>

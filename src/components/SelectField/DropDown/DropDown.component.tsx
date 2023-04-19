@@ -3,12 +3,10 @@ import React from 'react';
 import { SelectFieldItem } from '../SelectFieldItem';
 import { Icon } from '../../Icon';
 
-import type { SelectFieldDropDownProps } from './SelectFieldDropDown.types';
-import { Container } from './SelectFieldDropDown.styles';
+import type { DropDownProps } from './DropDown.types';
+import { Container } from './DropDown.styles';
 
-export const DropDown: React.FC<
-  SelectFieldDropDownProps
-> = ({
+export const DropDown: React.FC<DropDownProps> = ({
   data,
   setSelectedItem,
   setIsOpen,

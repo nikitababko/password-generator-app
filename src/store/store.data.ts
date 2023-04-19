@@ -1,4 +1,4 @@
-import type { FormItemsType } from '../components/Form/FormItem/FormItem.types';
+import type { ItemsType as FormItemsType } from '../components/Form/Item/Item.types';
 import { LightTheme } from '../utils/designTokens';
 
 import type { StoreInitialStateType } from './store.types';
