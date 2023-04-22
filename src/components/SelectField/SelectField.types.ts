@@ -2,14 +2,10 @@ import type React from 'react';
 
 import type { LanguagesType } from '../../hooks/useTranslate/useTranslate.types';
 
-export type SelectFieldItemType = {
-  id: number | LanguagesType;
-  icon?: React.ReactNode;
-  label: string | number;
-};
+import type { ItemType } from './Item/Item.types';
 
 export type SelectFieldProps = {
-  data?: SelectFieldItemType[];
+  data?: ItemType[];
   styles?: Partial<{
     width: string;
     // backgroundColor: keyof ColorDesignTokensType;
@@ -31,13 +27,13 @@ export type ContainerStylesProps = Partial<{
 }>;
 
 export type UseSelectFieldControllerType = (
-  data: SelectFieldItemType[],
+  data: ItemType[],
 ) => {
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  selectedItem: SelectFieldItemType;
+  selectedItem: ItemType;
   setSelectedItem: React.Dispatch<
-    React.SetStateAction<SelectFieldItemType>
+    React.SetStateAction<ItemType>
   >;
   handleClick: () => void;
   ref: React.RefObject<HTMLDivElement>;

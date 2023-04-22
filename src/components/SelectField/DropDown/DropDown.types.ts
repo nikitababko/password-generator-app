@@ -1,14 +1,14 @@
 import type React from 'react';
 
-import type { SelectFieldItemType } from '../SelectField.types';
 import type { LanguagesType } from '../../../hooks/useTranslate/useTranslate.types';
+import type { ItemType } from '../Item/Item.types';
 
 export type DropDownProps = {
-  data?: SelectFieldItemType[];
+  data?: ItemType[];
   isOpen: boolean;
-  selectedItem: SelectFieldItemType;
+  selectedItem: ItemType;
   setSelectedItem: React.Dispatch<
-    React.SetStateAction<SelectFieldItemType>
+    React.SetStateAction<ItemType>
   >;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   callback?: (

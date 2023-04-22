@@ -1,7 +1,7 @@
 import React from 'react';
 
-import type { SelectFieldItemType } from '../SelectField/SelectField.types';
 import { Icon } from '../Icon';
+import type { ItemType as SelectFieldItemType } from '../SelectField/Item/Item.types';
 
 const boxShadow = '0px 0px 5px 3px rgb(34 60 80 / 20%)';
 

@@ -1,14 +1,19 @@
 import type React from 'react';
 
-import type { SelectFieldItemType } from '../SelectField.types';
 import type { LanguagesType } from '../../../hooks/useTranslate/useTranslate.types';
 
-export type SelectFieldItemProps = {
-  item: SelectFieldItemType;
+export type ItemType = {
+  id: number | LanguagesType;
+  icon?: React.ReactNode;
+  label: string | number;
+};
+
+export type ItemProps = {
+  item: ItemType;
   isDropDownItem?: boolean;
   selectedItemEqualToItem?: boolean;
   setSelectedItem?: React.Dispatch<
-    React.SetStateAction<SelectFieldItemType>
+    React.SetStateAction<ItemType>
   >;
   setIsOpen?: React.Dispatch<React.SetStateAction<boolean>>;
   children?: React.ReactNode;
@@ -18,16 +23,16 @@ export type SelectFieldItemProps = {
   ) => void;
 };
 
-export type SelectFieldItemContainerStylesType = {
+export type ItemContainerStylesType = {
   itemId: number | LanguagesType;
   isDropDownItem?: boolean;
   selectedItemEqualToItem?: boolean;
 };
 
-export type UseSelectFieldItemControllerType = (
-  item: SelectFieldItemType,
+export type UseItemControllerType = (
+  item: ItemType,
   setSelectedItem?: React.Dispatch<
-    React.SetStateAction<SelectFieldItemType>
+    React.SetStateAction<ItemType>
   >,
   setIsOpen?: React.Dispatch<React.SetStateAction<boolean>>,
   callback?: (

@@ -1,16 +1,10 @@
 import React from 'react';
 
-import type { SelectFieldItemProps } from './SelectFieldItem.types';
-import {
-  Children,
-  Container,
-  Label,
-} from './SelectFieldItem.styles';
-import { useSelectFieldItemController } from './SelectFieldItem.controller';
+import type { ItemProps } from './Item.types';
+import { Children, Container, Label } from './Item.styles';
+import { useItemController } from './Item.controller';
 
-export const SelectFieldItem: React.FC<
-  SelectFieldItemProps
-> = ({
+export const Item: React.FC<ItemProps> = ({
   item,
   setSelectedItem,
   setIsOpen,
@@ -19,7 +13,7 @@ export const SelectFieldItem: React.FC<
   children,
   callback,
 }) => {
-  const { handleClick } = useSelectFieldItemController(
+  const { handleClick } = useItemController(
     item,
     setSelectedItem,
     setIsOpen,

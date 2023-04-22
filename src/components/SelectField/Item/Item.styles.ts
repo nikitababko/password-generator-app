@@ -4,13 +4,14 @@ import {
   ColorDesignTokens,
   FontSize,
 } from '../../../utils/designTokens';
-import type {
-  ChildrenStylesProps,
-  SelectFieldItemContainerStylesType,
-} from './SelectFieldItem.types';
 import { animation } from '../../../utils/animation';
 
-export const Container = styled.div<SelectFieldItemContainerStylesType>`
+import type {
+  ChildrenStylesProps,
+  ItemContainerStylesType,
+} from './Item.types';
+
+export const Container = styled.div<ItemContainerStylesType>`
   display: flex;
   column-gap: 8px;
   align-items: center;

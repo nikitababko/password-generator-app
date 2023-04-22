@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { SelectFieldItem } from '../SelectFieldItem';
 import { Icon } from '../../Icon';
+import { Item } from '../Item';
 
 import type { DropDownProps } from './DropDown.types';
 import { Container } from './DropDown.styles';
@@ -17,7 +17,7 @@ export const DropDown: React.FC<DropDownProps> = ({
   return (
     <Container isOpen={isOpen}>
       {data?.map((selectFieldItem) => (
-        <SelectFieldItem
+        <Item
           key={selectFieldItem.id}
           item={selectFieldItem}
           setSelectedItem={setSelectedItem}
@@ -29,7 +29,7 @@ export const DropDown: React.FC<DropDownProps> = ({
           callback={callback}
         >
           <Icon name="CheckMark" width={15} height={16} />
-        </SelectFieldItem>
+        </Item>
       ))}
     </Container>
   );

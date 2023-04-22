@@ -2,10 +2,8 @@ import { useRef, useState } from 'react';
 
 import { useOnClickOutside } from '../../hooks';
 
-import type {
-  SelectFieldItemType,
-  UseSelectFieldControllerType,
-} from './SelectField.types';
+import type { UseSelectFieldControllerType } from './SelectField.types';
+import type { ItemType } from './Item/Item.types';
 
 export const useSelectFieldController: UseSelectFieldControllerType =
   (data) => {
@@ -14,7 +12,7 @@ export const useSelectFieldController: UseSelectFieldControllerType =
     const firstItem = data[0];
 
     const [selectedItem, setSelectedItem] =
-      useState<SelectFieldItemType>(firstItem);
+      useState<ItemType>(firstItem);
 
     const ref = useRef<HTMLDivElement>(null);
     useOnClickOutside(ref, () => setIsOpen?.(false));
