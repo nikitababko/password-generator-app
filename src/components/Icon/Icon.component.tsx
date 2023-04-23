@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { IconItems } from './Icon.data';
 import type { IconProps } from './Icon.types';
 import { Container } from './Icon.styles';
+import { useController } from './Icon.controller';
 
 export const Icon: React.FC<IconProps> = ({
   name,
@@ -11,7 +11,7 @@ export const Icon: React.FC<IconProps> = ({
   height,
   styles,
 }) => {
-  const Component = IconItems[name](color);
+  const { getIcon } = useController();
 
   return (
     <Container
@@ -19,7 +19,7 @@ export const Icon: React.FC<IconProps> = ({
       width={width}
       height={height}
     >
-      {Component}
+      {getIcon(name, color)}
     </Container>
   );
 };

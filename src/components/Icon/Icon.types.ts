@@ -54,3 +54,12 @@ export type IconContainerAttrsType = Omit<
   IconContainerStylesType,
   'styles'
 >;
+
+export type GetIconType = (
+  name: IconProps['name'],
+  color: IconProps['color'],
+) => React.ReactNode;
+
+export type UseControllerType = () => {
+  getIcon: GetIconType;
+};
