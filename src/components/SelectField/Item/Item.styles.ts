@@ -8,10 +8,10 @@ import { animation } from '../../../utils/animation';
 
 import type {
   ChildrenStylesProps,
-  ItemContainerStylesType,
+  ContainerStylesType,
 } from './Item.types';
 
-export const Container = styled.div<ItemContainerStylesType>`
+export const Container = styled.div<ContainerStylesType>`
   display: flex;
   column-gap: 8px;
   align-items: center;

@@ -3,10 +3,10 @@ import React from 'react';
 import { Icon } from '../../Icon';
 import { Item } from '../Item';
 
-import type { DropDownProps } from './DropDown.types';
+import type { Props } from './DropDown.types';
 import { Container } from './DropDown.styles';
 
-export const DropDown: React.FC<DropDownProps> = ({
+export const DropDown: React.FC<Props> = ({
   data,
   setSelectedItem,
   setIsOpen,

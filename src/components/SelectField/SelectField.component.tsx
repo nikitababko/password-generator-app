@@ -7,12 +7,12 @@ import {
   Container,
   Content,
 } from './SelectField.styles';
-import type { SelectFieldProps } from './SelectField.types';
+import type { Props } from './SelectField.types';
 import { Item } from './Item';
 import { DropDown } from './DropDown';
 import { useSelectFieldController } from './SelectField.controller';
 
-export const SelectField: React.FC<SelectFieldProps> = ({
+export const SelectField: React.FC<Props> = ({
   data = [],
   styles,
   callback,

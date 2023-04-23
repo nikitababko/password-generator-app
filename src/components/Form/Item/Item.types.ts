@@ -1,7 +1,7 @@
 import type { ReturnUseTranslateType } from '../../../hooks/useTranslate/useTranslate.types';
 
 export type ItemProps = {
-  item: ItemsType;
+  item: ItemType;
   callback: (
     id: number,
     value: string | number | boolean,
@@ -26,7 +26,7 @@ export type HandleClickType = (
   value: string | number | boolean,
 ) => void;
 
-export type ItemsType = {
+export type ItemType = {
   id: number;
   label: string;
   valueExample: string;

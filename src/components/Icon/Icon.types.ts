@@ -45,11 +45,10 @@ export type IconProps = {
   styles?: React.CSSProperties;
 };
 
-export type IconContainerStylesType = {
-  width?: number;
-  height?: number;
-  styles?: React.CSSProperties;
-};
+export type IconContainerStylesType = Pick<
+  IconProps,
+  'width' | 'height' | 'styles'
+>;
 
 export type IconContainerAttrsType = Omit<
   IconContainerStylesType,

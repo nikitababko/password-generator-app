@@ -1,6 +1,6 @@
 import type {
   HandleClickType,
-  ItemsType as FormItemsType,
+  ItemType as FormItemsType,
 } from '../Item/Item.types';
 
 export type UseTopSectionControllerType = () => {
@@ -10,5 +10,5 @@ export type UseTopSectionControllerType = () => {
 };
 
 export type IsDisabledItemType = (
-  formItemId: number,
+  formItemId: FormItemsType['id'],
 ) => boolean;

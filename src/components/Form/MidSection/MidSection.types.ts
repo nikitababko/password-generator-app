@@ -1,9 +1,11 @@
 import type React from 'react';
+import type { GeneratePasswordType } from '@nikitababko/password-generator/dist/index.types';
+
 import type { ReturnUseTranslateType } from '../../../hooks/useTranslate/useTranslate.types';
 
 export type UseMidSectionControllerType = () => {
   handleGeneratePassword: () => void;
-  password: string[];
+  password: ReturnType<GeneratePasswordType>;
   handleCopy: () => Promise<void>;
   isCopied: boolean;
   isGenerated: boolean;
@@ -11,9 +13,9 @@ export type UseMidSectionControllerType = () => {
 };
 
 export type CopyButtonStylesProps = {
-  isCopied: boolean;
+  isCopied: ReturnType<UseMidSectionControllerType>['isCopied'];
 };
 
 export type GenerateButtonAnimationType = (
-  isGenerated: boolean,
+  isGenerated: ReturnType<UseMidSectionControllerType>['isGenerated'],
 ) => React.CSSProperties;

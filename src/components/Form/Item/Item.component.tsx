@@ -54,8 +54,6 @@ export const Item: React.FC<ItemProps> = ({
             data={item.options}
             styles={{
               width: '90px',
-              // TODO: add backgroundColorType
-              // backgroundColor: ColorDesignTokens.BlackLight,
             }}
             callback={(id, value) =>
               callback(item.id, value)

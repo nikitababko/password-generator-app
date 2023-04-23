@@ -4,27 +4,22 @@ import type { LanguagesType } from '../../hooks/useTranslate/useTranslate.types'
 
 import type { ItemType } from './Item/Item.types';
 
-export type SelectFieldProps = {
+export type Props = {
   data?: ItemType[];
   styles?: Partial<{
     width: string;
-    // backgroundColor: keyof ColorDesignTokensType;
   }>;
   callback?: (
-    id: number | LanguagesType,
+    id: ItemType['id'] | LanguagesType,
     value: string | number,
   ) => void;
 };
 
 export type ChevronWrapperProps = {
-  isOpen: boolean;
+  isOpen: ReturnType<UseSelectFieldControllerType>['isOpen'];
 };
 
-export type ContainerStylesProps = Partial<{
-  styles?: Partial<{
-    width: string;
-  }>;
-}>;
+export type ContainerStylesProps = Pick<Props, 'styles'>;
 
 export type UseSelectFieldControllerType = (
   data: ItemType[],

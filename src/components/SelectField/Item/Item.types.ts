@@ -8,7 +8,7 @@ export type ItemType = {
   label: string | number;
 };
 
-export type ItemProps = {
+export type Props = {
   item: ItemType;
   isDropDownItem?: boolean;
   selectedItemEqualToItem?: boolean;
@@ -18,15 +18,15 @@ export type ItemProps = {
   setIsOpen?: React.Dispatch<React.SetStateAction<boolean>>;
   children?: React.ReactNode;
   callback?: (
-    id: number | LanguagesType,
-    value: string | number,
+    id: ItemType['id'],
+    value: ItemType['label'],
   ) => void;
 };
 
-export type ItemContainerStylesType = {
-  itemId: number | LanguagesType;
-  isDropDownItem?: boolean;
-  selectedItemEqualToItem?: boolean;
+export type ContainerStylesType = {
+  itemId: ItemType['id'];
+  isDropDownItem?: Props['isDropDownItem'];
+  selectedItemEqualToItem?: Props['selectedItemEqualToItem'];
 };
 
 export type UseItemControllerType = (
@@ -36,11 +36,11 @@ export type UseItemControllerType = (
   >,
   setIsOpen?: React.Dispatch<React.SetStateAction<boolean>>,
   callback?: (
-    id: number | LanguagesType,
-    value: string | number,
+    id: ItemType['id'],
+    value: ItemType['label'],
   ) => void,
 ) => { handleClick: () => void };
 
 export type ChildrenStylesProps = {
-  selectedItemEqualToItem?: boolean;
+  selectedItemEqualToItem?: ContainerStylesType['selectedItemEqualToItem'];
 };

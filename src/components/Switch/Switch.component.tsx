@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { Container } from './Switch.styles';
-import type { SwitchProps } from './Switch.types';
+import type { Props } from './Switch.types';
 import { useSwitchController } from './Switch.controller';
 
-export const Switch: React.FC<SwitchProps> = ({
+export const Switch: React.FC<Props> = ({
   id,
   callback,
   value,

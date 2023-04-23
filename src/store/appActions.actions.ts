@@ -1,4 +1,4 @@
-import type { ItemsType as FormItemsType } from '../components/Form/Item/Item.types';
+import type { ItemType as FormItemsType } from '../components/Form/Item/Item.types';
 import type { ThemeType } from '../utils/designTokens/designTokens.types';
 import type { LanguagesType } from '../hooks/useTranslate/useTranslate.types';
 

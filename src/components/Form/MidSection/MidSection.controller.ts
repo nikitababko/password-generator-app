@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import { generatePassword } from '@nikitababko/password-generator';
+import type { GeneratePasswordType } from '@nikitababko/password-generator/dist/index.types';
 
 import { useAppContext } from '../../../store';
 import { useTranslate } from '../../../hooks';
@@ -9,9 +10,9 @@ import { animationTime } from './MidSection.data';
 
 export const useMidSectionController: UseMidSectionControllerType =
   () => {
-    const [password, setPassword] = useState<string[]>([
-      '',
-    ]);
+    const [password, setPassword] = useState<
+      ReturnType<GeneratePasswordType>
+    >(['']);
     const [isCopied, setIsCopied] =
       useState<boolean>(false);
     const [isGenerated, setIsGenerated] =

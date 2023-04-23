@@ -1,10 +1,10 @@
 import React from 'react';
 
-import type { ItemProps } from './Item.types';
+import type { Props } from './Item.types';
 import { Children, Container, Label } from './Item.styles';
 import { useItemController } from './Item.controller';
 
-export const Item: React.FC<ItemProps> = ({
+export const Item: React.FC<Props> = ({
   item,
   setSelectedItem,
   setIsOpen,
