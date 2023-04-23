@@ -13,7 +13,7 @@ import {
   ValueExample,
 } from './Item.styles';
 import type { ItemProps } from './Item.types';
-import { useItemController } from './Item.controller';
+import { useController } from './Item.controller';
 
 export const Item: React.FC<ItemProps> = ({
   item,
@@ -25,7 +25,7 @@ export const Item: React.FC<ItemProps> = ({
     handleClick,
     isPasswordLengthRow,
     t,
-  } = useItemController(item.id);
+  } = useController(item.id);
 
   return (
     <Container>

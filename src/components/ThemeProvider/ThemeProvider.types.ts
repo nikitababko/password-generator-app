@@ -6,6 +6,6 @@ export type Props = {
   children: React.ReactNode;
 };
 
-export type UseThemeProviderType = () => {
+export type UseControllerType = () => {
   theme: ThemeType;
 };

@@ -3,9 +3,9 @@ import { useState } from 'react';
 import { useTranslate } from '../../../hooks';
 
 import { visibleTime } from './Item.data';
-import type { UseItemControllerType } from './Item.types';
+import type { UseControllerType } from './Item.types';
 
-export const useItemController: UseItemControllerType = (
+export const useController: UseControllerType = (
   itemId,
 ) => {
   const [valueExampleIsVisible, setValueExampleIsVisible] =

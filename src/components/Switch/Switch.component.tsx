@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container } from './Switch.styles';
 import type { Props } from './Switch.types';
-import { useSwitchController } from './Switch.controller';
+import { useController } from './Switch.controller';
 
 export const Switch: React.FC<Props> = ({
   id,
@@ -10,7 +10,7 @@ export const Switch: React.FC<Props> = ({
   value,
   isDisabled,
 }) => {
-  const { isActive, handleClick } = useSwitchController(
+  const { isActive, handleClick } = useController(
     value,
     callback,
     id,

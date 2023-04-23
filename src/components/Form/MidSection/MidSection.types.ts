@@ -3,7 +3,7 @@ import type { GeneratePasswordType } from '@nikitababko/password-generator/dist/
 
 import type { ReturnUseTranslateType } from '../../../hooks/useTranslate/useTranslate.types';
 
-export type UseMidSectionControllerType = () => {
+export type UseControllerType = () => {
   handleGeneratePassword: () => void;
   password: ReturnType<GeneratePasswordType>;
   handleCopy: () => Promise<void>;
@@ -13,9 +13,9 @@ export type UseMidSectionControllerType = () => {
 };
 
 export type CopyButtonStylesProps = {
-  isCopied: ReturnType<UseMidSectionControllerType>['isCopied'];
+  isCopied: ReturnType<UseControllerType>['isCopied'];
 };
 
 export type GenerateButtonAnimationType = (
-  isGenerated: ReturnType<UseMidSectionControllerType>['isGenerated'],
+  isGenerated: ReturnType<UseControllerType>['isGenerated'],
 ) => React.CSSProperties;

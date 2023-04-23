@@ -29,7 +29,7 @@ export type ContainerStylesType = {
   selectedItemEqualToItem?: Props['selectedItemEqualToItem'];
 };
 
-export type UseItemControllerType = (
+export type UseControllerType = (
   item: ItemType,
   setSelectedItem?: React.Dispatch<
     React.SetStateAction<ItemType>

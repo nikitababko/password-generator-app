@@ -8,11 +8,11 @@ export type Props = {
 };
 
 export type SwitchContainerStylesProps = {
-  isActive: ReturnType<UseSwitchControllerType>['isActive'];
+  isActive: ReturnType<UseControllerType>['isActive'];
   isDisabled: Props['isDisabled'];
 };
 
-export type UseSwitchControllerType = (
+export type UseControllerType = (
   value: Props['value'],
   callback: Props['callback'],
   id: Props['id'],

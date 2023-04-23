@@ -7,11 +7,11 @@ import {
   Copyright,
   ProjectVersion,
 } from './BottomSection.styles';
-import { useBottomSectionController } from './BottomSection.controller';
+import { useController } from './BottomSection.controller';
 import { projectVersion } from './BottomSection.data';
 
 export const BottomSection: React.FC = () => {
-  const { copyright } = useBottomSectionController();
+  const { copyright } = useController();
 
   return (
     <Container>

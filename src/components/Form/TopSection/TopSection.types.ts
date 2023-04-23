@@ -3,7 +3,7 @@ import type {
   ItemType as FormItemsType,
 } from '../Item/Item.types';
 
-export type UseTopSectionControllerType = () => {
+export type UseControllerType = () => {
   formItems: FormItemsType[];
   handleClick: HandleClickType;
   isDisabledItem: IsDisabledItemType;

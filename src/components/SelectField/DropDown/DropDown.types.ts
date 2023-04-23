@@ -1,6 +1,6 @@
 import type { LanguagesType } from '../../../hooks/useTranslate/useTranslate.types';
 import type { ItemType } from '../Item/Item.types';
-import type { UseSelectFieldControllerType } from '../SelectField.types';
+import type { UseControllerType as UseSelectFieldControllerType } from '../SelectField.types';
 
 export type Props = {
   data?: ItemType[];

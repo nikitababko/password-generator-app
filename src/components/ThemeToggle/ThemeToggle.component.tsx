@@ -6,10 +6,10 @@ import {
   Stars,
   ToggleItem,
 } from './ThemeToggle.styles';
-import { useThemeToggle } from './ThemeToggle.controller';
+import { useController } from './ThemeToggle.controller';
 
 export const ThemeToggle: React.FC = () => {
-  const { handleClick, isDay } = useThemeToggle();
+  const { handleClick, isDay } = useController();
 
   return (
     <Container onClick={handleClick} isDay={isDay}>

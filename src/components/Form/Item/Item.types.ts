@@ -38,7 +38,7 @@ export type ItemType = {
   }[];
 };
 
-export type UseItemControllerType = (itemId: number) => {
+export type UseControllerType = (itemId: number) => {
   valueExampleIsVisible: boolean;
   handleClick: () => void;
   isPasswordLengthRow: boolean;

@@ -2,7 +2,7 @@ import React from 'react';
 
 import type { Props } from './Item.types';
 import { Children, Container, Label } from './Item.styles';
-import { useItemController } from './Item.controller';
+import { useController } from './Item.controller';
 
 export const Item: React.FC<Props> = ({
   item,
@@ -13,7 +13,7 @@ export const Item: React.FC<Props> = ({
   children,
   callback,
 }) => {
-  const { handleClick } = useItemController(
+  const { handleClick } = useController(
     item,
     setSelectedItem,
     setIsOpen,

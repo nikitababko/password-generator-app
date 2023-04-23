@@ -16,14 +16,12 @@ export type Props = {
 };
 
 export type ChevronWrapperProps = {
-  isOpen: ReturnType<UseSelectFieldControllerType>['isOpen'];
+  isOpen: ReturnType<UseControllerType>['isOpen'];
 };
 
 export type ContainerStylesProps = Pick<Props, 'styles'>;
 
-export type UseSelectFieldControllerType = (
-  data: ItemType[],
-) => {
+export type UseControllerType = (data: ItemType[]) => {
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   selectedItem: ItemType;

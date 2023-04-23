@@ -12,7 +12,7 @@ import {
   PasswordLabel,
   PasswordWrapper,
 } from './MidSection.styles';
-import { useMidSectionController } from './MidSection.controller';
+import { useController } from './MidSection.controller';
 
 export const MidSection: React.FC = () => {
   const {
@@ -22,7 +22,7 @@ export const MidSection: React.FC = () => {
     isCopied,
     t,
     isGenerated,
-  } = useMidSectionController();
+  } = useController();
 
   return (
     <Container>

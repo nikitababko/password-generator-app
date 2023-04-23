@@ -2,7 +2,7 @@ export type ThemeStylesType = {
   isDay: boolean;
 };
 
-export type UseThemeToggleType = () => {
+export type UseControllerType = () => {
   handleClick: () => void;
   isDay: boolean;
 };

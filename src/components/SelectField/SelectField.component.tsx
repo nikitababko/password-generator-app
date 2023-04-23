@@ -10,7 +10,7 @@ import {
 import type { Props } from './SelectField.types';
 import { Item } from './Item';
 import { DropDown } from './DropDown';
-import { useSelectFieldController } from './SelectField.controller';
+import { useController } from './SelectField.controller';
 
 export const SelectField: React.FC<Props> = ({
   data = [],
@@ -24,7 +24,7 @@ export const SelectField: React.FC<Props> = ({
     setSelectedItem,
     handleClick,
     ref,
-  } = useSelectFieldController(data);
+  } = useController(data);
 
   return (
     <Container ref={ref} styles={styles}>

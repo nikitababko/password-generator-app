@@ -3,11 +3,11 @@ import React from 'react';
 import { Item } from '../Item';
 
 import { Container } from './TopSection.styles';
-import { useTopSectionController } from './TopSection.controller';
+import { useController } from './TopSection.controller';
 
 export const TopSection: React.FC = () => {
   const { handleClick, formItems, isDisabledItem } =
-    useTopSectionController();
+    useController();
 
   return (
     <Container>
