@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { useTranslate } from '../../../hooks';
 
-import { visibleTime } from './Item.data';
 import type { UseControllerType } from './Item.types';
+import { visibleTime } from './Item.data';
 
 export const useController: UseControllerType = (
   itemId,
@@ -14,11 +14,21 @@ export const useController: UseControllerType = (
 
   const handleClick = () => {
     setValueExampleIsVisible((prevState) => !prevState);
-    setTimeout(
-      () => setValueExampleIsVisible(false),
-      visibleTime,
-    );
   };
+
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+
+    if (valueExampleIsVisible) {
+      timer = setTimeout(() => {
+        setValueExampleIsVisible(false);
+      }, visibleTime);
+    }
+
+    return () => {
+      clearTimeout(timer as NodeJS.Timeout);
+    };
+  }, [valueExampleIsVisible]);
 
   const isPasswordLengthRow = itemId === 1;
 
