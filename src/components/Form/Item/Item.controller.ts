@@ -26,7 +26,7 @@ export const useController: UseControllerType = (
     }
 
     return () => {
-      clearTimeout(timer as NodeJS.Timeout);
+      clearTimeout(timer);
     };
   }, [valueExampleIsVisible]);
 
