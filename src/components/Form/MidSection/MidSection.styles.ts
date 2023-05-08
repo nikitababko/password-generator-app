@@ -129,29 +129,29 @@ export const PasswordLabel = styled.p`
 
 const copyButtonFirstIconAnimation = keyframes`
   20% {
-    top: -30%;
+    transform: translate(-50%, -200%);
   }
 
   70% {
-    top: -30%;
+    transform: translate(-50%, -200%);
   }
 
   100% {
-    top: 50%;
+    transform: translate(-50%, -50%);
   }
 `;
 
 const copyButtonSecondIconAnimation = keyframes`
   20% {
-    top: 50%;
+    transform: translate(-50%, -50%);
   }
 
   70% {
-    top: 50%;
+    transform: translate(-50%, -50%);
   }
 
   100% {
-    top: 116%;
+    transform: translate(-50%, 180%);
   }
 `;
 
@@ -174,10 +174,10 @@ export const CopyButton = styled.button<CopyButtonStylesProps>`
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
   }
 
   svg:first-child {
+    transform: translate(-50%, -50%);
     ${({ isCopied }) =>
       isCopied &&
       css`
@@ -187,7 +187,7 @@ export const CopyButton = styled.button<CopyButtonStylesProps>`
   }
 
   svg:last-child {
-    top: 116%;
+    transform: translate(-50%, 180%);
     ${({ isCopied }) =>
       isCopied &&
       css`
