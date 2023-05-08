@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { generatePassword } from '@nikitababko/password-generator';
+import generatePassword from '@nikitababko/password-generator';
 import type { GeneratePasswordType } from '@nikitababko/password-generator/dist/index.types';
 
 import { useAppContext } from '../../../store';
@@ -53,7 +53,11 @@ export const useController: UseControllerType = () => {
         includeUpperCaseChars: state.formItems[4]
           .value as boolean,
         // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-        noSimilarChars: state.formItems[5].value as boolean,
+        excludeSimilarChars: state.formItems[5]
+          .value as boolean,
+        // eslint-disable-next-line @typescript-eslint/no-magic-numbers
+        excludeAmbiguousChars: state.formItems[6]
+          .value as boolean,
         quantity: 1,
       }),
     );
