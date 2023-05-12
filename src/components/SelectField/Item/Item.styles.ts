@@ -11,7 +11,9 @@ import type {
   ContainerStylesType,
 } from './Item.types';
 
-export const Container = styled.div<ContainerStylesType>`
+export const Container = styled.div.attrs({
+  role: 'option',
+})<ContainerStylesType>`
   display: flex;
   column-gap: 8px;
   align-items: center;

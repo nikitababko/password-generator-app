@@ -25,7 +25,7 @@ export const MidSection: React.FC = () => {
   } = useController();
 
   return (
-    <Container>
+    <Container data-testid="MidSectionContainer">
       <GenerateButton onClick={handleGeneratePassword}>
         <GenerateButtonLabel>
           {t.generate}

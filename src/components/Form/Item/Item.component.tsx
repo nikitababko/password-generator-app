@@ -23,17 +23,17 @@ export const Item: React.FC<ItemProps> = ({
   const {
     valueExampleIsVisible,
     handleClick,
-    isPasswordLengthRow,
+    isFormItemPasswordLength,
     t,
   } = useController(item.id);
 
   return (
-    <Container>
+    <Container data-testid="FormItemContainer">
       <LeftCol
         onClick={handleClick}
-        isPasswordLengthRow={isPasswordLengthRow}
+        isFormItemPasswordLength={isFormItemPasswordLength}
       >
-        {!isPasswordLengthRow && <Info>i</Info>}
+        {!isFormItemPasswordLength && <Info>i</Info>}
 
         <Label
           valueExampleIsVisible={valueExampleIsVisible}

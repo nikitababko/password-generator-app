@@ -108,7 +108,9 @@ export const PasswordWrapper = styled.div`
   )}
 `;
 
-export const PasswordLabel = styled.p`
+export const PasswordLabel = styled.p.attrs({
+  'data-testid': 'MidSectionPasswordLabel', // TODO: That not working but working in '<Container data-testid='...'>'
+})`
   text-align: center;
   width: 100%;
   background-color: transparent;
@@ -155,7 +157,9 @@ const copyButtonSecondIconAnimation = keyframes`
   }
 `;
 
-export const CopyButton = styled.button<CopyButtonStylesProps>`
+export const CopyButton = styled.button.attrs({
+  'data-testid': 'MidSectionCopyButton', // TODO: That not working but working in '<Container data-testid='...'>'
+})<CopyButtonStylesProps>`
   position: relative;
   width: 100%;
   max-width: 56px;

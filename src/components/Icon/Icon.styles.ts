@@ -13,6 +13,7 @@ export const Container = styled.svg.attrs<IconContainerAttrsType>(
     }`,
     fill: 'none',
     xmlns: 'http://www.w3.org/2000/svg',
+    role: 'img',
   }),
 )<IconContainerStylesType>`
   ${({ styles, width, height }) => {

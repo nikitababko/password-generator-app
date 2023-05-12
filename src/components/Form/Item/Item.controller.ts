@@ -30,12 +30,12 @@ export const useController: UseControllerType = (
     };
   }, [valueExampleIsVisible]);
 
-  const isPasswordLengthRow = itemId === 1;
+  const isFormItemPasswordLength = itemId === 1;
 
   return {
     valueExampleIsVisible,
     handleClick,
-    isPasswordLengthRow,
+    isFormItemPasswordLength,
     t,
   };
 };

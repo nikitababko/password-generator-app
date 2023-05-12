@@ -5,7 +5,9 @@ import { animation } from '../../utils/animation';
 
 import type { SwitchContainerStylesProps } from './Switch.types';
 
-export const Container = styled.div<SwitchContainerStylesProps>`
+export const Container = styled.div.attrs({
+  role: 'switch',
+})<SwitchContainerStylesProps>`
   position: relative;
   width: 56px;
   height: 32px;

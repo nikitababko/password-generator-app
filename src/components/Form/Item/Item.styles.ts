@@ -22,7 +22,9 @@ export const Container = styled.div`
   width: 100%;
 `;
 
-export const LeftCol = styled.div<ItemLeftColStylesProps>`
+export const LeftCol = styled.div.attrs({
+  role: 'button',
+})<ItemLeftColStylesProps>`
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -47,11 +49,11 @@ export const LeftCol = styled.div<ItemLeftColStylesProps>`
     `,
   )}
 
-  ${({ isPasswordLengthRow }) => {
+  ${({ isFormItemPasswordLength }) => {
     return mediaContainer767(
       css`
         justify-content: flex-start;
-        pointer-events: ${isPasswordLengthRow
+        pointer-events: ${isFormItemPasswordLength
           ? 'none'
           : 'all'};
         padding-left: 36px;

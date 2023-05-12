@@ -14,7 +14,7 @@ export const BottomSection: React.FC = () => {
   const { copyright } = useController();
 
   return (
-    <Container>
+    <Container data-testid="BottomSectionContainer">
       <Copyright>{copyright}</Copyright>
 
       <ProjectVersion>

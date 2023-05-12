@@ -3,7 +3,9 @@ import styled, { css } from 'styled-components';
 import { ColorDesignTokens } from '../../utils/designTokens';
 import { mediaContainer1023 } from '../../styles/mediaQueryContainers';
 
-export const Container = styled.div`
+export const Container = styled.div.attrs({
+  role: 'form',
+})`
   align-self: center;
   padding: 40px 124px;
   width: 100%;

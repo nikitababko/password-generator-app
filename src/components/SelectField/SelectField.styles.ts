@@ -8,7 +8,9 @@ import type {
   ContainerStylesProps,
 } from './SelectField.types';
 
-export const Container = styled.div<ContainerStylesProps>`
+export const Container = styled.div.attrs({
+  role: 'listbox',
+})<ContainerStylesProps>`
   position: relative;
   height: 48px;
   min-width: ${({ styles }) => styles?.width ?? '196px'};

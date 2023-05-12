@@ -10,7 +10,7 @@ export type ItemProps = {
 };
 
 export type ItemLeftColStylesProps = {
-  isPasswordLengthRow: boolean;
+  isFormItemPasswordLength: ReturnType<UseControllerType>['isFormItemPasswordLength'];
 };
 
 export type ItemValueExampleStylesProps = {
@@ -41,6 +41,6 @@ export type ItemType = {
 export type UseControllerType = (itemId: number) => {
   valueExampleIsVisible: boolean;
   handleClick: () => void;
-  isPasswordLengthRow: boolean;
+  isFormItemPasswordLength: boolean;
   t: ReturnUseTranslateType;
 };

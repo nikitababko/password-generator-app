@@ -18,7 +18,9 @@
     "հայերեն",
     "ქართული",
     "Polski",
-    "Deutsch"
+    "Deutsch",
+    "listbox",
+    "testid"
   ],
   "ignorePaths": [
     ".husky",
@@ -26,6 +28,7 @@
     "dist",
     "build",
     "node_modules",
-    "src/hooks/useTranslate/useTranslate.data.ts"
+    "src/hooks/useTranslate/useTranslate.data.ts",
+    "pnpm-lock.yaml"
   ]
 }

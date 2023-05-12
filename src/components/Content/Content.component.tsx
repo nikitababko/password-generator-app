@@ -7,7 +7,7 @@ import { Container } from './Content.styles';
 
 export const Content: React.FC = () => {
   return (
-    <Container>
+    <Container data-testid="ContentContainer">
       <Header />
 
       <Form />

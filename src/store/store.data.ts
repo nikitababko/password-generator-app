@@ -65,21 +65,21 @@ export const formItemsInitialState = [
     label: 'includeNumbers',
     valueExample: '123456',
     type: 'switch',
-    value: false,
+    value: true,
   },
   {
     id: 4,
     label: 'includeLowercaseCharacters',
     valueExample: 'abcdefgh',
     type: 'switch',
-    value: false,
+    value: true,
   },
   {
     id: 5,
     label: 'includeUppercaseCharacters',
     valueExample: 'ABCDEFGH',
     type: 'switch',
-    value: false,
+    value: true,
   },
   {
     id: 6,
@@ -97,7 +97,7 @@ export const formItemsInitialState = [
   },
   // {
   //   id: 8,
-  //   label: 'Save My Preference',
+  //   label: 'saveMySettings',
   //   valueExample: '',
   //   type: 'switch',
   //   value: false,

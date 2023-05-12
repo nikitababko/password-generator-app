@@ -10,7 +10,7 @@ export const TopSection: React.FC = () => {
     useController();
 
   return (
-    <Container>
+    <Container data-testid="TopSectionContainer">
       {formItems?.map((formItem) => (
         <Item
           key={formItem.id}
