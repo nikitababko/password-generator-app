@@ -2,7 +2,7 @@ import styled, { css, keyframes } from 'styled-components';
 
 import {
   ColorDesignTokens,
-  FontSize,
+  FontSizes,
 } from '../../../utils/designTokens';
 import {
   mediaContainer1023,
@@ -66,7 +66,7 @@ export const GenerateButton = styled.button`
 `;
 
 export const GenerateButtonLabel = styled.p`
-  font-size: ${FontSize.sm};
+  font-size: ${FontSizes.SM};
   line-height: 26px;
   font-weight: 400;
   color: ${ColorDesignTokens.White};
@@ -114,7 +114,7 @@ export const PasswordLabel = styled.p.attrs({
   text-align: center;
   width: 100%;
   background-color: transparent;
-  font-size: ${FontSize.sm};
+  font-size: ${FontSizes.SM};
   line-height: 26px;
   border-radius: 12px;
   white-space: nowrap;

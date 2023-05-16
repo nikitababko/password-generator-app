@@ -30,10 +30,10 @@ export const ColorDesignTokens: ColorDesignTokensType = {
   White: '#FFFFFF',
 } as const;
 
-export const FontSize = {
-  sm: '22px',
-  m: '26px',
-  l: '36px',
+export const FontSizes = {
+  SM: '22px',
+  M: '26px',
+  L: '36px',
 } as const;
 
 export const LightTheme: ThemeType = {

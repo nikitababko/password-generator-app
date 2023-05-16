@@ -43,7 +43,8 @@
     "build": "next build",
     "start": "next start",
     "prepare": "npx husky install",
-    "test:unit": "jest"
+    "test:unit": "jest",
+    "lint": "eslint . && bash -c tsc"
   },
   "dependencies": {
     "@next/font": "13.1.1",

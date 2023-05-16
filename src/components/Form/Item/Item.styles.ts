@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 import {
   ColorDesignTokens,
-  FontSize,
+  FontSizes,
 } from '../../../utils/designTokens';
 import {
   mediaContainer1023,
@@ -34,7 +34,7 @@ export const LeftCol = styled.div.attrs({
   max-width: 645px;
   min-width: 160px;
   height: 100%;
-  font-size: ${FontSize.sm};
+  font-size: ${FontSizes.SM};
   font-weight: 400;
   line-height: 25px;
   background-color: ${({ theme }) => {
