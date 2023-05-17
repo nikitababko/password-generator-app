@@ -1,11 +1,15 @@
-import type { UseControllerType } from './BottomSection.types';
+import type {
+  CopyrightType,
+  UseControllerType,
+  GetCurrentYearType,
+} from './BottomSection.types';
 import {
   authorName,
   foundationYear,
 } from './BottomSection.data';
 
 export const useController: UseControllerType = () => {
-  const getCurrentYear = () => {
+  const getCurrentYear: GetCurrentYearType = () => {
     const getFullYear = new Date().getFullYear();
 
     if (foundationYear === getFullYear) {
@@ -15,7 +19,10 @@ export const useController: UseControllerType = () => {
     return `- ${getFullYear}`;
   };
 
-  const copyright = `Copyright © ${foundationYear} ${getCurrentYear()} ${authorName}`;
+  const copyright: CopyrightType = {
+    year: `Copyright © ${foundationYear} ${getCurrentYear()}`,
+    name: `${authorName}`,
+  };
 
   return {
     copyright,

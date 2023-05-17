@@ -4,7 +4,9 @@ import { getProjectName } from '../../../utils/getProjectName';
 
 import {
   Container,
-  Copyright,
+  CopyrightName,
+  CopyrightWrapper,
+  CopyrightYear,
   ProjectVersion,
 } from './BottomSection.styles';
 import { useController } from './BottomSection.controller';
@@ -14,8 +16,14 @@ export const BottomSection: React.FC = () => {
   const { copyright } = useController();
 
   return (
-    <Container data-testid="BottomSectionContainer">
-      <Copyright>{copyright}</Copyright>
+    <Container>
+      <CopyrightWrapper>
+        <CopyrightYear data-testid="CopyrightYear">
+          {copyright.year}
+        </CopyrightYear>
+
+        <CopyrightName>{copyright.name}</CopyrightName>
+      </CopyrightWrapper>
 
       <ProjectVersion>
         {`${getProjectName()} ${projectVersion}`}

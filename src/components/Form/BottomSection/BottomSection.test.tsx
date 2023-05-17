@@ -9,7 +9,7 @@ describe('BottomSection', () => {
     render(<BottomSection />);
 
     expect(
-      screen.getByTestId('BottomSectionContainer'),
+      screen.getByRole('contentinfo'),
     ).toBeInTheDocument();
   });
 });
