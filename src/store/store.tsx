@@ -12,8 +12,9 @@ export const StoreContext = React.createContext<StoreType>([
   () => {},
 ]);
 
-export const useAppContext = () =>
-  useContext<StoreType>(StoreContext);
+export const useAppContext = () => {
+  return useContext<StoreType>(StoreContext);
+};
 
 export const StoreProvider: React.FC<
   StoreProviderProps

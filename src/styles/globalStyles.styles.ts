@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 import '@nikitababko/reset-css';
 import { Roboto } from '@next/font/google';
 
-import { animation } from '../utils/animation';
+import { getAnimation } from '../utils/getAnimation';
 
 const roboto = Roboto({
   weight: '400',
@@ -22,6 +22,6 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   * {
-    transition: color ${animation()}, background-color ${animation()};
+    transition: color ${getAnimation()}, background-color ${getAnimation()};
   }
 `;

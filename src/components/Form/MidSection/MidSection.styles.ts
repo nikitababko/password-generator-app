@@ -9,7 +9,7 @@ import {
   mediaContainer479,
   mediaContainer767,
 } from '../../../styles/mediaQueryContainers';
-import { animation } from '../../../utils/animation';
+import { getAnimation } from '../../../utils/getAnimation';
 
 import type {
   CopyButtonStylesProps,
@@ -45,7 +45,7 @@ export const GenerateButton = styled.button`
     return theme.generateButtonBackgroundColor;
   }};
   cursor: pointer;
-  transition: box-shadow ${animation()};
+  transition: box-shadow ${getAnimation()};
   border: none;
 
   &:hover {
@@ -167,7 +167,7 @@ export const CopyButton = styled.button.attrs({
   border-radius: 12px;
   background-color: ${ColorDesignTokens.Blue};
   cursor: pointer;
-  transition: box-shadow ${animation()};
+  transition: box-shadow ${getAnimation()};
   border: none;
   overflow: hidden;
   pointer-events: ${({ isCopied }) => {
@@ -186,7 +186,7 @@ export const CopyButton = styled.button.attrs({
       isCopied &&
       css`
         animation: ${copyButtonFirstIconAnimation}
-          ${animation(animationTime)};
+          ${getAnimation(animationTime)};
       `}
   }
 
@@ -196,7 +196,7 @@ export const CopyButton = styled.button.attrs({
       isCopied &&
       css`
         animation: ${copyButtonSecondIconAnimation}
-          ${animation(animationTime)};
+          ${getAnimation(animationTime)};
       `}
   }
 
@@ -216,6 +216,6 @@ export const GenerateButtonAnimation: GenerateButtonAnimationType =
   (isGenerated) => {
     return {
       transform: `rotate(${isGenerated ? '180deg' : 0})`,
-      transition: `transform ${animation()}`,
+      transition: `transform ${getAnimation()}`,
     };
   };

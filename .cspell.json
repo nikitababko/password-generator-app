@@ -29,6 +29,7 @@
     "build",
     "node_modules",
     "src/hooks/useTranslate/useTranslate.data.ts",
-    "pnpm-lock.yaml"
+    "pnpm-lock.yaml",
+    "out"
   ]
 }

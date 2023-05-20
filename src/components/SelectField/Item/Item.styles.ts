@@ -4,7 +4,7 @@ import {
   ColorDesignTokens,
   FontSizes,
 } from '../../../utils/designTokens';
-import { animation } from '../../../utils/animation';
+import { getAnimation } from '../../../utils/getAnimation';
 
 import type {
   ChildrenStylesProps,
@@ -35,7 +35,7 @@ export const Container = styled.div.attrs({
             ColorDesignTokens.BlueLightSky
           };  
         }
-        transition: background-color ${animation()};
+        transition: background-color ${getAnimation()};
       `
     );
   }};

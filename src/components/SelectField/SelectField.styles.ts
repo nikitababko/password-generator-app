@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { ColorDesignTokens } from '../../utils/designTokens';
-import { animation } from '../../utils/animation';
+import { getAnimation } from '../../utils/getAnimation';
 
 import type {
   ChevronWrapperProps,
@@ -36,5 +36,5 @@ export const ChevronWrapper = styled.div<ChevronWrapperProps>`
   transform: ${({ isOpen }) => {
     return `rotate(${isOpen ? '180deg' : '0'})`;
   }};
-  transition: transform ${animation()};
+  transition: transform ${getAnimation()};
 `;

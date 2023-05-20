@@ -1,12 +1,13 @@
 import { IconItems } from './Icon.data';
 import type {
-  UseControllerType,
   GetIconType,
+  UseControllerType,
 } from './Icon.types';
 
 export const useController: UseControllerType = () => {
-  const getIcon: GetIconType = (name, color) =>
-    IconItems[name](color);
+  const getIcon: GetIconType = (name, color) => {
+    return IconItems[name](color);
+  };
 
   return {
     getIcon,

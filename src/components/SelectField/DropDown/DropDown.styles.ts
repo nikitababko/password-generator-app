@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { ColorDesignTokens } from '../../../utils/designTokens';
-import { animation } from '../../../utils/animation';
+import { getAnimation } from '../../../utils/getAnimation';
 
 import type { ContainerStylesProps } from './DropDown.types';
 
@@ -26,7 +26,8 @@ export const Container = styled.div<ContainerStylesProps>`
       : 'none';
   }};
   border-radius: 12px;
-  transition: padding ${animation()}, height ${animation()};
+  transition: padding ${getAnimation()},
+    height ${getAnimation()};
 
   &::-webkit-scrollbar {
     width: 6px;

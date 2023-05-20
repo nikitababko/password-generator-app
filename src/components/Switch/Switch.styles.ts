@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { ColorDesignTokens } from '../../utils/designTokens';
-import { animation } from '../../utils/animation';
+import { getAnimation } from '../../utils/getAnimation';
 
 import type { SwitchContainerStylesProps } from './Switch.types';
 
@@ -22,7 +22,7 @@ export const Container = styled.div.attrs({
   }};
   border-radius: 26px;
   cursor: pointer;
-  transition: background-color ${animation()};
+  transition: background-color ${getAnimation()};
   pointer-events: ${({ isDisabled }) => {
     return isDisabled ? 'none' : 'auto';
   }};
@@ -44,7 +44,7 @@ export const Container = styled.div.attrs({
         : ColorDesignTokens.GrayDim;
     }};
     border-radius: 50%;
-    transition: transform ${animation()},
-      background-color ${animation()};
+    transition: transform ${getAnimation()},
+      background-color ${getAnimation()};
   }
 `;

@@ -1,7 +1,7 @@
 import styled, { css, keyframes } from 'styled-components';
 
 import { ColorDesignTokens } from '../../utils/designTokens';
-import { animation } from '../../utils/animation';
+import { getAnimation } from '../../utils/getAnimation';
 
 import type { ThemeStylesType } from './ThemeToggle.types';
 
@@ -52,8 +52,8 @@ export const Container = styled.div.attrs({
       ? ColorDesignTokens.BlueTurquoise
       : ColorDesignTokens.BlueSlate;
   }};
-  transition: background-color ${animation()},
-    border ${animation()};
+  transition: background-color ${getAnimation()},
+    border ${getAnimation()};
   cursor: pointer;
 `;
 
@@ -66,7 +66,7 @@ export const ToggleItem = styled.div<ThemeStylesType>`
     return css`
       ${isDay
         ? itemRightToLeftAnimation
-        : itemLeftToRightAnimation} ${animation()} forwards
+        : itemLeftToRightAnimation} ${getAnimation()} forwards
     `;
   }};
   width: 40px;
@@ -85,7 +85,7 @@ export const ToggleItem = styled.div<ThemeStylesType>`
     opacity: ${({ isDay }) => {
       return isDay ? 0 : 1;
     }};
-    transition: opacity ${animation()};
+    transition: opacity ${getAnimation()};
   }
 
   &::after {
@@ -100,7 +100,7 @@ export const ToggleItem = styled.div<ThemeStylesType>`
     opacity: ${({ isDay }) => {
       return isDay ? 0 : 1;
     }};
-    transition: opacity ${animation()};
+    transition: opacity ${getAnimation()};
   }
 `;
 
@@ -114,8 +114,8 @@ export const Cloud = styled.div<ThemeStylesType>`
   opacity: ${({ isDay }) => {
     return isDay ? 1 : 0;
   }};
-  transition: transform ${animation()},
-    opacity ${animation()};
+  transition: transform ${getAnimation()},
+    opacity ${getAnimation()};
   background: ${ColorDesignTokens.White};
   height: 15px;
   width: 15px;
@@ -136,8 +136,8 @@ export const Stars = styled.div<ThemeStylesType>`
   transform: ${({ isDay }) => {
     return `translate(${isDay ? '68px' : '26px'}, -50%)`;
   }};
-  transition: transform ${animation()},
-    opacity ${animation()};
+  transition: transform ${getAnimation()},
+    opacity ${getAnimation()};
   background-color: ${ColorDesignTokens.White};
   height: 7px;
   width: 7px;
