@@ -32,7 +32,8 @@
     {
       "files": [
         "*.ts",
-        "*.tsx"
+        "*.tsx",
+        "*.jsx"
       ],
       "rules": {
         "no-console": [
@@ -61,7 +62,6 @@
         ],
         "import/prefer-default-export": "off",
         "@typescript-eslint/indent": "off",
-        "react/jsx-filename-extension": "off",
         "arrow-body-style": "off",
         "import/no-extraneous-dependencies": [
           "error",
@@ -91,7 +91,15 @@
         "react/no-multi-comp": [
           "error"
         ],
-        "react/jsx-newline": "error"
+        "react/jsx-newline": "error",
+        "react/jsx-filename-extension": [
+          "error",
+          {
+            "extensions": [
+              ".tsx"
+            ]
+          }
+        ]
       }
     },
     {

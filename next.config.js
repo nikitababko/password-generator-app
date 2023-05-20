@@ -4,9 +4,10 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
     reactRemoveProperties: { properties: ['data-testid'] },
-    removeConsole: {
-      exclude: ['error'],
-    },
+    removeConsole:
+      process.env.NODE_ENV === 'production'
+        ? { exclude: ['error'] }
+        : false,
   },
 };
 

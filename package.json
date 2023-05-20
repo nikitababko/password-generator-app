@@ -41,7 +41,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -- -p 3232",
+    "export": "next export",
     "prepare": "npx husky install",
     "test:unit": "jest",
     "lint": "eslint . && bash -c tsc"
