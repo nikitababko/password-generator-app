@@ -18,6 +18,9 @@
     "project": "tsconfig.json",
     "tsconfigRootDir": "./"
   },
+  "ignorePatterns": [
+    "out"
+  ],
   "plugins": [
     "@typescript-eslint",
     "prettier"
