@@ -1,9 +1,9 @@
-import type { ItemType as FormItemsType } from '../components/Form/Item/Item.types';
+import type { ItemType as FormItemType } from '../components/Form/Item/Item.types';
 import { LightTheme } from '../utils/designTokens';
 
 import type { StoreInitialStateType } from './store.types';
 
-export const FORM_ITEMS_INITIAL_STATE = [
+export const FORM_ITEMS_INITIAL_STATE: FormItemType[] = [
   {
     id: 1,
     label: 'passwordLength',
@@ -102,7 +102,7 @@ export const FORM_ITEMS_INITIAL_STATE = [
   //   type: 'switch',
   //   value: false,
   // },
-] satisfies FormItemsType[];
+];
 
 export const storeInitialState: StoreInitialStateType = {
   theme: LightTheme,

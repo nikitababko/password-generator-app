@@ -1,6 +1,6 @@
 import type { TranslationsType } from './useTranslate.types';
 
-export const Translations = {
+export const Translations: TranslationsType = {
   en: {
     passwordLength: 'Password Length',
     includeSymbols: 'Include Symbols',
@@ -178,4 +178,4 @@ export const Translations = {
     excludeAmbiguousCharacters: 'Escludi caratteri ambigui',
     generate: 'creare',
   },
-} satisfies TranslationsType;
+};
