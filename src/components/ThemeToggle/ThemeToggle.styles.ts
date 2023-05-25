@@ -1,6 +1,6 @@
 import styled, { css, keyframes } from 'styled-components';
 
-import { ColorDesignTokens } from '../../utils/designTokens';
+import { COLOR_DESIGN_TOKENS } from '../../utils/designTokens';
 import { getAnimation } from '../../utils/getAnimation';
 
 import type { ThemeStylesType } from './ThemeToggle.types';
@@ -8,13 +8,13 @@ import type { ThemeStylesType } from './ThemeToggle.types';
 const itemLeftToRightAnimation = keyframes`
   0% {
     transform: translate(5px, -50%);
-    border: 3px solid ${ColorDesignTokens.Yellow};
-    background-color: ${ColorDesignTokens.YellowCorn};
+    border: 3px solid ${COLOR_DESIGN_TOKENS.YELLOW};
+    background-color: ${COLOR_DESIGN_TOKENS.YELLOW_CORN};
   }
 
   100% {
-    border: 3px solid ${ColorDesignTokens.GrayDark};
-    background-color: ${ColorDesignTokens.White};
+    border: 3px solid ${COLOR_DESIGN_TOKENS.GRAY_DARK};
+    background-color: ${COLOR_DESIGN_TOKENS.WHITE};
     transform: translate(48px, -50%);
   }
 `;
@@ -22,14 +22,14 @@ const itemLeftToRightAnimation = keyframes`
 const itemRightToLeftAnimation = keyframes`
   0% {
     transform: translate(48px, -50%);
-    border: 3px solid ${ColorDesignTokens.GrayDark};
-    background-color: ${ColorDesignTokens.White};
+    border: 3px solid ${COLOR_DESIGN_TOKENS.GRAY_DARK};
+    background-color: ${COLOR_DESIGN_TOKENS.WHITE};
   }
 
   100% {
     transform: translate(5px, -50%);
-    border: 3px solid ${ColorDesignTokens.Yellow};
-    background-color: ${ColorDesignTokens.YellowCorn};
+    border: 3px solid ${COLOR_DESIGN_TOKENS.YELLOW};
+    background-color: ${COLOR_DESIGN_TOKENS.YELLOW_CORN};
   }
 `;
 
@@ -43,14 +43,14 @@ export const Container = styled.div.attrs({
   border: ${({ isDay }) => {
     return `2px solid ${
       isDay
-        ? ColorDesignTokens.BlueDarkTurquoise
-        : ColorDesignTokens.BlueDarkSlate
+        ? COLOR_DESIGN_TOKENS.BLUE_DARK_TURQUOISE
+        : COLOR_DESIGN_TOKENS.BLUE_DARK_SLATE
     }`;
   }};
   background-color: ${({ isDay }) => {
     return isDay
-      ? ColorDesignTokens.BlueTurquoise
-      : ColorDesignTokens.BlueSlate;
+      ? COLOR_DESIGN_TOKENS.BLUE_TURQUOISE
+      : COLOR_DESIGN_TOKENS.BLUE_SLATE;
   }};
   transition: background-color ${getAnimation()},
     border ${getAnimation()};
@@ -81,7 +81,7 @@ export const ToggleItem = styled.div<ThemeStylesType>`
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background-color: ${ColorDesignTokens.GrayDark};
+    background-color: ${COLOR_DESIGN_TOKENS.GRAY_DARK};
     opacity: ${({ isDay }) => {
       return isDay ? 0 : 1;
     }};
@@ -96,7 +96,7 @@ export const ToggleItem = styled.div<ThemeStylesType>`
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: ${ColorDesignTokens.GrayDark};
+    background-color: ${COLOR_DESIGN_TOKENS.GRAY_DARK};
     opacity: ${({ isDay }) => {
       return isDay ? 0 : 1;
     }};
@@ -116,13 +116,13 @@ export const Cloud = styled.div<ThemeStylesType>`
   }};
   transition: transform ${getAnimation()},
     opacity ${getAnimation()};
-  background: ${ColorDesignTokens.White};
+  background: ${COLOR_DESIGN_TOKENS.WHITE};
   height: 15px;
   width: 15px;
-  box-shadow: ${ColorDesignTokens.White} 7px -6px 0 0,
-    ${ColorDesignTokens.White} 15px -6px 0 -3px,
-    ${ColorDesignTokens.White} 18px 0 0 -2px,
-    ${ColorDesignTokens.White} 10px 1px 0 -2px;
+  box-shadow: ${COLOR_DESIGN_TOKENS.WHITE} 7px -6px 0 0,
+    ${COLOR_DESIGN_TOKENS.WHITE} 15px -6px 0 -3px,
+    ${COLOR_DESIGN_TOKENS.WHITE} 18px 0 0 -2px,
+    ${COLOR_DESIGN_TOKENS.WHITE} 10px 1px 0 -2px;
 `;
 
 export const Stars = styled.div<ThemeStylesType>`
@@ -138,7 +138,7 @@ export const Stars = styled.div<ThemeStylesType>`
   }};
   transition: transform ${getAnimation()},
     opacity ${getAnimation()};
-  background-color: ${ColorDesignTokens.White};
+  background-color: ${COLOR_DESIGN_TOKENS.WHITE};
   height: 7px;
   width: 7px;
 
@@ -150,7 +150,7 @@ export const Stars = styled.div<ThemeStylesType>`
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background-color: ${ColorDesignTokens.White};
+    background-color: ${COLOR_DESIGN_TOKENS.WHITE};
   }
 
   &::after {
@@ -161,6 +161,6 @@ export const Stars = styled.div<ThemeStylesType>`
     width: 3px;
     height: 3px;
     border-radius: 50%;
-    background-color: ${ColorDesignTokens.White};
+    background-color: ${COLOR_DESIGN_TOKENS.WHITE};
   }
 `;

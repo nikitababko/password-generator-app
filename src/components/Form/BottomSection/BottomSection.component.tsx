@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { getProjectName } from '../../../utils/getProjectName';
+import { version as projectVersion } from '../../../../package.json';
 
 import {
   Container,
@@ -10,7 +11,6 @@ import {
   ProjectVersion,
 } from './BottomSection.styles';
 import { useController } from './BottomSection.controller';
-import { projectVersion } from './BottomSection.data';
 
 export const BottomSection: React.FC = () => {
   const { copyright } = useController();

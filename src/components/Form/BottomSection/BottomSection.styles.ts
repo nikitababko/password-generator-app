@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ColorDesignTokens } from '../../../utils/designTokens';
+import { COLOR_DESIGN_TOKENS } from '../../../utils/designTokens';
 
 export const Container = styled.footer`
   margin-top: 76px;
@@ -20,7 +20,7 @@ export const CopyrightName = styled(CopyrightYear).attrs({
   href: 'https://nikitababko.github.io',
   target: '_blank',
 })`
-  color: ${ColorDesignTokens.Black};
+  color: ${COLOR_DESIGN_TOKENS.BLACK};
 `;
 
 export const ProjectVersion = styled(CopyrightYear)``;

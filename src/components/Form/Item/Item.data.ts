@@ -1,1 +1,1 @@
-export const visibleTime = 2000;
+export const VISIBLE_TIME = 2000;

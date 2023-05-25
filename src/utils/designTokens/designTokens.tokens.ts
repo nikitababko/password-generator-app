@@ -4,30 +4,30 @@ import type {
   ThemeType,
 } from './designTokens.types';
 
-export const MediaBreakPointsDesignTokens: MediaBreakPointsDesignTokensType =
+export const MEDIA_BREAK_POINTS_DESIGN_TOKENS: MediaBreakPointsDesignTokensType =
   {
-    media1023: 1023,
-    media767: 767,
-    media479: 479,
-    media374: 374,
+    MEDIA_1023: 1023,
+    MEDIA_767: 767,
+    MEDIA_479: 479,
+    MEDIA_374: 374,
   } as const;
 
-export const ColorDesignTokens: ColorDesignTokensType = {
-  Blue: '#157AF5',
-  BlueDarkTurquoise: '#72cce3',
-  BlueTurquoise: '#96dcee',
-  BlueDarkSlate: '#5d6baa',
-  BlueSlate: '#808fc7',
-  BlueLightSky: '#DAE6FF',
-  BlueLight: '#E9F4FE',
-  Black: '#222222',
-  BlackLight: '#2E3D54',
-  GrayLight: '#F0F4F7',
-  GrayDark: '#979797',
-  GrayDim: '#6B7382',
-  Yellow: '#F5EB71',
-  YellowCorn: '#FFFAA8',
-  White: '#FFFFFF',
+export const COLOR_DESIGN_TOKENS: ColorDesignTokensType = {
+  BLUE: '#157AF5',
+  BLUE_DARK_TURQUOISE: '#72cce3',
+  BLUE_TURQUOISE: '#96dcee',
+  BLUE_DARK_SLATE: '#5d6baa',
+  BLUE_SLATE: '#808fc7',
+  BLUE_LIGHT_SKY: '#DAE6FF',
+  BLUE_LIGHT: '#E9F4FE',
+  BLACK: '#222222',
+  BLACK_LIGHT: '#2E3D54',
+  GRAY_LIGHT: '#F0F4F7',
+  GRAY_DARK: '#979797',
+  GRAY_DIM: '#6B7382',
+  YELLOW: '#F5EB71',
+  YELLOW_CORN: '#FFFAA8',
+  WHITE: '#FFFFFF',
 } as const;
 
 export const FontSizes = {
@@ -37,29 +37,29 @@ export const FontSizes = {
 } as const;
 
 export const LightTheme: ThemeType = {
-  backgroundColor: ColorDesignTokens.BlueLight,
-  foregroundColor: ColorDesignTokens.White,
+  backgroundColor: COLOR_DESIGN_TOKENS.BLUE_LIGHT,
+  foregroundColor: COLOR_DESIGN_TOKENS.WHITE,
   formItemLeftColBackgroundColor:
-    ColorDesignTokens.GrayLight,
-  selectBackgroundColor: ColorDesignTokens.White,
-  fontColor: ColorDesignTokens.Black,
-  fontGenerateButtonColor: ColorDesignTokens.White,
-  borderColor: ColorDesignTokens.BlackLight,
+    COLOR_DESIGN_TOKENS.GRAY_LIGHT,
+  selectBackgroundColor: COLOR_DESIGN_TOKENS.WHITE,
+  fontColor: COLOR_DESIGN_TOKENS.BLACK,
+  fontGenerateButtonColor: COLOR_DESIGN_TOKENS.WHITE,
+  borderColor: COLOR_DESIGN_TOKENS.BLACK_LIGHT,
   generateButtonBackgroundColor:
-    ColorDesignTokens.BlackLight,
+    COLOR_DESIGN_TOKENS.BLACK_LIGHT,
 } as const;
 
 export const DarkTheme: ThemeType = {
-  backgroundColor: ColorDesignTokens.BlackLight,
-  foregroundColor: ColorDesignTokens.GrayDark,
+  backgroundColor: COLOR_DESIGN_TOKENS.BLACK_LIGHT,
+  foregroundColor: COLOR_DESIGN_TOKENS.GRAY_DARK,
   formItemLeftColBackgroundColor:
-    ColorDesignTokens.GrayLight,
-  selectBackgroundColor: ColorDesignTokens.GrayLight,
-  fontColor: ColorDesignTokens.White,
-  fontGenerateButtonColor: ColorDesignTokens.White,
-  borderColor: ColorDesignTokens.GrayLight,
+    COLOR_DESIGN_TOKENS.GRAY_LIGHT,
+  selectBackgroundColor: COLOR_DESIGN_TOKENS.GRAY_LIGHT,
+  fontColor: COLOR_DESIGN_TOKENS.WHITE,
+  fontGenerateButtonColor: COLOR_DESIGN_TOKENS.WHITE,
+  borderColor: COLOR_DESIGN_TOKENS.GRAY_LIGHT,
   generateButtonBackgroundColor:
-    MediaBreakPointsDesignTokens.media767
-      ? ColorDesignTokens.Black
-      : ColorDesignTokens.BlackLight,
+    MEDIA_BREAK_POINTS_DESIGN_TOKENS.MEDIA_767
+      ? COLOR_DESIGN_TOKENS.BLACK
+      : COLOR_DESIGN_TOKENS.BLACK_LIGHT,
 } as const;

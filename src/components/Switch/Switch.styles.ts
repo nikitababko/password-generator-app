@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { ColorDesignTokens } from '../../utils/designTokens';
+import { COLOR_DESIGN_TOKENS } from '../../utils/designTokens';
 import { getAnimation } from '../../utils/getAnimation';
 
 import type { SwitchContainerStylesProps } from './Switch.types';
@@ -15,10 +15,10 @@ export const Container = styled.div.attrs({
     return isActive
       ? `${
           isDisabled
-            ? `${ColorDesignTokens.Blue}70`
-            : ColorDesignTokens.Blue
+            ? `${COLOR_DESIGN_TOKENS.BLUE}70`
+            : COLOR_DESIGN_TOKENS.BLUE
         }`
-      : ColorDesignTokens.BlueLightSky;
+      : COLOR_DESIGN_TOKENS.BLUE_LIGHT_SKY;
   }};
   border-radius: 26px;
   cursor: pointer;
@@ -40,8 +40,8 @@ export const Container = styled.div.attrs({
     height: 24px;
     background-color: ${({ isActive }) => {
       return isActive
-        ? ColorDesignTokens.White
-        : ColorDesignTokens.GrayDim;
+        ? COLOR_DESIGN_TOKENS.WHITE
+        : COLOR_DESIGN_TOKENS.GRAY_DIM;
     }};
     border-radius: 50%;
     transition: transform ${getAnimation()},

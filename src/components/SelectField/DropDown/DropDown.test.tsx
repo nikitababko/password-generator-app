@@ -2,7 +2,7 @@ import React from 'react';
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 
-import { formItemsInitialState } from '../../../store/store.data';
+import { FORM_ITEMS_INITIAL_STATE } from '../../../store/store.data';
 
 import { DropDown } from './DropDown.component';
 
@@ -10,7 +10,7 @@ describe('DropDown', () => {
   it('render', () => {
     render(
       <DropDown
-        data={formItemsInitialState[0].options}
+        data={FORM_ITEMS_INITIAL_STATE[0].options}
         isOpen
         setIsOpen={() => null}
         selectedItem={{

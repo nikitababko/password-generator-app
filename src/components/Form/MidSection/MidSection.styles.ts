@@ -1,7 +1,7 @@
 import styled, { css, keyframes } from 'styled-components';
 
 import {
-  ColorDesignTokens,
+  COLOR_DESIGN_TOKENS,
   FontSizes,
 } from '../../../utils/designTokens';
 import {
@@ -15,7 +15,7 @@ import type {
   CopyButtonStylesProps,
   GenerateButtonAnimationType,
 } from './MidSection.types';
-import { animationTime } from './MidSection.data';
+import { ANIMATION_TIME } from './MidSection.data';
 
 export const Container = styled.div`
   display: flex;
@@ -49,7 +49,7 @@ export const GenerateButton = styled.button`
   border: none;
 
   &:hover {
-    box-shadow: 0 0 8px 1px ${ColorDesignTokens.Black};
+    box-shadow: 0 0 8px 1px ${COLOR_DESIGN_TOKENS.BLACK};
   }
 
   ${mediaContainer767(
@@ -69,7 +69,7 @@ export const GenerateButtonLabel = styled.p`
   font-size: ${FontSizes.SM};
   line-height: 26px;
   font-weight: 400;
-  color: ${ColorDesignTokens.White};
+  color: ${COLOR_DESIGN_TOKENS.WHITE};
 
   ${mediaContainer767(
     css`
@@ -95,7 +95,7 @@ export const PasswordWrapper = styled.div`
 
   ${mediaContainer1023(
     css`
-      background-color: ${ColorDesignTokens.White};
+      background-color: ${COLOR_DESIGN_TOKENS.WHITE};
     `,
   )}
 
@@ -125,7 +125,7 @@ export const PasswordLabel = styled.p.attrs({
 
   &::-webkit-scrollbar-thumb {
     border-radius: 12px;
-    background: ${ColorDesignTokens.GrayDark};
+    background: ${COLOR_DESIGN_TOKENS.GRAY_DARK};
   }
 `;
 
@@ -165,7 +165,7 @@ export const CopyButton = styled.button.attrs({
   max-width: 56px;
   height: 56px;
   border-radius: 12px;
-  background-color: ${ColorDesignTokens.Blue};
+  background-color: ${COLOR_DESIGN_TOKENS.BLUE};
   cursor: pointer;
   transition: box-shadow ${getAnimation()};
   border: none;
@@ -186,7 +186,7 @@ export const CopyButton = styled.button.attrs({
       isCopied &&
       css`
         animation: ${copyButtonFirstIconAnimation}
-          ${getAnimation(animationTime)};
+          ${getAnimation(ANIMATION_TIME)};
       `}
   }
 
@@ -196,12 +196,12 @@ export const CopyButton = styled.button.attrs({
       isCopied &&
       css`
         animation: ${copyButtonSecondIconAnimation}
-          ${getAnimation(animationTime)};
+          ${getAnimation(ANIMATION_TIME)};
       `}
   }
 
   &:hover {
-    box-shadow: 0 0 8px 1px ${ColorDesignTokens.Blue};
+    box-shadow: 0 0 8px 1px ${COLOR_DESIGN_TOKENS.BLUE};
   }
 
   ${mediaContainer479(

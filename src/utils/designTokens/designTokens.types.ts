@@ -1,45 +1,45 @@
 export type MediaBreakPointsDesignTokensType = {
-  media1023: 1023;
-  media767: 767;
-  media479: 479;
-  media374: 374;
+  MEDIA_1023: 1023;
+  MEDIA_767: 767;
+  MEDIA_479: 479;
+  MEDIA_374: 374;
 };
 
 export type ColorDesignTokensType = {
-  Blue: '#157AF5';
-  BlueDarkTurquoise: '#72cce3';
-  BlueTurquoise: '#96dcee';
-  BlueDarkSlate: '#5d6baa';
-  BlueSlate: '#808fc7';
-  BlueLightSky: '#DAE6FF';
-  BlueLight: '#E9F4FE';
-  Black: '#222222';
-  BlackLight: '#2E3D54';
-  GrayLight: '#F0F4F7';
-  GrayDark: '#979797';
-  GrayDim: '#6B7382';
-  Yellow: '#F5EB71';
-  YellowCorn: '#FFFAA8';
-  White: '#FFFFFF';
+  BLUE: '#157AF5';
+  BLUE_DARK_TURQUOISE: '#72cce3';
+  BLUE_TURQUOISE: '#96dcee';
+  BLUE_DARK_SLATE: '#5d6baa';
+  BLUE_SLATE: '#808fc7';
+  BLUE_LIGHT_SKY: '#DAE6FF';
+  BLUE_LIGHT: '#E9F4FE';
+  BLACK: '#222222';
+  BLACK_LIGHT: '#2E3D54';
+  GRAY_LIGHT: '#F0F4F7';
+  GRAY_DARK: '#979797';
+  GRAY_DIM: '#6B7382';
+  YELLOW: '#F5EB71';
+  YELLOW_CORN: '#FFFAA8';
+  WHITE: '#FFFFFF';
 };
 
 export type ThemeType = {
   backgroundColor: ColorDesignTokensType[
-    | 'BlueLight'
-    | 'BlackLight'];
+    | 'BLUE_LIGHT'
+    | 'BLACK_LIGHT'];
   foregroundColor: ColorDesignTokensType[
-    | 'White'
-    | 'GrayDark'];
-  formItemLeftColBackgroundColor: ColorDesignTokensType['GrayLight'];
+    | 'WHITE'
+    | 'GRAY_DARK'];
+  formItemLeftColBackgroundColor: ColorDesignTokensType['GRAY_LIGHT'];
   selectBackgroundColor: ColorDesignTokensType[
-    | 'White'
-    | 'GrayLight'];
-  fontColor: ColorDesignTokensType['Black' | 'White'];
-  fontGenerateButtonColor: ColorDesignTokensType['White'];
+    | 'WHITE'
+    | 'GRAY_LIGHT'];
+  fontColor: ColorDesignTokensType['BLACK' | 'WHITE'];
+  fontGenerateButtonColor: ColorDesignTokensType['WHITE'];
   borderColor: ColorDesignTokensType[
-    | 'BlackLight'
-    | 'GrayLight'];
+    | 'BLACK_LIGHT'
+    | 'GRAY_LIGHT'];
   generateButtonBackgroundColor: ColorDesignTokensType[
-    | 'BlackLight'
-    | 'Black'];
+    | 'BLACK_LIGHT'
+    | 'BLACK'];
 };

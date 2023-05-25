@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import {
-  ColorDesignTokens,
+  COLOR_DESIGN_TOKENS,
   FontSizes,
 } from '../../../utils/designTokens';
 import { getAnimation } from '../../../utils/getAnimation';
@@ -22,7 +22,7 @@ export const Container = styled.div.attrs({
   cursor: pointer;
   background-color: ${({ selectedItemEqualToItem }) => {
     return selectedItemEqualToItem
-      ? ColorDesignTokens.BlueLightSky
+      ? COLOR_DESIGN_TOKENS.BLUE_LIGHT_SKY
       : 'transparent';
   }};
   ${({ isDropDownItem }) => {
@@ -32,7 +32,7 @@ export const Container = styled.div.attrs({
         padding: 12px 14px;
         &:hover {
           background-color: ${
-            ColorDesignTokens.BlueLightSky
+            COLOR_DESIGN_TOKENS.BLUE_LIGHT_SKY
           };  
         }
         transition: background-color ${getAnimation()};

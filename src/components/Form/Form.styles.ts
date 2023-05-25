@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { ColorDesignTokens } from '../../utils/designTokens';
+import { COLOR_DESIGN_TOKENS } from '../../utils/designTokens';
 import { mediaContainer1023 } from '../../styles/mediaQueryContainers';
 
 export const Container = styled.div.attrs({
@@ -13,7 +13,7 @@ export const Container = styled.div.attrs({
     return theme.foregroundColor;
   }};
   border-radius: 12px;
-  box-shadow: 0 15px 37px -3px ${ColorDesignTokens.Black}45;
+  box-shadow: 0 15px 37px -3px ${COLOR_DESIGN_TOKENS.BLACK}45;
 
   ${mediaContainer1023(
     css`

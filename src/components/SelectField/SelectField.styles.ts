@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { ColorDesignTokens } from '../../utils/designTokens';
+import { COLOR_DESIGN_TOKENS } from '../../utils/designTokens';
 import { getAnimation } from '../../utils/getAnimation';
 
 import type {
@@ -27,7 +27,7 @@ export const Content = styled.div`
   background-color: ${({ theme }) => {
     return theme.selectBackgroundColor;
   }};
-  border: 1px solid ${ColorDesignTokens.BlueLightSky};
+  border: 1px solid ${COLOR_DESIGN_TOKENS.BLUE_LIGHT_SKY};
   border-radius: 12px;
   cursor: pointer;
 `;

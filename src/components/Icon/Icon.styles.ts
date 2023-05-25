@@ -4,12 +4,12 @@ import type {
   IconContainerAttrsType,
   IconContainerStylesType,
 } from './Icon.types';
-import { defaultSize } from './Icon.data';
+import { DEFAULT_SIZE } from './Icon.data';
 
 export const Container = styled.svg.attrs<IconContainerAttrsType>(
   ({ width, height }) => ({
-    viewBox: `0 0 ${width ?? defaultSize.width} ${
-      height ?? defaultSize.height
+    viewBox: `0 0 ${width ?? DEFAULT_SIZE.width} ${
+      height ?? DEFAULT_SIZE.height
     }`,
     fill: 'none',
     xmlns: 'http://www.w3.org/2000/svg',
@@ -19,8 +19,8 @@ export const Container = styled.svg.attrs<IconContainerAttrsType>(
   ${({ styles, width, height }) => {
     return {
       ...styles,
-      width: `${width ?? defaultSize.width}px`,
-      height: `${height ?? defaultSize.height}px`,
+      width: `${width ?? DEFAULT_SIZE.width}px`,
+      height: `${height ?? DEFAULT_SIZE.height}px`,
       textDecoration: 'none',
     };
   }};

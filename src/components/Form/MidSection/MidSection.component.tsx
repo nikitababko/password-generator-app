@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Icon } from '../../Icon';
-import { ColorDesignTokens } from '../../../utils/designTokens';
+import { COLOR_DESIGN_TOKENS } from '../../../utils/designTokens';
 
 import {
   Container,
@@ -50,7 +50,7 @@ export const MidSection: React.FC = () => {
           name="CheckMark"
           width={15}
           height={16}
-          color={ColorDesignTokens.White}
+          color={COLOR_DESIGN_TOKENS.WHITE}
         />
       </CopyButton>
     </Container>

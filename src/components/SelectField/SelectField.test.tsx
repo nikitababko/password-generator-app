@@ -4,13 +4,13 @@ import { render, screen } from '@testing-library/react';
 
 import { SelectField } from './SelectField.component';
 
-import { formItemsInitialState } from '../../store/store.data';
+import { FORM_ITEMS_INITIAL_STATE } from '../../store/store.data';
 
 describe('SelectField', () => {
   it('render', () => {
     render(
       <SelectField
-        data={formItemsInitialState[0].options}
+        data={FORM_ITEMS_INITIAL_STATE[0].options}
       />,
     );
 

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useTranslate } from '../../../hooks';
 
 import type { UseControllerType } from './Item.types';
-import { visibleTime } from './Item.data';
+import { VISIBLE_TIME } from './Item.data';
 
 export const useController: UseControllerType = (
   itemId,
@@ -22,7 +22,7 @@ export const useController: UseControllerType = (
     if (valueExampleIsVisible) {
       timer = setTimeout(() => {
         setValueExampleIsVisible(false);
-      }, visibleTime);
+      }, VISIBLE_TIME);
     }
 
     return () => {

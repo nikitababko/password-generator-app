@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 import {
-  ColorDesignTokens,
+  COLOR_DESIGN_TOKENS,
   FontSizes,
 } from '../../../utils/designTokens';
 import {
@@ -45,7 +45,7 @@ export const LeftCol = styled.div.attrs({
 
   ${mediaContainer1023(
     css`
-      background-color: ${ColorDesignTokens.White};
+      background-color: ${COLOR_DESIGN_TOKENS.WHITE};
     `,
   )}
 
@@ -104,11 +104,11 @@ export const Info = styled.p`
   display: none;
   margin-right: 15px;
   padding: 6px 5px;
-  border: 1px solid ${ColorDesignTokens.GrayDark};
+  border: 1px solid ${COLOR_DESIGN_TOKENS.GRAY_DARK};
   border-radius: 2px;
-  background-color: ${ColorDesignTokens.White};
+  background-color: ${COLOR_DESIGN_TOKENS.WHITE};
   line-height: 11px;
-  color: ${ColorDesignTokens.GrayDark};
+  color: ${COLOR_DESIGN_TOKENS.GRAY_DARK};
   pointer-events: none;
 
   ${mediaContainer767(

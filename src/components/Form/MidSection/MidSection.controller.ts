@@ -6,7 +6,7 @@ import { useAppContext } from '../../../store';
 import { useTranslate } from '../../../hooks';
 
 import type { UseControllerType } from './MidSection.types';
-import { animationTime } from './MidSection.data';
+import { ANIMATION_TIME } from './MidSection.data';
 
 export const useController: UseControllerType = () => {
   const [password, setPassword] = useState<
@@ -28,7 +28,7 @@ export const useController: UseControllerType = () => {
 
       setTimeout(
         () => setIsCopied(false),
-        Number(`${animationTime}000`),
+        Number(`${ANIMATION_TIME}000`),
       );
     } catch (error) {
       console.error(error);

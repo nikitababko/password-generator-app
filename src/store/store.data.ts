@@ -3,7 +3,7 @@ import { LightTheme } from '../utils/designTokens';
 
 import type { StoreInitialStateType } from './store.types';
 
-export const formItemsInitialState = [
+export const FORM_ITEMS_INITIAL_STATE = [
   {
     id: 1,
     label: 'passwordLength',
@@ -107,5 +107,5 @@ export const formItemsInitialState = [
 export const storeInitialState: StoreInitialStateType = {
   theme: LightTheme,
   lang: 'en',
-  formItems: formItemsInitialState,
+  formItems: FORM_ITEMS_INITIAL_STATE,
 };

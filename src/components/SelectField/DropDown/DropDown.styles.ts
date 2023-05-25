@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { ColorDesignTokens } from '../../../utils/designTokens';
+import { COLOR_DESIGN_TOKENS } from '../../../utils/designTokens';
 import { getAnimation } from '../../../utils/getAnimation';
 
 import type { ContainerStylesProps } from './DropDown.types';
@@ -22,7 +22,7 @@ export const Container = styled.div<ContainerStylesProps>`
   }};
   border: ${({ isOpen }) => {
     return isOpen
-      ? `1px solid ${ColorDesignTokens.BlueLightSky}`
+      ? `1px solid ${COLOR_DESIGN_TOKENS.BLUE_LIGHT_SKY}`
       : 'none';
   }};
   border-radius: 12px;
@@ -39,6 +39,6 @@ export const Container = styled.div<ContainerStylesProps>`
 
   &::-webkit-scrollbar-thumb {
     border-radius: 12px;
-    background: ${ColorDesignTokens.GrayDark};
+    background: ${COLOR_DESIGN_TOKENS.GRAY_DARK};
   }
 `;
