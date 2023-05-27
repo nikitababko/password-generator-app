@@ -139,6 +139,14 @@
         "testing-library",
         "jest-dom"
       ]
+    },
+    {
+      "files": [
+        "*.tsx"
+      ],
+      "rules": {
+        "react/prop-types": "off"
+      }
     }
   ]
 }
