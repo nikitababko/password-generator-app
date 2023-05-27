@@ -12,62 +12,65 @@ import {
   RightCol,
   ValueExample,
 } from './Item.styles';
-import type { ItemProps } from './Item.types';
 import { useController } from './Item.controller';
+import type { ItemProps } from './Item.types';
 
-export const Item: React.FC<ItemProps> = ({
-  item,
-  callback,
-  isDisabled,
-}) => {
-  const {
-    valueExampleIsVisible,
-    handleClick,
-    isFormItemPasswordLength,
-    t,
-  } = useController(item.id);
+const Item: React.FC<ItemProps> = React.memo<ItemProps>(
+  ({ item, callback, isDisabled }) => {
+    const {
+      valueExampleIsVisible,
+      handleClick,
+      isFormItemPasswordLength,
+      t,
+    } = useController(item.id);
 
-  return (
-    <Container data-testid="FormItemContainer">
-      <LeftCol
-        onClick={handleClick}
-        isFormItemPasswordLength={isFormItemPasswordLength}
-      >
-        {!isFormItemPasswordLength && <Info>i</Info>}
-
-        <Label
-          valueExampleIsVisible={valueExampleIsVisible}
+    return (
+      <Container data-testid="FormItemContainer">
+        <LeftCol
+          onClick={handleClick}
+          isFormItemPasswordLength={
+            isFormItemPasswordLength
+          }
         >
-          {t[item.label as keyof TranslationsValuesType]}
-        </Label>
+          {!isFormItemPasswordLength && <Info>i</Info>}
 
-        <ValueExample
-          valueExampleIsVisible={valueExampleIsVisible}
-        >
-          {item.valueExample}
-        </ValueExample>
-      </LeftCol>
+          <Label
+            valueExampleIsVisible={valueExampleIsVisible}
+          >
+            {t[item.label as keyof TranslationsValuesType]}
+          </Label>
 
-      <RightCol>
-        {item.type === 'select' ? (
-          <SelectField
-            data={item.options}
-            styles={{
-              width: '90px',
-            }}
-            callback={(id, value) =>
-              callback(item.id, value)
-            }
-          />
-        ) : (
-          <Switch
-            value={item.value as boolean}
-            id={item.id}
-            callback={callback}
-            isDisabled={isDisabled}
-          />
-        )}
-      </RightCol>
-    </Container>
-  );
-};
+          <ValueExample
+            valueExampleIsVisible={valueExampleIsVisible}
+          >
+            {item.valueExample}
+          </ValueExample>
+        </LeftCol>
+
+        <RightCol>
+          {item.type === 'select' ? (
+            <SelectField
+              data={item.options}
+              styles={{
+                width: '90px',
+              }}
+              callback={(id, value) =>
+                callback(item.id, value)
+              }
+            />
+          ) : (
+            <Switch
+              value={item.value as boolean}
+              id={item.id}
+              callback={callback}
+              isDisabled={isDisabled}
+            />
+          )}
+        </RightCol>
+      </Container>
+    );
+  },
+);
+
+Item.displayName = 'Item';
+export { Item };

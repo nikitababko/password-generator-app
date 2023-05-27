@@ -1,3 +1,5 @@
+import { useCallback, useMemo } from 'react';
+
 import type { HandleClickType } from '../Item/Item.types';
 import { useAppContext } from '../../../store';
 import { setFormItemsAction } from '../../../store/appActions.actions';
@@ -10,13 +12,21 @@ import type {
 export const useController: UseControllerType = () => {
   const [state, dispatch] = useAppContext();
 
-  const handleClick: HandleClickType = (id, value) => {
-    dispatch(
-      setFormItemsAction(state.formItems, id, value),
-    );
-  };
+  const memoFormItems = useMemo(
+    () => state.formItems,
+    [state.formItems],
+  );
 
-  const isLastActiveItemId = () => {
+  const handleClick: HandleClickType = useCallback(
+    (id, value) => {
+      dispatch(
+        setFormItemsAction(state.formItems, id, value),
+      );
+    },
+    [dispatch, state.formItems],
+  );
+
+  const isLastActiveItemId = useCallback(() => {
     const items = state.formItems.filter((formItem) => {
       return formItem.value === true;
     });
@@ -26,16 +36,17 @@ export const useController: UseControllerType = () => {
     }
 
     return null;
-  };
+  }, [state.formItems]);
 
-  const isDisabledItem: IsDisabledItemType = (
-    formItemId,
-  ) => {
-    return isLastActiveItemId() === formItemId;
-  };
+  const isDisabledItem = useCallback<IsDisabledItemType>(
+    (formItemId) => {
+      return isLastActiveItemId() === formItemId;
+    },
+    [isLastActiveItemId],
+  );
 
   return {
-    formItems: state.formItems,
+    formItems: memoFormItems,
     handleClick,
     isLastActiveItemId,
     isDisabledItem,
