@@ -1,5 +1,4 @@
 import React from 'react';
-import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 
 import { FORM_ITEMS_INITIAL_STATE } from '../../../store/store.data';

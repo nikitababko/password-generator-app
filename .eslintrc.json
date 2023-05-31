@@ -147,6 +147,17 @@
       "rules": {
         "react/prop-types": "off"
       }
+    },
+    {
+      "files": [
+        "**/*.cy.{js,ts,jsx,tsx}"
+      ],
+      "extends": [
+        "plugin:cypress/recommended"
+      ],
+      "plugins": [
+        "cypress"
+      ]
     }
   ]
 }
