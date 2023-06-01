@@ -3,7 +3,10 @@ const nextConfig = {
   reactStrictMode: true,
   compiler: {
     styledComponents: true,
-    reactRemoveProperties: { properties: ['data-testid'] },
+    reactRemoveProperties:
+      process.env.NODE_ENV === 'production'
+        ? { properties: ['data-testid'] }
+        : false,
     removeConsole:
       process.env.NODE_ENV === 'production'
         ? { exclude: ['error'] }
