@@ -23,7 +23,7 @@ describe('MidSection', () => {
     ).toBeInTheDocument();
 
     expect(
-      screen.getByTestId('MidSectionCopyButton'),
+      screen.getByTestId('CopyButton'),
     ).toBeInTheDocument();
   });
 });

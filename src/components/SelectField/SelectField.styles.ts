@@ -16,7 +16,9 @@ export const Container = styled.div.attrs({
   min-width: ${({ styles }) => styles?.width ?? '196px'};
 `;
 
-export const Content = styled.div`
+export const Content = styled.div.attrs({
+  'data-testid': 'SelectFieldContent',
+})`
   display: flex;
   justify-content: space-between;
   align-items: center;

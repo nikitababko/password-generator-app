@@ -32,7 +32,10 @@ export const Container = styled.div`
   )}
 `;
 
-export const GenerateButton = styled.button`
+export const GenerateButton = styled.button.attrs({
+  role: 'button',
+  'data-testid': 'GenerateButton',
+})`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -78,7 +81,9 @@ export const GenerateButtonLabel = styled.p`
   )}
 `;
 
-export const PasswordWrapper = styled.div`
+export const PasswordWrapper = styled.div.attrs({
+  'data-testid': 'PasswordWrapper',
+})`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,7 +114,7 @@ export const PasswordWrapper = styled.div`
 `;
 
 export const PasswordLabel = styled.p.attrs({
-  'data-testid': 'MidSectionPasswordLabel', // TODO: That not working but working in '<Container data-testid='...'>'
+  'data-testid': 'MidSectionPasswordLabel',
 })`
   text-align: center;
   width: 100%;
@@ -158,7 +163,7 @@ const copyButtonSecondIconAnimation = keyframes`
 `;
 
 export const CopyButton = styled.button.attrs({
-  'data-testid': 'MidSectionCopyButton', // TODO: That not working but working in '<Container data-testid='...'>'
+  'data-testid': 'CopyButton',
 })<CopyButtonStylesProps>`
   position: relative;
   width: 100%;
