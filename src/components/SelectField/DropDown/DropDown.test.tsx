@@ -21,7 +21,7 @@ describe('DropDown', () => {
     );
 
     expect(
-      screen.getByTestId('DropDown'),
+      screen.getByTestId('DropDownContainer'),
     ).toBeInTheDocument();
   });
 });

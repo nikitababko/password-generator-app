@@ -15,7 +15,10 @@ export const DropDown: React.FC<Props> = ({
   callback,
 }) => {
   return (
-    <Container data-testid="DropDown" isOpen={isOpen}>
+    <Container
+      data-testid="DropDownContainer"
+      isOpen={isOpen}
+    >
       {data?.map((selectFieldItem) => (
         <Item
           key={selectFieldItem.id}
