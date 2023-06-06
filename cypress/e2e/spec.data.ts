@@ -1,8 +1,12 @@
 export const Elements = {
   LayoutContainer: '[data-testid="LayoutContainer"]',
+  HeaderContainer: '[role="banner"]',
   SwitchContainer: '[role="switch"]',
   SelectFieldContainer: '[role="listbox"]',
   SelectFieldContent: '[data-testid="SelectFieldContent"]',
+  SelectFieldItemContainer: '[role="option"]',
+  SelectFieldIDropDownContainer:
+    '[data-testid="DropDownContainer"]',
   FormContainer: '[role="form"]',
   TopSectionContainer:
     '[data-testid="TopSectionContainer"]',
@@ -15,3 +19,5 @@ export const Elements = {
   CopyButton: '[data-testid="CopyButton"]',
   GenerateButton: '[data-testid="GenerateButton"]',
 };
+
+export const TEST_URL = 'http://localhost:3001';

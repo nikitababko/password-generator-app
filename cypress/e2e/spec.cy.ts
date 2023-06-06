@@ -1,19 +1,19 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-
 import chaiColors from 'chai-colors';
+
+import { Translations } from '../../src/hooks/useTranslate/useTranslate.data';
+import { FORM_ITEMS_INITIAL_STATE } from '../../src/store/store.data';
+
+import { Elements, TEST_URL } from './spec.data';
 import {
   checkDarkTheme,
   checkLightTheme,
 } from './spec.helpers';
-import { Elements } from './spec.data';
-import { Translations } from '../../src/hooks/useTranslate/useTranslate.data';
 
 chai.use(chaiColors);
 
 describe('Password generator', () => {
   it('Toggle theme', () => {
-    cy.visit('http://localhost:3001');
+    cy.visit(TEST_URL);
 
     checkLightTheme();
 
@@ -25,23 +25,97 @@ describe('Password generator', () => {
   });
 
   it('Change language', () => {
-    cy.visit('http://localhost:3001');
+    cy.visit(TEST_URL);
 
-    cy.get('[data-testid="SelectFieldContent"]')
-      .first()
-      .click();
+    Object.values(Translations).forEach(
+      (translation, index) => {
+        cy.get(Elements.SelectFieldContent).first().click();
 
-    cy.get(
-      '[data-testid="DropDownContainer"] [role="option"]',
-    )
-      .eq(2)
-      .click();
+        cy.get(
+          `${Elements.SelectFieldIDropDownContainer} ${Elements.SelectFieldItemContainer}`,
+        )
+          .eq(index)
+          .click();
 
-    cy.get(Elements.FormItemContainerLeftCol)
-      .eq(0)
-      .should(
-        'contain.text',
-        Translations.zh.passwordLength,
-      );
+        cy.get(Elements.FormItemContainerLeftCol)
+          .eq(0)
+          .should(
+            'contain.text',
+            translation.passwordLength,
+          );
+
+        cy.get(Elements.FormItemContainerLeftCol)
+          .eq(1)
+          .should(
+            'contain.text',
+            translation.includeSymbols,
+          );
+
+        cy.get(Elements.FormItemContainerLeftCol)
+          .eq(2)
+          .should(
+            'contain.text',
+            translation.includeNumbers,
+          );
+
+        cy.get(Elements.FormItemContainerLeftCol)
+          // eslint-disable-next-line @typescript-eslint/no-magic-numbers
+          .eq(3)
+          .should(
+            'contain.text',
+            translation.includeLowercaseCharacters,
+          );
+
+        cy.get(Elements.FormItemContainerLeftCol)
+          // eslint-disable-next-line @typescript-eslint/no-magic-numbers
+          .eq(4)
+          .should(
+            'contain.text',
+            translation.includeUppercaseCharacters,
+          );
+
+        cy.get(Elements.FormItemContainerLeftCol)
+          // eslint-disable-next-line @typescript-eslint/no-magic-numbers
+          .eq(5)
+          .should(
+            'contain.text',
+            translation.excludeSimilarCharacters,
+          );
+
+        cy.get(Elements.FormItemContainerLeftCol)
+          // eslint-disable-next-line @typescript-eslint/no-magic-numbers
+          .eq(6)
+          .should(
+            'contain.text',
+            translation.excludeAmbiguousCharacters,
+          );
+      },
+    );
+  });
+
+  it('Select password length', () => {
+    cy.visit(TEST_URL);
+
+    FORM_ITEMS_INITIAL_STATE[0].options?.forEach(
+      (option, index) => {
+        cy.get(
+          `${Elements.FormContainer} ${Elements.SelectFieldContent}`,
+        ).click();
+
+        cy.get(
+          `${Elements.FormContainer} ${Elements.SelectFieldIDropDownContainer} ${Elements.SelectFieldItemContainer}`,
+        )
+          .eq(index)
+          .click();
+
+        cy.get(`${Elements.PasswordWrapper} p`)
+          .invoke('text')
+          .should(
+            'have.length',
+            FORM_ITEMS_INITIAL_STATE[0].options?.[index]
+              ?.label,
+          );
+      },
+    );
   });
 });
