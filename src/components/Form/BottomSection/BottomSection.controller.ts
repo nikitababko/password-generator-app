@@ -1,4 +1,4 @@
-import { author as projectAuthor } from '../../../../package.json';
+import packageJSON from '../../../../package.json';
 
 import type {
   CopyrightType,
@@ -20,7 +20,7 @@ export const useController: UseControllerType = () => {
 
   const copyright: CopyrightType = {
     year: `Copyright © ${FOUNDATION_YEAR} ${getCurrentYear()}`,
-    name: `${projectAuthor.name}`,
+    name: `${packageJSON.author.name}`,
   };
 
   return {

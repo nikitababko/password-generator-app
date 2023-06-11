@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { getProjectName } from '../../../utils/getProjectName';
-import { version as projectVersion } from '../../../../package.json';
+import packageJSON from '../../../../package.json';
 
 import {
   Container,
@@ -26,7 +26,7 @@ export const BottomSection: React.FC = () => {
       </CopyrightWrapper>
 
       <ProjectVersion>
-        {`${getProjectName()} ${projectVersion}`}
+        {`${getProjectName()} ${packageJSON.version}`}
       </ProjectVersion>
     </Container>
   );

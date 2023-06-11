@@ -5,53 +5,49 @@ import {
   NextScript,
 } from 'next/document';
 import React from 'react';
-import { getProjectName } from '../utils/getProjectName';
-import { metaDescription } from '../constants';
+import { metaData } from '../constants';
 
 export default function Document() {
   return (
     <Html lang="en" translate="no">
       <Head>
-        <meta charSet="UTF-8" />
+        <meta charSet={metaData.charSet} />
 
         <meta
           httpEquiv="X-UA-Compatible"
           content="IE=edge"
         />
 
-        <meta name="google" content="notranslate" />
+        <meta name="google" content={metaData.google} />
 
-        <meta name="robots" content="index,follow" />
+        <meta name="robots" content={metaData.robots} />
 
         <meta
           name="classification"
-          content="application, online-tool, security, password-generator"
+          content={metaData.classification}
         />
 
-        <meta name="rating" content="General" />
+        <meta name="rating" content={metaData.rating} />
+
+        <meta name="creator" content={metaData.me} />
+
+        <meta name="author" content={metaData.me} />
+
+        <meta name="Designer" content={metaData.me} />
 
         <meta
-          name="creator"
-          content="Nikita Babko, niki.babko@gmail.com"
+          name="publisher"
+          content={metaData.publisher}
         />
 
         <meta
-          name="author"
-          content="Nikita Babko, niki.babko@gmail.com"
+          name="distribution"
+          content={metaData.distribution}
         />
-
-        <meta
-          name="Designer"
-          content="Nikita Babko, niki.babko@gmail.com"
-        />
-
-        <meta name="publisher" content="The Babko Group" />
-
-        <meta name="distribution" content="global" />
 
         <meta
           name="application-name"
-          content={getProjectName()}
+          content={metaData['application-name']}
         />
 
         {/* <meta */}
@@ -61,26 +57,26 @@ export default function Document() {
 
         <meta
           name="description"
-          content={metaDescription}
+          content={metaData.description}
         />
+
+        <meta name="keywords" content={metaData.keywords} />
 
         <meta
-          name="keywords"
-          content="password generator, secure passwords, unique passwords, online security, password strength, password tool, password algorithm, randomization, password customization, data protection, account security, password generator tool"
+          property="og:type"
+          content={metaData.og.type}
         />
-
-        <meta property="og:type" content="website" />
 
         {/* TODO: insert password generator link */}
         {/* <meta property="og:url" content="https://nikitababko.github.io/" /> */}
         <meta
           property="og:title"
-          content={getProjectName()}
+          content={metaData.og.title}
         />
 
         <meta
           property="og:description"
-          content={metaDescription}
+          content={metaData.description}
         />
 
         {/* TODO: insert password generator logo */}
@@ -88,7 +84,7 @@ export default function Document() {
 
         <meta
           property="twitter:card"
-          content="summary_large_image"
+          content={metaData.twitter.card}
         />
 
         {/* TODO: insert password generator link */}
@@ -99,23 +95,26 @@ export default function Document() {
 
         <meta
           name="twitter:creator"
-          content="@nikitababko"
+          content={metaData.twitter.creator}
         />
 
         <meta
           property="twitter:title"
-          content={getProjectName()}
+          content={metaData.twitter.title}
         />
 
         <meta
           property="twitter:description"
-          content={metaDescription}
+          content={metaData.description}
         />
 
         {/* TODO: insert password generator logo */}
         {/* <meta property="twitter:image" content="./logo_url" /> */}
 
-        <meta name="copyright" content="Copyright 2023" />
+        <meta
+          name="copyright"
+          content={metaData.copyright}
+        />
       </Head>
 
       <body>
