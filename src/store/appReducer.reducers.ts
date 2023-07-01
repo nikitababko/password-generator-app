@@ -21,7 +21,7 @@ export const appReducer = (
         lang: action.payload,
       };
 
-    case ActionTypes.SET_FORM_ITEMS:
+    case ActionTypes.SET_FORM_ITEM:
       return {
         ...state,
         formItems: action.payload,

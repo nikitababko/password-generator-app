@@ -19,12 +19,12 @@ export const changeLangAction = (
   payload: id,
 });
 
-export const setFormItemsAction = (
+export const setFormItemAction = (
   formItems: FormItemsType[],
   id: number,
   value: string | number | boolean,
 ): ActionType => ({
-  type: ActionTypes.SET_FORM_ITEMS,
+  type: ActionTypes.SET_FORM_ITEM,
   payload: formItems?.map((formItem) => {
     return formItem.id === id
       ? { ...formItem, value }

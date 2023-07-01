@@ -2,7 +2,7 @@ import { useCallback, useMemo } from 'react';
 
 import type { HandleClickType } from '../Item/Item.types';
 import { useAppContext } from '../../../store';
-import { setFormItemsAction } from '../../../store/appActions.actions';
+import { setFormItemAction } from '../../../store/appActions.actions';
 
 import type {
   IsDisabledItemType,
@@ -20,7 +20,7 @@ export const useController: UseControllerType = () => {
   const handleClick: HandleClickType = useCallback(
     (id, value) => {
       dispatch(
-        setFormItemsAction(state.formItems, id, value),
+        setFormItemAction(state.formItems, id, value),
       );
     },
     [dispatch, state.formItems],

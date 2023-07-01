@@ -32,7 +32,7 @@ type ChangeLangActionType = {
 };
 
 type FormItemActionType = {
-  type: ActionTypes.SET_FORM_ITEMS;
+  type: ActionTypes.SET_FORM_ITEM;
   payload: FormItemsType[];
 };
 
