@@ -5,7 +5,7 @@ import { ThemeToggle } from '../ThemeToggle';
 import { useAppContext } from '../../store';
 import { changeLangAction } from '../../store/appActions.actions';
 import type { LanguagesType } from '../../hooks/useTranslate/useTranslate.types';
-import { getProjectName } from '../../utils/getProjectName';
+import { PROJECT_NAME } from '../../constants';
 
 import {
   Container,
@@ -21,7 +21,7 @@ export const Header: React.FC = () => {
   return (
     <Container>
       <LeftCol>
-        <Title>{getProjectName()}</Title>
+        <Title>{PROJECT_NAME}</Title>
       </LeftCol>
 
       <RightCol>

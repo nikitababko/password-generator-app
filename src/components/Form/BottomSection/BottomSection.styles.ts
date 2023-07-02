@@ -23,4 +23,4 @@ export const CopyrightName = styled(CopyrightYear).attrs({
   color: ${COLOR_DESIGN_TOKENS.BLACK};
 `;
 
-export const ProjectVersion = styled(CopyrightYear)``;
+export const ProjectName = styled(CopyrightYear)``;

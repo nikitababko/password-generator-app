@@ -1,14 +1,13 @@
 import React from 'react';
 
-import { getProjectName } from '../../../utils/getProjectName';
-import packageJSON from '../../../../package.json';
+import { PROJECT_NAME } from '../../../constants';
 
 import {
   Container,
   CopyrightName,
   CopyrightWrapper,
   CopyrightYear,
-  ProjectVersion,
+  ProjectName,
 } from './BottomSection.styles';
 import { useController } from './BottomSection.controller';
 
@@ -25,9 +24,7 @@ export const BottomSection: React.FC = () => {
         <CopyrightName>{copyright.name}</CopyrightName>
       </CopyrightWrapper>
 
-      <ProjectVersion>
-        {`${getProjectName()} ${packageJSON.version}`}
-      </ProjectVersion>
+      <ProjectName>{PROJECT_NAME}</ProjectName>
     </Container>
   );
 };

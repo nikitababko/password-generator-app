@@ -7,7 +7,7 @@ import { GlobalStyles } from '../styles/globalStyles.styles';
 import { ThemeProvider } from '../components/ThemeProvider';
 import { StoreProvider } from '../store';
 import { Loader } from '../components/Loader';
-import { getProjectName } from '../utils/getProjectName';
+import { PROJECT_NAME } from '../constants';
 
 const Layout = dynamic(
   () =>
@@ -30,7 +30,7 @@ const App: React.FC<AppProps> = ({
           content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
         />
 
-        <title>{getProjectName()}</title>
+        <title>{PROJECT_NAME}</title>
       </Head>
 
       <StoreProvider>
