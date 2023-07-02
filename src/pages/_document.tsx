@@ -5,6 +5,7 @@ import {
   NextScript,
 } from 'next/document';
 import React from 'react';
+
 import { metaData } from '../constants';
 
 export default function Document() {
