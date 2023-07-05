@@ -68,8 +68,11 @@ export default function Document() {
           content={metaData.og.type}
         />
 
-        {/* TODO: insert password generator link */}
-        {/* <meta property="og:url" content="https://nikitababko.github.io/" /> */}
+        <meta
+          property="og:url"
+          content="https://passguard.vercel.app/"
+        />
+
         <meta
           property="og:title"
           content={metaData.og.title}
@@ -80,8 +83,10 @@ export default function Document() {
           content={metaData.description}
         />
 
-        {/* TODO: insert password generator logo */}
-        {/* <meta property="og:image" content="./logo_url" /> */}
+        <meta
+          property="og:image"
+          content="/static/logo.svg"
+        />
 
         <meta
           property="twitter:card"
@@ -109,12 +114,20 @@ export default function Document() {
           content={metaData.description}
         />
 
-        {/* TODO: insert password generator logo */}
-        {/* <meta property="twitter:image" content="./logo_url" /> */}
+        <meta
+          property="twitter:image"
+          content="/static/logo.svg"
+        />
 
         <meta
           name="copyright"
           content={metaData.copyright}
+        />
+
+        <link
+          rel="shortcut icon"
+          href="/static/logo.ico"
+          type="image/ico"
         />
       </Head>
 

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Image from 'next/image';
 import { SelectField } from '../SelectField';
 import { ThemeToggle } from '../ThemeToggle';
 import { useAppContext } from '../../store';
@@ -21,6 +22,13 @@ export const Header: React.FC = () => {
   return (
     <Container>
       <LeftCol>
+        <Image
+          src="/static/logo.svg"
+          alt="Logo"
+          width={69}
+          height={77}
+        />
+
         <Title>{PROJECT_NAME}</Title>
       </LeftCol>
 
