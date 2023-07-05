@@ -51,8 +51,10 @@ export const GenerateButton = styled.button.attrs({
   transition: box-shadow ${getAnimation()};
   border: none;
 
-  &:hover {
-    box-shadow: 0 0 8px 1px ${COLOR_DESIGN_TOKENS.BLACK};
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: 0 0 8px 1px ${COLOR_DESIGN_TOKENS.BLACK};
+    }
   }
 
   ${mediaContainer767(
@@ -205,8 +207,10 @@ export const CopyButton = styled.button.attrs({
       `}
   }
 
-  &:hover {
-    box-shadow: 0 0 8px 1px ${COLOR_DESIGN_TOKENS.BLUE};
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: 0 0 8px 1px ${COLOR_DESIGN_TOKENS.BLUE};
+    }
   }
 
   ${mediaContainer479(

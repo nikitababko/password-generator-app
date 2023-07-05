@@ -25,15 +25,18 @@ export const Container = styled.div.attrs({
       ? COLOR_DESIGN_TOKENS.BLUE_LIGHT_SKY
       : 'transparent';
   }};
+
   ${({ isDropDownItem }) => {
     return (
       isDropDownItem &&
       `
         padding: 12px 14px;
-        &:hover {
-          background-color: ${
-            COLOR_DESIGN_TOKENS.BLUE_LIGHT_SKY
-          };  
+        @media (hover: hover) {
+                &:hover {
+                  background-color: ${
+                    COLOR_DESIGN_TOKENS.BLUE_LIGHT_SKY
+                  };  
+                }
         }
         transition: background-color ${getAnimation()};
       `
