@@ -55,7 +55,6 @@ export default function Document() {
         {/*  name="Abstract" */}
         {/*  content="Password generator for data protection" */}
         {/* /> */}
-
         <meta
           name="description"
           content={metaData.description}
@@ -93,11 +92,10 @@ export default function Document() {
           content={metaData.twitter.card}
         />
 
-        {/* TODO: insert password generator link */}
-        {/* <meta */}
-        {/*  property="twitter:url" */}
-        {/*  content="https://nikitababko.github.io/" */}
-        {/* /> */}
+        <meta
+          property="twitter:url"
+          content="https://passguard.vercel.app/"
+        />
 
         <meta
           name="twitter:creator"
