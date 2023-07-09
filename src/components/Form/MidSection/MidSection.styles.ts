@@ -6,7 +6,6 @@ import {
 } from '../../../utils/designTokens';
 import {
   mediaContainer1023,
-  mediaContainer479,
   mediaContainer767,
 } from '../../../styles/mediaQueryContainers';
 import { getAnimation } from '../../../utils/getAnimation';
@@ -21,15 +20,6 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   column-gap: 24px;
-
-  ${mediaContainer479(
-    css`
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      grid-row-gap: 40px;
-    `,
-  )}
 `;
 
 export const GenerateButton = styled.button.attrs({
@@ -60,12 +50,6 @@ export const GenerateButton = styled.button.attrs({
   ${mediaContainer767(
     css`
       max-width: 56px;
-    `,
-  )}
-
-  ${mediaContainer479(
-    css`
-      grid-column: 1;
     `,
   )}
 `;
@@ -103,14 +87,6 @@ export const PasswordWrapper = styled.div.attrs({
   ${mediaContainer1023(
     css`
       background-color: ${COLOR_DESIGN_TOKENS.WHITE};
-    `,
-  )}
-
-  ${mediaContainer479(
-    css`
-      grid-column: 1 / -1;
-      grid-row: 2;
-      max-width: none;
     `,
   )}
 `;
@@ -212,13 +188,6 @@ export const CopyButton = styled.button.attrs({
       box-shadow: 0 0 8px 1px ${COLOR_DESIGN_TOKENS.BLUE};
     }
   }
-
-  ${mediaContainer479(
-    css`
-      grid-column: 2;
-      justify-self: flex-end;
-    `,
-  )}
 `;
 
 export const GenerateButtonAnimation: GenerateButtonAnimationType =
