@@ -67,10 +67,7 @@ export default function Document() {
           content={metaData.og.type}
         />
 
-        <meta
-          property="og:url"
-          content="https://passguard.vercel.app/"
-        />
+        <meta property="og:url" content={metaData.og.url} />
 
         <meta
           property="og:title"
@@ -84,7 +81,12 @@ export default function Document() {
 
         <meta
           property="og:image"
-          content="/static/logo.svg"
+          content={metaData.socialImage}
+        />
+
+        <meta
+          name="twitter:site"
+          content={metaData.twitter.site}
         />
 
         <meta
@@ -94,7 +96,7 @@ export default function Document() {
 
         <meta
           property="twitter:url"
-          content="https://passguard.vercel.app/"
+          content={metaData.twitter.url}
         />
 
         <meta
@@ -114,8 +116,10 @@ export default function Document() {
 
         <meta
           property="twitter:image"
-          content="/static/logo.svg"
+          content={metaData.socialImage}
         />
+
+        <meta property="twitter:image:alt" content="Logo" />
 
         <meta
           name="copyright"
@@ -124,7 +128,7 @@ export default function Document() {
 
         <link
           rel="shortcut icon"
-          href="/static/logo.ico"
+          href={metaData.linkShortcutIcon}
           type="image/ico"
         />
       </Head>
