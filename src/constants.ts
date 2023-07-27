@@ -31,7 +31,6 @@ export const metaData = {
   twitter: {
     card: 'summary_large_image',
     creator: NICK_NAME,
-    site: NICK_NAME,
     title: PROJECT_NAME,
     url: APP_URL,
   },

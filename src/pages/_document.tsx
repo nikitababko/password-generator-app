@@ -85,11 +85,6 @@ export default function Document() {
         />
 
         <meta
-          name="twitter:site"
-          content={metaData.twitter.site}
-        />
-
-        <meta
           property="twitter:card"
           content={metaData.twitter.card}
         />
