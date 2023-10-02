@@ -20,14 +20,12 @@ export const Container = styled.div<ContainerStylesProps>`
   background-color: ${({ theme }) => {
     return theme.selectBackgroundColor;
   }};
-  border: ${({ isOpen }) => {
-    return isOpen
-      ? `1px solid ${COLOR_DESIGN_TOKENS.BLUE_LIGHT_SKY}`
-      : 'none';
-  }};
+  border: 1px solid ${COLOR_DESIGN_TOKENS.BLUE_LIGHT_SKY};
+  visibility: ${({ isOpen }) =>
+    isOpen ? 'visible' : 'hidden'};
   border-radius: 12px;
   transition: padding ${getAnimation()},
-    height ${getAnimation()};
+    height ${getAnimation()}, visibility ${getAnimation()};
 
   &::-webkit-scrollbar {
     width: 6px;
