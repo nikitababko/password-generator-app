@@ -13,10 +13,12 @@ export const useController: UseControllerType = (data) => {
   const [selectedItem, setSelectedItem] =
     useState<ItemType>(firstItem);
 
-  const ref = useRef<HTMLDivElement>(null);
-  useOnClickOutside(ref, () => setIsOpen?.(false));
+  const reference = useRef<HTMLDivElement>(null);
+  useOnClickOutside(reference, () => setIsOpen?.(false));
 
-  const handleClick = () => setIsOpen((prev) => !prev);
+  const handleClick = () => {
+    setIsOpen((previous) => !previous);
+  };
 
   return {
     isOpen,
@@ -24,6 +26,6 @@ export const useController: UseControllerType = (data) => {
     selectedItem,
     setSelectedItem,
     handleClick,
-    ref,
+    ref: reference,
   };
 };

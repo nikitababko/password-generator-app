@@ -1,6 +1,6 @@
 import React from 'react';
-
 import Image from 'next/image';
+
 import { SelectField } from '../SelectField';
 import { ThemeToggle } from '../ThemeToggle';
 import { useAppContext } from '../../store';

@@ -25,7 +25,7 @@ export const useController: UseControllerType = () => {
   }, [dispatch, isDay]);
 
   const handleClick = () => {
-    setIsDay((prevState) => !prevState);
+    setIsDay((previousState) => !previousState);
   };
 
   return {

@@ -12,7 +12,9 @@ export const useController: UseControllerType = (
   const t = useTranslate();
 
   const handleClick = () => {
-    setValueExampleIsVisible((prevState) => !prevState);
+    setValueExampleIsVisible(
+      (previousState) => !previousState,
+    );
   };
 
   const isFormItemPasswordLength = itemId === 1;

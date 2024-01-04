@@ -86,7 +86,14 @@
               "pascalCase": true
             }
           }
-        ]
+        ],
+        "unicorn/prevent-abbreviations": [
+          "error",
+          {
+            "ignore": ["Props"]
+          }
+        ],
+        "unicorn/no-null": "off"
       }
     },
     {

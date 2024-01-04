@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 import type {
-  IconContainerAttrsType,
+  IconContainerAttributesType,
   IconContainerStylesType,
 } from './Icon.types';
 import { DEFAULT_SIZE } from './Icon.data';
 
-export const Container = styled.svg.attrs<IconContainerAttrsType>(
+export const Container = styled.svg.attrs<IconContainerAttributesType>(
   ({ width, height }) => ({
     viewBox: `0 0 ${width ?? DEFAULT_SIZE.width} ${
       height ?? DEFAULT_SIZE.height

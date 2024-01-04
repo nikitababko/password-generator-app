@@ -36,7 +36,7 @@ export const useController: UseControllerType = () => {
   };
 
   const handleGeneratePassword = useCallback(() => {
-    setIsGenerated((prevState) => !prevState);
+    setIsGenerated((previousState) => !previousState);
 
     setPassword(
       generatePassword({

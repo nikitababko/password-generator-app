@@ -7,12 +7,12 @@ import { useOnClickOutside } from './useOnClickOutside.hook';
 const TestComponent = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const ref = useRef<HTMLDivElement>(null);
-  useOnClickOutside(ref, () => setIsOpen(false));
+  const reference = useRef<HTMLDivElement>(null);
+  useOnClickOutside(reference, () => setIsOpen(false));
 
   return (
     <div>
-      <div ref={ref}>
+      <div ref={reference}>
         <button onClick={() => setIsOpen(true)}>
           Open
         </button>

@@ -12,6 +12,7 @@ export const MEDIA_BREAK_POINTS_DESIGN_TOKENS: MediaBreakPointsDesignTokensType 
     MEDIA_374: 374,
   } as const;
 
+// TODO: remove лишние типы и вместо них typeof делать от объекта
 export const COLOR_DESIGN_TOKENS: ColorDesignTokensType = {
   BLUE: '#157AF5',
   BLUE_DARK_TURQUOISE: '#72cce3',

@@ -50,7 +50,7 @@ export type IconContainerStylesType = Pick<
   'width' | 'height' | 'styles'
 >;
 
-export type IconContainerAttrsType = Omit<
+export type IconContainerAttributesType = Omit<
   IconContainerStylesType,
   'styles'
 >;

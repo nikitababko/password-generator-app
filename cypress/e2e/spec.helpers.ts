@@ -1,6 +1,4 @@
 import type { ValueOf } from 'ts-essentials';
-
-import type { ColorDesignTokensType } from '../../src/utils/designTokens/designTokens.types';
 import {
   COLOR_DESIGN_TOKENS,
   DarkTheme,
@@ -15,7 +13,8 @@ const checkExistAndBackgroundColor = (
       HTMLElementTagNameMap[keyof HTMLElementTagNameMap]
     >
   >,
-  color: ValueOf<ColorDesignTokensType>,
+  // TODO: remove лишние типы и вместо них typeof делать от объекта
+  color: ValueOf<typeof COLOR_DESIGN_TOKENS>,
 ) => {
   return element
     .should('exist')

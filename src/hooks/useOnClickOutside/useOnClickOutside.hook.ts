@@ -3,16 +3,16 @@ import { useEffect } from 'react';
 import type { UseOnClickOutsideType } from './useOnClickOutside.types';
 
 export const useOnClickOutside: UseOnClickOutsideType = (
-  ref,
+  reference,
   handler,
 ) => {
   useEffect(() => {
     const listener = (event: Event) => {
-      const el = ref?.current;
+      const element = reference?.current;
 
       if (
-        !el ||
-        el.contains((event?.target as Node) || null)
+        !element ||
+        element.contains((event?.target as Node) || null)
       ) {
         return;
       }
@@ -25,5 +25,5 @@ export const useOnClickOutside: UseOnClickOutsideType = (
       document.removeEventListener('mousedown', listener);
       document.removeEventListener('touchstart', listener);
     };
-  }, [ref, handler]);
+  }, [reference, handler]);
 };

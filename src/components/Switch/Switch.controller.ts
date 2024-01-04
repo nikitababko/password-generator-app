@@ -15,7 +15,7 @@ export const useController: UseControllerType = (
   }, [id, isActive]);
 
   const handleClick = () => {
-    setIsActive((prevState) => !prevState);
+    setIsActive((previousState) => !previousState);
   };
 
   return {

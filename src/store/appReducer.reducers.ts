@@ -9,25 +9,29 @@ export const appReducer = (
   action: ActionType,
 ): StoreInitialStateType => {
   switch (action.type) {
-    case ActionTypes.THEME_TOGGLE:
+    case ActionTypes.THEME_TOGGLE: {
       return {
         ...state,
         theme: action.payload,
       };
+    }
 
-    case ActionTypes.CHANGE_LANG:
+    case ActionTypes.CHANGE_LANG: {
       return {
         ...state,
         lang: action.payload,
       };
+    }
 
-    case ActionTypes.SET_FORM_ITEM:
+    case ActionTypes.SET_FORM_ITEM: {
       return {
         ...state,
         formItems: action.payload,
       };
+    }
 
-    default:
+    default: {
       return state;
+    }
   }
 };
