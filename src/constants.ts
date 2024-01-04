@@ -9,7 +9,7 @@ const LOGO_SHORTCUT = '/static/logo.ico';
 const LOGO_SOCIAL = '/static/logo.png';
 
 export const metaData = {
-  charSet: 'UTF-8',
+  charSet: 'utf8',
   google: 'notranslate',
   robots: 'index, follow',
   classification:
@@ -19,6 +19,7 @@ export const metaData = {
   publisher: 'The Babko Group',
   distribution: 'global',
   'application-name': PROJECT_NAME,
+  title: "Password generator 'PassGuard'",
   description: DESCRIPTION,
   keywords:
     'password generator, secure passwords, unique passwords, online security, password strength, password tool, password algorithm, randomization, password customization, data protection, account security, password generator tool',

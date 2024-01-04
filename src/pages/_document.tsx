@@ -55,6 +55,8 @@ export default function Document() {
         {/*  name="Abstract" */}
         {/*  content="Password generator for data protection" */}
         {/* /> */}
+        <meta name="title" content={metaData.title} />
+
         <meta
           name="description"
           content={metaData.description}
