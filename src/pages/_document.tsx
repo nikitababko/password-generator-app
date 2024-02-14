@@ -11,11 +11,7 @@ import { roboto } from '../styles/globalStyles.styles';
 
 export default function Document() {
   return (
-    <Html
-      lang="en"
-      translate="no"
-      className={roboto.className}
-    >
+    <Html lang="en" translate="no">
       <Head>
         <meta charSet={metaData.charSet} />
 
@@ -135,7 +131,7 @@ export default function Document() {
         />
       </Head>
 
-      <body>
+      <body className={roboto.className}>
         <Main />
 
         <NextScript />
