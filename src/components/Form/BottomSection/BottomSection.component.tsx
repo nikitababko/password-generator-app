@@ -18,7 +18,7 @@ export const BottomSection: React.FC = () => {
     <Container>
       <CopyrightWrapper>
         <CopyrightYear data-testid="CopyrightYear">
-          {copyright.year}
+          {copyright.year}{' '}
         </CopyrightYear>
 
         <CopyrightName>{copyright.name}</CopyrightName>
