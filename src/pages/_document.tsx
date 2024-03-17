@@ -7,7 +7,6 @@ import {
 import React from 'react';
 
 import { metaData } from '../constants';
-import { roboto } from '../styles/globalStyles.styles';
 
 export default function Document() {
   return (
@@ -131,7 +130,7 @@ export default function Document() {
         />
       </Head>
 
-      <body className={roboto.className}>
+      <body>
         <Main />
 
         <NextScript />

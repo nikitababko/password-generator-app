@@ -28,6 +28,10 @@ export const roboto = Roboto({
 });
 
 export const GlobalStyles = createGlobalStyle`
+  html {
+    font-family: ${roboto.style.fontFamily};
+  }
+
   * {
     transition: color ${getAnimation()}, background-color ${getAnimation()};
   }
