@@ -9,7 +9,7 @@ import { Image } from '../styles/_app.styles';
 import { ThemeProvider } from '../components/ThemeProvider';
 import { StoreProvider } from '../store';
 import { Loader } from '../components/Loader';
-import { PROJECT_NAME } from '../constants';
+import { PROJECT_TITLE } from '../constants';
 
 const Layout = dynamic(
   () =>
@@ -32,7 +32,7 @@ const App: React.FC<AppProps> = ({
           content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
         />
 
-        <title>{PROJECT_NAME}</title>
+        <title>{PROJECT_TITLE}</title>
       </Head>
 
       <Script
