@@ -19,7 +19,7 @@
     "project": "tsconfig.json",
     "tsconfigRootDir": "./"
   },
-  "ignorePatterns": ["out"],
+  "ignorePatterns": ["out", "next.config.js"],
   "plugins": ["@typescript-eslint", "prettier"],
   "env": {
     "node": true,
