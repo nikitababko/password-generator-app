@@ -1,13 +1,15 @@
+import type React from 'react';
 import type { LanguagesType } from '../../../hooks/useTranslate/useTranslate.types';
 import type { ItemType } from '../Item/Item.types';
-import type { UseControllerType as UseSelectFieldControllerType } from '../SelectField.types';
 
 export type Props = {
   data?: ItemType[];
-  isOpen: ReturnType<UseSelectFieldControllerType>['isOpen'];
-  selectedItem: ReturnType<UseSelectFieldControllerType>['selectedItem'];
-  setSelectedItem: ReturnType<UseSelectFieldControllerType>['setSelectedItem'];
-  setIsOpen: ReturnType<UseSelectFieldControllerType>['setIsOpen'];
+  isOpen: boolean;
+  selectedItem: ItemType;
+  setSelectedItem: React.Dispatch<
+    React.SetStateAction<ItemType>
+  >;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   callback?: (
     id: number | LanguagesType,
     value: string | number,

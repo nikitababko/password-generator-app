@@ -13,12 +13,12 @@ export const Item: React.FC<Props> = ({
   children,
   callback,
 }) => {
-  const { handleClick } = useController(
+  const { handleClick } = useController({
     item,
     setSelectedItem,
     setIsOpen,
     callback,
-  );
+  });
 
   return (
     <Container

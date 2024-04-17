@@ -29,17 +29,17 @@ export type ContainerStylesType = {
   selectedItemEqualToItem?: Props['selectedItemEqualToItem'];
 };
 
-export type UseControllerType = (
-  item: ItemType,
+export type UseControllerArgumentsType = {
+  item: ItemType;
   setSelectedItem?: React.Dispatch<
     React.SetStateAction<ItemType>
-  >,
-  setIsOpen?: React.Dispatch<React.SetStateAction<boolean>>,
+  >;
+  setIsOpen?: React.Dispatch<React.SetStateAction<boolean>>;
   callback?: (
     id: ItemType['id'],
     value: ItemType['label'],
-  ) => void,
-) => { handleClick: () => void };
+  ) => void;
+};
 
 export type ChildrenStylesProps = {
   selectedItemEqualToItem?: ContainerStylesType['selectedItemEqualToItem'];

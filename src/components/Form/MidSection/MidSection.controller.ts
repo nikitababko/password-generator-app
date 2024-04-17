@@ -4,17 +4,14 @@ import type { GeneratePasswordType } from '@nikitababko/password-generator/dist/
 
 import { useAppContext } from '../../../store';
 import { useTranslate } from '../../../hooks';
-
-import type { UseControllerType } from './MidSection.types';
 import { ANIMATION_TIME } from './MidSection.data';
 
-export const useController: UseControllerType = () => {
+export const useController = () => {
   const [password, setPassword] = useState<
     ReturnType<GeneratePasswordType>
   >(['']);
-  const [isCopied, setIsCopied] = useState<boolean>(false);
-  const [isGenerated, setIsGenerated] =
-    useState<boolean>(false);
+  const [isCopied, setIsCopied] = useState(false);
+  const [isGenerated, setIsGenerated] = useState(false);
 
   const [state] = useAppContext();
 

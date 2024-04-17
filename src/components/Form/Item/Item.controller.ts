@@ -2,13 +2,9 @@ import { useState } from 'react';
 
 import { useTranslate } from '../../../hooks';
 
-import type { UseControllerType } from './Item.types';
-
-export const useController: UseControllerType = (
-  itemId,
-) => {
+export const useController = (itemId: number) => {
   const [valueExampleIsVisible, setValueExampleIsVisible] =
-    useState<boolean>(false);
+    useState(false);
   const t = useTranslate();
 
   const handleClick = () => {

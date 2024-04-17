@@ -1,13 +1,13 @@
 import { useCallback } from 'react';
 import { IconItems } from './Icon.data';
-import type {
-  GetIconType,
-  UseControllerType,
-} from './Icon.types';
+import type { IconProps } from './Icon.types';
 
-export const useController: UseControllerType = () => {
-  const getIcon: GetIconType = useCallback(
-    (name, color) => {
+export const useController = () => {
+  const getIcon = useCallback(
+    (
+      name: IconProps['name'],
+      color: IconProps['color'],
+    ) => {
       return IconItems[name](color);
     },
     [],

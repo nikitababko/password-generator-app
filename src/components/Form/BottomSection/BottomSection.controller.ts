@@ -1,14 +1,8 @@
 import packageJSON from '../../../../package.json';
-
-import type {
-  CopyrightType,
-  GetCurrentYearType,
-  UseControllerType,
-} from './BottomSection.types';
 import { FOUNDATION_YEAR } from './BottomSection.data';
 
-export const useController: UseControllerType = () => {
-  const getCurrentYear: GetCurrentYearType = () => {
+export const useController = () => {
+  const getCurrentYear = () => {
     const getFullYear = new Date().getFullYear();
 
     if (FOUNDATION_YEAR === getFullYear) {
@@ -18,7 +12,7 @@ export const useController: UseControllerType = () => {
     return `- ${getFullYear}`;
   };
 
-  const copyright: CopyrightType = {
+  const copyright = {
     year: `Copyright © ${FOUNDATION_YEAR} ${getCurrentYear()}`,
     name: `${packageJSON.author.name}`,
   };

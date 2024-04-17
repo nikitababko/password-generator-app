@@ -10,10 +10,7 @@ import {
 } from '../../../styles/mediaQueryContainers';
 import { getAnimation } from '../../../utils/getAnimation';
 
-import type {
-  CopyButtonStylesProps,
-  GenerateButtonAnimationType,
-} from './MidSection.types';
+import type { CopyButtonStylesProps } from './MidSection.types';
 import { ANIMATION_TIME } from './MidSection.data';
 
 export const Container = styled.div`
@@ -190,10 +187,9 @@ export const CopyButton = styled.button.attrs({
   }
 `;
 
-export const GenerateButtonAnimation: GenerateButtonAnimationType =
-  (isGenerated) => {
-    return {
-      transform: `rotate(${isGenerated ? '180deg' : 0})`,
-      transition: `transform ${getAnimation()}`,
-    };
+export const getArrowAnimation = (isGenerated: boolean) => {
+  return {
+    transform: `rotate(${isGenerated ? '180deg' : 0})`,
+    transition: `transform ${getAnimation()}`,
   };
+};

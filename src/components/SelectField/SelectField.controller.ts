@@ -1,12 +1,10 @@
 import { useRef, useState } from 'react';
 
 import { useOnClickOutside } from '../../hooks';
-
-import type { UseControllerType } from './SelectField.types';
 import type { ItemType } from './Item/Item.types';
 
-export const useController: UseControllerType = (data) => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+export const useController = (data: ItemType[]) => {
+  const [isOpen, setIsOpen] = useState(false);
 
   const firstItem = data[0];
 

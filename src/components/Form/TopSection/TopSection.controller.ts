@@ -1,15 +1,13 @@
 import { useCallback, useMemo } from 'react';
 
-import type { HandleClickType } from '../Item/Item.types';
+import type {
+  HandleClickType,
+  ItemType,
+} from '../Item/Item.types';
 import { useAppContext } from '../../../store';
 import { setFormItemAction } from '../../../store/appActions.actions';
 
-import type {
-  IsDisabledItemType,
-  UseControllerType,
-} from './TopSection.types';
-
-export const useController: UseControllerType = () => {
+export const useController = () => {
   const [state, dispatch] = useAppContext();
 
   const memoFormItems = useMemo(
@@ -85,8 +83,8 @@ export const useController: UseControllerType = () => {
     includeFormItems.length,
   ]);
 
-  const isDisabledItem = useCallback<IsDisabledItemType>(
-    (formItemId) => {
+  const isDisabledItem = useCallback(
+    (formItemId: ItemType['id']) => {
       return (
         (isLastActiveItemId || hasExcludeFieldId) ===
         formItemId

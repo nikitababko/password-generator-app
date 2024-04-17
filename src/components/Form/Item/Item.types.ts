@@ -1,5 +1,3 @@
-import type { ReturnUseTranslateType } from '../../../hooks/useTranslate/useTranslate.types';
-
 export type ItemProps = {
   item: ItemType;
   callback: (
@@ -10,7 +8,7 @@ export type ItemProps = {
 };
 
 export type ItemLeftColStylesProps = {
-  isFormItemPasswordLength: ReturnType<UseControllerType>['isFormItemPasswordLength'];
+  isFormItemPasswordLength: boolean;
 };
 
 export type ItemValueExampleStylesProps = {
@@ -36,11 +34,4 @@ export type ItemType = {
     id: number;
     label: number;
   }[];
-};
-
-export type UseControllerType = (itemId: number) => {
-  valueExampleIsVisible: boolean;
-  handleClick: () => void;
-  isFormItemPasswordLength: boolean;
-  t: ReturnUseTranslateType;
 };

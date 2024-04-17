@@ -7,8 +7,8 @@ import {
   Container,
   CopyButton,
   GenerateButton,
-  GenerateButtonAnimation,
   GenerateButtonLabel,
+  getArrowAnimation,
   PasswordLabel,
   PasswordWrapper,
 } from './MidSection.styles';
@@ -35,7 +35,7 @@ export const MidSection: React.FC = () => {
           name="ArrowRepeat"
           width={31}
           height={32}
-          styles={GenerateButtonAnimation(isGenerated)}
+          styles={getArrowAnimation(isGenerated)}
         />
       </GenerateButton>
 

@@ -7,10 +7,8 @@ import {
 } from '../../utils/designTokens';
 import { themeToggleAction } from '../../store/appActions.actions';
 
-import type { UseControllerType } from './ThemeToggle.types';
-
-export const useController: UseControllerType = () => {
-  const [isDay, setIsDay] = useState<boolean>(true);
+export const useController = () => {
+  const [isDay, setIsDay] = useState(true);
 
   const [, dispatch] = useAppContext();
 

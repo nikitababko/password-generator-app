@@ -1,11 +1,11 @@
-import type { UseControllerType } from './Item.types';
+import type { UseControllerArgumentsType } from './Item.types';
 
-export const useController: UseControllerType = (
+export const useController = ({
   item,
   setSelectedItem,
   setIsOpen,
   callback,
-) => {
+}: UseControllerArgumentsType) => {
   const handleClick = () => {
     setSelectedItem?.(item);
     setIsOpen?.(false);

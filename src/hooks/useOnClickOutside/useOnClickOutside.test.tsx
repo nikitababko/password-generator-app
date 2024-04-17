@@ -5,7 +5,7 @@ import userEvent from '@testing-library/user-event';
 import { useOnClickOutside } from './useOnClickOutside.hook';
 
 const TestComponent = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const reference = useRef<HTMLDivElement>(null);
   useOnClickOutside(reference, () => setIsOpen(false));

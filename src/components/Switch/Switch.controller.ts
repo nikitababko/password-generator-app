@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 
-import type { UseControllerType } from './Switch.types';
+import type { Props } from './Switch.types';
 
-export const useController: UseControllerType = (
-  value,
-  callback,
-  id,
+export const useController = (
+  value: Props['value'],
+  callback: Props['callback'],
+  id: Props['id'],
 ) => {
-  const [isActive, setIsActive] = useState<boolean>(value);
+  const [isActive, setIsActive] = useState(value);
 
   useEffect(() => {
     callback?.(id, isActive);

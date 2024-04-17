@@ -1,8 +1,6 @@
 import { useAppContext } from '../../store';
 
-import type { UseControllerType } from './ThemeProvider.types';
-
-export const useController: UseControllerType = () => {
+export const useController = () => {
   const [state] = useAppContext();
 
   return {

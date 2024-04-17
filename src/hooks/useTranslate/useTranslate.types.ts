@@ -33,8 +33,5 @@ export type TranslationsType = Record<
   TranslationsValuesType
 >;
 
-export type ReturnUseTranslateType =
-  ReturnType<UseTranslateType>;
-
 export type UseTranslateType =
   () => ValueOf<TranslationsType>;
