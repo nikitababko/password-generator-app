@@ -1,26 +1,25 @@
 import { useEffect, useState } from 'react';
-
-import { useAppContext } from '../../store';
 import {
   DarkTheme,
   LightTheme,
 } from '../../utils/designTokens';
-import { themeToggleAction } from '../../store/appActions.actions';
+import { useThemeStore } from '../../store';
 
 export const useController = () => {
   const [isDay, setIsDay] = useState(true);
-
-  const [, dispatch] = useAppContext();
+  const changeTheme = useThemeStore(
+    (state) => state.changeTheme,
+  );
 
   useEffect(() => {
     if (isDay) {
-      dispatch(themeToggleAction(LightTheme));
+      changeTheme(LightTheme);
     } else {
-      dispatch(themeToggleAction(DarkTheme));
+      changeTheme(DarkTheme);
     }
 
-    return () => dispatch(themeToggleAction(LightTheme));
-  }, [dispatch, isDay]);
+    return () => changeTheme(LightTheme);
+  }, [changeTheme, isDay]);
 
   const handleClick = () => {
     setIsDay((previousState) => !previousState);

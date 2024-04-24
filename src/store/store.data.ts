@@ -1,7 +1,4 @@
 import type { ItemType as FormItemType } from '../components/Form/Item/Item.types';
-import { LightTheme } from '../utils/designTokens';
-
-import type { StoreInitialStateType } from './store.types';
 
 export const FORM_ITEMS_INITIAL_STATE: FormItemType[] = [
   {
@@ -103,9 +100,3 @@ export const FORM_ITEMS_INITIAL_STATE: FormItemType[] = [
   //   value: false,
   // },
 ];
-
-export const storeInitialState: StoreInitialStateType = {
-  theme: LightTheme,
-  lang: 'en',
-  formItems: FORM_ITEMS_INITIAL_STATE,
-};

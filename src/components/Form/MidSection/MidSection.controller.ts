@@ -1,10 +1,9 @@
 import { useCallback, useEffect, useState } from 'react';
 import generatePassword from '@nikitababko/password-generator';
 import type { GeneratePasswordType } from '@nikitababko/password-generator/dist/index.types';
-
-import { useAppContext } from '../../../store';
 import { useTranslate } from '../../../hooks';
 import { ANIMATION_TIME } from './MidSection.data';
+import { useFormStore } from '../../../store/formState';
 
 export const useController = () => {
   const [password, setPassword] = useState<
@@ -13,7 +12,9 @@ export const useController = () => {
   const [isCopied, setIsCopied] = useState(false);
   const [isGenerated, setIsGenerated] = useState(false);
 
-  const [state] = useAppContext();
+  const formItems = useFormStore(
+    (state) => state.formItems,
+  );
 
   const t = useTranslate();
 
@@ -38,27 +39,26 @@ export const useController = () => {
     setPassword(
       generatePassword({
         // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-        length: state.formItems[0].value as number,
+        length: formItems[0].value as number,
         // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-        includeSymbols: state.formItems[1].value as boolean,
+        includeSymbols: formItems[1].value as boolean,
         // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-        includeNumbers: state.formItems[2].value as boolean,
+        includeNumbers: formItems[2].value as boolean,
         // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-        includeLowerCaseChars: state.formItems[3]
+        includeLowerCaseChars: formItems[3]
           .value as boolean,
         // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-        includeUpperCaseChars: state.formItems[4]
+        includeUpperCaseChars: formItems[4]
           .value as boolean,
         // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-        excludeSimilarChars: state.formItems[5]
-          .value as boolean,
+        excludeSimilarChars: formItems[5].value as boolean,
         // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-        excludeAmbiguousChars: state.formItems[6]
+        excludeAmbiguousChars: formItems[6]
           .value as boolean,
         quantity: 1,
       }),
     );
-  }, [state.formItems]);
+  }, [formItems]);
 
   useEffect(() => {
     handleGeneratePassword();

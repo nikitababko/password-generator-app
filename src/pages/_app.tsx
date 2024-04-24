@@ -7,7 +7,6 @@ import Script from 'next/script';
 import { GlobalStyles } from '../styles/globalStyles.styles';
 import { Image } from '../styles/_app.styles';
 import { ThemeProvider } from '../components/ThemeProvider';
-import { StoreProvider } from '../store';
 import { Loader } from '../components/Loader';
 import { PROJECT_TITLE } from '../constants';
 
@@ -66,15 +65,13 @@ const App: React.FC<AppProps> = ({
         </div>
       </noscript>
 
-      <StoreProvider>
-        <ThemeProvider>
-          <GlobalStyles />
+      <ThemeProvider>
+        <GlobalStyles />
 
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </ThemeProvider>
-      </StoreProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
     </React.Fragment>
   );
 };

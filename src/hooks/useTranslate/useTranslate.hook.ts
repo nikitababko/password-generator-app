@@ -1,10 +1,9 @@
-import { useAppContext } from '../../store';
-
 import { Translations } from './useTranslate.data';
 import type { UseTranslateType } from './useTranslate.types';
+import { useLangStore } from '../../store';
 
 export const useTranslate: UseTranslateType = () => {
-  const [state] = useAppContext();
+  const lang = useLangStore((state) => state.lang);
 
-  return Translations[state.lang];
+  return Translations[lang];
 };

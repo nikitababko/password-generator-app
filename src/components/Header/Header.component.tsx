@@ -3,9 +3,6 @@ import Image from 'next/image';
 
 import { SelectField } from '../SelectField';
 import { ThemeToggle } from '../ThemeToggle';
-import { useAppContext } from '../../store';
-import { changeLangAction } from '../../store/appActions.actions';
-import type { LanguagesType } from '../../hooks/useTranslate/useTranslate.types';
 import { PROJECT_NAME } from '../../constants';
 
 import {
@@ -15,9 +12,13 @@ import {
   Title,
 } from './Header.styles';
 import { data } from './Header.data';
+import { useLangStore } from '../../store';
+import type { LanguagesType } from '../../hooks/useTranslate/useTranslate.types';
 
 export const Header: React.FC = () => {
-  const [, dispatch] = useAppContext();
+  const changeLang = useLangStore(
+    (state) => state.changeLang,
+  );
 
   return (
     <Container>
@@ -37,9 +38,7 @@ export const Header: React.FC = () => {
 
         <SelectField
           data={data}
-          callback={(id) =>
-            dispatch(changeLangAction(id as LanguagesType))
-          }
+          callback={(id) => changeLang(id as LanguagesType)}
         />
       </RightCol>
     </Container>

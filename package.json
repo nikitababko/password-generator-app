@@ -59,7 +59,8 @@
     "next": "13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "styled-components": "5.3.6"
+    "styled-components": "5.3.6",
+    "zustand": "4.5.2"
   },
   "devDependencies": {
     "@commitlint/cli": "17.3.0",

@@ -5,24 +5,23 @@ import {
   screen,
 } from '@testing-library/react';
 
-import { useAppContext } from '../../../store';
-
 import { Item } from './Item.component';
 import { useController } from './Item.controller';
+import { useFormStore } from '../../../store/formState';
 
 describe('FormItem', () => {
   it('render', () => {
     const {
-      result: {
-        current: [state],
-      },
-    } = renderHook(() => useAppContext());
+      result: { current },
+    } = renderHook(() =>
+      useFormStore((state) => state.formItems),
+    );
 
     const { result } = renderHook(() => useController(2));
 
     render(
       <Item
-        item={state.formItems[1]}
+        item={current[1]}
         callback={() => null}
         isDisabled
       />,

@@ -4,28 +4,25 @@ import type {
   HandleClickType,
   ItemType,
 } from '../Item/Item.types';
-import { useAppContext } from '../../../store';
-import { setFormItemAction } from '../../../store/appActions.actions';
+import { useFormStore } from '../../../store/formState';
 
 export const useController = () => {
-  const [state, dispatch] = useAppContext();
+  const { formItems, setFormItems } = useFormStore();
 
   const memoFormItems = useMemo(
-    () => state.formItems,
-    [state.formItems],
+    () => formItems,
+    [formItems],
   );
 
   const handleClick: HandleClickType = useCallback(
     (id, value) => {
-      dispatch(
-        setFormItemAction(state.formItems, id, value),
-      );
+      setFormItems(formItems, id, value);
     },
-    [dispatch, state.formItems],
+    [setFormItems, formItems],
   );
 
   const isLastActiveItemId = useMemo(() => {
-    const items = state.formItems.filter((formItem) => {
+    const items = formItems.filter((formItem) => {
       return formItem.value === true;
     });
 
@@ -34,14 +31,14 @@ export const useController = () => {
     }
 
     return null;
-  }, [state.formItems]);
+  }, [formItems]);
 
   const formItemsWithOnlyTrue = useMemo(
     () =>
-      state.formItems.filter((formItem) => {
+      formItems.filter((formItem) => {
         return formItem.value === true;
       }),
-    [state.formItems],
+    [formItems],
   );
 
   const includeFormItems = useMemo(() => {
