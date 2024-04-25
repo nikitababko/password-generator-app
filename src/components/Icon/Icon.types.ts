@@ -1,9 +1,8 @@
 import type React from 'react';
 import type { ValueOf } from 'next/constants';
+import type { COLOR_DESIGN_TOKENS } from '../../utils';
 
-import type { ColorDesignTokensType } from '../../utils/designTokens/designTokens.types';
-
-export type ColorType = ValueOf<ColorDesignTokensType>;
+export type ColorType = ValueOf<typeof COLOR_DESIGN_TOKENS>;
 
 export type DefaultSizeType = Record<
   'width' | 'height',

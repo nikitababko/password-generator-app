@@ -4,7 +4,7 @@ import {
   mediaContainer374,
   mediaContainer767,
 } from '../../styles/mediaQueryContainers';
-import { FontSizes } from '../../utils/designTokens';
+import { FONT_SIZES } from '../../utils';
 
 export const Container = styled.header`
   display: flex;
@@ -27,7 +27,7 @@ export const LeftCol = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: ${FontSizes.L};
+  font-size: ${FONT_SIZES.L};
 `;
 
 export const RightCol = styled.div`

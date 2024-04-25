@@ -1,15 +1,19 @@
 import { create } from 'zustand';
-import type { ThemeType } from '../utils/designTokens/designTokens.types';
-import { LightTheme } from '../utils/designTokens';
+import type { DarkTheme } from '../utils';
+import { LightTheme } from '../utils';
 
 interface ThemeState {
-  theme: ThemeType;
-  changeTheme: (theme: ThemeType) => void;
+  theme: typeof LightTheme | typeof DarkTheme;
+  changeTheme: (
+    theme: typeof LightTheme | typeof DarkTheme,
+  ) => void;
 }
 
 export const useThemeStore = create<ThemeState>((set) => ({
   theme: LightTheme,
-  changeTheme: (theme: ThemeType) => {
+  changeTheme: (
+    theme: typeof LightTheme | typeof DarkTheme,
+  ) => {
     return set(() => ({ theme } as ThemeState));
   },
 }));

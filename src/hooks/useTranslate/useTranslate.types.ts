@@ -1,5 +1,3 @@
-import type { ValueOf } from 'next/constants';
-
 export type LanguagesType =
   | 'en'
   | 'ru'
@@ -32,6 +30,3 @@ export type TranslationsType = Record<
   LanguagesType,
   TranslationsValuesType
 >;
-
-export type UseTranslateType =
-  () => ValueOf<TranslationsType>;

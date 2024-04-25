@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 import '@nikitababko/reset-css';
 import { Roboto } from '@next/font/google';
 
-import { getAnimation } from '../utils/getAnimation';
+import { getAnimation } from '../utils';
 
 export const roboto = Roboto({
   weight: '400',

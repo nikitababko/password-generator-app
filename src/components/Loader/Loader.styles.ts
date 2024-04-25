@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { COLOR_DESIGN_TOKENS } from '../../utils/designTokens';
+import { COLOR_DESIGN_TOKENS } from '../../utils';
 
 export const Container = styled.div.attrs({
   role: 'progressbar',

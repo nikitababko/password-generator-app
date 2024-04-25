@@ -1,19 +1,11 @@
-import type {
-  ColorDesignTokensType,
-  MediaBreakPointsDesignTokensType,
-  ThemeType,
-} from './designTokens.types';
+export const MEDIA_BREAK_POINTS_DESIGN_TOKENS = {
+  MEDIA_1023: 1023,
+  MEDIA_767: 767,
+  MEDIA_479: 479,
+  MEDIA_374: 374,
+} as const;
 
-export const MEDIA_BREAK_POINTS_DESIGN_TOKENS: MediaBreakPointsDesignTokensType =
-  {
-    MEDIA_1023: 1023,
-    MEDIA_767: 767,
-    MEDIA_479: 479,
-    MEDIA_374: 374,
-  } as const;
-
-// TODO: remove лишние типы и вместо них typeof делать от объекта
-export const COLOR_DESIGN_TOKENS: ColorDesignTokensType = {
+export const COLOR_DESIGN_TOKENS = {
   BLUE: '#157AF5',
   BLUE_DARK_TURQUOISE: '#72cce3',
   BLUE_TURQUOISE: '#96dcee',
@@ -31,13 +23,13 @@ export const COLOR_DESIGN_TOKENS: ColorDesignTokensType = {
   WHITE: '#FFFFFF',
 } as const;
 
-export const FontSizes = {
+export const FONT_SIZES = {
   SM: '22px',
   M: '26px',
   L: '36px',
 } as const;
 
-export const LightTheme: ThemeType = {
+export const LightTheme = {
   backgroundColor: COLOR_DESIGN_TOKENS.BLUE_LIGHT,
   foregroundColor: COLOR_DESIGN_TOKENS.WHITE,
   formItemLeftColBackgroundColor:
@@ -50,7 +42,7 @@ export const LightTheme: ThemeType = {
     COLOR_DESIGN_TOKENS.BLACK_LIGHT,
 } as const;
 
-export const DarkTheme: ThemeType = {
+export const DarkTheme = {
   backgroundColor: COLOR_DESIGN_TOKENS.BLACK_LIGHT,
   foregroundColor: COLOR_DESIGN_TOKENS.GRAY_DARK,
   formItemLeftColBackgroundColor:

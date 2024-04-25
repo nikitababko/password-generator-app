@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
-import { COLOR_DESIGN_TOKENS } from '../../../utils/designTokens';
-import { getAnimation } from '../../../utils/getAnimation';
+import {
+  COLOR_DESIGN_TOKENS,
+  getAnimation,
+} from '../../../utils';
 
 import type { ContainerStylesProps } from './DropDown.types';
 

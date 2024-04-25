@@ -1,10 +1,6 @@
 import styled, { css } from 'styled-components';
 
 import {
-  COLOR_DESIGN_TOKENS,
-  FontSizes,
-} from '../../../utils/designTokens';
-import {
   mediaContainer1023,
   mediaContainer767,
 } from '../../../styles/mediaQueryContainers';
@@ -14,6 +10,10 @@ import type {
   ItemLeftColStylesProps,
   ItemValueExampleStylesProps,
 } from './Item.types';
+import {
+  COLOR_DESIGN_TOKENS,
+  FONT_SIZES,
+} from '../../../utils';
 
 export const Container = styled.div`
   display: flex;
@@ -34,7 +34,7 @@ export const LeftCol = styled.div.attrs({
   max-width: 645px;
   min-width: 160px;
   height: 100%;
-  font-size: ${FontSizes.SM};
+  font-size: ${FONT_SIZES.SM};
   font-weight: 400;
   line-height: 25px;
   background-color: ${({ theme }) => {

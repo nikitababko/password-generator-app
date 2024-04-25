@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 import {
   COLOR_DESIGN_TOKENS,
-  FontSizes,
-} from '../../../utils/designTokens';
-import { getAnimation } from '../../../utils/getAnimation';
+  FONT_SIZES,
+  getAnimation,
+} from '../../../utils';
 
 import type {
   ChildrenStylesProps,
@@ -45,7 +45,7 @@ export const Container = styled.div.attrs({
 `;
 
 export const Label = styled.p`
-  font-size: ${FontSizes.SM};
+  font-size: ${FONT_SIZES.SM};
 `;
 
 export const Children = styled.div<ChildrenStylesProps>`

@@ -1,10 +1,11 @@
 import type { ValueOf } from 'ts-essentials';
+
+import { Elements } from './spec.data';
 import {
   COLOR_DESIGN_TOKENS,
   DarkTheme,
   LightTheme,
-} from '../../src/utils/designTokens';
-import { Elements } from './spec.data';
+} from '../../src/utils';
 import Chainable = Cypress.Chainable;
 
 const checkExistAndBackgroundColor = (

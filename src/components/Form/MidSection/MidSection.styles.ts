@@ -1,14 +1,14 @@
 import styled, { css, keyframes } from 'styled-components';
 
 import {
-  COLOR_DESIGN_TOKENS,
-  FontSizes,
-} from '../../../utils/designTokens';
-import {
   mediaContainer1023,
   mediaContainer767,
 } from '../../../styles/mediaQueryContainers';
-import { getAnimation } from '../../../utils/getAnimation';
+import {
+  COLOR_DESIGN_TOKENS,
+  FONT_SIZES,
+  getAnimation,
+} from '../../../utils';
 
 import type { CopyButtonStylesProps } from './MidSection.types';
 import { ANIMATION_TIME } from './MidSection.data';
@@ -52,7 +52,7 @@ export const GenerateButton = styled.button.attrs({
 `;
 
 export const GenerateButtonLabel = styled.p`
-  font-size: ${FontSizes.SM};
+  font-size: ${FONT_SIZES.SM};
   line-height: 26px;
   font-weight: 400;
   color: ${COLOR_DESIGN_TOKENS.WHITE};
@@ -94,7 +94,7 @@ export const PasswordLabel = styled.p.attrs({
   text-align: center;
   width: 100%;
   background-color: transparent;
-  font-size: ${FontSizes.SM};
+  font-size: ${FONT_SIZES.SM};
   line-height: 26px;
   border-radius: 12px;
   white-space: nowrap;

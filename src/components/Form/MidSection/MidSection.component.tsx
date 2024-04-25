@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { Icon } from '../../Icon';
-import { COLOR_DESIGN_TOKENS } from '../../../utils/designTokens';
 
 import {
   Container,
@@ -13,6 +12,7 @@ import {
   PasswordWrapper,
 } from './MidSection.styles';
 import { useController } from './MidSection.controller';
+import { COLOR_DESIGN_TOKENS } from '../../../utils';
 
 export const MidSection: React.FC = () => {
   const {
