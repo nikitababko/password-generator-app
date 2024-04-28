@@ -13,7 +13,7 @@ import type {
 import {
   COLOR_DESIGN_TOKENS,
   FONT_SIZES,
-} from '../../../utils';
+} from '../../../constants';
 
 export const Container = styled.div`
   display: flex;

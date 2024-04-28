@@ -1,11 +1,9 @@
 import styled, { css, keyframes } from 'styled-components';
 
-import {
-  COLOR_DESIGN_TOKENS,
-  getAnimation,
-} from '../../utils';
+import { getAnimation } from '../../utils';
 
 import type { ThemeStylesType } from './ThemeToggle.types';
+import { COLOR_DESIGN_TOKENS } from '../../constants';
 
 const itemLeftToRightAnimation = keyframes`
   0% {

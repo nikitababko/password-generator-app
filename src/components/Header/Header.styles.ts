@@ -4,7 +4,7 @@ import {
   mediaContainer374,
   mediaContainer767,
 } from '../../styles/mediaQueryContainers';
-import { FONT_SIZES } from '../../utils';
+import { FONT_SIZES } from '../../constants';
 
 export const Container = styled.header`
   display: flex;

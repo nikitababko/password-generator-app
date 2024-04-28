@@ -1,10 +1,10 @@
 import React from 'react';
+import { COLOR_DESIGN_TOKENS } from '../../constants';
 
 import type {
   DefaultSizeType,
   IconItemsType,
 } from './Icon.types';
-import { COLOR_DESIGN_TOKENS } from '../../utils';
 
 export const DEFAULT_SIZE: DefaultSizeType = {
   width: 22,

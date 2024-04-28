@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
-import {
-  COLOR_DESIGN_TOKENS,
-  FONT_SIZES,
-  getAnimation,
-} from '../../../utils';
+import { getAnimation } from '../../../utils';
 
 import type {
   ChildrenStylesProps,
   ContainerStylesType,
 } from './Item.types';
+import {
+  COLOR_DESIGN_TOKENS,
+  FONT_SIZES,
+} from '../../../constants';
 
 export const Container = styled.div.attrs({
   role: 'option',

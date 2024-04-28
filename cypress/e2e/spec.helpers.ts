@@ -5,7 +5,7 @@ import {
   COLOR_DESIGN_TOKENS,
   DarkTheme,
   LightTheme,
-} from '../../src/utils';
+} from '../../src/constants';
 import Chainable = Cypress.Chainable;
 
 const checkExistAndBackgroundColor = (

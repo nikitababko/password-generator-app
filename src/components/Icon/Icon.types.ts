@@ -1,6 +1,6 @@
 import type React from 'react';
 import type { ValueOf } from 'next/constants';
-import type { COLOR_DESIGN_TOKENS } from '../../utils';
+import type { COLOR_DESIGN_TOKENS } from '../../constants';
 
 export type ColorType = ValueOf<typeof COLOR_DESIGN_TOKENS>;
 

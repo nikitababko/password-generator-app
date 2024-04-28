@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 
-import {
-  COLOR_DESIGN_TOKENS,
-  getAnimation,
-} from '../../utils';
+import { getAnimation } from '../../utils';
 
 import type { SwitchContainerStylesProps } from './Switch.types';
+import { COLOR_DESIGN_TOKENS } from '../../constants';
 
 export const Container = styled.div.attrs({
   role: 'switch',

@@ -4,14 +4,14 @@ import {
   mediaContainer1023,
   mediaContainer767,
 } from '../../../styles/mediaQueryContainers';
-import {
-  COLOR_DESIGN_TOKENS,
-  FONT_SIZES,
-  getAnimation,
-} from '../../../utils';
+import { getAnimation } from '../../../utils';
 
 import type { CopyButtonStylesProps } from './MidSection.types';
 import { ANIMATION_TIME } from './MidSection.data';
+import {
+  COLOR_DESIGN_TOKENS,
+  FONT_SIZES,
+} from '../../../constants';
 
 export const Container = styled.div`
   display: flex;

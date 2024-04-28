@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 import { mediaContainer1023 } from '../../styles/mediaQueryContainers';
-import { COLOR_DESIGN_TOKENS } from '../../utils';
+import { COLOR_DESIGN_TOKENS } from '../../constants';
 
 export const Container = styled.div.attrs({
   role: 'form',

@@ -1,6 +1,6 @@
 import { create } from 'zustand';
-import type { DarkTheme } from '../utils';
-import { LightTheme } from '../utils';
+import type { DarkTheme } from '../constants';
+import { LightTheme } from '../constants';
 
 interface ThemeState {
   theme: typeof LightTheme | typeof DarkTheme;

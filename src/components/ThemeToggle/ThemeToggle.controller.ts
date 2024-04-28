@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { useThemeStore } from '../../store';
-import { DarkTheme, LightTheme } from '../../utils';
+import { DarkTheme, LightTheme } from '../../constants';
 
 export const useController = () => {
   const [isDay, setIsDay] = useState(true);

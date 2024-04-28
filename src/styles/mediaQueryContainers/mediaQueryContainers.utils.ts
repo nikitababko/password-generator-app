@@ -1,7 +1,7 @@
 import { css } from 'styled-components';
 
 import type { MediaQueryContainerType } from './mediaQueryContainers.types';
-import { MEDIA_BREAK_POINTS_DESIGN_TOKENS } from '../../utils';
+import { MEDIA_BREAK_POINTS_DESIGN_TOKENS } from '../../constants';
 
 export const mediaContainer1023: MediaQueryContainerType = (
   styles,

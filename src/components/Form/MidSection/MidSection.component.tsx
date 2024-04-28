@@ -12,7 +12,7 @@ import {
   PasswordWrapper,
 } from './MidSection.styles';
 import { useController } from './MidSection.controller';
-import { COLOR_DESIGN_TOKENS } from '../../../utils';
+import { COLOR_DESIGN_TOKENS } from '../../../constants';
 
 export const MidSection: React.FC = () => {
   const {

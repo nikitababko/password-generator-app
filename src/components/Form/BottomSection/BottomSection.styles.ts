@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { COLOR_DESIGN_TOKENS } from '../../../utils';
+import { COLOR_DESIGN_TOKENS } from '../../../constants';
 
 export const Container = styled.footer`
   margin-top: 76px;

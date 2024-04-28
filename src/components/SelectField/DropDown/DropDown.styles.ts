@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 
-import {
-  COLOR_DESIGN_TOKENS,
-  getAnimation,
-} from '../../../utils';
+import { getAnimation } from '../../../utils';
 
 import type { ContainerStylesProps } from './DropDown.types';
+import { COLOR_DESIGN_TOKENS } from '../../../constants';
 
 export const Container = styled.div<ContainerStylesProps>`
   position: absolute;
