@@ -5,7 +5,7 @@ import type { ItemType as SelectFieldItemType } from '../SelectField/Item/Item.t
 
 const BOX_SHADOW = '0px 0px 5px 3px rgb(34 60 80 / 20%)';
 
-export const data: SelectFieldItemType[] = [
+export const languages: SelectFieldItemType[] = [
   {
     id: 'en',
     icon: (
@@ -16,7 +16,7 @@ export const data: SelectFieldItemType[] = [
         }}
       />
     ),
-    label: 'English',
+    value: 'English',
   },
   {
     id: 'ru',
@@ -28,7 +28,7 @@ export const data: SelectFieldItemType[] = [
         }}
       />
     ),
-    label: 'Русский',
+    value: 'Русский',
   },
   {
     id: 'zh',
@@ -40,7 +40,7 @@ export const data: SelectFieldItemType[] = [
         }}
       />
     ),
-    label: '中國人',
+    value: '中國人',
   },
   {
     id: 'ko',
@@ -52,7 +52,7 @@ export const data: SelectFieldItemType[] = [
         }}
       />
     ),
-    label: '한국인',
+    value: '한국인',
   },
   {
     id: 'ja',
@@ -64,7 +64,7 @@ export const data: SelectFieldItemType[] = [
         }}
       />
     ),
-    label: '日本語',
+    value: '日本語',
   },
   {
     id: 'fr',
@@ -76,7 +76,7 @@ export const data: SelectFieldItemType[] = [
         }}
       />
     ),
-    label: 'Français',
+    value: 'Français',
   },
   {
     id: 'de',
@@ -88,7 +88,7 @@ export const data: SelectFieldItemType[] = [
         }}
       />
     ),
-    label: 'Deutsch',
+    value: 'Deutsch',
   },
   {
     id: 'id',
@@ -100,7 +100,7 @@ export const data: SelectFieldItemType[] = [
         }}
       />
     ),
-    label: 'Indonesia',
+    value: 'Indonesia',
   },
   {
     id: 'pl',
@@ -112,7 +112,7 @@ export const data: SelectFieldItemType[] = [
         }}
       />
     ),
-    label: 'Polski',
+    value: 'Polski',
   },
   {
     id: 'es',
@@ -124,7 +124,7 @@ export const data: SelectFieldItemType[] = [
         }}
       />
     ),
-    label: 'Español',
+    value: 'Español',
   },
   {
     id: 'ka',
@@ -136,7 +136,7 @@ export const data: SelectFieldItemType[] = [
         }}
       />
     ),
-    label: 'ქართული',
+    value: 'ქართული',
   },
   {
     id: 'ar',
@@ -148,7 +148,7 @@ export const data: SelectFieldItemType[] = [
         }}
       />
     ),
-    label: 'عرب',
+    value: 'عرب',
   },
   {
     id: 'hy',
@@ -160,7 +160,7 @@ export const data: SelectFieldItemType[] = [
         }}
       />
     ),
-    label: 'հայերեն',
+    value: 'հայերեն',
   },
   {
     id: 'hi',
@@ -172,7 +172,7 @@ export const data: SelectFieldItemType[] = [
         }}
       />
     ),
-    label: 'हिन्दी',
+    value: 'हिन्दी',
   },
   {
     id: 'it',
@@ -184,6 +184,6 @@ export const data: SelectFieldItemType[] = [
         }}
       />
     ),
-    label: 'Italiano',
+    value: 'Italiano',
   },
 ];

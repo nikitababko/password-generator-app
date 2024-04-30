@@ -7,29 +7,31 @@ import type { Props } from './DropDown.types';
 import { Container } from './DropDown.styles';
 
 export const DropDown: React.FC<Props> = ({
-  data,
+  options,
   setSelectedItem,
   setIsOpen,
   isOpen,
   selectedItem,
   callback,
+  defaultOption,
 }) => {
   return (
     <Container
       data-testid="DropDownContainer"
       isOpen={isOpen}
     >
-      {data?.map((selectFieldItem) => (
+      {options?.map((option) => (
         <Item
-          key={selectFieldItem.id}
-          item={selectFieldItem}
+          key={option.id}
+          item={option}
           setSelectedItem={setSelectedItem}
           setIsOpen={setIsOpen}
           isDropDownItem
           selectedItemEqualToItem={
-            selectFieldItem.id === selectedItem.id
+            option.id === selectedItem.id
           }
           callback={callback}
+          defaultOption={defaultOption}
         >
           <Icon name="CheckMark" width={15} height={16} />
         </Item>

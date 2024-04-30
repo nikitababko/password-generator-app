@@ -17,6 +17,7 @@ export const Translations: DeepReadonly<TranslationsType> =
       excludeAmbiguousCharacters:
         'Exclude Ambiguous Characters',
       generate: 'Generate',
+      saveMySettings: 'Save my settings',
     },
     ru: {
       passwordLength: 'Длина пароля',
@@ -29,6 +30,7 @@ export const Translations: DeepReadonly<TranslationsType> =
       excludeAmbiguousCharacters:
         'Исключить неоднозначные символы',
       generate: 'Сгенерировать',
+      saveMySettings: 'Сохранить мои настройки',
     },
     zh: {
       passwordLength: '密碼長度',
@@ -39,6 +41,7 @@ export const Translations: DeepReadonly<TranslationsType> =
       excludeSimilarCharacters: '排除相似字符',
       excludeAmbiguousCharacters: '排除歧義字符',
       generate: '產生',
+      saveMySettings: '保存我的设置',
     },
     ko: {
       passwordLength: '비밀번호 길이',
@@ -49,6 +52,7 @@ export const Translations: DeepReadonly<TranslationsType> =
       excludeSimilarCharacters: '유사한 문자 제외',
       excludeAmbiguousCharacters: '모호한 문자 제외',
       generate: '생성하다',
+      saveMySettings: '내 설정 저장',
     },
     ja: {
       passwordLength: 'パスワードの長さ',
@@ -60,6 +64,7 @@ export const Translations: DeepReadonly<TranslationsType> =
       excludeAmbiguousCharacters:
         'あいまいな文字を除外する',
       generate: '生成',
+      saveMySettings: '設定を保存する',
     },
     fr: {
       passwordLength: 'Longueur du mot de passe',
@@ -74,6 +79,7 @@ export const Translations: DeepReadonly<TranslationsType> =
       excludeAmbiguousCharacters:
         'Exclure les caractères ambigus',
       generate: 'Générer',
+      saveMySettings: 'Enregistrer mes paramètres',
     },
     de: {
       passwordLength: 'Passwortlänge',
@@ -87,6 +93,7 @@ export const Translations: DeepReadonly<TranslationsType> =
       excludeAmbiguousCharacters:
         'Schließen Sie mehrdeutige Zeichen aus',
       generate: 'Generieren',
+      saveMySettings: 'Meine Einstellungen speichern',
     },
     id: {
       passwordLength: 'Panjang kata sandi',
@@ -101,6 +108,7 @@ export const Translations: DeepReadonly<TranslationsType> =
       excludeAmbiguousCharacters:
         'Kecualikan karakter yang ambigu',
       generate: 'Menghasilkan',
+      saveMySettings: 'Simpan pengaturan saya',
     },
     pl: {
       passwordLength: 'Długość hasła',
@@ -112,6 +120,7 @@ export const Translations: DeepReadonly<TranslationsType> =
       excludeAmbiguousCharacters:
         'Wyklucz niejednoznaczne znaki',
       generate: 'Generować',
+      saveMySettings: 'Zapisz moje ustawienia',
     },
     es: {
       passwordLength: 'Longitud de la contraseña',
@@ -126,6 +135,7 @@ export const Translations: DeepReadonly<TranslationsType> =
       excludeAmbiguousCharacters:
         'Excluir caracteres ambiguos',
       generate: 'Generar',
+      saveMySettings: 'Guardar mis ajustes',
     },
     ka: {
       passwordLength: 'პაროლის სიგრძე',
@@ -138,6 +148,7 @@ export const Translations: DeepReadonly<TranslationsType> =
       excludeAmbiguousCharacters:
         'გამორიცხეთ ორაზროვანი პერსონაჟები',
       generate: 'Გენერირება',
+      saveMySettings: 'ჩემი პარამეტრების შენახვა',
     },
     ar: {
       passwordLength: 'پاس ورڈ کی لمبائی',
@@ -150,6 +161,7 @@ export const Translations: DeepReadonly<TranslationsType> =
         'ملتے جلتے حروف کو خارج کریں۔',
       excludeAmbiguousCharacters: 'مبہم حروف کو خارج کریں۔',
       generate: 'پیدا کریں۔',
+      saveMySettings: 'حفظ إعداداتي',
     },
     hy: {
       passwordLength: 'Գաղտնաբառի երկարությունը',
@@ -162,6 +174,7 @@ export const Translations: DeepReadonly<TranslationsType> =
       excludeAmbiguousCharacters:
         'Բացառեք երկիմաստ կերպարները',
       generate: 'ստեղծել',
+      saveMySettings: 'պահպանել իմ կարգավորումները',
     },
     hi: {
       passwordLength: 'पारण शब्द लम्बाई',
@@ -173,6 +186,7 @@ export const Translations: DeepReadonly<TranslationsType> =
       excludeAmbiguousCharacters:
         'अस्पष्ट वर्णों को छोड़ दें',
       generate: 'बनाना',
+      saveMySettings: 'मेरी सेटिंग सहेजें',
     },
     it: {
       passwordLength: 'Lunghezza della password',
@@ -186,5 +200,6 @@ export const Translations: DeepReadonly<TranslationsType> =
       excludeAmbiguousCharacters:
         'Escludi caratteri ambigui',
       generate: 'creare',
+      saveMySettings: 'salva le mie impostazioni',
     },
   };

@@ -11,14 +11,11 @@ import {
   RightCol,
   Title,
 } from './Header.styles';
-import { data } from './Header.data';
-import { useLangStore } from '../../store';
-import type { LanguagesType } from '../../hooks/useTranslate/useTranslate.types';
+import { languages } from './Header.data';
+import { useController } from './Header.controller';
 
 export const Header: React.FC = () => {
-  const changeLang = useLangStore(
-    (state) => state.changeLang,
-  );
+  const { handleClick, defaultLanguage } = useController();
 
   return (
     <Container>
@@ -37,8 +34,9 @@ export const Header: React.FC = () => {
         <ThemeToggle />
 
         <SelectField
-          data={data}
-          callback={(id) => changeLang(id as LanguagesType)}
+          options={languages}
+          callback={handleClick}
+          defaultOption={defaultLanguage}
         />
       </RightCol>
     </Container>

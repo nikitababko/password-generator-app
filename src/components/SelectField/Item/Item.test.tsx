@@ -9,7 +9,7 @@ describe('Item', () => {
       <Item
         item={{
           id: 1,
-          label: 6,
+          value: 6,
         }}
       />,
     );

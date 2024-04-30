@@ -22,6 +22,7 @@ const Item: React.FC<ItemProps> = React.memo<ItemProps>(
       handleClick,
       isFormItemPasswordLength,
       t,
+      defaultOptionPasswordLength,
     } = useController(item.id);
 
     return (
@@ -50,13 +51,17 @@ const Item: React.FC<ItemProps> = React.memo<ItemProps>(
         <RightCol>
           {item.type === 'select' ? (
             <SelectField
-              data={item.options}
+              options={item.options}
               styles={{
                 width: '90px',
               }}
-              callback={(id, value) =>
-                callback(item.id, value)
-              }
+              callback={(id, value) => {
+                callback(item.id, value, {
+                  id: id as number,
+                  value,
+                });
+              }}
+              defaultOption={defaultOptionPasswordLength}
             />
           ) : (
             <Switch

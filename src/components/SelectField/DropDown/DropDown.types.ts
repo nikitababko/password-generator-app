@@ -1,9 +1,8 @@
 import type React from 'react';
-import type { LanguagesType } from '../../../hooks/useTranslate/useTranslate.types';
 import type { ItemType } from '../Item/Item.types';
 
 export type Props = {
-  data?: ItemType[];
+  options?: ItemType[];
   isOpen: boolean;
   selectedItem: ItemType;
   setSelectedItem: React.Dispatch<
@@ -11,9 +10,10 @@ export type Props = {
   >;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   callback?: (
-    id: number | LanguagesType,
-    value: string | number,
+    id: ItemType['id'],
+    value: ItemType['value'],
   ) => void;
+  defaultOption?: ItemType | null;
 };
 
 export type ContainerStylesProps = {

@@ -9,7 +9,7 @@ describe('SelectField', () => {
   it('render', () => {
     render(
       <SelectField
-        data={FORM_ITEMS_INITIAL_STATE[0].options}
+        options={FORM_ITEMS_INITIAL_STATE[0].options}
       />,
     );
 

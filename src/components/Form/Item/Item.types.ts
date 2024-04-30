@@ -1,8 +1,12 @@
 export type ItemProps = {
   item: ItemType;
   callback: (
-    id: number,
-    value: string | number | boolean,
+    id: ItemType['id'],
+    value: ItemType['value'],
+    option?: {
+      id: ItemType['id'];
+      value: ItemType['value'];
+    },
   ) => void;
   isDisabled: boolean;
 };
@@ -20,8 +24,12 @@ export type ItemLabelStylesProps = {
 };
 
 export type HandleClickType = (
-  id: number,
-  value: string | number | boolean,
+  id: ItemType['id'],
+  value: ItemType['value'],
+  option?: {
+    id: ItemType['id'];
+    value: ItemType['value'];
+  },
 ) => void;
 
 export type ItemType = {
@@ -30,8 +38,12 @@ export type ItemType = {
   valueExample: string;
   type: 'select' | 'switch';
   value: string | number | boolean;
+  selectedOption?: {
+    id: number | string;
+    value: number | string;
+  } | null;
   options?: {
     id: number;
-    label: number;
+    value: number;
   }[];
 };

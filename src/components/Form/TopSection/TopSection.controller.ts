@@ -3,11 +3,12 @@ import { useCallback, useMemo } from 'react';
 import type {
   HandleClickType,
   ItemType,
+  ItemType as FormItemType,
 } from '../Item/Item.types';
 import { useFormStore } from '../../../store/formState';
 
 export const useController = () => {
-  const { formItems, setFormItems } = useFormStore();
+  const { formItems, changeFormItemValue } = useFormStore();
 
   const memoFormItems = useMemo(
     () => formItems,
@@ -15,10 +16,15 @@ export const useController = () => {
   );
 
   const handleClick: HandleClickType = useCallback(
-    (id, value) => {
-      setFormItems(formItems, id, value);
+    (id, value, option) => {
+      changeFormItemValue(
+        formItems,
+        id,
+        value,
+        option as FormItemType['selectedOption'],
+      );
     },
-    [setFormItems, formItems],
+    [changeFormItemValue, formItems],
   );
 
   const isLastActiveItemId = useMemo(() => {

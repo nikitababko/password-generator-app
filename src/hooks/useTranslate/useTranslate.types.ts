@@ -24,6 +24,7 @@ export type TranslationsValuesType = {
   excludeSimilarCharacters: string;
   excludeAmbiguousCharacters: string;
   generate: string;
+  saveMySettings: string;
 };
 
 export type TranslationsType = Record<

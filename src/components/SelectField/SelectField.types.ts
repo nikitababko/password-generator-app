@@ -1,16 +1,15 @@
-import type { LanguagesType } from '../../hooks/useTranslate/useTranslate.types';
-
 import type { ItemType } from './Item/Item.types';
 
 export type Props = {
-  data?: ItemType[];
+  options?: ItemType[];
   styles?: Partial<{
     width: string;
   }>;
   callback?: (
-    id: ItemType['id'] | LanguagesType,
-    value: string | number,
+    id: ItemType['id'],
+    value: ItemType['value'],
   ) => void;
+  defaultOption?: ItemType | null;
 };
 
 export type ChevronWrapperProps = {

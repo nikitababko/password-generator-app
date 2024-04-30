@@ -7,46 +7,50 @@ export const FORM_ITEMS_INITIAL_STATE: FormItemType[] = [
     valueExample: '',
     type: 'select',
     value: 6,
+    selectedOption: {
+      id: 1,
+      value: 6,
+    },
     options: [
       {
         id: 1,
-        label: 6,
+        value: 6,
       },
       {
         id: 2,
-        label: 12,
+        value: 12,
       },
       {
         id: 3,
-        label: 18,
+        value: 18,
       },
       {
         id: 4,
-        label: 24,
+        value: 24,
       },
       {
         id: 5,
-        label: 30,
+        value: 30,
       },
       {
         id: 6,
-        label: 36,
+        value: 36,
       },
       {
         id: 7,
-        label: 42,
+        value: 42,
       },
       {
         id: 8,
-        label: 46,
+        value: 46,
       },
       {
         id: 9,
-        label: 52,
+        value: 52,
       },
       {
         id: 10,
-        label: 58,
+        value: 58,
       },
     ],
   },
@@ -92,11 +96,11 @@ export const FORM_ITEMS_INITIAL_STATE: FormItemType[] = [
     type: 'switch',
     value: false,
   },
-  // {
-  //   id: 8,
-  //   label: 'saveMySettings',
-  //   valueExample: '',
-  //   type: 'switch',
-  //   value: false,
-  // },
+  {
+    id: 8,
+    label: 'saveMySettings',
+    valueExample: '',
+    type: 'switch',
+    value: false,
+  },
 ];

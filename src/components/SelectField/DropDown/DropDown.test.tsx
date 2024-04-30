@@ -9,12 +9,12 @@ describe('DropDown', () => {
   it('render', () => {
     render(
       <DropDown
-        data={FORM_ITEMS_INITIAL_STATE[0].options}
+        options={FORM_ITEMS_INITIAL_STATE[0].options}
         isOpen
         setIsOpen={() => null}
         selectedItem={{
           id: 1,
-          label: 6,
+          value: 6,
         }}
         setSelectedItem={() => null}
       />,

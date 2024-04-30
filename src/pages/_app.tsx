@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import Script from 'next/script';
@@ -9,6 +9,7 @@ import { Image } from '../styles/_app.styles';
 import { ThemeProvider } from '../components/ThemeProvider';
 import { Loader } from '../components/Loader';
 import { PROJECT_TITLE } from '../constants';
+import { useFormStore } from '../store/formState';
 
 const Layout = dynamic(
   () =>
@@ -23,6 +24,36 @@ const App: React.FC<AppProps> = ({
   Component,
   pageProps,
 }) => {
+  const { formItems, setFormItems } = useFormStore();
+
+  useEffect(() => {
+    const formItemsFromLS =
+      localStorage.getItem('formItems');
+
+    if (formItemsFromLS) {
+      setFormItems(JSON.parse(formItemsFromLS));
+    }
+  }, [setFormItems]);
+
+  useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-magic-numbers
+    const saveMySettings = formItems.at(-1)?.value;
+
+    localStorage.setItem(
+      'saveMySettings',
+      JSON.stringify(saveMySettings),
+    );
+
+    if (saveMySettings) {
+      localStorage.setItem(
+        'formItems',
+        JSON.stringify(formItems),
+      );
+    } else {
+      localStorage.removeItem('formItems');
+    }
+  }, [formItems]);
+
   return (
     <React.Fragment>
       <Head>

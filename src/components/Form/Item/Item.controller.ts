@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 
 import { useTranslate } from '../../../hooks';
 
@@ -13,12 +13,22 @@ export const useController = (itemId: number) => {
     );
   };
 
-  const isFormItemPasswordLength = itemId === 1;
+  const isFormItemPasswordLength = useMemo(() => {
+    return itemId === 1;
+  }, [itemId]);
+
+  const defaultOptionPasswordLength = useMemo(() => {
+    const storedValue = localStorage.getItem('formItems');
+    return storedValue
+      ? JSON.parse(storedValue)[0].selectedOption
+      : null;
+  }, []);
 
   return {
     valueExampleIsVisible,
     handleClick,
     isFormItemPasswordLength,
     t,
+    defaultOptionPasswordLength,
   };
 };

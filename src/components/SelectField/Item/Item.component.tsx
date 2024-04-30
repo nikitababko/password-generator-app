@@ -12,12 +12,14 @@ export const Item: React.FC<Props> = ({
   selectedItemEqualToItem,
   children,
   callback,
+  defaultOption,
 }) => {
   const { handleClick } = useController({
     item,
     setSelectedItem,
     setIsOpen,
     callback,
+    defaultOption,
   });
 
   return (
@@ -29,7 +31,7 @@ export const Item: React.FC<Props> = ({
     >
       {item?.icon}
 
-      <Label>{item?.label}</Label>
+      <Label>{item?.value}</Label>
 
       {children && (
         <Children
