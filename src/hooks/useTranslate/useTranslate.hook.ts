@@ -1,8 +1,10 @@
 import { Translations } from './useTranslate.data';
-import { useLangStore } from '../../store';
+import { useLanguageStore } from '../../store';
 
 export const useTranslate = () => {
-  const lang = useLangStore((state) => state.lang);
+  const language = useLanguageStore(
+    (state) => state.language,
+  );
 
-  return Translations[lang];
+  return Translations[language];
 };

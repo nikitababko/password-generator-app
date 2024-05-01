@@ -36,25 +36,28 @@ export const useController = () => {
   const handleGeneratePassword = useCallback(() => {
     setIsGenerated((previousState) => !previousState);
 
+    const [
+      { value: length },
+      { value: includeSymbols },
+      { value: includeNumbers },
+      { value: includeLowerCaseChars },
+      { value: includeUpperCaseChars },
+      { value: excludeSimilarChars },
+      { value: excludeAmbiguousChars },
+    ] = formItems;
+
     setPassword(
       generatePassword({
-        // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-        length: formItems[0].value as number,
-        // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-        includeSymbols: formItems[1].value as boolean,
-        // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-        includeNumbers: formItems[2].value as boolean,
-        // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-        includeLowerCaseChars: formItems[3]
-          .value as boolean,
-        // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-        includeUpperCaseChars: formItems[4]
-          .value as boolean,
-        // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-        excludeSimilarChars: formItems[5].value as boolean,
-        // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-        excludeAmbiguousChars: formItems[6]
-          .value as boolean,
+        length: length as number,
+        includeSymbols: includeSymbols as boolean,
+        includeNumbers: includeNumbers as boolean,
+        includeLowerCaseChars:
+          includeLowerCaseChars as boolean,
+        includeUpperCaseChars:
+          includeUpperCaseChars as boolean,
+        excludeSimilarChars: excludeSimilarChars as boolean,
+        excludeAmbiguousChars:
+          excludeAmbiguousChars as boolean,
         quantity: 1,
       }),
     );

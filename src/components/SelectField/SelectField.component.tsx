@@ -12,7 +12,6 @@ import { Item } from './Item';
 import { DropDown } from './DropDown';
 import { useController } from './SelectField.controller';
 
-// eslint-disable-next-line react/display-name
 export const SelectField: React.FC<Props> = React.memo(
   ({ options = [], styles, callback, defaultOption }) => {
     const {

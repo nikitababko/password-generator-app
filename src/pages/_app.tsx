@@ -36,7 +36,6 @@ const App: React.FC<AppProps> = ({
   }, [setFormItems]);
 
   useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-magic-numbers
     const saveMySettings = formItems.at(-1)?.value;
 
     localStorage.setItem(

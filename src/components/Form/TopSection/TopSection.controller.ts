@@ -18,13 +18,13 @@ export const useController = () => {
   const handleClick: HandleClickType = useCallback(
     (id, value, option) => {
       changeFormItemValue(
-        formItems,
+        // formItems,
         id,
         value,
         option as FormItemType['selectedOption'],
       );
     },
-    [changeFormItemValue, formItems],
+    [changeFormItemValue],
   );
 
   const isLastActiveItemId = useMemo(() => {

@@ -1,11 +1,11 @@
 import { useCallback, useMemo } from 'react';
-import { useLangStore } from '../../store';
+import { useLanguageStore } from '../../store';
 import { languages } from './Header.data';
 import type { ItemType } from '../SelectField/Item/Item.types';
 import type { LanguagesType } from '../../hooks/useTranslate/useTranslate.types';
 
 export const useController = () => {
-  const changeLang = useLangStore(
+  const changeLang = useLanguageStore(
     (state) => state.changeLang,
   );
 

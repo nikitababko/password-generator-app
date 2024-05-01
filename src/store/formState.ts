@@ -5,7 +5,7 @@ import { FORM_ITEMS_INITIAL_STATE } from './store.data';
 interface FormState {
   formItems: FormItemType[];
   changeFormItemValue: (
-    formItems: FormItemType[],
+    // formItems: FormItemType[],
     id: number | string,
     value: string | number | boolean,
     selectedOption?: FormItemType['selectedOption'],
@@ -16,14 +16,14 @@ interface FormState {
 export const useFormStore = create<FormState>((set) => ({
   formItems: FORM_ITEMS_INITIAL_STATE,
   changeFormItemValue: (
-    formItems,
+    // formItems,
     id,
     value,
     selectedOption,
   ) => {
-    return set(() => {
+    return set((state) => {
       return {
-        formItems: formItems?.map((formItem) => {
+        formItems: state.formItems?.map((formItem) => {
           return formItem.id === id
             ? {
                 ...formItem,

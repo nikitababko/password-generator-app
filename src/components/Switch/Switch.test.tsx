@@ -23,7 +23,7 @@ describe('Switch', () => {
   });
 
   const TestSwitchData = {
-    id: 4,
+    id: 1,
     value: false,
   };
 

@@ -37,14 +37,7 @@
             "allow": ["error"]
           }
         ],
-        "@typescript-eslint/no-magic-numbers": [
-          "error",
-          {
-            "ignoreEnums": true,
-            "ignoreNumericLiteralTypes": true,
-            "ignore": [1023, 767, 479, 374, 2, 1, 0]
-          }
-        ],
+        "@typescript-eslint/no-magic-numbers": "off",
         "import/prefer-default-export": "off",
         "@typescript-eslint/indent": "off",
         "arrow-body-style": "off",
@@ -58,6 +51,7 @@
         "react/self-closing-comp": "error",
         "react/no-array-index-key": "error",
         "react/jsx-boolean-value": "error",
+        "react/display-name": "off",
         "react/jsx-curly-brace-presence": "error",
         "react/forbid-component-props": "error",
         "react/jsx-fragments": ["error", "element"],

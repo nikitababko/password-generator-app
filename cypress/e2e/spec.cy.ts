@@ -53,7 +53,6 @@ describe('Password generator', () => {
         .should('contain.text', translation.includeNumbers);
 
       cy.get(Elements.FormItemContainerLeftCol)
-        // eslint-disable-next-line @typescript-eslint/no-magic-numbers
         .eq(3)
         .should(
           'contain.text',
@@ -61,7 +60,6 @@ describe('Password generator', () => {
         );
 
       cy.get(Elements.FormItemContainerLeftCol)
-        // eslint-disable-next-line @typescript-eslint/no-magic-numbers
         .eq(4)
         .should(
           'contain.text',
@@ -69,7 +67,6 @@ describe('Password generator', () => {
         );
 
       cy.get(Elements.FormItemContainerLeftCol)
-        // eslint-disable-next-line @typescript-eslint/no-magic-numbers
         .eq(5)
         .should(
           'contain.text',
@@ -77,7 +74,6 @@ describe('Password generator', () => {
         );
 
       cy.get(Elements.FormItemContainerLeftCol)
-        // eslint-disable-next-line @typescript-eslint/no-magic-numbers
         .eq(6)
         .should(
           'contain.text',

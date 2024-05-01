@@ -1,2 +1,2 @@
-export * from './langStore';
+export * from './languageStore';
 export * from './themeStore';
