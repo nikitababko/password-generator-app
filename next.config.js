@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
+const { withSentryConfig } = require('@sentry/nextjs');
+const { LANGUAGE_CODES } = require('./src/languageCodes');
+
 const nextConfig = {
   reactStrictMode: true,
   compiler: {
@@ -32,13 +35,17 @@ const nextConfig = {
       },
     ],
   },
+  i18n: {
+    locales: Object.keys(LANGUAGE_CODES).map((key) =>
+      key.toLowerCase(),
+    ),
+    defaultLocale: 'en',
+  },
 };
 
 module.exports = nextConfig;
 
 // Injected content via Sentry wizard below
-
-const { withSentryConfig } = require('@sentry/nextjs');
 
 module.exports = withSentryConfig(
   module.exports,

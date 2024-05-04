@@ -19,7 +19,7 @@
     "project": "tsconfig.json",
     "tsconfigRootDir": "./"
   },
-  "ignorePatterns": ["out", "next.config.js"],
+  "ignorePatterns": ["out"],
   "plugins": ["@typescript-eslint", "prettier"],
   "env": {
     "node": true,
@@ -29,7 +29,7 @@
   },
   "overrides": [
     {
-      "files": ["*.ts", "*.tsx", "*.jsx"],
+      "files": ["*.ts", "*.js", "*.tsx", "*.jsx"],
       "rules": {
         "no-console": [
           "error",
@@ -128,6 +128,12 @@
       "files": ["**/*.cy.{js,ts,jsx,tsx}"],
       "extends": ["plugin:cypress/recommended"],
       "plugins": ["cypress"]
+    },
+    {
+      "files": ["*.js"],
+      "rules": {
+        "unicorn/prefer-module": "off"
+      }
     }
   ]
 }

@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -18,11 +14,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": false,
-    "types": [
-      "node",
-      "jest",
-      "@testing-library/jest-dom"
-    ]
+    "types": ["node", "jest", "@testing-library/jest-dom"]
   },
   "include": [
     "next-env.d.ts",
@@ -30,10 +22,9 @@
     "jest.config.js",
     "jest.setup.js",
     "commitlint.config.js",
+    "src/languageCodes.js",
     "**/*.ts",
     "**/*.tsx"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

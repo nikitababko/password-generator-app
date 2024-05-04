@@ -2,12 +2,13 @@ import React from 'react';
 
 import { Icon } from '../Icon';
 import type { ItemType as SelectFieldItemType } from '../SelectField/Item/Item.types';
+import { LANGUAGE_CODES } from '../../languageCodes';
 
 const BOX_SHADOW = '0px 0px 5px 3px rgb(34 60 80 / 20%)';
 
 export const languages: SelectFieldItemType[] = [
   {
-    id: 'en',
+    id: LANGUAGE_CODES.EN,
     icon: (
       <Icon
         name="FlagUs"
@@ -19,7 +20,7 @@ export const languages: SelectFieldItemType[] = [
     value: 'English',
   },
   {
-    id: 'ru',
+    id: LANGUAGE_CODES.RU,
     icon: (
       <Icon
         name="FlagRu"
@@ -31,7 +32,7 @@ export const languages: SelectFieldItemType[] = [
     value: 'Русский',
   },
   {
-    id: 'zh',
+    id: LANGUAGE_CODES.ZH,
     icon: (
       <Icon
         name="FlagCh"
@@ -43,7 +44,7 @@ export const languages: SelectFieldItemType[] = [
     value: '中國人',
   },
   {
-    id: 'ko',
+    id: LANGUAGE_CODES.KO,
     icon: (
       <Icon
         name="FlagKr"
@@ -55,7 +56,7 @@ export const languages: SelectFieldItemType[] = [
     value: '한국인',
   },
   {
-    id: 'ja',
+    id: LANGUAGE_CODES.JA,
     icon: (
       <Icon
         name="FlagJp"
@@ -67,7 +68,7 @@ export const languages: SelectFieldItemType[] = [
     value: '日本語',
   },
   {
-    id: 'fr',
+    id: LANGUAGE_CODES.FR,
     icon: (
       <Icon
         name="FlagFr"
@@ -79,7 +80,7 @@ export const languages: SelectFieldItemType[] = [
     value: 'Français',
   },
   {
-    id: 'de',
+    id: LANGUAGE_CODES.DE,
     icon: (
       <Icon
         name="FlagDe"
@@ -91,7 +92,7 @@ export const languages: SelectFieldItemType[] = [
     value: 'Deutsch',
   },
   {
-    id: 'id',
+    id: LANGUAGE_CODES.ID,
     icon: (
       <Icon
         name="FlagIn"
@@ -103,7 +104,7 @@ export const languages: SelectFieldItemType[] = [
     value: 'Indonesia',
   },
   {
-    id: 'pl',
+    id: LANGUAGE_CODES.PL,
     icon: (
       <Icon
         name="FlagPl"
@@ -115,7 +116,7 @@ export const languages: SelectFieldItemType[] = [
     value: 'Polski',
   },
   {
-    id: 'es',
+    id: LANGUAGE_CODES.ES,
     icon: (
       <Icon
         name="FlagEs"
@@ -127,7 +128,7 @@ export const languages: SelectFieldItemType[] = [
     value: 'Español',
   },
   {
-    id: 'ka',
+    id: LANGUAGE_CODES.KA,
     icon: (
       <Icon
         name="FlagGe"
@@ -139,7 +140,7 @@ export const languages: SelectFieldItemType[] = [
     value: 'ქართული',
   },
   {
-    id: 'ar',
+    id: LANGUAGE_CODES.AR,
     icon: (
       <Icon
         name="FlagAe"
@@ -151,7 +152,7 @@ export const languages: SelectFieldItemType[] = [
     value: 'عرب',
   },
   {
-    id: 'hy',
+    id: LANGUAGE_CODES.HY,
     icon: (
       <Icon
         name="FlagAm"
@@ -163,7 +164,7 @@ export const languages: SelectFieldItemType[] = [
     value: 'հայերեն',
   },
   {
-    id: 'hi',
+    id: LANGUAGE_CODES.HI,
     icon: (
       <Icon
         name="FlagIn"
@@ -175,7 +176,7 @@ export const languages: SelectFieldItemType[] = [
     value: 'हिन्दी',
   },
   {
-    id: 'it',
+    id: LANGUAGE_CODES.IT,
     icon: (
       <Icon
         name="FlagIt"
