@@ -19,8 +19,13 @@
     "project": "tsconfig.json",
     "tsconfigRootDir": "./"
   },
-  "ignorePatterns": ["out"],
-  "plugins": ["@typescript-eslint", "prettier"],
+  "ignorePatterns": [
+    "out"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
   "env": {
     "node": true,
     "es6": true,
@@ -29,12 +34,19 @@
   },
   "overrides": [
     {
-      "files": ["*.ts", "*.js", "*.tsx", "*.jsx"],
+      "files": [
+        "*.ts",
+        "*.js",
+        "*.tsx",
+        "*.jsx"
+      ],
       "rules": {
         "no-console": [
           "error",
           {
-            "allow": ["error"]
+            "allow": [
+              "error"
+            ]
           }
         ],
         "@typescript-eslint/no-magic-numbers": "off",
@@ -54,7 +66,10 @@
         "react/display-name": "off",
         "react/jsx-curly-brace-presence": "error",
         "react/forbid-component-props": "error",
-        "react/jsx-fragments": ["error", "element"],
+        "react/jsx-fragments": [
+          "error",
+          "element"
+        ],
         "react/jsx-no-useless-fragment": [
           "error",
           {
@@ -64,12 +79,16 @@
         "@typescript-eslint/consistent-type-imports": [
           "error"
         ],
-        "react/no-multi-comp": ["error"],
+        "react/no-multi-comp": [
+          "error"
+        ],
         "react/jsx-newline": "error",
         "react/jsx-filename-extension": [
           "error",
           {
-            "extensions": [".tsx"]
+            "extensions": [
+              ".tsx"
+            ]
           }
         ],
         "unicorn/filename-case": [
@@ -84,14 +103,18 @@
         "unicorn/prevent-abbreviations": [
           "error",
           {
-            "ignore": ["Props"]
+            "ignore": [
+              "Props"
+            ]
           }
         ],
         "unicorn/no-null": "off"
       }
     },
     {
-      "files": ["src/components/Icon/Icon.data.tsx"],
+      "files": [
+        "src/components/Icon/Icon.data.tsx"
+      ],
       "rules": {
         "react/no-multi-comp": [
           "error",
@@ -102,7 +125,9 @@
       }
     },
     {
-      "files": ["*.js"],
+      "files": [
+        "*.js"
+      ],
       "rules": {
         "@typescript-eslint/no-var-requires": 0
       }
@@ -116,21 +141,34 @@
         "plugin:testing-library/react",
         "plugin:jest-dom/recommended"
       ],
-      "plugins": ["testing-library", "jest-dom"]
+      "plugins": [
+        "testing-library",
+        "jest-dom"
+      ]
     },
     {
-      "files": ["*.tsx"],
+      "files": [
+        "*.tsx"
+      ],
       "rules": {
         "react/prop-types": "off"
       }
     },
     {
-      "files": ["**/*.cy.{js,ts,jsx,tsx}"],
-      "extends": ["plugin:cypress/recommended"],
-      "plugins": ["cypress"]
+      "files": [
+        "**/*.cy.{js,ts,jsx,tsx}"
+      ],
+      "extends": [
+        "plugin:cypress/recommended"
+      ],
+      "plugins": [
+        "cypress"
+      ]
     },
     {
-      "files": ["*.js"],
+      "files": [
+        "*.js"
+      ],
       "rules": {
         "unicorn/prefer-module": "off"
       }

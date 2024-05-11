@@ -1,12 +1,11 @@
 {
   "**/*.{js,jsx,ts,tsx}": [
-    "prettier --write",
     "eslint --fix",
+    "prettier --write",
     "eslint --max-warnings=0",
     "bash -c tsc"
   ],
   "**/*.{js,jsx,ts,tsx,md,json}": [
     "npx cspell '**/*.{js,jsx,ts,tsx,md,json}'"
-  ],
-  "*.json": ["prettier --write"]
+  ]
 }
