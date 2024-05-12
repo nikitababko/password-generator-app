@@ -1,8 +1,10 @@
 import { useCallback, useMemo } from 'react';
+import type { ValueOf } from 'ts-essentials';
 import { useLanguageStore } from '../../store';
 import { languages } from './Header.data';
 import type { ItemType } from '../SelectField/Item/Item.types';
 import type { LanguagesType } from '../../hooks/useTranslate/useTranslate.types';
+import type { LANGUAGE_CODES } from '../../languageCodes';
 
 export const useController = () => {
   const changeLang = useLanguageStore(
@@ -23,10 +25,26 @@ export const useController = () => {
       ? JSON.parse(saveMySettingFromLS)
       : null;
 
-    if (saveMySettingsFromLSParsed) {
-      return defaultLanguageId
-        ? languages.find((l) => l.id === defaultLanguageId)
-        : null;
+    const getFoundLanguage = (
+      languageId: ValueOf<typeof LANGUAGE_CODES>,
+    ) => {
+      return languages.find((l) => l.id === languageId);
+    };
+
+    if (defaultLanguageId && saveMySettingsFromLSParsed) {
+      return getFoundLanguage(defaultLanguageId);
+    }
+
+    const userPreferredLanguages = navigator.languages;
+
+    if (
+      userPreferredLanguages &&
+      Array.isArray(userPreferredLanguages) &&
+      userPreferredLanguages[0].slice(0, 2)
+    ) {
+      return getFoundLanguage(
+        userPreferredLanguages[0].slice(0, 2),
+      );
     }
 
     return null;
