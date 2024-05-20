@@ -23,7 +23,8 @@ const Item: React.FC<ItemProps> = React.memo<ItemProps>(
       isFormItemPasswordLength,
       t,
       defaultOptionPasswordLength,
-    } = useController(item.id);
+      isFormItemSaveMySettings,
+    } = useController(item);
 
     return (
       <Container data-testid="FormItemContainer">
@@ -32,8 +33,12 @@ const Item: React.FC<ItemProps> = React.memo<ItemProps>(
           isFormItemPasswordLength={
             isFormItemPasswordLength
           }
+          isFormItemSaveMySettings={
+            isFormItemSaveMySettings
+          }
         >
-          {!isFormItemPasswordLength && <Info>i</Info>}
+          {!isFormItemSaveMySettings &&
+            !isFormItemPasswordLength && <Info>i</Info>}
 
           <Label
             valueExampleIsVisible={valueExampleIsVisible}

@@ -13,6 +13,7 @@ export type ItemProps = {
 
 export type ItemLeftColStylesProps = {
   isFormItemPasswordLength: boolean;
+  isFormItemSaveMySettings: boolean;
 };
 
 export type ItemValueExampleStylesProps = {

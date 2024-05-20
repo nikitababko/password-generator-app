@@ -8,6 +8,7 @@ import {
 import { Item } from './Item.component';
 import { useController } from './Item.controller';
 import { useFormStore } from '../../../store/formState';
+import { FORM_ITEMS_INITIAL_STATE } from '../../../store/store.data';
 
 describe('FormItem', () => {
   it('render', () => {
@@ -17,7 +18,9 @@ describe('FormItem', () => {
       useFormStore((state) => state.formItems),
     );
 
-    const { result } = renderHook(() => useController(2));
+    const { result } = renderHook(() =>
+      useController(FORM_ITEMS_INITIAL_STATE[1]),
+    );
 
     render(
       <Item

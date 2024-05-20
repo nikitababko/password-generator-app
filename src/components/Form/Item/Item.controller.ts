@@ -1,11 +1,15 @@
 import { useMemo, useState } from 'react';
 
 import { useTranslate } from '../../../hooks';
+import type { ItemType } from './Item.types';
 
-export const useController = (itemId: number) => {
+export const useController = (item: ItemType) => {
   const [valueExampleIsVisible, setValueExampleIsVisible] =
     useState(false);
   const t = useTranslate();
+
+  const isFormItemSaveMySettings =
+    item.label === 'saveMySettings';
 
   const handleClick = () => {
     setValueExampleIsVisible(
@@ -14,8 +18,8 @@ export const useController = (itemId: number) => {
   };
 
   const isFormItemPasswordLength = useMemo(() => {
-    return itemId === 1;
-  }, [itemId]);
+    return item.label === 'passwordLength';
+  }, [item.label]);
 
   const defaultOptionPasswordLength = useMemo(() => {
     const storedValue = localStorage.getItem('formItems');
@@ -30,5 +34,6 @@ export const useController = (itemId: number) => {
     isFormItemPasswordLength,
     t,
     defaultOptionPasswordLength,
+    isFormItemSaveMySettings,
   };
 };

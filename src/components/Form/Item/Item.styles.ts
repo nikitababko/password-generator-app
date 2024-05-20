@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 import {
   mediaContainer1023,
+  mediaContainer479,
   mediaContainer767,
 } from '../../../styles/mediaQueryContainers';
 
@@ -49,11 +50,22 @@ export const LeftCol = styled.div.attrs({
     `,
   )}
 
-  ${({ isFormItemPasswordLength }) => {
+  ${mediaContainer479(
+    css`
+      min-height: 70px;
+      padding: 0 21px;
+    `,
+  )}
+
+  ${({
+    isFormItemPasswordLength,
+    isFormItemSaveMySettings,
+  }) => {
     return mediaContainer767(
       css`
         justify-content: flex-start;
-        pointer-events: ${isFormItemPasswordLength
+        pointer-events: ${isFormItemSaveMySettings ||
+        isFormItemPasswordLength
           ? 'none'
           : 'all'};
         padding-left: 36px;
