@@ -6,6 +6,7 @@
     "email": "niki.babko@gmail.com",
     "url": "https://nikitababko.github.io"
   },
+  "homepage": "https://passguard.vercel.app/",
   "description": "Password generator app",
   "keywords": [
     "password",
