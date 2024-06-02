@@ -146,7 +146,7 @@ export const CopyButton = styled.button.attrs({
   height: 56px;
   border-radius: 12px;
   background-color: ${COLOR_DESIGN_TOKENS.BLUE};
-  cursor: pointer;
+  cursor: copy;
   transition: box-shadow ${getAnimation()};
   border: none;
   overflow: hidden;
