@@ -2,13 +2,7 @@ import React from 'react';
 
 import { PROJECT_NAME } from '../../../constants';
 
-import {
-  Container,
-  CopyrightName,
-  CopyrightWrapper,
-  CopyrightYear,
-  ProjectName,
-} from './BottomSection.styles';
+import { Container } from './BottomSection.styles';
 import { useController } from './BottomSection.controller';
 
 export const BottomSection: React.FC = () => {
@@ -16,15 +10,21 @@ export const BottomSection: React.FC = () => {
 
   return (
     <Container>
-      <CopyrightWrapper>
-        <CopyrightYear data-testid="CopyrightYear">
+      <div>
+        <span data-testid="CopyrightYear">
           {copyright.year}{' '}
-        </CopyrightYear>
+        </span>
 
-        <CopyrightName>{copyright.name}</CopyrightName>
-      </CopyrightWrapper>
+        <a
+          href="https://nikitababko.github.io"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {copyright.name}
+        </a>
+      </div>
 
-      <ProjectName>{PROJECT_NAME}</ProjectName>
+      <span>{PROJECT_NAME}</span>
     </Container>
   );
 };

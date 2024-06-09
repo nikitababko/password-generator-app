@@ -1,26 +1,26 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { mediaContainer1023 } from '../../../styles/mediaQueryContainers';
 import { COLOR_DESIGN_TOKENS } from '../../../constants';
 
 export const Container = styled.footer`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   margin-top: 76px;
   text-align: center;
   font-size: 22px;
   font-weight: 400;
   line-height: 26px;
+
+  p,
+  span,
+  a {
+    color: ${COLOR_DESIGN_TOKENS.BLACK};
+
+    ${mediaContainer1023(
+      css`
+        color: ${COLOR_DESIGN_TOKENS.WHITE};
+      `,
+    )}
+  }
 `;
-
-export const CopyrightWrapper = styled.p`
-  margin-bottom: 10px;
-`;
-
-export const CopyrightYear = styled.span``;
-
-export const CopyrightName = styled(CopyrightYear).attrs({
-  as: 'a',
-  href: 'https://nikitababko.github.io',
-  target: '_blank',
-})`
-  color: ${COLOR_DESIGN_TOKENS.BLACK};
-`;
-
-export const ProjectName = styled(CopyrightYear)``;
