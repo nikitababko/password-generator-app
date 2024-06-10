@@ -7,11 +7,11 @@ import {
 import { getAnimation } from '../../../utils';
 
 import type { CopyButtonStylesProps } from './MidSection.types';
-import { ANIMATION_TIME } from './MidSection.data';
 import {
   COLOR_DESIGN_TOKENS,
   FONT_SIZES,
 } from '../../../constants';
+import { ANIMATION_TIME } from './MidSection.data';
 
 export const Container = styled.div`
   display: flex;
@@ -109,38 +109,27 @@ export const PasswordLabel = styled.p.attrs({
   }
 `;
 
-const copyButtonFirstIconAnimation = keyframes`
+const copyButtonInnerAnimation = keyframes`
   20% {
-    transform: translate(-50%, -200%);
+    transform: translateY(-26px);
   }
 
-  70% {
-    transform: translate(-50%, -200%);
+  50% {
+    transform: translateY(-26px);
   }
 
   100% {
-    transform: translate(-50%, -50%);
-  }
-`;
-
-const copyButtonSecondIconAnimation = keyframes`
-  20% {
-    transform: translate(-50%, -50%);
-  }
-
-  70% {
-    transform: translate(-50%, -50%);
-  }
-
-  100% {
-    transform: translate(-50%, 180%);
+    transform: translateY(23px);
   }
 `;
 
 export const CopyButton = styled.button.attrs({
   'data-testid': 'CopyButton',
 })<CopyButtonStylesProps>`
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   max-width: 56px;
   height: 56px;
@@ -153,32 +142,6 @@ export const CopyButton = styled.button.attrs({
   pointer-events: ${({ isCopied }) => {
     return isCopied ? 'none' : 'auto';
   }};
-
-  svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-  }
-
-  svg:first-child {
-    transform: translate(-50%, -50%);
-    ${({ isCopied }) =>
-      isCopied &&
-      css`
-        animation: ${copyButtonFirstIconAnimation}
-          ${getAnimation(ANIMATION_TIME)};
-      `}
-  }
-
-  svg:last-child {
-    transform: translate(-50%, 180%);
-    ${({ isCopied }) =>
-      isCopied &&
-      css`
-        animation: ${copyButtonSecondIconAnimation}
-          ${getAnimation(ANIMATION_TIME)};
-      `}
-  }
 
   @media (hover: hover) {
     &:hover {
@@ -193,3 +156,18 @@ export const getArrowAnimation = (isGenerated: boolean) => {
     transition: `transform ${getAnimation()}`,
   };
 };
+
+export const CopyButtonInner = styled.div<CopyButtonStylesProps>`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  transform: translateY(23px);
+  ${({ isCopied }) =>
+    isCopied &&
+    css`
+      animation: ${copyButtonInnerAnimation}
+        ${getAnimation(ANIMATION_TIME)};
+    `}
+`;

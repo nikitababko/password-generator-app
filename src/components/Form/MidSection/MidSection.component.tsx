@@ -1,10 +1,12 @@
 import React from 'react';
 
+import { css } from 'styled-components';
 import { Icon } from '../../Icon';
 
 import {
   Container,
   CopyButton,
+  CopyButtonInner,
   GenerateButton,
   GenerateButtonLabel,
   getArrowAnimation,
@@ -35,7 +37,9 @@ export const MidSection: React.FC = () => {
           name="ArrowRepeat"
           width={31}
           height={32}
-          styles={getArrowAnimation(isGenerated)}
+          styles={css`
+            ${getArrowAnimation(isGenerated)}
+          `}
         />
       </GenerateButton>
 
@@ -44,14 +48,21 @@ export const MidSection: React.FC = () => {
       </PasswordWrapper>
 
       <CopyButton onClick={handleCopy} isCopied={isCopied}>
-        <Icon name="CopySelect" width={31} height={32} />
+        <CopyButtonInner isCopied={isCopied}>
+          <Icon
+            name="CopySelect"
+            width={31}
+            height={32}
+            color={COLOR_DESIGN_TOKENS.WHITE}
+          />
 
-        <Icon
-          name="CheckMark"
-          width={15}
-          height={16}
-          color={COLOR_DESIGN_TOKENS.WHITE}
-        />
+          <Icon
+            name="CheckMark"
+            width={24}
+            height={24}
+            color={COLOR_DESIGN_TOKENS.WHITE}
+          />
+        </CopyButtonInner>
       </CopyButton>
     </Container>
   );

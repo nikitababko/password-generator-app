@@ -1,4 +1,9 @@
-import { useCallback, useEffect, useState } from 'react';
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import generatePassword from '@nikitababko/password-generator';
 import type { GeneratePasswordType } from '@nikitababko/password-generator/dist/index.types';
 import { useTranslate } from '../../../hooks';
@@ -11,6 +16,9 @@ export const useController = () => {
   >(['']);
   const [isCopied, setIsCopied] = useState(false);
   const [isGenerated, setIsGenerated] = useState(false);
+  const timeoutReference = useRef<null | NodeJS.Timeout>(
+    null,
+  );
 
   const formItems = useFormStore(
     (state) => state.formItems,
@@ -24,7 +32,11 @@ export const useController = () => {
 
       setIsCopied(true);
 
-      setTimeout(
+      if (timeoutReference.current) {
+        clearTimeout(timeoutReference.current);
+      }
+
+      timeoutReference.current = setTimeout(
         () => setIsCopied(false),
         Number(`${ANIMATION_TIME}000`),
       );
@@ -32,6 +44,14 @@ export const useController = () => {
       console.error(error);
     }
   };
+
+  useEffect(() => {
+    return () => {
+      if (timeoutReference.current) {
+        clearTimeout(timeoutReference.current);
+      }
+    };
+  }, []);
 
   const handleGeneratePassword = useCallback(() => {
     setIsGenerated((previousState) => !previousState);
