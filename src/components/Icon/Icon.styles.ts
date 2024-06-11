@@ -1,27 +1,15 @@
 import styled from 'styled-components';
+import type { IconContainerStylesType } from './Icon.types';
 
-import type {
-  IconContainerAttributesType,
-  IconContainerStylesType,
-} from './Icon.types';
-import { DEFAULT_SIZE } from './Icon.data';
+export const Container = styled.div.attrs({
+  role: 'img',
+})<IconContainerStylesType>`
+  width: ${({ width }) => `${width}px`};
+  height: ${({ height }) => `${height}px`};
 
-export const Container = styled.svg.attrs<IconContainerAttributesType>(
-  ({ width, height }) => ({
-    viewBox: `0 0 ${width ?? DEFAULT_SIZE.width} ${
-      height ?? DEFAULT_SIZE.height
-    }`,
-    fill: 'none',
-    xmlns: 'http://www.w3.org/2000/svg',
-    role: 'img',
-  }),
-)<IconContainerStylesType>`
-  ${({ styles, width, height }) => {
-    return {
-      ...styles,
-      width: `${width ?? DEFAULT_SIZE.width}px`,
-      height: `${height ?? DEFAULT_SIZE.height}px`,
-      textDecoration: 'none',
-    };
-  }};
+  ${({ styles }) => styles}
+  & > svg {
+    width: 100%;
+    height: 100%;
+  }
 `;

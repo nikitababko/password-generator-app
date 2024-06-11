@@ -5,6 +5,7 @@ import { Item } from '../Item';
 
 import type { Props } from './DropDown.types';
 import { Container } from './DropDown.styles';
+import { COLOR_DESIGN_TOKENS } from '../../../constants';
 
 export const DropDown: React.FC<Props> = ({
   options,
@@ -33,7 +34,12 @@ export const DropDown: React.FC<Props> = ({
           callback={callback}
           defaultOption={defaultOption}
         >
-          <Icon name="CheckMark" width={15} height={16} />
+          <Icon
+            name="CheckMark"
+            width={15}
+            height={16}
+            color={COLOR_DESIGN_TOKENS.BLUE}
+          />
         </Item>
       ))}
     </Container>

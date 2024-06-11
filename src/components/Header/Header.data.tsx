@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { css } from 'styled-components';
 import { Icon } from '../Icon';
 import type { ItemType as SelectFieldItemType } from '../SelectField/Item/Item.types';
 import { LANGUAGE_CODES } from '../../languageCodes';
@@ -12,9 +13,11 @@ export const languages: SelectFieldItemType[] = [
     icon: (
       <Icon
         name="FlagUs"
-        styles={{
-          boxShadow: BOX_SHADOW,
-        }}
+        width={22}
+        height={17}
+        styles={css`
+          box-shadow: ${BOX_SHADOW};
+        `}
       />
     ),
     value: 'English',
@@ -24,9 +27,11 @@ export const languages: SelectFieldItemType[] = [
     icon: (
       <Icon
         name="FlagRu"
-        styles={{
-          boxShadow: BOX_SHADOW,
-        }}
+        width={22}
+        height={17}
+        styles={css`
+          box-shadow: ${BOX_SHADOW};
+        `}
       />
     ),
     value: 'Русский',
@@ -36,9 +41,11 @@ export const languages: SelectFieldItemType[] = [
     icon: (
       <Icon
         name="FlagCh"
-        styles={{
-          boxShadow: BOX_SHADOW,
-        }}
+        width={22}
+        height={17}
+        styles={css`
+          box-shadow: ${BOX_SHADOW};
+        `}
       />
     ),
     value: '中國人',
@@ -48,9 +55,11 @@ export const languages: SelectFieldItemType[] = [
     icon: (
       <Icon
         name="FlagKr"
-        styles={{
-          boxShadow: BOX_SHADOW,
-        }}
+        width={22}
+        height={17}
+        styles={css`
+          box-shadow: ${BOX_SHADOW};
+        `}
       />
     ),
     value: '한국인',
@@ -60,9 +69,11 @@ export const languages: SelectFieldItemType[] = [
     icon: (
       <Icon
         name="FlagJp"
-        styles={{
-          boxShadow: BOX_SHADOW,
-        }}
+        width={22}
+        height={17}
+        styles={css`
+          box-shadow: ${BOX_SHADOW};
+        `}
       />
     ),
     value: '日本語',
@@ -72,9 +83,11 @@ export const languages: SelectFieldItemType[] = [
     icon: (
       <Icon
         name="FlagFr"
-        styles={{
-          boxShadow: BOX_SHADOW,
-        }}
+        width={22}
+        height={17}
+        styles={css`
+          box-shadow: ${BOX_SHADOW};
+        `}
       />
     ),
     value: 'Français',
@@ -84,9 +97,11 @@ export const languages: SelectFieldItemType[] = [
     icon: (
       <Icon
         name="FlagDe"
-        styles={{
-          boxShadow: BOX_SHADOW,
-        }}
+        width={22}
+        height={17}
+        styles={css`
+          box-shadow: ${BOX_SHADOW};
+        `}
       />
     ),
     value: 'Deutsch',
@@ -96,9 +111,11 @@ export const languages: SelectFieldItemType[] = [
     icon: (
       <Icon
         name="FlagIn"
-        styles={{
-          boxShadow: BOX_SHADOW,
-        }}
+        width={22}
+        height={17}
+        styles={css`
+          box-shadow: ${BOX_SHADOW};
+        `}
       />
     ),
     value: 'Indonesia',
@@ -108,9 +125,11 @@ export const languages: SelectFieldItemType[] = [
     icon: (
       <Icon
         name="FlagPl"
-        styles={{
-          boxShadow: BOX_SHADOW,
-        }}
+        width={22}
+        height={17}
+        styles={css`
+          box-shadow: ${BOX_SHADOW};
+        `}
       />
     ),
     value: 'Polski',
@@ -120,9 +139,11 @@ export const languages: SelectFieldItemType[] = [
     icon: (
       <Icon
         name="FlagEs"
-        styles={{
-          boxShadow: BOX_SHADOW,
-        }}
+        width={22}
+        height={17}
+        styles={css`
+          box-shadow: ${BOX_SHADOW};
+        `}
       />
     ),
     value: 'Español',
@@ -132,9 +153,11 @@ export const languages: SelectFieldItemType[] = [
     icon: (
       <Icon
         name="FlagGe"
-        styles={{
-          boxShadow: BOX_SHADOW,
-        }}
+        width={22}
+        height={17}
+        styles={css`
+          box-shadow: ${BOX_SHADOW};
+        `}
       />
     ),
     value: 'ქართული',
@@ -144,9 +167,11 @@ export const languages: SelectFieldItemType[] = [
     icon: (
       <Icon
         name="FlagAe"
-        styles={{
-          boxShadow: BOX_SHADOW,
-        }}
+        width={22}
+        height={17}
+        styles={css`
+          box-shadow: ${BOX_SHADOW};
+        `}
       />
     ),
     value: 'عرب',
@@ -156,9 +181,11 @@ export const languages: SelectFieldItemType[] = [
     icon: (
       <Icon
         name="FlagAm"
-        styles={{
-          boxShadow: BOX_SHADOW,
-        }}
+        width={22}
+        height={17}
+        styles={css`
+          box-shadow: ${BOX_SHADOW};
+        `}
       />
     ),
     value: 'հայերեն',
@@ -168,9 +195,11 @@ export const languages: SelectFieldItemType[] = [
     icon: (
       <Icon
         name="FlagIn"
-        styles={{
-          boxShadow: BOX_SHADOW,
-        }}
+        width={22}
+        height={17}
+        styles={css`
+          box-shadow: ${BOX_SHADOW};
+        `}
       />
     ),
     value: 'हिन्दी',
@@ -180,9 +209,11 @@ export const languages: SelectFieldItemType[] = [
     icon: (
       <Icon
         name="FlagIt"
-        styles={{
-          boxShadow: BOX_SHADOW,
-        }}
+        width={22}
+        height={17}
+        styles={css`
+          box-shadow: ${BOX_SHADOW};
+        `}
       />
     ),
     value: 'Italiano',

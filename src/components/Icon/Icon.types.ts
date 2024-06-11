@@ -1,13 +1,9 @@
 import type React from 'react';
 import type { ValueOf } from 'ts-essentials';
+import type { FlattenSimpleInterpolation } from 'styled-components';
 import type { COLOR_DESIGN_TOKENS } from '../../constants';
 
 export type ColorType = ValueOf<typeof COLOR_DESIGN_TOKENS>;
-
-export type DefaultSizeType = Record<
-  'width' | 'height',
-  number
->;
 
 type IconItemsKeyType =
   | 'FlagUs'
@@ -41,7 +37,7 @@ export type IconProps = {
   color?: ColorType;
   width?: number;
   height?: number;
-  styles?: React.CSSProperties;
+  styles?: FlattenSimpleInterpolation;
 };
 
 export type IconContainerStylesType = Pick<

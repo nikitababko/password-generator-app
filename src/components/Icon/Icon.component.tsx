@@ -1,8 +1,8 @@
 import React from 'react';
 
 import type { IconProps } from './Icon.types';
-import { Container } from './Icon.styles';
 import { useController } from './Icon.controller';
+import { Container } from './Icon.styles';
 
 export const Icon: React.FC<IconProps> = ({
   name,
@@ -15,9 +15,9 @@ export const Icon: React.FC<IconProps> = ({
 
   return (
     <Container
-      styles={styles}
       width={width}
       height={height}
+      styles={styles}
     >
       {getIcon(name, color)}
     </Container>
