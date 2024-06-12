@@ -7,7 +7,6 @@ const DESCRIPTION =
 const APP_URL = 'https://passguard.vercel.app/';
 const NICK_NAME = '@nikitababko';
 const LOGO_SHORTCUT = '/static/logo.ico';
-const LOGO_SOCIAL = '/static/logo.png';
 
 export const metaData = {
   charSet: 'utf8',
@@ -29,16 +28,17 @@ export const metaData = {
     title: PROJECT_TITLE,
     description: DESCRIPTION,
     url: APP_URL,
+    image: '/static/logo-og.png',
   },
   twitter: {
     card: 'summary_large_image',
     creator: NICK_NAME,
     title: PROJECT_TITLE,
     url: APP_URL,
+    image: '/static/logo-twitter.png',
   },
   copyright: 'Copyright 2023',
   linkShortcutIcon: LOGO_SHORTCUT,
-  socialImage: LOGO_SOCIAL,
 } as const;
 
 export const MEDIA_BREAK_POINTS_DESIGN_TOKENS = {

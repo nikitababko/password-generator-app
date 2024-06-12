@@ -83,7 +83,7 @@ export default function Document() {
 
         <meta
           property="og:image"
-          content={metaData.socialImage}
+          content={metaData.og.image}
         />
 
         <meta
@@ -113,7 +113,7 @@ export default function Document() {
 
         <meta
           property="twitter:image"
-          content={metaData.socialImage}
+          content={metaData.twitter.image}
         />
 
         <meta property="twitter:image:alt" content="Logo" />
