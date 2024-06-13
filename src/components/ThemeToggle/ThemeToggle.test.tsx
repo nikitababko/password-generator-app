@@ -7,6 +7,8 @@ describe('ThemeToggle', () => {
   it('render', () => {
     render(<ThemeToggle />);
 
-    expect(screen.getByRole('switch')).toBeInTheDocument();
+    expect(
+      screen.getByTestId('ThemeToggle'),
+    ).toBeInTheDocument();
   });
 });

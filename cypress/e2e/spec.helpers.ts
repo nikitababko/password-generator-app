@@ -14,7 +14,6 @@ const checkExistAndBackgroundColor = (
       HTMLElementTagNameMap[keyof HTMLElementTagNameMap]
     >
   >,
-  // TODO: remove лишние типы и вместо них typeof делать от объекта
   color: ValueOf<typeof COLOR_DESIGN_TOKENS>,
 ) => {
   return element
@@ -30,7 +29,7 @@ export const checkLightTheme = () => {
   );
 
   checkExistAndBackgroundColor(
-    cy.get(Elements.SwitchContainer).first(),
+    cy.get(Elements.ThemeToggle),
     COLOR_DESIGN_TOKENS.BLUE_TURQUOISE,
   );
 
@@ -72,7 +71,7 @@ export const checkDarkTheme = () => {
   );
 
   checkExistAndBackgroundColor(
-    cy.get(Elements.SwitchContainer).first(),
+    cy.get(Elements.ThemeToggle),
     COLOR_DESIGN_TOKENS.BLUE_SLATE,
   );
 

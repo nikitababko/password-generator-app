@@ -1,6 +1,4 @@
 import React from 'react';
-
-import { SelectField } from '../../SelectField';
 import { Switch } from '../../Switch';
 import type { TranslationsValuesType } from '../../../hooks/useTranslate/useTranslate.types';
 
@@ -14,15 +12,15 @@ import {
 } from './Item.styles';
 import { useController } from './Item.controller';
 import type { ItemProps } from './Item.types';
+import { NumberField } from '../../NumberField';
 
 const Item: React.FC<ItemProps> = React.memo<ItemProps>(
-  ({ item, callback, isDisabled }) => {
+  ({ item, onChange, isDisabled }) => {
     const {
       valueExampleIsVisible,
       handleClick,
       isFormItemPasswordLength,
       t,
-      defaultOptionPasswordLength,
       isFormItemSaveMySettings,
     } = useController(item);
 
@@ -54,25 +52,17 @@ const Item: React.FC<ItemProps> = React.memo<ItemProps>(
         </LeftCol>
 
         <RightCol>
-          {item.type === 'select' ? (
-            <SelectField
-              options={item.options}
-              styles={{
-                width: '90px',
-              }}
-              callback={(id, value) => {
-                callback(item.id, value, {
-                  id: id as number,
-                  value,
-                });
-              }}
-              defaultOption={defaultOptionPasswordLength}
+          {item.type === 'number' ? (
+            <NumberField
+              id={item.id}
+              value={item.value as number}
+              onChange={onChange}
             />
           ) : (
             <Switch
-              value={item.value as boolean}
               id={item.id}
-              callback={callback}
+              value={item.value as boolean}
+              onChange={onChange}
               isDisabled={isDisabled}
             />
           )}

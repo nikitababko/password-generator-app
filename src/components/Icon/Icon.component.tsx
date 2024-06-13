@@ -10,6 +10,7 @@ export const Icon: React.FC<IconProps> = ({
   width,
   height,
   styles,
+  ...rest
 }) => {
   const { getIcon } = useController();
 
@@ -18,6 +19,7 @@ export const Icon: React.FC<IconProps> = ({
       width={width}
       height={height}
       styles={styles}
+      {...rest}
     >
       {getIcon(name, color)}
     </Container>

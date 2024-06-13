@@ -8,7 +8,6 @@ interface FormState {
     // formItems: FormItemType[],
     id: number | string,
     value: string | number | boolean,
-    selectedOption?: FormItemType['selectedOption'],
   ) => void;
   setFormItems: (formItems: FormItemType[]) => void;
 }
@@ -19,7 +18,6 @@ export const useFormStore = create<FormState>((set) => ({
     // formItems,
     id,
     value,
-    selectedOption,
   ) => {
     return set((state) => {
       return {
@@ -28,7 +26,6 @@ export const useFormStore = create<FormState>((set) => ({
             ? {
                 ...formItem,
                 value,
-                selectedOption,
               }
             : formItem;
         }),

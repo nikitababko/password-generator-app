@@ -1,13 +1,11 @@
 import chaiColors from 'chai-colors';
 
-import { Translations } from '../../src/hooks/useTranslate/useTranslate.data';
-import { FORM_ITEMS_INITIAL_STATE } from '../../src/store/store.data';
-
 import { Elements, TEST_URL } from './spec.data';
 import {
   checkDarkTheme,
   checkLightTheme,
 } from './spec.helpers';
+import { Translations } from '../../src/hooks/useTranslate/useTranslate.data';
 import type { LanguagesType } from '../../src/hooks/useTranslate/useTranslate.types';
 
 chai.use(chaiColors);
@@ -18,10 +16,10 @@ describe('Password generator', () => {
 
     checkLightTheme();
 
-    cy.get('[role="switch"]').first().click();
+    cy.get(Elements.ThemeToggle).click();
     checkDarkTheme();
 
-    cy.get('[role="switch"]').first().click();
+    cy.get(Elements.ThemeToggle).click();
     checkLightTheme();
   });
 
@@ -85,28 +83,30 @@ describe('Password generator', () => {
   it('Select password length', () => {
     cy.visit(TEST_URL);
 
-    if (FORM_ITEMS_INITIAL_STATE[0].options) {
-      const { options } = FORM_ITEMS_INITIAL_STATE[0];
-      /* eslint-disable unicorn/no-for-loop */
-      for (
-        let index = 0;
-        index < options.length;
-        index += 1
-      ) {
-        cy.get(
-          `${Elements.FormContainer} ${Elements.SelectFieldContent}`,
-        ).click();
+    cy.get(Elements.NumberFieldInput).should(
+      'have.value',
+      '6',
+    );
 
-        cy.get(
-          `${Elements.FormContainer} ${Elements.SelectFieldIDropDownContainer} ${Elements.SelectFieldItemContainer}`,
-        )
-          .eq(index)
-          .click();
+    cy.get(Elements.NumberFieldArrowUp).click();
 
-        cy.get(`${Elements.PasswordWrapper} p`)
-          .invoke('text')
-          .should('have.length', options[index]?.value);
-      }
-    }
+    cy.get(Elements.NumberFieldInput).should(
+      'have.value',
+      '7',
+    );
+
+    cy.get(Elements.NumberFieldArrowDown).dblclick();
+
+    cy.get(Elements.NumberFieldInput).should(
+      'have.value',
+      '5',
+    );
+
+    cy.get(Elements.NumberFieldInput).type('{backspace}15');
+
+    cy.get(Elements.NumberFieldInput).should(
+      'have.value',
+      '15',
+    );
   });
 });

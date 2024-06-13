@@ -6,13 +6,13 @@ import { useController } from './Switch.controller';
 
 export const Switch: React.FC<Props> = ({
   id,
-  callback,
+  onChange,
   value,
   isDisabled,
 }) => {
   const { isActive, handleClick } = useController(
     value,
-    callback,
+    onChange,
     id,
   );
 

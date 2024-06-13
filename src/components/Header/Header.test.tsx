@@ -15,7 +15,9 @@ describe('Header', () => {
       }),
     ).toBeInTheDocument();
 
-    expect(screen.getByRole('switch')).toBeInTheDocument();
+    expect(
+      screen.getByTestId('ThemeToggle'),
+    ).toBeInTheDocument();
 
     expect(screen.getByRole('listbox')).toBeInTheDocument();
   });

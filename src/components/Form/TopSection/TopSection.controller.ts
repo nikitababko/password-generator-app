@@ -3,7 +3,6 @@ import { useCallback, useMemo } from 'react';
 import type {
   HandleClickType,
   ItemType,
-  ItemType as FormItemType,
 } from '../Item/Item.types';
 import { useFormStore } from '../../../store/formState';
 
@@ -15,14 +14,9 @@ export const useController = () => {
     [formItems],
   );
 
-  const handleClick: HandleClickType = useCallback(
-    (id, value, option) => {
-      changeFormItemValue(
-        // formItems,
-        id,
-        value,
-        option as FormItemType['selectedOption'],
-      );
+  const handleOnChange: HandleClickType = useCallback(
+    (id, value) => {
+      changeFormItemValue(id, value);
     },
     [changeFormItemValue],
   );
@@ -98,7 +92,7 @@ export const useController = () => {
 
   return {
     formItems: memoFormItems,
-    handleClick,
+    handleOnChange,
     isLastActiveItemId,
     isDisabledItem,
   };

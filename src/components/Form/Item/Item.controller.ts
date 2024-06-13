@@ -21,19 +21,11 @@ export const useController = (item: ItemType) => {
     return item.label === 'passwordLength';
   }, [item.label]);
 
-  const defaultOptionPasswordLength = useMemo(() => {
-    const storedValue = localStorage.getItem('formItems');
-    return storedValue
-      ? JSON.parse(storedValue)[0].selectedOption
-      : null;
-  }, []);
-
   return {
     valueExampleIsVisible,
     handleClick,
     isFormItemPasswordLength,
     t,
-    defaultOptionPasswordLength,
     isFormItemSaveMySettings,
   };
 };

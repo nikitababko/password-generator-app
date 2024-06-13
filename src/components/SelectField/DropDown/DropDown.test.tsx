@@ -1,15 +1,14 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
-import { FORM_ITEMS_INITIAL_STATE } from '../../../store/store.data';
-
 import { DropDown } from './DropDown.component';
+import { languages } from '../../Header/Header.data';
 
 describe('DropDown', () => {
   it('render', () => {
     render(
       <DropDown
-        options={FORM_ITEMS_INITIAL_STATE[0].options}
+        options={languages}
         isOpen
         setIsOpen={() => null}
         selectedItem={{

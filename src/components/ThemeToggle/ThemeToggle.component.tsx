@@ -12,7 +12,11 @@ export const ThemeToggle: React.FC = () => {
   const { handleClick, isDay } = useController();
 
   return (
-    <Container onClick={handleClick} isDay={isDay}>
+    <Container
+      data-testid="ThemeToggle"
+      onClick={handleClick}
+      isDay={isDay}
+    >
       <ToggleItem isDay={isDay} />
 
       <Cloud isDay={isDay} />

@@ -5,17 +5,17 @@ import type { TranslationsType } from './useTranslate.types';
 export const Translations: DeepReadonly<TranslationsType> =
   {
     en: {
-      passwordLength: 'Password Length',
-      includeSymbols: 'Include Symbols',
-      includeNumbers: 'Include Numbers',
+      passwordLength: 'Password length',
+      includeSymbols: 'Include symbols',
+      includeNumbers: 'Include numbers',
       includeLowercaseCharacters:
-        'Include Lowercase Characters',
+        'Include lowercase characters',
       includeUppercaseCharacters:
-        'Include Uppercase Characters',
+        'Include uppercase characters',
       excludeSimilarCharacters:
-        'Exclude Similar Characters',
+        'Exclude similar characters',
       excludeAmbiguousCharacters:
-        'Exclude Ambiguous Characters',
+        'Exclude ambiguous characters',
       generate: 'Generate',
       saveMySettings: 'Save my settings',
     },

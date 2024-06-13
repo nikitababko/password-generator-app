@@ -32,20 +32,16 @@ export type IconItemsType = Record<
   (color?: ColorType) => React.ReactNode
 >;
 
-export type IconProps = {
-  name: IconItemsKeyType;
-  color?: ColorType;
-  width?: number;
-  height?: number;
-  styles?: FlattenSimpleInterpolation;
-};
+export type IconProps =
+  React.DOMAttributes<HTMLDivElement> & {
+    name: IconItemsKeyType;
+    color?: ColorType;
+    width?: number;
+    height?: number;
+    styles?: FlattenSimpleInterpolation;
+  };
 
 export type IconContainerStylesType = Pick<
   IconProps,
   'width' | 'height' | 'styles'
->;
-
-export type IconContainerAttributesType = Omit<
-  IconContainerStylesType,
-  'styles'
 >;

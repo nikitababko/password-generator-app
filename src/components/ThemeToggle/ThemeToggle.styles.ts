@@ -33,9 +33,7 @@ const itemRightToLeftAnimation = keyframes`
   }
 `;
 
-export const Container = styled.div.attrs({
-  role: 'switch',
-})<ThemeStylesType>`
+export const Container = styled.div<ThemeStylesType>`
   position: relative;
   min-width: 100px;
   height: 48px;

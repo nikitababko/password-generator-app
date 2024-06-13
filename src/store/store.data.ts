@@ -4,55 +4,9 @@ export const FORM_ITEMS_INITIAL_STATE: FormItemType[] = [
   {
     id: 1,
     label: 'passwordLength',
-    valueExample: '',
-    type: 'select',
+    valueExample: 'min 1, max 256',
+    type: 'number',
     value: 6,
-    selectedOption: {
-      id: 1,
-      value: 6,
-    },
-    options: [
-      {
-        id: 1,
-        value: 6,
-      },
-      {
-        id: 2,
-        value: 12,
-      },
-      {
-        id: 3,
-        value: 18,
-      },
-      {
-        id: 4,
-        value: 24,
-      },
-      {
-        id: 5,
-        value: 30,
-      },
-      {
-        id: 6,
-        value: 36,
-      },
-      {
-        id: 7,
-        value: 42,
-      },
-      {
-        id: 8,
-        value: 46,
-      },
-      {
-        id: 9,
-        value: 52,
-      },
-      {
-        id: 10,
-        value: 58,
-      },
-    ],
   },
   {
     id: 2,

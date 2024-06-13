@@ -2,16 +2,11 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 
 import { SelectField } from './SelectField.component';
-
-import { FORM_ITEMS_INITIAL_STATE } from '../../store/store.data';
+import { languages } from '../Header/Header.data';
 
 describe('SelectField', () => {
   it('render', () => {
-    render(
-      <SelectField
-        options={FORM_ITEMS_INITIAL_STATE[0].options}
-      />,
-    );
+    render(<SelectField options={languages} />);
 
     expect(screen.getByRole('listbox')).toBeInTheDocument();
   });

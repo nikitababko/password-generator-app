@@ -4,13 +4,13 @@ import type { Props } from './Switch.types';
 
 export const useController = (
   value: Props['value'],
-  callback: Props['callback'],
+  onChange: Props['onChange'],
   id: Props['id'],
 ) => {
   const [isActive, setIsActive] = useState(value);
 
   useEffect(() => {
-    callback?.(id, isActive);
+    onChange?.(id, isActive);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id, isActive]);
 

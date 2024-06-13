@@ -33,7 +33,7 @@ describe('Switch', () => {
         id={TestSwitchData.id}
         value={TestSwitchData.value}
         isDisabled={false}
-        callback={(id, value) =>
+        onChange={(id, value) =>
           result.current.setState({ id, value })
         }
       />,

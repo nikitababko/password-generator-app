@@ -25,7 +25,7 @@ describe('FormItem', () => {
     render(
       <Item
         item={current[1]}
-        callback={() => null}
+        onChange={() => null}
         isDisabled
       />,
     );
