@@ -23,10 +23,17 @@ export const useController = () => {
 
   const isLastActiveItemId = useMemo(() => {
     const items = formItems.filter((formItem) => {
-      return formItem.value === true;
+      return (
+        formItem.value === true &&
+        formItem.label !== 'saveMySettings'
+      );
     });
 
-    if (items.length <= 1) {
+    if (
+      items[0] &&
+      items.length <= 1 &&
+      items[0].id !== 8
+    ) {
       return items[0].id;
     }
 
