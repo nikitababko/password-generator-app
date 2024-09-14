@@ -73,6 +73,7 @@ export const FONT_SIZES = {
 } as const;
 
 export const LightTheme = {
+  titleColor: COLOR_DESIGN_TOKENS.BLACK,
   backgroundColor: COLOR_DESIGN_TOKENS.BLUE_LIGHT,
   foregroundColor: COLOR_DESIGN_TOKENS.WHITE,
   formItemLeftColBackgroundColor:
@@ -86,6 +87,7 @@ export const LightTheme = {
 } as const;
 
 export const DarkTheme = {
+  titleColor: COLOR_DESIGN_TOKENS.GRAY_LIGHT,
   backgroundColor: COLOR_DESIGN_TOKENS.BLACK_LIGHT,
   foregroundColor: COLOR_DESIGN_TOKENS.GRAY_DARK,
   formItemLeftColBackgroundColor:

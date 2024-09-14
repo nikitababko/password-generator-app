@@ -35,7 +35,8 @@ export const GenerateButton = styled.button.attrs({
     return theme.generateButtonBackgroundColor;
   }};
   cursor: pointer;
-  transition: box-shadow ${getAnimation()};
+  transition: box-shadow ${getAnimation()},
+    background-color ${getAnimation()};
   border: none;
 
   @media (hover: hover) {

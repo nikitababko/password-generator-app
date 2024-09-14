@@ -5,6 +5,7 @@ import {
   mediaContainer767,
 } from '../../styles/mediaQueryContainers';
 import { FONT_SIZES } from '../../constants';
+import { getAnimation } from '../../utils';
 
 export const Container = styled.header`
   display: flex;
@@ -28,6 +29,10 @@ export const LeftCol = styled.div`
 
 export const Title = styled.h1`
   font-size: ${FONT_SIZES.L};
+  color: ${({ theme }) => {
+    return theme.titleColor;
+  }};
+  transition: color ${getAnimation()};
 `;
 
 export const RightCol = styled.div`
