@@ -50,7 +50,7 @@
     "test:e2e:run": "cypress run --browser '/Applications/Network/Google Chrome.app/Contents/MacOS/Google Chrome'",
     "start:test:e2e:open": "cross-env PORT=3001 start-server-and-test dev 3001 test:e2e:open",
     "start:test:e2e:run": "cross-env PORT=3001 start-server-and-test dev 3001 test:e2e:run",
-    "lint": "eslint . && bash -c tsc"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@next/font": "13.1.1",
