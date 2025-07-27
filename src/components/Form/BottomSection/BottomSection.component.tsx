@@ -16,7 +16,7 @@ export const BottomSection: React.FC = () => {
         </span>
 
         <a
-          href="https://nikitababko.github.io"
+          href="https://nikitababko.com"
           target="_blank"
           rel="noreferrer"
         >
