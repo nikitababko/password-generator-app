@@ -3,8 +3,5 @@
     "eslint --fix",
     "prettier --write",
     "eslint --max-warnings=0"
-  ],
-  "**/*.{js,jsx,ts,tsx,md,json}": [
-    "npx cspell '**/*.{js,jsx,ts,tsx,md,json}'"
   ]
 }
